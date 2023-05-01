@@ -1,0 +1,18 @@
+---
+title: " 'It is true: I received it on WhatsApp!': The Effects of WhatsApp on Misinformation Beliefs and Polarization"
+subtitle: ""
+author: "Tiago Ventura | Rajeshwari Majumdar | Joshua Tucker | Jonathan Nagler"
+institute: ""
+date: ""
+output:
+  xaringan::moon_reader:
+    css: ["xaringan-themer.css"]
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+editor_options: 
+  chunk_output_type: console
+---
+

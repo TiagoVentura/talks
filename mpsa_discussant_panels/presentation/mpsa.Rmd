@@ -1,0 +1,330 @@
+---
+title: "The Effects of WhatsApp on Politics: Evidence From a Deactivation Experiment"
+author: "Tiago Ventura, Rajeshwari Majumdar, Jonathan Nagler, and  Joshua A. Tucker <br> <br><span style = 'font-size: 80%;'>Center for Social Media and Politics,  NYU</span>"
+date: " <span style = 'font-size: 60%;'> <br> 80th Annual MPSA Conference <br> 04/14/2022 </span>"
+output:
+  xaringan::moon_reader:
+    css: ["xaringan-themer.css", "custom.css"]
+    lib_dir: libs
+    self_contained: false
+    nature:
+      #ratio: 16:9
+      #ratio: 191:100
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+      slideNumberFormat: "Slide %current% of %total%" # Slide 12 of 42
+---
+layout: true
+
+<div class="my-footer"><span>Tiago Ventura (CSMAP) &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbspMPSA Annual Meeting</span></div> 
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+knitr::opts_chunk$set(messagwese=FALSE, warning = FALSE)
+xaringanthemer::style_mono_light(base_color ="#23395b", 
+                                  title_slide_text_color="#ffff", 
+                                  title_slide_background_color = "#23395b", 
+                                  background_color = "#fff", 
+                                  link_color =  "#23395b")
+options(htmltools.dir.version = FALSE)
+knitr::opts_chunk$set(message=FALSE, warning = FALSE, error=TRUE, echo=FALSE, cache=TRUE)
+```
+
+```{r style-share-again, echo=FALSE}
+xaringanExtra::use_tile_view()
+xaringanExtra::use_panelset()
+
+#xaringanExtra::style_share_again(
+#  share_buttons = c("twitter", "linkedin", "pocket")
+#)
+```
+
+---
+class:middle, center
+
+### Whatsapp and Politics in the Global South
+
+---
+class:middle, center
+
+```{r out.width="100%"}
+knitr::include_graphics("./presentation/nyt.png")
+```
+
+---
+class:inverse, middle, center
+
+### Even though WhatsApp has received a huge attention from the media and policy makers, no study has so far identified causal effects of WhatsApp on politics. 
+
+
+
+---
+class: middle
+
+## Our Design: Multimedia Deactivation on WhatsApp
+
+--
+
+`r icons::fontawesome("arrow-alt-circle-right")` **Our Solution:** Cut channels through which users' are exposed to misinformation and polarizing content: videos, images and audios .red[(Machado et al., 2019; Resende et al., 2019; Garimella and Tyson, 2018; Garimella and Eckles, 2020; Batista Pereira et al., ND).]
+
+--
+
+`r icons::fontawesome("arrow-alt-circle-right")` **Experiment:** Offer respondents a monetary incentive to
+
+- Disable their automatic download of media on WhatsApp 
+- Do not purposefully click and watch any media on WhatsApp
+
+--
+
+`r icons::fontawesome("arrow-alt-circle-right")` **Treatment Period:** Three weeks:
+
+- **Start:** Three weeks before general election in Brazil
+- **End:** three days after the voting day
+
+---
+## Overview of the Experiment
+
+.center[
+```{r out.width="120%"}
+knitr::include_graphics("./output/research_design.png")
+```
+]
+
+---
+.center[
+```{r  out.width="55%"}
+knitr::include_graphics("./output/deactivation.png")
+```
+]
+
+
+---
+<br>
+.center[
+```{r out.width="30%"}
+knitr::include_graphics("./output/iphone_deact.jpeg")
+```
+]
+
+---
+.center[
+```{r  out.width="55%"}
+knitr::include_graphics("./output/compliance.png")
+```
+]
+
+---
+<br>
+.center[
+```{r out.width="30%"}
+knitr::include_graphics("./output/iphone_compliance.jpeg")
+```
+]
+
+---
+class:middle
+
+## Hypotheses
+
+H1: Deactivated users will report lower levels of previous exposure to FALSE rumors.
+
+H2a: Deactivated  will display a higher ability to accurately identify FALSE rumors.
+
+H2b Deactivated users will display lower levels of mainstream news knowledge.
+
+H3: Deactivated will display lower levels of outgroup political polarization.
+
+H4: Deactivated will display higher levels of the aggregated index of subjective well-being.
+
+
+---
+class: center, middle, inverse
+
+# Results
+
+---
+
+### Effects on WhatsApp usage
+
+.center[
+```{r  out.width="90%"}
+knitr::include_graphics("./output/models_compliance.png")
+```
+]
+
+---
+### Effects on Exposure to Misinformation Rumors
+
+.center[
+```{r  out.width="90%"}
+knitr::include_graphics("./output/exposure_h1.png")
+```
+]
+
+---
+### False > True reduction in exposure
+
+.center[
+```{r  out.width="90%"}
+knitr::include_graphics("./output/difference_true_false_exposure.png")
+```
+]
+
+---
+### Effects on Belief Accuracy
+
+.center[
+```{r  out.width="90%"}
+knitr::include_graphics("./output/belief_accuracy_h2.png")
+```
+]
+
+---
+### Effects on Polarization & Subjective Well-Being
+
+.center[
+```{r  out.width="90%"}
+knitr::include_graphics("./output/pol_sw_index.png")
+```
+]
+
+---
+class: middle
+
+## Discussion
+
+
+--
+
+`r icons::fontawesome("arrow-alt-circle-right")` **WhatsApp is an important vector through which voters receive misinformation in Brazil at .red[a higher rate] compared to true news.**
+
+--
+
+`r icons::fontawesome("arrow-alt-circle-right")` .**The null results provide support for a .red[minimalist view of the causal effects] of WhatsApp on political attitudes.**
+--
+
+`r icons::fontawesome("arrow-alt-circle-right")`  **Exposure to misinformation .red[does not] mechanically affect attitudes**
+
+--
+
+
+---
+class:middle, inverse
+
+#  BUT...
+
+---
+
+class:middle
+
+### It would be a mistake to conclude that WhatsApp plays no role in politics.
+
+--
+
+- Scope conditions: focus on direct effects of WhatsApp. 
+
+--
+
+- Do not rule out the use of WhatsApp as a mobilization and organizational tool by malicious actors. 
+
+--
+
+- Largers effect might exist exactly in hard to reach populations.
+
+--
+
+- Small effect size vs Power
+
+--
+
+- Electoral context + Motivated Reasoning
+
+---
+class: middle
+
+## Next steps. 
+
+--
+
+### Replication, Replication, Replication
+
+--
+
+**Multi-Country Study**
+
+- Contextual variation
+
+- Partial vs full deactivation
+
+- In and out of election periods
+
+--
+
+---
+class:middle, center
+
+## Thank you!
+
+---
+class: middle, center, inverse
+
+## Additional Analyses 
+
+
+---
+.center[
+```{r  out.width="55%"}
+knitr::include_graphics("./output/recruitment.png")
+```
+]
+
+---
+.center[
+```{r  out.width="70%"}
+knitr::include_graphics("./output/filters.png")
+```
+]
+---
+### Exposure and Partisanship
+
+.center[
+```{r  out.width="90%"}
+knitr::include_graphics("./output/sif_exposure_bothparties_counter_pro.png")
+```
+]
+
+---
+### Belief Accuracy Conditional on WhatsApp usage for Politics
+
+.center[
+```{r  out.width="90%"}
+knitr::include_graphics("./output/sif_het_use_whatsapp_fac.png")
+```
+]
+
+
+---
+### Polarization Outcomes
+
+.center[
+```{r  out.width="90%"}
+knitr::include_graphics("./output/pol_outcomes.png")
+```
+]
+
+---
+class:middle
+
+## Examples of Misinformation Outcomes
+
+### False Item: 
+
+_Only complete votes are counted by the electoral justice. If the voter only votes for the President, and votes blank for all the other races, the vote is considered a partial vote, and will be annulled_
+
+### True Item:
+
+_After consecutive reductions, the current oil price in Brazil is below the global average value_
+
+
+

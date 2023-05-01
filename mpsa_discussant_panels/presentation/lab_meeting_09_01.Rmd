@@ -1,0 +1,363 @@
+---
+title: "<span style = 'font-style:italic'> 'It is true, I received on WhatsApp': </span><br> <span style = 'font-size: 70%;'>The Effects of WhatsApp on Misinformation Beliefs and Polarization</span><br>"
+author: "<span style = 'font-size: 90%;'>Tiago Ventura, Rajeshwari Majumdar, Joshua Tucker, and Jonathan Nagler </span>"
+date: " <span style = 'font-size: 70%;'> CSMaP Lab Meeting <br> 09/01/2022 </span>"
+output:
+  xaringan::moon_reader:
+    css: ["xaringan-themer.css", "custom.css"]
+    lib_dir: libs
+    self_contained: false
+    nature:
+      #ratio: 16:9
+      #ratio: 191:100
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+      titleSlideClass: ["center", "middle",]
+      slideNumberFormat: |
+        <div class="progress-bar-container">
+          <div class="progress-bar" style="width: calc(%current% / %total% * 100%);">
+          </div>
+        </div>
+---
+layout: true
+
+<div class="my-footer"><span>CSMaP Lab Meeting, 09-01-2022</span></div> 
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+knitr::opts_chunk$set(messagwese=FALSE, warning = FALSE)
+xaringanthemer::style_mono_light(base_color ="#23395b", 
+                                  title_slide_text_color="#23395b", 
+                                  title_slide_background_color = "#fff", 
+                                  background_color = "#fff", 
+                                  link_color =  "#23395b")
+options(htmltools.dir.version = FALSE)
+knitr::opts_chunk$set(message=FALSE, warning = FALSE, error=TRUE, echo=FALSE, cache=TRUE)
+```
+
+```{r style-share-again, echo=FALSE}
+xaringanExtra::use_tile_view()
+xaringanExtra::use_panelset()
+
+#xaringanExtra::style_share_again(
+#  share_buttons = c("twitter", "linkedin", "pocket")
+#)
+```
+
+---
+class:middle
+
+## WhatsApp 101
+
+--
+
+.panelset.sideways[
+
+.panel[.panel-name[WhatsApp]
+
+#### .fade[WhatsApp is a worldwide popular end-to-end encrypted messaging app allowing both direct and ingroup communications with close to 2 billion around the world]
+
+]
+
+.panel[.panel-name[Usage in Brazil]
+
+- .red[66% of the Brazilian eligible voters] has a social media account, and .red[65% have an WhatsApp account] ([Datafolha 2018](http://media.folha.uol.com.br/datafolha/2018/10/27/44cc2204230d2fd45e18b039ee8c07a6.pdf)) – 150 million people in 2022. 
+
+
+
+- Most used app for all purposes: .red[talk to family & friends, do business & pay bills, consume news, talk politics, among others] ([Reuters Institute, 2021](https://reutersinstitute.politics.ox.ac.uk/digital-news-report/2021)). 
+
+
+
+- Used by .red[48% of population to read news], despite having no “news feed” ([Reuters Institute, 2021](https://reutersinstitute.politics.ox.ac.uk/digital-news-report/2021))
+
+- Across the world, .red[Brazilians are the most concerned about misinformation]. 
+
+- And .red[WhatsApp is the main social media application] where users report to see more misinformation. 
+
+]
+]
+
+---
+## Motivation
+
+.center[
+```{r out.width="100%"}
+knitr::include_graphics("nyt.png")
+```
+]
+
+---
+class:middle, inverse, center
+
+## Field Experiment: An WhatsApp Media-Constrained Deactivation
+
+---
+###  Intervention 
+Deactivation experiments have been recently used to causally identify the effects of social media on users' behavior ans attitudes .red[(Asimovic et al 2021 and Alcott et al 2020)]. Deactivating WhatsApp users is **theorethically and empirically unfeasible**.
+
+
+--
+
+`r icons::fontawesome("arrow-alt-circle-right")` **Our Solution:** .black[cut channels through which users' are exposed to misinformation  and polarizing content]
+
+--
+
+`r icons::fontawesome("arrow-alt-circle-right")` **Experiment:** Offer respondents a monetary incentive to
+
+- Disable their automatic download of media on WhatsApp
+- Dot not purposefully click and watch any media on WhatsApp
+
+--
+
+`r icons::fontawesome("arrow-alt-circle-right")` **Treatment Period:** Three weeks:
+
+- **Start:** Two week before presidential elections in Brazil
+- **End:** One week after the voting day
+
+
+
+
+
+
+---
+## Overview of the Experiment
+
+.panelset.sideways[
+
+.panel[.panel-name[Design]
+```{r, echo=FALSE}
+library(DiagrammeR)
+survey_flow <- mermaid(diagram="
+graph TD
+A[Recruitment Survey: <br/> Facebook Ads]--> |Participant Selection| Comp[Start the Experiment: <br/> Upload image disabling downloads]
+Comp --> Tall{Randomization}
+Tall --> |Treatment| Tb[3 weeks without media]
+Tall --> |Control| C[3 days no media & <br/> Use Whatsapp as usual]
+
+C --> G[Compliance Checks]
+Tb --> G
+G --> Final{Final survey}
+
+style Tall stroke:#333,stroke-width:2px,fill:#FFFF00
+style Final stroke:#333,stroke-width:2px,fill:#FFFF00
+             ",
+width="100%")
+survey_flow
+```
+]
+
+.panel[.panel-name[Filtering Questions]
+
+- Time spent on WhatsApp > 10 minutes every day
+
+- Should not use desktop WhatsApp
+
+- Accept to join the study
+
+- `r icons::fontawesome("question")` Received images about politics on WhatsApp
+
+
+]
+
+.panel[.panel-name[Timeline]
+
+- **Start Recruitment:** Between September 2th - 5th
+
+- **Start the Experiment** September 15th
+
+- **Activation of the Control + First Compliance**: September 18th
+
+- **Treatment duration**: From September 15th to October 6th
+
+- **Presidential Election**: October 2
+
+
+]
+
+.panel[.panel-name[Treatment Groups]
+
+`r icons::fontawesome("arrow-alt-circle-right")` **Treatment**
+
+- 3 weeks with automatic download disabled
+
+- 3 weeks without consuming media
+
+- Weakly screenshots of storage of media consumption on WhatsApp
+
+`r icons::fontawesome("arrow-alt-circle-right")` **Control**
+
+- 3 days with automatic download disabled
+
+- 3 days without consuming media
+
+- Weakly screenshots of storage of media consumption on WhatsApp
+
+]
+]
+
+---
+## Ways to Measure Compliance
+
+To measure compliance, we will ask participants to upload through a qualtrics survey screenshots of their WhatsApp.
+
+--
+
+.panelset.sideways[
+.panel[.panel-name[Automatic Download]
+
+.center[
+```{r out.width="35%"}
+knitr::include_graphics("screen2.png")
+```
+]
+]
+.panel[.panel-name[Storage Information]
+.center[
+```{r out.width="35%"}
+knitr::include_graphics("screen1.png")
+```
+]
+]
+]
+
+--
+
+
+---
+class:middle
+
+## Outcomes
+
+--
+#### .darkblue[Misinformation] 
+
+- False Headlines published on fact-checking webpages during the month of the experiment + True headlines from mainstream media.
+
+--
+
+#### .darkblue[Polarization]
+
+- Affective polarization (Feeling Thermomether)
+- Social Polarization (Watching the world cup with an outgroup)
+- Issue Polarization (Abortion, gun control, etc..)
+- False Polarization ('Where do I observe the two main candidates?')
+
+--
+#### .darkblue[Subjective Well-being]
+
+- How did you feel last week? (Happy, Anxious, etc...)
+
+--
+
+
+---
+class:middle
+## Hypotheses
+
+
+.pull-right-wide[
+
+H1a: Users using the Media-Constrained WhatsApp will display a .red[higher ability to accurately identify FALSE headlines] compared to their counterparts using the regular WhatsApp.
+
+H1b: Users using the Media-Constrained WhatsApp will display .red[lower levels of knowledge on mainstream news headlines] compared to their counterparts  using the regular WhatsApp.
+
+H2: Users using the Media-Constrained WhatsApp  will display .red[lower levels of outgroup partisan polarization] compared to their counterparts using the regular WhatsApp.
+
+
+H3: Users using the Media-Constrained WhatsApp will display .red[higher levels of the aggregated index of subjective well-being] compared to their counterparts using the regular WhatsApp.
+
+
+] 
+
+
+---
+class: middle, center, inverse
+
+## One-Week Pilot Study
+
+---
+class:middle, 
+## Pilot Summary
+
+
+**Recruitment**: Four days using Facebook Ads
+
+**Experimental Condition:**
+
+- **Treatment** Full-week with automatic download disabled
+- **Control**: Three days with no-media.
+
+**Experiment Assignment:** After uploading proof of disabling automatic download of media.
+
+**Responses:**
+  - 540 complete responses
+  - 317 passed  the filters
+  - 74 invited to joint the expeirment (August 19-20)
+
+---
+## Pilot Analysis: Attrition Rate
+
+.panelset.sideways[
+
+.panel[.panel-name[Results]
+
+.center[
+```{r out.width="100%"}
+knitr::include_graphics("attrition_rate.png")
+```
+]
+]
+
+.panel[.panel-name[Notes]
+
+We recruited 540 completes in the screening, from which 317 passed all the screening questions. 
+
+To invite participants, we block randomized on gender, education and age to select 74 out of 317. This probably give us a lower bound for the attrition rate.
+
+In addition, we started with email communication, and moved later to direct WhatsApp messages. The later is way more effective.  
+
+]
+]
+
+---
+## Pilot Analysis: Evaluating Compliance Checks
+
+.center[
+```{r out.width="100%"}
+knitr::include_graphics("att_cr.png")
+```
+]
+
+---
+## Pilot Analysis: Comparing Demographics
+
+.center[
+```{r out.width="100%"}
+knitr::include_graphics("att_dem.png")
+```
+]
+---
+## Open Questions
+
+#### Mechanisms for misinformation
+
+- Working with exposure (Have you seen this headline before?).  What else is important to be included in the survey?
+
+#### Headlines selection
+- Any advice on how to select the headlines? 
+
+    - .red[Should we take advantage of the compliance survey and  add some headline tasks while collecting screenshots for compliance?]
+
+#### Compliance
+ 
+#### Descriptive information 
+
+---
+class:inverse, middle, center
+
+## What else? 
+
+### Thanks!
+
