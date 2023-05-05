@@ -1,7 +1,7 @@
 ---
-title: " <span style = 'font-size: 80%;'> WhatsApp increases exposure to false rumors but has limited effects on beliefs and polarization: Evidence from a multimedia constrained deactivation experiment </span>"
+title: " <span style = 'font-size: 80%;'> The effects of WhatsApp on exposure to misinformation and political attitudes: Evidence from a multimedia-constrained deactivation experiment </span>"
 author: "Tiago Ventura, Rajeshwari Majumdar, Jonathan Nagler, and  Joshua A. Tucker <br> <br><span style = 'font-size: 80%;'>Center for Social Media and Politics,  NYU</span>"
-date: " <span style = 'font-size: 60%;'> <br> CSMaP Conference<br> 04/15/2023 </span>"
+date: " <span style = 'font-size: 60%;'> <br> UW SR-SCP Workshop<br> 05/05/2023 </span>"
 output:
   xaringan::moon_reader:
     css: ["xaringan-themer.css", "custom.css"]
@@ -17,7 +17,7 @@ output:
 ---
 layout: true
 
-<div class="my-footer"><span>Tiago Ventura (CSMaP) &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp CSMaP Conference</span></div> 
+<div class="my-footer"><span>Tiago Ventura (CSMaP) &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp UW SR-SCP Workshop</span></div> 
 
 ```{r setup, include=FALSE}
 options(htmltools.dir.version = FALSE)
@@ -26,7 +26,7 @@ xaringanthemer::style_mono_light(base_color ="#23395b",
                                   title_slide_text_color="#ffff", 
                                   title_slide_background_color = "#23395b", 
                                   background_color = "#fff", 
-                                  link_color =  "#23395b")
+                                  link_color =  "#DA291C")
 options(htmltools.dir.version = FALSE)
 knitr::opts_chunk$set(message=FALSE, warning = FALSE, error=TRUE, echo=FALSE, cache=TRUE)
 ```
@@ -42,12 +42,120 @@ xaringanExtra::use_panelset()
 
 ---
 class:middle
-## Motivation
 
+### From Liberation to Turmoil: The Misinformation Turn
+
+
+.center[
+```{r out.width="100%"}
+knitr::include_graphics("output/time.png")
+```
+
+[From Liberation to Turmoil, Tucker et. al., 2019](https://muse.jhu.edu/article/671987)
+]
+---
+class:middle, inverse
+
+## Three insights from the recent literature on social media and politics. 
+
+---
+class: middle 
+
+## People .red[aren’t] actually exposed to a lot of .red[misinformation] – but exposure is heavily concentrated. 
+---
+class:middle 
 
 ```{r out.width="100%"}
-knitr::include_graphics("./presentation/nyt.png")
+knitr::include_graphics("gringer.png")
 ```
+.center[[Grinberg et al., 2019](https://www.science.org/doi/pdf/10.1126/science.aau2706)]
+
+---
+class: middle 
+
+## The downstreamm effects of being exposed to misinformation on political atttitudes are .red[difficult to measure, often small in size, and context dependent]. 
+
+---
+
+class:middle 
+
+### .center[Exposure to IRA Russian Misinformation on Twitter  doesn’t lead to changes in attitudes]
+
+.center[
+
+```{r out.width="70%"}
+knitr::include_graphics("russian.png")
+```
+
+.center[[Eady et al., 2023](https://www.nature.com/articles/s41467-022-35576-9)]
+]
+
+
+---
+class:middle 
+
+### .center[Causal effects of social media are context-dependent]
+
+.pull-left[
+
+.middle[
+```{r out.width="100%"}
+knitr::include_graphics("alcott.png")
+```
+
+.center[Facebook Deactivation in the US [Alcott et al., 2020](https://www.aeaweb.org/articles?id=10.1257/aer.20190658)]
+]
+]
+
+.pull-right[
+
+.middle[
+```{r out.width="120%"}
+knitr::include_graphics("nejla.jpg")
+```
+
+.center[Facebook Deactivation in Bosnia and Herzegovina [Asimovic et. al, 2022](https://www.pnas.org/doi/10.1073/pnas.2022819118)]
+]
+]
+---
+class:middle
+
+## Most of the scholarly evidence come from a .red[advanced democracies] and from a .red[few platforms] (mostly Twitter, and to some extent Facebook)
+
+---
+class:middle
+
+### For years, WhatsApp has been the .red[main social media applicattion] in many Global South democracies.
+
+--
+
+- .red[66% of the Brazilian eligible voters] has a social media account, and .red[65% have an WhatsApp account] ([Datafolha 2018](http://media.folha.uol.com.br/datafolha/2018/10/27/44cc2204230d2fd45e18b039ee8c07a6.pdf)) – 150 million people in 2022. 
+
+--
+
+- Most used app for all purposes: .red[talk to family & friends, do business & pay bills, consume news, talk politics, among others] ([Reuters Institute, 2021](https://reutersinstitute.politics.ox.ac.uk/digital-news-report/2021)). 
+
+--
+
+- Used by .red[48% of population to read news], despite having no “news feed” ([Reuters Institute, 2021](https://reutersinstitute.politics.ox.ac.uk/digital-news-report/2021))
+
+--
+
+- And .red[WhatsApp is the main social media application] where users report to see more misinformation. 
+
+--
+
+---
+class:middle 
+
+.center[
+```{r out.width="100%"}
+knitr::include_graphics("nyt.png")
+```
+
+]
+
+--
 
 ---
 ### Research Goal
@@ -60,11 +168,21 @@ knitr::include_graphics("./presentation/nyt.png")
 .content-box-gray[Provide causal estimates for the effects of exposure to misinformation on WhatsApp on political outcomes.]
 
 ---
+### Deactivation Studies on Facebook
+
+```{r out.width="90%"}
+knitr::include_graphics("deactivation_studies.png")
+```
+.pull-left[.center[Facebook Deactivation in the US [Alcott et al., 2020](https://www.aeaweb.org/articles?id=10.1257/aer.20190658)]]
+
+.pull-right[.center[Facebook Deactivation in Bosnia and Herzegovina [Asimovic et. al, 2022](https://www.pnas.org/doi/10.1073/pnas.2022819118)]]
+---
 class: inverse, center, middle
 
-## WhatsApp Multimedia Deactivation Field Experiment during the three weeks leading up to the 2022 Presidential Election in Brazil.
+## WhatsApp Constrained Deactivation Field Experiment during the three weeks leading up to the 2022 Presidential Election in Brazil.
 
 ---
+
 class: middle
 
 `r icons::fontawesome("arrow-alt-circle-right")` **Our Design:** Cut the primary channels through which users are exposed to misinformation and polarizing content: videos, images and audios .red[(Machado et al., 2019; Resende et al., 2019; Garimella and Tyson, 2018; Garimella and Eckles, 2020; Batista Pereira et al., 2023).]
@@ -84,9 +202,15 @@ class: middle
 - **End:** three days after the voting day.
 
 ---
-class:center, middle, inverse
+class:center, middle
 
 ## Overview of the Experiment
+
+.center[
+```{r out.width = "100%"}
+knitr::include_graphics("output/research_design.png")
+```
+]
 
 ---
 
@@ -169,6 +293,21 @@ class:middle
   - How did you feel for the past three weeks? (Happy, Anxious, etc...).
 
 --
+
+---
+class:middle
+
+## Hypotheses
+
+H1: Deactivated users will report lower levels of previous exposure to FALSE rumors.
+
+H2a: Deactivated  will display a higher ability to accurately identify FALSE rumors.
+
+H2b Deactivated users will display lower levels of mainstream news knowledge.
+
+H3: Deactivated will display lower levels of outgroup political polarization.
+
+H4: Deactivated will display higher levels of the aggregated index of subjective well-being.
 
 ---
 

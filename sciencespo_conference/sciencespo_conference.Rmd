@@ -74,7 +74,7 @@ class:middle
 ---
 class:middle
 
-## For years, WhatsApp has been the main social media applicattion in many Global South democracies.
+## For years, WhatsApp has been the main social media applicattion in many Global South democracies. However, there is a dearth of research on causal effects of WhatsApp usage on politics
 
 ---
 class:middle

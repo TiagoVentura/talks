@@ -24,5 +24,4 @@ Repository to share source materials for presentations and talks.
 
 - [CSMaP, Job Talk](https://tiagoventura.github.io/CSMaP_talk/presentation_ut.html#1)
 
-- [Data Science Talk, McCourt School, Georgetown]()
 
