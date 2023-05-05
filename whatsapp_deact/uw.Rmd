@@ -40,8 +40,10 @@ xaringanExtra::use_panelset()
 #)
 ```
 
+
 ---
 class:middle
+
 
 ### From Liberation to Turmoil: The Misinformation Turn
 
@@ -56,12 +58,12 @@ knitr::include_graphics("output/time.png")
 ---
 class:middle, inverse
 
-## Three insights from the recent literature on social media and politics. 
+## Three insights from the recent literature on social media and misinformation. 
 
 ---
 class: middle 
 
-## People .red[aren’t] actually exposed to a lot of .red[misinformation] – but exposure is heavily concentrated. 
+## 1) People .red[aren’t] actually exposed to a lot of .red[misinformation] – but exposure is heavily concentrated. 
 ---
 class:middle 
 
@@ -73,7 +75,7 @@ knitr::include_graphics("gringer.png")
 ---
 class: middle 
 
-## The downstreamm effects of being exposed to misinformation on political atttitudes are .red[difficult to measure, often small in size, and context dependent]. 
+## 2) The downstream effects of exposure to misinformation on political atttitudes are .red[difficult to measure, often small in size, and context dependent]. 
 
 ---
 
@@ -120,30 +122,7 @@ knitr::include_graphics("nejla.jpg")
 ---
 class:middle
 
-## Most of the scholarly evidence come from a .red[advanced democracies] and from a .red[few platforms] (mostly Twitter, and to some extent Facebook)
-
----
-class:middle
-
-### For years, WhatsApp has been the .red[main social media applicattion] in many Global South democracies.
-
---
-
-- .red[66% of the Brazilian eligible voters] has a social media account, and .red[65% have an WhatsApp account] ([Datafolha 2018](http://media.folha.uol.com.br/datafolha/2018/10/27/44cc2204230d2fd45e18b039ee8c07a6.pdf)) – 150 million people in 2022. 
-
---
-
-- Most used app for all purposes: .red[talk to family & friends, do business & pay bills, consume news, talk politics, among others] ([Reuters Institute, 2021](https://reutersinstitute.politics.ox.ac.uk/digital-news-report/2021)). 
-
---
-
-- Used by .red[48% of population to read news], despite having no “news feed” ([Reuters Institute, 2021](https://reutersinstitute.politics.ox.ac.uk/digital-news-report/2021))
-
---
-
-- And .red[WhatsApp is the main social media application] where users report to see more misinformation. 
-
---
+## 3) Most of the scholarly evidence come from a .red[advanced democracies] and from a .red[few platforms] (mostly Twitter, and to some extent Facebook)
 
 ---
 class:middle 
@@ -158,14 +137,32 @@ knitr::include_graphics("nyt.png")
 --
 
 ---
-### Research Goal
+class:middle
+## Today's Presentation
 
-<br>
-<br>
-<br>
-<br>
+--
+.red[Research Problem:] What are the causal effect of WhatsApp usage on beliefs for misinformation and its downstream effects, particularly political polarization?
 
-.content-box-gray[Provide causal estimates for the effects of exposure to misinformation on WhatsApp on political outcomes.]
+--
+
+.red[Design:] Multimedia-Constrained Deactivation Experiment on WhatsApp:
+
+- Incentivized participants to spent three weeks without accessing any multimedia (images, videos and audio) on WhatsApp.
+
+
+--
+
+.red[Context:] Weeks before the 2022 Presidential Election in Brazil
+
+
+--
+.red[Results:] 
+
+- Substantive reduction in **exposure to popular misinformation rumors**.
+
+- Unable to detect small to moderate effects on **attitudes (belief accuracy and polarization)**
+
+--
 
 ---
 ### Deactivation Studies on Facebook
@@ -176,10 +173,6 @@ knitr::include_graphics("deactivation_studies.png")
 .pull-left[.center[Facebook Deactivation in the US [Alcott et al., 2020](https://www.aeaweb.org/articles?id=10.1257/aer.20190658)]]
 
 .pull-right[.center[Facebook Deactivation in Bosnia and Herzegovina [Asimovic et. al, 2022](https://www.pnas.org/doi/10.1073/pnas.2022819118)]]
----
-class: inverse, center, middle
-
-## WhatsApp Constrained Deactivation Field Experiment during the three weeks leading up to the 2022 Presidential Election in Brazil.
 
 ---
 
@@ -202,15 +195,30 @@ class: middle
 - **End:** three days after the voting day.
 
 ---
-class:center, middle
+class:center, inverse, middle
 
 ## Overview of the Experiment
 
-.center[
-```{r out.width = "100%"}
-knitr::include_graphics("output/research_design.png")
-```
-]
+---
+
+## Recruitment
+
+**Method:** Facebook Ads targeting adults Brazil
+
+**Started Recruitment:** September 8th
+
+**Number of respondents:** 1,947
+
+**Screening variables:** 
+
+  + Willingness to join: .red[1,8861 participants]
+  
+  + More 5min WhatsApp daily
+
+  + Only WhatsApp mobile
+  
+  + More than 2 min to complete recruitment + other quality controls
+
 
 ---
 
