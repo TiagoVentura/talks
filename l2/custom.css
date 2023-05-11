@@ -1,0 +1,218 @@
+:root {
+/*-- COLOR VARIABLES --*/
+--DarkBlue:           #003087;
+--Blue:               #005EB8;
+--BrightBlue:         #0072CE;
+
+--Black:              #231F20;
+--DarkGrey:           #425563;
+--MidGrey:            #768692;
+--PaleGrey:           #E8EDEE;
+--White:              #FFFFFF;
+
+--DarkGreen:          #006747;
+--Green:              #009639;
+--AquaGreen:          #00A499;
+
+--Purple:             #330072;
+--DarkPink:           #7C2855;
+--Pink:               #AE2573;
+--DarkRed:            #8A1538;
+--Red:                #DA291C;
+
+--my-blue:            #122140;
+--my-yellow:          #e5bf00;
+--my-gold:            #ae8f00;
+
+--my-coral:          #903030;
+--my-red:            #600018;
+--my-pink:           #c09090;
+}
+
+.footnote {
+  position: absolute;
+  bottom: 60px;
+  padding-right: 4em;
+  font-size: 0.8em;
+}
+
+/* Title slide */
+
+/* Add image and change bg color */
+.title-slide {
+  background-image: url(https://process.filestackapi.com/resize=width:600,height:315,fit:max/quality=value:90/lLNVw57qSNW1Zyynlp0K);
+  background-position: 90% 15%;
+  background-size: 150px;
+  background-color: #ffff;
+}
+
+/* H1 fonts */
+.title-slide h1 {
+  color: #23395b;
+  padding-top: 60px;
+  font-weight: normal;
+  font-size: 40px;
+  text-align: left;
+  text-shadow: none;
+  padding-bottom: 18px;
+  margin-bottom: 18px;
+}
+
+/* H2 fonts */
+.title-slide h2 {
+  color:#23395b;
+  font-size: 25px;
+  text-align: left;
+  text-shadow: none;
+  padding-top: 0px;
+  margin-top: 0px;
+}
+
+/* H3 fonts */
+.title-slide h3 {
+  font-size: 20px;
+  font-weight: normal;
+  color: #23395b;
+  text-align: left;
+  text-shadow: none;
+  padding: 0px;
+  margin: 0px;
+  line-height: 1;
+}
+
+div.my-footer {
+    background-color: #23395b;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    height: 30px;
+    width: 100%;
+}
+div.my-footer span {
+    font-size: 12pt;
+    color: #FFFFFF;
+    position: absolute;
+    left: 20px;
+    bottom: 5px;
+}
+.pull-left-narrow {
+  float: left;
+  width: 20%;
+  
+}
+
+.remark-slide-number {
+  position: absolute;
+  color: #FFFFFF; /* white */
+  opacity: 1; /* default: 0.5 */
+  bottom: 5px;
+}
+
+
+.red{
+color: #C93312;  
+}
+
+
+
+
+
+/*-- Custom classes for text emphasis --*/
+.blue       { color:  var(--Blue) }
+.green      { color:  var(--Green) }
+.pink       { color:  var(--Pink) }
+.warmyellow { color:  var(--WarmYellow) }
+.palegrey   { color:  var(--PaleGrey)}
+.midgrey   { color:  var(--MidGrey)}
+.my-blue    { color:  var(--my-blue) }
+.darkblue    { color:  var(--DarkBlue) }
+.my-yellow  { color:  var(--my-yellow) }
+.my-gold    { color:  var(--my-gold)}
+.my-red     { color:  var(--my-red) }
+.my-coral   { color:  var(--my-coral) }
+.my-pink    { color:  var(--my-pink) }
+.black    { color:  var(--Black) }
+.my-hot-pink { background-color: #ff69b4 }
+
+
+/*-- EXPERIMENTAL -----------------------------------------------------------*/
+
+/*-- 3 column layout --*/
+.left-col {
+  width: 29%;
+  text-align: left;
+  padding-left: 20px;
+  padding-right: 20px;
+  float: left;
+}
+
+.center-col {
+  width: 29%;
+  text-align: left;
+  padding-left: 20px;
+  padding-right: 20px;
+  float: left;
+}
+
+.right-col {
+  width: 29%;
+  text-align: left;
+  padding-left: 20px;
+  padding-right: 20px;
+  float: left;
+}
+
+/* five-column layout */
+
+/*.flex {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.column {
+  float: left;
+  width: 25%;
+  text-align: center;
+}*/
+
+/*.columns { display: flex; }*/
+
+.pull-left {
+  padding-top: 0px;
+}
+
+.pull-left-narrow {
+  float: left;
+  width: 20%;
+}
+
+.pull-right-wide {
+  float: right;
+  width: 75%;
+}
+/* Clear floats after the columns */
+.pull-right-wide + * { clear: both; }
+
+/*-- Text muting/fading --*/
+.fade { opacity: 0.5; }
+
+
+.content-box { 
+    box-sizing: content-box;
+    background-color: #e2e2e2;
+}
+
+.content-box-gray {
+  background-color: #e2e2e2;
+  position: absolute;
+  left: 50px;
+  width: calc(100% - 100px);
+  padding: 10px;
+  text-align: center;
+  font-size: 1.50rem;
+  border-radius: 25px
+
+
+}
+  

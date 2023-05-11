@@ -4,6 +4,8 @@ Repository to share source materials for presentations and talks.
 
 ## 2023
 
+- [Siegel Foundation Fellowship Meeting](https://tiagoventura.github.io/talks/l2/l2_siegel)
+
 - [University of Washington, SR-SCP](https://tiagoventura.github.io/talks/whatsapp_deact/uw)
 
 - [CSMaP Annual Conference](https://tiagoventura.github.io/talks/whatsapp_deact/csmap_conference)
