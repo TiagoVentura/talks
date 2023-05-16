@@ -1,5 +1,5 @@
 ---
-title: " <span style = 'font-size: 80%;'> The Effects of Partisan Geographical Segregation on Online Behavior on Twitter. </span>"
+title: " <span style = 'font-size: 80%;'> The Effects of Partisan Geographical Segregation on Online Behavior on Twitter</span>"
 author: "Megan Brown, Tiago Ventura, Jonathan Nagler, and  Joshua A. Tucker <br> <br><span style = 'font-size: 80%;'>Center for Social Media and Politics,  NYU</span>"
 date: " <span style = 'font-size: 60%;'> <br> Siegel Fellows Workshop <br> 05/06/2023 </span>"
 output:
@@ -46,13 +46,23 @@ class:middle
 ## Motivation
 
 --
-**Heightened levels of olarization have become a striking feature of contemporary politics, affecting, for example: **. 
+**Heightened levels of polarization are a striking feature of contemporary politics. Although the causes are a contested topic, its effects are largely documented,  affecting, for example: **. 
 
 --
   - .midgrey[Citizens’ support for democratic norms (.red[Graham and Svolik, 2020])]
+  
+--
+
   - .midgrey[objective perceptions about the economy (.red[Enns et al., 2012])]
+--
+
   - .midgrey[levels of hostility, anger, and adversarial animus towards outgroup .red[(Mason, 2018; Webster, 2020)]] 
+  
+--
+
   - .midgrey[Health behavior and attitudes (.red[Baxter-King et al., 2022; Druckman et al., 2021])]
+
+--
 
 ---
 class:middle
@@ -63,8 +73,15 @@ class:middle
 
 --
   - .midgrey[dating decisions and attractiveness (.red[Huber and Malhotra, 2017; Nicholson et al., 2016])]
+  
+--
+
   - .midgrey[interpersonal economic relations (.red[McConnell et al., 2018])]
+  
+--
+
   - .midgrey[labor market transactions (.red[Gift and Gift, 2015])]
+
 --
 
 
@@ -111,16 +128,26 @@ class: middle
 
 ## Puzzle
 
+--
+
 `r icons::fontawesome("arrow-alt-circle-right")` **The existence of online echo-chambers have been largely overstate.** 
 
+--
+
 `r icons::fontawesome("arrow-alt-circle-right")` **Yet the consolidation of social media  and the internet has been shown to indeed exacerbate political polarization**
+
+--
 
 - .midgrey[Allcott et al., 2020: Deactivation Experiment]
 - .midgrey[Bail et al., 2018: Bot Experiment]
 - .midgrey[Settle, 2018: Increasing capacity to identify out partisans]
 - .midgrey[Lelkes et al., 2017: Effects of early adoption on internet]
 
+--
+
 #.center[ `r icons::fontawesome("question")`]
+
+--
 
 ---
 class:middle
@@ -137,14 +164,14 @@ class:middle
 
 **Online Environments**:
 
-- Rather than isolating users in homogenous online echo chambers, social media actually exposes users content that they would hardly not be exposed outside of social media. 
+- Rather than isolating users in homogeneous online echo chambers, social media actually exposes users content that they would hardly be exposed outside of social media. 
 
 - *it is not isolation from opposing views that drives polarization but precisely the fact that digital media bring us to interact outside of local bubbles (.red[Tornberg 2022, pp2])*
 
 ---
 class:middle
 
-### Social Media studies has focused so much on levels of online partisan sorting, but in the process, we lost sight of our local bubbles and how they interact with how users behave online. 
+### Social media studies have focused so much on levels of online partisan sorting, but in the process, we lost sight of our local bubbles and how they interact with how users behave online. 
 
 ---
 ## Research Questions
@@ -156,7 +183,7 @@ class:middle
 .content-box-gray[1) What is the relationship between offline partisan sorting and online partisan sorting?]
 
 ---
-### Research Questions
+## Research Questions
 <br>
 <br>
 <br>
@@ -166,27 +193,37 @@ class:middle
 .content-box-gray[2) How does offline political segregation influence online behavior?]
 
 ---
-
+class:middle
 ### Our approach
 
 
-We link a novel dataset of the offline networks and online networks of ~1m Twitter users. 
+We link a novel dataset of the offline networks and online networks of ~1m Twitter users.  We measure or have plans to measure: 
 
-We measure/plan to: 
+--
 
 - Levels of offline partisan segregation for all users
 
+--
+
 - Levels of online partisan segregation on online networks from Twitter
+
+--
 
 - Provide meaningful comparisons across different geographical units
 
+--
+
 - Estimate the correlation between online and offline segregations
 
-- .red[For the future:] estimate the effects of online segregation on online behavior: 
+--
+
+- .red[For the future:] Estimate the effects of online segregation on online behavior: 
 
   - outgroup animosity 
   - toxicity
   - sharing of misinformaiton
+
+--
 
 ---
 class:middle, inverse, center
@@ -305,6 +342,18 @@ knitr::include_graphics("twideo.png")
 ]
 
 ---
+## Measuring Partisan Segregation
+
+.center[
+```{r out.width="75%"}
+knitr::include_graphics("segmeas.png")
+```
+
+.footnote[[Source: Brown and Enos, 2021](https://www.nature.com/articles/s41562-021-01066-z)]
+
+]
+
+---
 class:middle 
 ## Offline Partisan Segregation
 
@@ -348,6 +397,7 @@ $\text{Online Exposure} =\frac{\sum_{k=1}^{n}\log(a+1)\mathbb(p_k=q_i)}{\sum_{k=
 - $p_k$ is the partisanship of the neighbor
 - $q_i$ is the opposite party of the individual whose exposure is being measured. 
 ]
+
 
 ---
 class:inverse, middle, center
