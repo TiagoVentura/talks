@@ -1,7 +1,7 @@
 ---
-title: "<span style = 'font-size: 80%;'> McCourt School: Foundations </span>"
+title: "<span style = 'font-size: 80%;'> McCourt School - Foundations </span>"
 subtitle: "<span style = 'font-size: 80%;'> Training Graduate Students for a Career in Computational Social Science </span>"
-author: "Prof. Tiago Ventura * McCourt School * Georgetown University"
+author: "Prof. Tiago Ventura | McCourt School | Georgetown University"
 date: "08/10/2023"
 format:
   revealjs: 
@@ -26,7 +26,7 @@ format:
 
 - Introduction: Who am I and how I got here.
 
-- Training Graduate Students for a Career in Computational Social Science 
+- Training Graduate Students for a Career in Computational Social Science [(article here)](https://osf.io/preprints/socarxiv/kgjn2/)
 
 - Lots of Discussion
 
@@ -59,29 +59,28 @@ knitr::include_graphics("me.jpg")
 :::
 :::
 
-# Summer Institute in Computation Social Sciences
+## Summer Institute in Computation Social Sciences
 
 ::: columns
 
 ::: {.column width="50%"}
-![](sicss2.jpeg){fig-align="center" width=70%}
+![](sicss2.jpeg){fig-align="center" width=60%}
 :::
 
 ::: {.column width="50%"}
-![](sicss.jpeg)
+![](sicss.jpeg){width=80%}
 :::
 :::
 
 <br>
 
-::: aside
-[Read more about [SICSS](https://sicss.io/)]
+:::aside
+Read more about [SICSS](https://sicss.io/)
 :::
 
-## {}
+## {#slide3-id data-menu-title="Article"}
 
 ![](css.png){fig-align="center"}
-
 
 ## Computational Social Science
 
@@ -104,6 +103,7 @@ knitr::include_graphics("me.jpg")
   - Step 2: Build a CSS Portfolio
 
   - Step 3: Engage in the CSS Networks
+
 
 
 ## Step 1: Learning Data Science Skills
