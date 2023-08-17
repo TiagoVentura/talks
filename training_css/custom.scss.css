@@ -1,0 +1,24 @@
+/*-- scss:defaults --*/
+
+$presentation-font-size-root: 20px
+
+/*-- scss:rules --*/
+
+
+.reveal .slides > section > section { 
+  text-align:left; 
+}
+
+.blue {
+  color: #041E42;
+  font-weight: bold;
+}
+
+.red {
+  color: #D50032;
+  font-weight: bold;
+}
+
+.center h1 {
+  text-align: center;
+}

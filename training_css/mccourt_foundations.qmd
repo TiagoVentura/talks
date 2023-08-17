@@ -1,0 +1,150 @@
+---
+title: "<span style = 'font-size: 80%;'> McCourt School: Foundations </span>"
+subtitle: "<span style = 'font-size: 80%;'> Training Graduate Students for a Career in Computational Social Science </span>"
+author: "Prof. Tiago Ventura * McCourt School * Georgetown University"
+date: "08/10/2023"
+format:
+  revealjs: 
+    transition: slide
+    background-transition: fade
+    slide-tone: true
+    width: 1600
+    height: 900
+    slide-number: true
+    center: true
+    incremental: true
+    chalkboard: 
+      buttons: false
+    preview-links: auto
+    #logo: images/quarto.png
+    #css: custom.scss
+    footer: McCourt Foundations
+    theme: [simple, custom.scss]
+---
+
+## Plans for today 
+
+- Introduction: Who am I and how I got here.
+
+- Training Graduate Students for a Career in Computational Social Science 
+
+- Lots of Discussion
+
+## About me
+
+
+::: columns
+::: {.column width="50%"}
+
+
+```{r  echo=FALSE, out.width = "80%", fig.align="left"}
+knitr::include_graphics("me.jpg") 
+```
+:::
+
+
+::: {.column width="50%"}
+
+::: incremental
+
+- **Professor Tiago Ventura (he/him):**
+
+    -   Assistant Professor at McCourt School.
+    -   Before that: Postdoc at [CSMAP-NYU](https://csmapnyu.org/) and a Researcher at Twitter.
+    -   PhD from the University of Maryland, College Park
+    -   PhD from State University of Rio de Janeiro, Brazil
+
+
+:::
+:::
+:::
+
+# Summer Institute in Computation Social Sciences
+
+::: columns
+
+::: {.column width="50%"}
+![](sicss2.jpeg){fig-align="center" width=70%}
+:::
+
+::: {.column width="50%"}
+![](sicss.jpeg)
+:::
+:::
+
+<br>
+
+::: aside
+[Read more about [SICSS](https://sicss.io/)]
+:::
+
+## {}
+
+![](css.png){fig-align="center"}
+
+
+## Computational Social Science
+
+
+> _We define [computational social science]{.red} as a field that engages the social sciences and data science by applying **novel digital and digitized data** and **computational methods** to advance social scientific understanding of human behavior_
+
+## CSS: Current stage of the field
+
+  - Increasing number social scientists assuming positions as computational social scientists in academic and non-academic organizations. 
+
+  - Most  graduate programs do not yet offer systematic training in CSS
+
+  - Or advising for students interested in CSS
+
+## Formalizing the Hidden Curriculum
+
+
+  - Step 1: Learning Data Science Skills
+
+  - Step 2: Build a CSS Portfolio
+
+  - Step 3: Engage in the CSS Networks
+
+
+## Step 1: Learning Data Science Skills
+
+::: incremental
+
+- Programming fluency in R and/or Python.
+
+- Experience with data management, particularly with managing large, messy, and unstructured data.
+
+- End-to-end research pipeline + Domain expertise.
+
+- Build strong foundations in statistical inference, causal inference and machine learning. 
+
+:::
+
+## Step 2: Building a Computational Social Science Portfolio
+
+::: incremental
+
+- Engagement with social and applied aspects of a data science.
+
+- Learn and use Git/Github for ALL YOUR PROJECTS. 
+
+- Make your data science project available on Github and write blog posts about them
+
+:::
+
+
+
+## Step 3: Connecting with Computational Social Scientists
+
+::: incremental
+
+- Attend CSS conferences and focus on horizontal networking
+
+- Internships are hugely important (All tech companies offer + non-profits, such as Civic Digital Fellowship and Data Science for Social Good Fellowship) 
+
+- Online networks: linkedin + Twitter + Github
+
+:::
+
+# Q&A {background-color="#447099"}
+
