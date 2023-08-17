@@ -85,7 +85,7 @@ Read more about [SICSS](https://sicss.io/)
 ## Computational Social Science
 
 
-> _We define [computational social science]{.red} as a field that engages the social sciences and data science by applying **novel digital and digitized data** and **computational methods** to advance social scientific understanding of human behavior_
+> We define [computational social science]{.red} as a field that engages the social sciences and data science by applying **novel digital and digitized data** and **computational methods** to advance social scientific understanding of human behavior
 
 ## CSS: Current stage of the field
 
