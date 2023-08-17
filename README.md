@@ -4,6 +4,8 @@ Repository to share source materials for presentations and talks.
 
 ## 2023
 
+- [McCourt School Foundations: raining Graduate Students for a Career in Computational Social Science](https://tiagoventura.github.io/talks/training_css/mccourt_foundations)
+
 - [Computational and Experimental Social Science Lab, Federal University of Pernambuco](https://tiagoventura.github.io/talks/whatsapp_deact/ufpe)
 
 
