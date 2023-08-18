@@ -2,12 +2,12 @@
 title: "<span style = 'font-size: 80%;'> McCourt School - Foundations </span>"
 subtitle: "<span style = 'font-size: 80%;'> Training Graduate Students for a Career in Computational Social Science </span>"
 author: "Prof. Tiago Ventura | McCourt School | Georgetown University"
-date: "08/10/2023"
+date: "08/18/2023"
 format:
   revealjs: 
     transition: slide
     background-transition: fade
-    slide-tone: true
+    slide-tone: false
     width: 1600
     height: 900
     slide-number: true
@@ -31,7 +31,6 @@ format:
 - Lots of Discussion
 
 ## About me
-
 
 ::: columns
 ::: {.column width="50%"}
