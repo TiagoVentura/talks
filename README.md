@@ -4,10 +4,11 @@ Repository to share source materials for presentations and talks.
 
 ## 2023
 
-- [McCourt School Foundations: raining Graduate Students for a Career in Computational Social Science](https://tiagoventura.github.io/talks/training_css/mccourt_foundations)
+- [APSA 2023: WhatsApp Deactivation](https://tiagoventura.github.io/talks/whatsapp_deact/apsa_2023)
+
+- [McCourt School Foundations: Training Graduate Students for a Career in Computational Social Science](https://tiagoventura.github.io/talks/training_css/mccourt_foundations)
 
 - [Computational and Experimental Social Science Lab, Federal University of Pernambuco](https://tiagoventura.github.io/talks/whatsapp_deact/ufpe)
-
 
 - [Siegel Foundation Fellowship Meeting](https://tiagoventura.github.io/talks/l2/l2_siegel)
 
