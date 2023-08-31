@@ -42,7 +42,6 @@ xaringanExtra::use_panelset()
 
 ---
 class:middle
-## Motivation
 
 
 ```{r out.width="100%"}
@@ -57,26 +56,15 @@ knitr::include_graphics("nyt.png")
 <br>
 <br>
 
-.content-box-gray[Provide causal estimates for the effects of exposure to misinformation on WhatsApp on political outcomes.]
+.content-box-gray[Provide causal estimates for the effects of WhatsApp  on exposure, beliefs for misinformation and downstream political attitudes]
 
----
-class: inverse, center, middle
-
-## WhatsApp Multimedia Deactivation Field Experiment during the three weeks leading up to the 2022 Presidential Election in Brazil.
-
-
----
-### Deactivation Studies on Facebook
-
-```{r out.width="90%"}
-knitr::include_graphics("deactivation_studies.png")
-```
-.pull-left[.center[Facebook Deactivation in the US [Alcott et al., 2020](https://www.aeaweb.org/articles?id=10.1257/aer.20190658)]]
-
-.pull-right[.center[Facebook Deactivation in Bosnia and Herzegovina [Asimovic et. al, 2022](https://www.pnas.org/doi/10.1073/pnas.2022819118)]]
 
 ---
 class: middle
+
+`r icons::fontawesome("arrow-alt-circle-right")` **Previous Deactivation studies:** full deactivation on Facebook, and mixed-results on effects on beliefs for misinformation and polarization  .red[(Asimovic et al., 2021; Allcott et al., 2020)]
+
+--
 
 `r icons::fontawesome("arrow-alt-circle-right")` **Our Design:** Cut the primary channels through which users are exposed to misinformation and polarizing content: videos, images and audios .red[(Machado et al., 2019; Resende et al., 2019; Garimella and Tyson, 2018; Garimella and Eckles, 2020; Batista Pereira et al., 2023).]
 
@@ -116,7 +104,7 @@ class:center, middle, inverse
 
 **Invited**: 1,135 respondents 
 
-**Completed**: 773 respondents
+**Enrolled**: 773 respondents
 ]
 
 
@@ -246,16 +234,6 @@ knitr::include_graphics("./output/belief_accuracy_h2.png")
 ```
 ]
 
----
-
-### Belief Accuracy Conditional on WhatsApp usage for Politics
-
-.center[
-```{r  out.width="90%"}
-knitr::include_graphics("./output/sif_het_use_whatsapp_fac.png")
-```
-]
-
 
 ---
 ### Effects on Polarization & Subjective Well-Being (H3 & H4)
@@ -302,7 +280,7 @@ class:middle
 
 --
 
-- Scope conditions: focus on direct effects of WhatsApp. 
+- Scope conditions: focus on direct effects of exposure to misinformation on WhatsApp. 
 
 --
 
@@ -310,7 +288,7 @@ class:middle
 
 --
 
-- Small effect size vs power
+- Minimal effects vs power analysis
 
 --
 
