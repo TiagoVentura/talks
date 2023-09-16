@@ -40,7 +40,6 @@
 
 /* Add image and change bg color */
 .title-slide {
-  background-image: url(https://process.filestackapi.com/resize=width:600,height:315,fit:max/quality=value:90/lLNVw57qSNW1Zyynlp0K);
   background-position: 90% 15%;
   background-size: 150px;
   background-color: #ffff;
