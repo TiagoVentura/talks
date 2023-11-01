@@ -90,27 +90,8 @@ class: center, middle
 
 ### .center[.red[Polarization]] 
 
----
-
-### Does Social Media Cause Polarization?
-
-#### Mostly yes.
-
-- Deactivation Experiment .red[(Allcott et. al., 2020)]
-- Bot Experiment .red[(Bail et. al., 2018)]
-- Increasing capacity to identify out partisans .red[(Settle, 2018)]
-- Early adoption on internet affects polarization .red[(Lelkes et. al., 2017)]
-
-#### No.
-
--  Effects vary conditional on offline networks .red[(Asimovic et. al., 2021)]
-
-#### And some nulls.
-
-- Meta Election Experiments .red[(Nyhan et. al., 2023: Meta Election Experiments)]
-- Reducing misinformation exposure during elections .red[(Nyhan et. al., 2023: Meta Election Experiments)]
-
---
+<!--
+-->
 ---
 class: middle
 
@@ -122,7 +103,7 @@ class: middle
 
 - Users’ digital media diets are balanced, and strongly influenced by big reputable outlets .red[(Guess 2021; Cardenal et. al., 2019)]
 
-- Substantial amount of overlap in the ideological distributions of accounts followed by Twitter users .red[Eady et. al. 2019]
+- Substantial amount of overlap in the ideological distributions of accounts followed by Twitter users (.red[Eady et. al. 2019])
 
 ---
 class: middle, animated, slideInLeft
@@ -168,7 +149,7 @@ class: middle, animated, slideInLeft
 
 --
 
-`r icons::fontawesome("arrow-alt-circle-right")` **To solve the causal chain**, we need to measures online segregation  .red[relative] to other channels through which voters **consume information or interact** with ingroup and outgroup voters
+`r icons::fontawesome("arrow-alt-circle-right")` **To solve the causal chain**, we need to measure online segregation  .red[relative] to other channels through which voters **consume information or interact** with ingroup and outgroup voters
 
 --
 
@@ -177,29 +158,35 @@ class: middle, animated, slideInLeft
   - Self-reported online vs offline networks .red[(Gentzkow and Shapiro 2011)]
   - TV news Consumption .red[(Muise et. al. 2022)]
   - **No studies looking at partisan geographical segregation and online behavior.**
---
-
----
-
-## Our contributtion
 
 --
+
 `r icons::fontawesome("arrow-alt-circle-right")` We provide meaningful comparisons for the same social media users between levels of **offline and online segregation**
 
 --
 
-`r icons::fontawesome("arrow-alt-circle-right")`  **Why it matters?**
+---
 
-  - American voters are highly sorted offline with respect to partisanship .red[(Brown and Enos, 2021)]
+## Why it matters?
 
-  - Partisan geographical segregation affects mass and elite polarization .red[(Bonica, 2014)], willigness to cooperated  across        groups .red[(Enos and Gidron, 2016)],  trust in government and anti-system attitudes .red[(Cramer, 2016)], and health               behavior .red[(Baxter-King et al., 2022)]. 
-  - **No studies looking at partisan geographical segregation and online behavior.**
+--
 
+- American voters are highly sorted offline with respect to partisanship .red[(Brown and Enos, 2021)]
+
+--
+
+- Partisan geographical segregation affects mass and elite polarization .red[(Bonica, 2014)], willigness to cooperated  across        groups .red[(Enos and Gidron, 2016)],  trust in government and anti-system attitudes .red[(Cramer, 2016)], and health               behavior .red[(Baxter-King et al., 2022)]. 
+
+--
+
+- **No scholarly work focusing on the effects of partisan geographical segregation and online behavior.**
+
+--
 
 --
 
 ---
-## Research Question 1 (Here)
+## Research Question 1 (Today)
 
 <br>
 <br>
@@ -309,7 +296,7 @@ knitr::include_graphics("twitter.png")
 ]
 
 ---
-## Measuring Ideology using Online Data
+## Measuring Partisan Identity
 
 .pull-left[
 
@@ -387,7 +374,7 @@ $\frac{\sum_{k=1}^{n}\log(a+1)\mathbb(p_k=q_i)}{\sum_{k=1}^{n}\log(a+1)}$
 
 ---
 
-## Measurement Assumption
+## Measurement Assumptions
 
 - We are interested in the probability of the voter **i**  being exposed to an outgroup **j** online and offline. We assume this probability increases with the number of outgroup neighbors and users on user **i** networks.
   
@@ -435,7 +422,7 @@ knitr::include_graphics("tabdemo.png")
 
 .center[
 ```{r out.width="100%"}
-knitr::include_graphics("figs/radians_distr_exposure.png")
+knitr::include_graphics("figs/radians_dens_exposure.png")
 ```
 ]
 
@@ -468,16 +455,16 @@ knitr::include_graphics("figs/radians_only_by_party_online_offline.png")
 ## Modeling Online Echo Chambers
 
 .center[
-```{r out.width="650%"}
+```{r out.width="60%"}
 knitr::include_graphics("tabmodels_.png")
 ```
 ]
 
 
 ---
-class:middle, center
+class:middle
 
-## Robustness Check
+## Robustness Check : Yougov Survey
 
 .pull-left[.center[
 ```{r out.width="100%"}
@@ -511,12 +498,21 @@ class:middle
 
 --
 
-- Estimate the effects of offline on online behavior: 
-  - .red[what would you be interested in seeing here?]
+- Correlation between offline on online behavior: 
+  - .red[What would you be interested in seeing here?]
 
---
+---
+class:middle
 
-- More Methodological articles
+### Next Steps
+
+- Focus on the effects of partisan segregation on online behavior
+
+  - Toxicity
+  - Outgroup Hostility
+  - Sharing of low-quality content
+
+- More methodological articles
 
   - Comparing different strategies to estimate ideology with online data
   - Use LLMs as an imputation technique and compare to traditional models. 
