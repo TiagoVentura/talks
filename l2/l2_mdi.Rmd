@@ -1,0 +1,365 @@
+---
+title: " <span style = 'font-size: 70%;'> Beyond Online Echo Chambers: Measuring Levels of Online and Offline Partisan Segregation with a panel of Twitter users </span>"
+author: " Tiago Ventura <sup>1</sup> , Megan Brown<sup>2,3</sup>,Jonathan Nagler<sup>3</sup>, and  Joshua A. Tucker<sup>3</sup> <br> <br><span style = 'font-size: 70%;'> <sup>1</sup> Georgetown University, <sup>2</sup> University of Michigan,  <sup>3</sup> Center for Social Media and Politics,  NYU</span>"
+date: " <span style = 'font-size: 80%;'> <br> MDI Tea Time <br> 11/03/2023 </span>"
+output:
+  xaringan::moon_reader:
+    css: 
+      - xaringan-themer.css
+      - custom.css 
+      - "https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css"
+    lib_dir: libs
+    self_contained: false
+    nature:
+      #ratio: 16:9
+      #ratio: 191:100
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+      slideNumberFormat: "Slide %current% of %total%" # Slide 12 of 42
+---
+layout: true
+
+<div class="my-footer"><span>Tiago Ventura (Georgetown University) &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp MDI Tea Time, 2023</span></div> 
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+knitr::opts_chunk$set(messagwese=FALSE, warning = FALSE)
+xaringanthemer::style_mono_light(base_color ="#23395b", 
+                                  title_slide_text_color="#ffff", 
+                                  title_slide_background_color = "#23395b", 
+                                  background_color = "#fff", 
+                                  link_color =  "#DA291C")
+options(htmltools.dir.version = FALSE)
+knitr::opts_chunk$set(message=FALSE, warning = FALSE, error=TRUE, echo=FALSE, cache=TRUE)
+```
+
+```{r style-share-again, echo=FALSE}
+xaringanExtra::use_tile_view()
+xaringanExtra::use_panelset()
+
+#xaringanExtra::style_share_again(
+#  share_buttons = c("twitter", "linkedin", "pocket")
+#)
+library(icons)
+```
+
+---
+
+class:middle 
+
+### .center[.blue[Social media]]
+
+### .center[`r icons::fontawesome("arrow-alt-circle-down")`]
+
+### .center[.blue[Echo Chambers]] 
+
+### .center[`r icons::fontawesome("arrow-alt-circle-down")`]
+
+### .center[.blue[Reduce cross-cutting exposure]]
+
+### .center[`r icons::fontawesome("arrow-alt-circle-down")`]
+
+### .center[.blue[Polarization]]
+
+
+
+---
+class: center, middle
+
+### .center[.red[Social media]]
+
+### .center[.red[`r  icons::icon_style(icons::fontawesome("arrow-alt-circle-down"))`] &nbsp;&nbsp;  `r icons::fontawesome("question")`]
+
+### .center[.red[Echo Chambers] &nbsp;&nbsp;&nbsp; `r icons::fontawesome("question")`]
+
+### .center[.red[`r  icons::icon_style(icons::fontawesome("arrow-alt-circle-down"))`  &nbsp;&nbsp; `r icons::fontawesome("question")`]]
+
+### .center[.red[Reduce cross-cutting exposure]  &nbsp;&nbsp; `r icons::fontawesome("question")`]
+
+### .center[.red[`r  icons::icon_style(icons::fontawesome("arrow-alt-circle-down"))`]  &nbsp;&nbsp; `r icons::fontawesome("question")`]
+
+### .center[.red[Polarization]] 
+
+---
+
+### Most of the literature: 
+
+#### .center[.palegrey[Social media]]
+
+#### .center[.palegrey[`r  icons::icon_style(icons::fontawesome("arrow-alt-circle-down"), fill="#E8EDEE")`]]
+
+### .center[.red[Echo Chambers]] 
+
+#### .center[.palegrey[`r  icons::icon_style(icons::fontawesome("arrow-alt-circle-down"), fill="#E8EDEE")`]]
+
+#### .center[.palegrey[Reduce cross-cutting exposure]]
+
+#### .center[.red[`r  icons::icon_style(icons::fontawesome("arrow-alt-circle-down"), fill="#E8EDEE")`]]
+
+#### .center[.palegrey[Polarization]] 
+
+
+---
+class: middle
+
+### Are social media echo-chambers real? 
+
+- Online Media Consumption  is similar to offline consumption .red[(Gentzkow and Shapiro, 2011; Wojcieszak  and  Mutz, 2009; Bisbee and Larsson, 2017)]
+
+- Users' friendship networks are heterogeneous outside of politics .red[(Bakshy et. al. 2012; Barbéra  e.t  al.,  015)]
+
+- Users’ digital media diets are balanced, and strongly influenced by big reputable outlets .red[(Guess 2021; Cardenal et. al., 2019)]
+
+- Bubbles emerge from motivated users who share more and faster more ideological content (.red[Aruguete et. al. 2022])
+
+---
+class: middle, animated, slideInLeft
+
+### Our focus 
+
+### .center[.blue[Social media]]
+
+## .center[.palegrey[`r  icons::icon_style(icons::fontawesome("arrow-alt-circle-down"), fill="#DA291C")`]]
+
+### .center[.blue[Echo Chambers]] 
+
+#### .center[.palegrey[`r  icons::icon_style(icons::fontawesome("arrow-alt-circle-down"), fill="#E8EDEE")`]]
+
+#### .center[.palegrey[Reduce cross-cutting exposure]]
+
+#### .center[.palegrey[`r  icons::icon_style(icons::fontawesome("arrow-alt-circle-down"), fill="#E8EDEE")`]]
+
+#### .center[.palegrey[Polarization]] 
+
+---
+
+## Our contributtion
+
+--
+
+`r icons::fontawesome("arrow-alt-circle-right")` **To solve the causal chain**, we need to measure online segregation  .red[relative] to other channels through which voters **consume information or interact** with ingroup and outgroup voters
+
+--
+
+`r icons::fontawesome("arrow-alt-circle-right")` **Previous related studies:**
+
+  - Self-reported online vs offline networks .red[(Gentzkow and Shapiro 2011)]
+  - TV news Consumption .red[(Muise et. al. 2022)]
+  - **No studies looking at partisan geographical segregation and online behavior.**
+
+--
+
+`r icons::fontawesome("arrow-alt-circle-right")` We provide meaningful comparisons for the same social media users between levels of **offline and online segregation**
+
+--
+
+---
+## Data Infrastructure
+
+.center[
+```{r out.width="100%"}
+knitr::include_graphics("datainfra.png")
+```
+]
+
+---
+## Simple Matching Procedure
+
+**Step 1: Parse Voter File Data**
+
+- For every voter in each US City, we collect unique: 
+  - First name
+  - Last name
+  
+
+**Step 2: Find Candidates on Twitter**
+
+- For every month on API Decahose data:
+  - Find matches with the three parsed data 
+  - Keep all matches
+  
+
+**Step 3: Discard Repeated Matches**
+
+- Multiple Jonh Does living in New York
+
+
+**Step 4: Keep unique matches**
+
+
+
+---
+## Offline Information: Voter Files
+
+.pull-left-narrow[
+
+.center[
+```{r out.width="100%"}
+knitr::include_graphics("voterfile.png")
+```
+]
+
+]
+
+.pull-right-wide[
+
+**Data Collection for every matched voters:**
+
+- Voter file demographics (gender, race, partisanship, religion)
+
+- Residential location (9 digits lat and long)
+
+- Closest 1.000 neighboors + their partisanship.
+
+]
+---
+## Online Information: Twitter Data
+
+.pull-left-narrow[
+<br>
+.center[
+```{r out.width="100%"}
+knitr::include_graphics("twitter.png")
+```
+]
+
+]
+
+.pull-right-wide[
+
+**Data Collection for every matched voters:**
+
+- Collect their full network (people they follow and follow them) ~ 57M
+
+- Collect their most recent timelines (3200 tweets) + 900k * 3,2k
+
+- Parse their timelines.
+]
+
+---
+## Measuring Partisan Identity
+
+.pull-left[
+
+**From voter file:**
+
+- Precise measure for every matched users
+
+**What about their friends:**
+
+- Ideology estimation method employed by .red[Barbera, 2015]
+- Homophily assumption: Following relationships between users and political elites to estimate ideology.
+
+]
+
+.pull-right[
+.center[
+```{r out.width="100%"}
+knitr::include_graphics("twideo.png")
+```
+]
+
+]
+
+---
+## Measuring Partisan Segregation: Offline
+
+
+.pull-left[
+<br>
+<br>
+<br>
+.center[
+$\text{Offline Outgroup Proximity}$ 
+
+$\frac{\sum_{k=1}^{1000}\frac{1}{d+1}\mathbb(p_k=q_i)}{\sum_{k=1}^{1000}\frac{1}{d +1}}$
+]
+]
+
+.pull-right[
+Where:
+
+- $i$ is a matched voters
+- $k$ is a given neighbor
+- $d$ is the distance in meters between the neighbor and the individual 
+- $p_k$ is the partisanship of the neighbor
+- $q_i$ is the opposite party of the individual whose exposure is being measured. 
+]
+
+---
+class:middle 
+## Online Partisan Segregation
+
+.pull-left[
+<br>
+<br>
+.center[
+
+$\text{Online Outgroup Proximity}$ 
+
+$\frac{\sum_{k=1}^{n}\log(a+1)\mathbb(p_k=q_i)}{\sum_{k=1}^{n}\log(a+1)}$
+
+]
+]
+
+.pull-right[
+
+**Where:**
+
+- $i$ is a matched voter
+- $k$ is a given neighbor
+- $a$ is the number of interactions between the friend and a user $i$ 
+- $p_k$ is the partisanship of the neighbor
+- $q_i$ is the opposite party of the individual whose exposure is being measured. 
+]
+
+---
+## Research Questions plan to answer
+
+-  What is the relationship between offline partisan sorting and online partisan sorting?
+
+-   How does offline political segregation influence online behavior?
+
+   + sharing of misinformation
+   + outgroup hate
+   + polarizing content
+
+---
+## Online vs Offline Exposure
+
+.center[
+```{r out.width="100%"}
+knitr::include_graphics("figs/radians_dens_exposure.png")
+```
+]
+
+
+---
+## Online vs Offline Exposure by Quantiles
+
+
+![](figs/offline_exposure_quantiles_circles.png)
+
+---
+## Modeling Online Echo Chambers
+
+.center[
+```{r out.width="55%"}
+knitr::include_graphics("tabmodels_.png")
+```
+]
+
+
+---
+
+class:inverse, middle, center
+
+# Thank you!
+  
+
+
+
+
+
+

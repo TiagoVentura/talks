@@ -1,0 +1,242 @@
+---
+title: " <span style = 'font-size: 80%;'>The Effects of WhatsApp on Politics: A Multi-Country Deactivation Experiment </span>"
+author: "Tiago Ventura | Georgetown University"
+date: " <span style = 'font-size: 80%;'> <br> Tech & Public Policy Grantee Conference <br> 11/14/2023 </span>"
+output:
+  xaringan::moon_reader:
+    css: ["xaringan-themer.css", "custom.css"]
+    lib_dir: libs
+    self_contained: false
+    nature:
+      #ratio: 16:9
+      #ratio: 191:100
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+      slideNumberFormat: "Slide %current% of %total%" # Slide 12 of 42
+---
+layout: true
+
+<div class="my-footer"><span>Tiago Ventura (Georgetown University) &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp Tech & Public Policy Grantee Conference </span></div> 
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+knitr::opts_chunk$set(messagwese=FALSE, warning = FALSE)
+xaringanthemer::style_mono_light(base_color ="#23395b", 
+                                  title_slide_text_color="#ffff", 
+                                  title_slide_background_color = "#23395b", 
+                                  background_color = "#fff", 
+                                  link_color =  "#0072CE")
+options(htmltools.dir.version = FALSE)
+knitr::opts_chunk$set(message=FALSE, warning = FALSE, error=TRUE, echo=FALSE, cache=TRUE)
+```
+
+```{r style-share-again, echo=FALSE}
+xaringanExtra::use_tile_view()
+xaringanExtra::use_panelset()
+
+#xaringanExtra::style_share_again(
+#  share_buttons = c("twitter", "linkedin", "pocket")
+#)
+```
+
+
+---
+## Motivation
+
+**Social Media:** From a liberation to Turmoil .red[(Tucker et. al., 2019)]
+
+**Three insights form the scholarly literature on social media and politics:**
+
+- Exposure to Misinformation follows a power law .red[(Grinberg et al., 2019)]
+
+- The downstream effects of exposure to misinformation on political attitudes are .red[difficult to measure, often small in size, and context dependent]. (See Meta Election Studies + Facebook Deactivation Studies)
+
+- Most of the scholarly evidence come from a .red[advanced democracies] and from a .red[feed-based platforms] (mostly Twitter, and to some extent Facebook)
+
+---
+class:middle
+### Critical Gap: Global South + Messaging Apps. 
+
+.center[
+```{r out.width="100%"}
+knitr::include_graphics("nyt.png")
+```
+
+]
+
+--
+
+---
+### WhatsApp Multimedia Deactivation Experiment - Brazil 2022
+
+--
+
+`r icons::fontawesome("arrow-alt-circle-right")` .red[Research Problem:] What are the causal effect of WhatsApp usage on beliefs for misinformation and its downstream effects, particularly political polarization?
+
+--
+
+`r icons::fontawesome("arrow-alt-circle-right")` .red[Design:] Multimedia-Constrained Deactivation Experiment on WhatsApp:
+
+- Incentivized participants to spent three weeks without accessing any multimedia (images, videos and audio) on WhatsApp.
+
+
+--
+
+`r icons::fontawesome("arrow-alt-circle-right")` .red[Context:] Weeks before the 2022 Presidential Election in Brazil
+
+
+--
+`r icons::fontawesome("arrow-alt-circle-right")` .red[Results:] 
+
+- Substantive reduction in **exposure to popular misinformation rumors**.
+
+- Unable to detect small to moderate effects on **attitudes (belief accuracy and polarization)**
+
+- Null-Effects on subjective well-being
+
+--
+
+---
+
+## Limitations
+
+- Scope conditions: focus on direct effects of exposure to misinformation on WhatsApp. 
+
+- Effects might be context-dependent
+
+  - Previous deactivation studies found different results in United States (x2), France and Bosnia
+  
+- Election context: highly polarization
+
+---
+class:middle, center, inverse
+
+# Tech & Public Policy Proposal
+
+---
+## Multi-Country WhatsApp Deactivation
+
+--
+
+`r icons::fontawesome("arrow-alt-circle-right")` .red[Research Problem:] What are the causal effect of WhatsApp usage on beliefs for misinformation and its downstream effects, particularly political polarization?
+
+--
+
+`r icons::fontawesome("arrow-alt-circle-right")` .red[Design:] Multi-Country Deactivation in three major Global South Democracies with Presidential Elections:
+
+- Country Selection: Mexico, South Africa, India
+
+- High WhatsApp usage + Ethnic and Political Polarization + Misinformation traveling primarely through WhatsApp
+
+--
+
+`r icons::fontawesome("arrow-alt-circle-right")` .red[Design:] Interventions: 
+
+- Multimedia Deactivation - Focus on reducing exposure to Misinformation
+
+- Reduction on WhatsApp usage - Full deactivation, >10min per day. 
+
+- Four week period. 
+
+--
+
+---
+
+## Extensions
+
+- Effects of group-based conversations on political polarization (Fall 2024)
+
+- Online Data Donation Tool for Content from WhatsApp Groups (Fall 2024)
+  
+  - Focus on immigrant communities in the US
+  
+  - Conditional on time also used in the multi-country deactivation
+
+
+---
+## Progress
+
+- Our first big effort was on building a team of experts and select the countries to run the experiment: 
+
+ + [Joshua Tucker](https://wp.nyu.edu/fas-joshuatucker/): Director of NYU’ Center for Social Media and Politics (CSMaP)
+
+  + [Shelley Liu](https://www.shelleyxliu.com/): Assistant professor at Duke University, Sanford School of Public Policy
+
+  + [Rajeshwari Majumdar](https://r-majumdar.github.io/): PhD Candidate, NYU Politics
+    
+  + [Carolina Torreblanco](https://carolina-torreblanca.github.io/): PhD Candidate, NYU Politics
+
+---
+## Progress
+
+- IRB Review: November and December
+
+- Recruitment: Starting in January
+
+- Deactivation: Early April to May. 
+
+---
+class:middle, center, inverse
+
+# Impact
+
+---
+## Causal Effects of WhatsApp on Politics
+
+--
+- **Claims about WhatsApp**:
+
+  - Downstream effects on episodes offline violence 
+  
+  - Affects voting choices in Global South elections
+  
+  - Facilitates spread of misinformation -> beliefs
+
+--
+
+- **Our work provides the first comparative evidence for the effects of WhatsApp on political outcomes**. 
+
+  - Separates general usage vs direct exposure to misinformation
+  
+  - Contextual variation
+  
+--
+
+---
+## Causal Effects of WhatsApp on Politics
+
+- **No causal eviedence -> poor policy choices.** 
+
+   - Policymakers and  technologists risk proposing solutions grounded in conventional wisdom, folk theory, or research from heterogeneous contexts. 
+
+---
+
+## The role of multimodal content on spread of misinformation
+
+Our work also focuses on multimodal content: 
+
+- Most academic work has focuses on textual misinformation
+
+- In contexts of low literacy, multimodal content have dominated the misinformation market
+
+  - travel fasters
+  
+  - easier to understand
+  
+- Most social media companies have guard-rails focused on text/sources. 
+
+---
+
+## Dissemination Plan
+
+- Main academic conferences in the next year calendar: APSA, IC2S2 & ICA
+
+- Summer 2024: Social Media and Politics Conference at Georgetown (together with John Ladd)
+
+- Open discussions about industry-academic collaborations with Meta/WhatsApp
+
+---
+class:center, middle, inverse
+
+# Thank you

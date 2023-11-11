@@ -289,9 +289,9 @@ class: middle
 --
 
 ---
-class:middle, center
+class:middle, center, inverse
 
-## Thank you!
+# Thank you!
 
 ---
 
