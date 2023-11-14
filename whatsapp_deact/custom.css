@@ -40,7 +40,7 @@
 
 /* Add image and change bg color */
 .title-slide {
-  background-image: url(https://process.filestackapi.com/resize=width:600,height:315,fit:max/quality=value:90/lLNVw57qSNW1Zyynlp0K);
+  background-image: url(https://www.georgetown.edu/wp-content/uploads/2019/10/Georgetown_logo_blueRGB.jpg);
   background-position: 90% 15%;
   background-size: 150px;
   background-color: #ffff;
@@ -123,6 +123,7 @@ color: #C93312;
 .pink       { color:  var(--Pink) }
 .warmyellow { color:  var(--WarmYellow) }
 .palegrey   { color:  var(--PaleGrey)}
+.midgrey   { color:  var(--MidGrey)}
 .my-blue    { color:  var(--my-blue) }
 .darkblue    { color:  var(--DarkBlue) }
 .my-yellow  { color:  var(--my-yellow) }
@@ -207,7 +208,7 @@ color: #C93312;
   position: absolute;
   left: 50px;
   width: calc(100% - 100px);
-  padding: 0px;
+  padding: 10px;
   text-align: center;
   font-size: 1.50rem;
   border-radius: 25px
