@@ -4,9 +4,11 @@ Repository to share source materials for presentations and talks.
 
 ## 2023
 
-- [CODE@MIT 2023: WhatsApp Deactivation](https://tiagoventura.github.io/talks/whatsapp_deact/code_mit_2023)
+- [CODE@MIT 2023](https://tiagoventura.github.io/talks/whatsapp_deact/tpp_2023)
 
-- [APSA 2023: WhatsApp Deactivation](https://tiagoventura.github.io/talks/whatsapp_deact/apsa_2023)
+- [CODE@MIT 2023](https://tiagoventura.github.io/talks/whatsapp_deact/code_mit_2023)
+
+- [APSA 2023](https://tiagoventura.github.io/talks/whatsapp_deact/apsa_2023)
 
 - [McCourt School Foundations: Training Graduate Students for a Career in Computational Social Science](https://tiagoventura.github.io/talks/training_css/mccourt_foundations)
 
