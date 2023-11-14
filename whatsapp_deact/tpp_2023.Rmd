@@ -214,7 +214,7 @@ class:middle
     
   + [Carolina Torreblanco](https://carolina-torreblanca.github.io/): PhD Candidate, NYU Politics
   
-  + [Maitreyi Natarajan])():  McCourt School’s Tech & Public Policy Scholar 
+  + [Maitreyi Natarajan]():  McCourt School’s Tech & Public Policy Scholar 
 
 ---
 class:middle
