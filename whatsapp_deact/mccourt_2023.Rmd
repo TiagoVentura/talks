@@ -65,10 +65,11 @@ class: middle
 class:middle 
 ### .center[1% of users represented 80% of exposure to Fake News on Twitter in 20216]
 
-
-```{r out.width="100%"}
+.center[
+```{r out.width="90%"}
 knitr::include_graphics("gringer.png")
 ```
+]
 .center[[Grinberg et al., 2019](https://www.science.org/doi/pdf/10.1126/science.aau2706)]
 
 
@@ -155,7 +156,7 @@ class:middle
 
 - And .red[WhatsApp is the main social media application] where users report to see more misinformation. 
 ]
-.panel[.panel-name[Effects on Politics:]
+.panel[.panel-name[Effects on Politics]
 
 Several claims about the role of WhatsApp on offline attitudes and behaviors: 
 
@@ -196,14 +197,14 @@ knitr::include_graphics("deactivation_studies.png")
 ]
 
 .pull-left[
-.center[Facebook Deactivation in the US [Alcott et al., 2020](https://www.aeaweb.org/articles?id=10.1257/aer.20190658)]
+.center[Facebook Deactivation in the US [(Alcott et al., 2020)](https://www.aeaweb.org/articles?id=10.1257/aer.20190658)]
 ]
 
 .pull-right[
 
-.center[Facebook Deactivation in Bosnia and Herzegovina [Asimovic et. al, 2022](https://www.pnas.org/doi/10.1073/pnas.2022819118)]
+.center[Facebook Deactivation in Bosnia and Herzegovina [(Asimovic et. al, 2022)](https://www.pnas.org/doi/10.1073/pnas.2022819118)]
 ]
-
+f
 
 ---
 class: middle
@@ -545,7 +546,7 @@ class: middle
 
 --
 
-`r icons::fontawesome("arrow-alt-circle-right")` **Experimental**
+`r icons::fontawesome("arrow-alt-circle-right")` .red[**Experimental**]
 
 - Multi-Country Deactivation: Mexico, South Africa and India. (TPP Grant)
 
@@ -555,7 +556,7 @@ class: middle
 
 --
 
-`r icons::fontawesome("arrow-alt-circle-right")` **Computational:**
+`r icons::fontawesome("arrow-alt-circle-right")` .red[**Computational**]
 
 - Developing a data donation pipeline for WhatsApp group data
 
