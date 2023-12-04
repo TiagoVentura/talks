@@ -27,6 +27,10 @@
 --my-coral:          #903030;
 --my-red:            #600018;
 --my-pink:           #c09090;
+
+--base-font-size: 18px;
+--text-font-size: .9rem;
+
 }
 
 .footnote {
@@ -209,7 +213,7 @@ color: #C93312;
   left: 50px;
   width: calc(100% - 100px);
   padding: 10px;
-  text-align: center;
+  text-align: top;
   font-size: 1.50rem;
   border-radius: 25px
 

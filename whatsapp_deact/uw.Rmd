@@ -44,9 +44,7 @@ xaringanExtra::use_panelset()
 ---
 class:middle
 
-
-### From Liberation to Turmoil: The Misinformation Turn
-
+## From Liberation to Turmoil: The Misinformation Turn
 
 .center[
 ```{r out.width="100%"}
@@ -81,7 +79,7 @@ class: middle
 
 class:middle 
 
-### .center[Exposure to IRA Russian Misinformation on Twitter  doesn’t lead to changes in attitudes]
+### .center[Exposure to IRA Russian Misinformation on Twitter doesn’t lead to changes in attitudes]
 
 .center[
 

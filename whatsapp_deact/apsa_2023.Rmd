@@ -56,13 +56,13 @@ knitr::include_graphics("nyt.png")
 <br>
 <br>
 
-.content-box-gray[Provide causal estimates for the effects of WhatsApp  on exposure, beliefs for misinformation and downstream political attitudes]
+.content-box-gray[Provide causal estimates for the effects of WhatsApp on exposure, beliefs for misinformation and downstream political attitudes]
 
 
 ---
 class: middle
 
-`r icons::fontawesome("arrow-alt-circle-right")` **Previous Deactivation studies:** full deactivation on Facebook, and mixed-results on effects on beliefs for misinformation and polarization  .red[(Asimovic et al., 2021; Allcott et al., 2020)]
+`r icons::fontawesome("arrow-alt-circle-right")` **Deactivation studies:** full deactivation on Facebook, and mixed-results on effects on beliefs for misinformation and polarization  .red[(Asimovic et al., 2021; Allcott et al., 2020)]
 
 --
 
@@ -276,19 +276,27 @@ class: middle
 ---
 class:middle
 
-## Limitations
+### Limitations
 
 --
 
-- Scope conditions: focus on direct effects of exposure to misinformation on WhatsApp. 
+- scope conditions: focus on direct effects of WhatsApp & and short-term effects.
 
 --
 
-- Larger effect might exist exactly in hard to reach groups.
+- Do not rule out the use of WhatsApp as a mobilization and organizational tool by malicious actors. 
 
 --
 
-- Minimal effects vs power analysis
+- Largers effect might exist exactly in hard to reach populations.
+
+--
+
+- Small effect size & Power
+
+--
+
+- Electoral context + Motivated Reasoning
 
 --
 

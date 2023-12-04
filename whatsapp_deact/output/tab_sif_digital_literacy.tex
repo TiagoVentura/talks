@@ -1,0 +1,29 @@
+\begin{table}
+
+\caption{Regression Models: Heterogenous effects of the Deactivation conditional on Digital Literacy Score }
+\centering
+\begin{threeparttable}
+\begin{tabular}[t]{lcccccc}
+\toprule
+  & False Rumors Exposure & True News Exposure & False Rumors Accuracy & True News Accuracy & Polarization Index & Subjective Well-Being Index\\
+\midrule
+Treatment & -0.424*** & -0.282*** & -0.069 & -0.009 & -0.029 & 0.154\\
+ & (0.077) & (0.065) & (0.082) & (0.080) & (0.159) & (0.273)\\
+Digital Literacy & 0.017 & -0.001 & 0.074** & 0.013 & 0.152** & -0.009\\
+ & (0.025) & (0.022) & (0.023) & (0.025) & (0.050) & (0.081)\\
+Treatment x Digital Literacy & -0.048 & -0.023 & -0.008 & 0.014 & 0.036 & -0.180\\
+ & (0.035) & (0.029) & (0.034) & (0.036) & (0.071) & (0.122)\\
+\midrule
+Num.Obs. & 660 & 660 & 660 & 660 & 660 & 660\\
+R2 & 0.163 & 0.140 & 0.188 & 0.104 & 0.161 & 0.126\\
+R2 Adj. & 0.122 & 0.097 & 0.148 & 0.060 & 0.120 & 0.083\\
+RMSE & 0.94 & 0.79 & 1.01 & 0.98 & 1.97 & 3.34\\
+\bottomrule
+\multicolumn{7}{l}{\rule{0pt}{1em}+ p $<$ 0.1, * p $<$ 0.05, ** p $<$ 0.01, *** p $<$ 0.001}\\
+\end{tabular}
+\begin{tablenotes}
+\item \textit{Note: } 
+\item  Robust standard errors in Parentheses. All models use the Covariate-Adjusted ITT estimator. 
+\end{tablenotes}
+\end{threeparttable}
+\end{table}

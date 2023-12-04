@@ -1,0 +1,28 @@
+\begin{table}
+\caption{Regression Models: Models regressing False Rumors Accuracy on False Rumors Exposure for all items. The first column presents simple OLS model with no controls. The second column presents Covariates-Adjusted Model. The third columns presents an instrumental variable estimation with exposure as the endogenous variable. The results indicate exposure strongly predicts belief for misinformation. However, when removing endogenous components using the instrumental variable model, the effects disappear.}
+\centering
+\begin{threeparttable}
+\begin{tabular}[t]{lccc}
+\toprule
+  & ITT Belief Misinfo \textasciitilde{} Exposure & Cov-ITT Belief Misinfo \textasciitilde{} Exposure &  Belief Misinfo \textasciitilde{} Exposure | Deactivation\\
+\midrule
+Intercept & \num{0.180}*** & \num{0.048} & \num{0.402}*\\
+ & (\num{0.009}) & (\num{0.105}) & (\num{0.185})\\
+Exposure to False Rumors & \num{0.229}*** & \num{0.223}*** & \num{-0.190}\\
+ & (\num{0.024}) & (\num{0.025}) & (\num{0.171})\\
+\midrule
+Num.Obs. & \num{2928} & \num{2640} & \num{2640}\\
+R2 & \num{0.049} & \num{0.072} & \num{-0.080}\\
+R2 Adj. &  &  & \num{-0.092}\\
+RMSE & \num{0.41} & \num{0.40} & \\
+Std.Errors & by: q\_email & by: q\_email & by: q\_email\\
+Controls & no & yes & yes\\
+\bottomrule
+\multicolumn{4}{l}{\rule{0pt}{1em}+ p $<$ 0.1, * p $<$ 0.05, ** p $<$ 0.01, *** p $<$ 0.001}\\
+\end{tabular}
+\begin{tablenotes}
+\item \textit{Note: } 
+\item Robust standard errors in parentheses
+\end{tablenotes}
+\end{threeparttable}
+\end{table}

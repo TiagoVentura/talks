@@ -1,0 +1,27 @@
+\begin{table}
+
+\caption{Regression Models: Deactivation Treatment Effects on Self-Reported Exposure to Misinformation on WhatsApp. The outcome variable is a nominal scale measuring self-reported exposure to misinformation. Results indicate robust negative descrease on self-reported exposure. }
+\centering
+\begin{threeparttable}
+\begin{tabular}[t]{lccc}
+\toprule
+  & ITT & Cov-ITT & CACE\\
+\midrule
+Intercept & 3.450*** & 8.870*** & 3.450***\\
+ & (0.103) & (0.832) & (0.103)\\
+Treatment & -0.452** & -0.496*** & -0.606**\\
+ & (0.145) & (0.139) & (0.194)\\
+\midrule
+Num.Obs. & 732 & 660 & 732\\
+R2 & 0.013 & 0.212 & 0.016\\
+R2 Adj. & 0.012 & 0.175 & 0.014\\
+RMSE & 1.96 & 1.75 & \\
+\bottomrule
+\multicolumn{4}{l}{\rule{0pt}{1em}+ p $<$ 0.1, * p $<$ 0.05, ** p $<$ 0.01, *** p $<$ 0.001}\\
+\end{tabular}
+\begin{tablenotes}
+\item \textit{Note: } 
+\item Robust standard errors in Parentheses
+\end{tablenotes}
+\end{threeparttable}
+\end{table}
