@@ -517,23 +517,23 @@ class: middle
 
 --
 
-- scope conditions: focus on direct effects of WhatsApp & and short-term effects.
+`r icons::fontawesome("arrow-alt-circle-right")` **Scope conditions**: focus on direct effects of exposure to misinformation on WhatsApp & and short-term effects.
 
 --
 
-- Do not rule out the use of WhatsApp as a mobilization and organizational tool by malicious actors. 
+`r icons::fontawesome("arrow-alt-circle-right")` **Our study does not** rule out the use of WhatsApp (and other messaging apps) as a mobilization and organizational tool by malicious actors. 
 
 --
 
-- Largers effect might exist exactly in hard to reach populations.
+`r icons::fontawesome("arrow-alt-circle-right")` Larger effect might exist exactly on **hard to reach population**.
 
 --
 
-- Small effect size & Power
+`r icons::fontawesome("arrow-alt-circle-right")` **Small effect size & power constraints**
 
 --
 
-- Electoral context + Motivated Reasoning
+`r icons::fontawesome("arrow-alt-circle-right")` Electoral context & role of **directional** motivated reasoning
 
 --
 
@@ -552,7 +552,7 @@ class: middle
 
 - Contextual Diversity
 
-- New treatment Arm: overall reduction on WhatsApp usage.
+- New treatment arm: overall reduction on WhatsApp usage.
 
 --
 
