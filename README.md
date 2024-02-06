@@ -2,6 +2,11 @@
 
 Repository to share source materials for presentations and talks.
 
+## 2024
+
+- [CIVICA Data Science Seminar](https://tiagoventura.github.io/talks/whatsapp_deact/civica_2024)
+
+
 ## 2023
 
 - [McCourt Faculty Seminar](https://tiagoventura.github.io/talks/whatsapp_deact/mccourt_2023)
