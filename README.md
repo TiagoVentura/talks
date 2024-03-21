@@ -4,6 +4,8 @@ Repository to share source materials for presentations and talks.
 
 ## 2024
 
+- [Mewe and Georgetown Collaboration](https://tiagoventura.github.io/talks/ai_elections/mewe)
+
 - [Generative AI, Misinformation and 2024 Elections](https://tiagoventura.github.io/talks/ai_elections/gtpi)
 
 

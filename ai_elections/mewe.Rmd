@@ -1,7 +1,7 @@
 ---
 title: "Approaches to Understand the Effects of Social Media in Society: The Role of Experimentation"
 author: "Tiago Ventura <br> <br><span style = 'font-size: 80%;'>McCourt School of Public Policy, Georgetown University </span>"
-date: " <span style = 'font-size: 80%;'> <br> Mewe & Georgetown Collaboration <br> <br> 03/14/2024 </span>"
+date: " <span style = 'font-size: 80%;'> <br> Mewe & Georgetown Collaboration <br> <br> 03/31/2024 </span>"
 output:
   xaringan::moon_reader:
     css: ["xaringan-themer.css", "custom.css", "mytheme-fonts.css"]
@@ -45,7 +45,7 @@ xaringanExtra::use_panelset()
 
 ---
 class: middle
-### The Effects of Digita Media on Democracy
+### The Effects of Digital Media on Democracy
 
 .center[
 ```{r  out.width="70%"}
@@ -67,7 +67,7 @@ class: middle
 
 `r icons::fontawesome("arrow-alt-circle-right")` Observational data can tell us little about causal effects of social media.
 
-`r icons::fontawesome("arrow-alt-circle-right")` Randomized interventions allow us to isolate causal effects. The most useful interventions come from collaborations between industry and independent researchers
+.red[Randomized interventions allow us to isolate causal effects. The most useful interventions come from collaborations between industry and independent researchers]
 
 ---
 class: middle
@@ -81,7 +81,7 @@ Large scale collaboration between Facebook internal researchers and outside scho
 Variety of experimental designs:
 
 - Change from algorithmic news feed to chronological
-- Downrank content from like-minded sources
+- Downranking content from like-minded sources
 - Remove re-shares
 - Deactivate users from Facebook and Instagram
 
@@ -92,7 +92,7 @@ class: middle
 
 ## A Framework for Collaboration
 
-`r icons::fontawesome("arrow-alt-circle-right")` RCT + Data. Main points of the collaboration:
+`r icons::fontawesome("arrow-alt-circle-right")` Main points of the collaboration:
 
 - Facebook no right of pre-publication approval
 
@@ -107,33 +107,30 @@ class: middle
 ---
 class: middle
 
-
-## What has our community learned so far from these studies? 
+### What has our community learned so far from these studies? 
 
 Four of the articles have been published so far (Science 3x and Nature):
 
-- Removing reshared content on Facebook substantially decreased the amount of political news and content from untrustworthy sources people saw in their feeds 
-   - But decreased news knowledge and do not affect political polarization ([Guess et. al. 2023a](https://www.science.org/doi/full/10.1126/science.add8424))
+- Removing reshared content substantially decreased the amount of political news and content from untrustworthy sources ([Guess et. al. 2023a](https://www.science.org/doi/full/10.1126/science.add8424))
 
-- Using chronological news feed decreased time and engagement in the platform, increased content from moderate friends and sources with ideologically mixed audiences ([Guess et. al. 2023b](https://www.science.org/doi/full/10.1126/science.abp9364))
-  - But also shows null effects on attitudinal outcomes. 
-  
-  
-- Most of the content people see on Facebook comes from like-minded ~ Echo Chambers do exist. 
-  - Breaking the echo-chamber had no measurable effects on attitudinal measures such as affective polarization, ideological extremity, candidate evaluations and belief in false claims ([Nyhan et. al. 2023](https://www.nature.com/articles/s41586-023-06297-w))
+- Chronological news feed decreased time and engagement in the platform, increased content from moderate friends and sources with ideologically mixed audiences ([Guess et. al. 2023b](https://www.science.org/doi/full/10.1126/science.abp9364))
+
+- Most of the content people see on Facebook comes from like-minded ~ Echo Chambers do exist ([Nyhan et. al. 2023](https://www.nature.com/articles/s41586-023-06297-w))
+
+- These interventions, including creaking the echo-chamber,  had no measurable effects on attitudinal political measures. 
   
 ---
 class: middle
 
-## What else can be learned with similar interventions?
+### What else can be learned with similar interventions?
 
-- Are these effects specific to the Facebook population?
+- Are these patterns of news consumption stable across platforms?
 
-- Variations across platforms?
+- Are null effects constrained by high levels of polarization during elections?
 
-- Most of these interventions lasted for a month. Do attitudes need more time to be shaped?
+- Are null effects constrained by the length of the interventions?
 
-- What are the constraints of running these studies during elections?
+- What are the effects of direct interventions to counter beliefs for misinformation, such as, labels, pre-bunking, inoculation, etc.. ? Most of these have been tested in survey experiments, very little in the field. 
 
 
 ---
