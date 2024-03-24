@@ -1,7 +1,7 @@
 ---
 title: "Approaches to Understand the Effects of Social Media in Society: The Role of Experimentation"
 author: "Tiago Ventura <br> <br><span style = 'font-size: 80%;'>McCourt School of Public Policy, Georgetown University </span>"
-date: " <span style = 'font-size: 80%;'> <br> Mewe & Georgetown Collaboration <br> <br> 03/31/2024 </span>"
+date: " <span style = 'font-size: 80%;'> <br> Mewe & Georgetown Collaboration <br> <br> 03/21/2024 </span>"
 output:
   xaringan::moon_reader:
     css: ["xaringan-themer.css", "custom.css", "mytheme-fonts.css"]
