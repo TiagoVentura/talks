@@ -6,15 +6,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 body {
-  font-family: "Lato", "Source Sans Pro", sans-serif;
+  font-family: "Lora", serif;
 }
 
 h1, h2 {
   font-family: "Lora", serif;
+
 }
 
 h3 {
-  font-family: "Lato", "Source Sans Pro", sans-serif;
+  font-family: "Lora", serif;
+
 }
 
 .remark-code, .remark-inline-code {

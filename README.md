@@ -4,9 +4,9 @@ Repository to share source materials for presentations and talks.
 
 ## 2024
 
+- [iLCSS-UMD: Global Social Media Experiment](https://tiagoventura.github.io/talks/ai_elections/ilcss)
 
 - [Generative AI, Misinformation and 2024 Elections](https://tiagoventura.github.io/talks/ai_elections/gtpi)
-
 
 - [CIVICA Data Science Seminar](https://tiagoventura.github.io/talks/whatsapp_deact/civica_2024)
 
