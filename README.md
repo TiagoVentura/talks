@@ -4,6 +4,8 @@ Repository to share source materials for presentations and talks.
 
 ## 2024
 
+- [SICSS-2024 Rutger University](https://tiagoventura.github.io/talks/survey_professionals/sicss_rutgers)
+
 - [iLCSS-UMD: Global Social Media Experiment](https://tiagoventura.github.io/talks/ai_elections/ilcss)
 
 - [Generative AI, Misinformation and 2024 Elections](https://tiagoventura.github.io/talks/ai_elections/gtpi)
