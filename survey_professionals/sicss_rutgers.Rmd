@@ -275,7 +275,7 @@ knitr::include_graphics("output/tab3.png")
 
 --
 
-`r icons::fontawesome("arrow-alt-circle-right")` **Although prevalent, they do not introduce substantive inferential problems**
+`r icons::fontawesome("arrow-alt-circle-right")` **Although prevalent, they .red[do not introduce substantive inferential problems]**
 
 - lack of robust cross-sample difference suggests that survey professionalism does not introduce systematic demographic or political bias
 
