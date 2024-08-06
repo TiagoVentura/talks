@@ -4,7 +4,7 @@ author: "Tiago Ventura, Rajeshwari Majumdar, Jonathan Nagler, and  Joshua A. Tuc
 date: " <span style = 'font-size: 80%;'> <br> McCourt Faculty Seminar <br> 12/04/2023 </span>"
 output:
   xaringan::moon_reader:
-    css: ["xaringan-themer.css", "custom.css", "mytheme-fonts.css"]
+    css: ["xaringan-themer.css", "custom.css"]
     lib_dir: libs
     self_contained: false
     nature:

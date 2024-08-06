@@ -1,0 +1,175 @@
+---
+title: " <span style = 'font-size: 70%;'> Comentários Sessão 05 - AT Comportamento Político </span>"
+author: " Tiago Ventura<sup>1</sup> <br><br><span style = 'font-size: 70%;'> <sup>1</sup> Georgetown University"
+date: " <span style = 'font-size: 80%;'> <br> ABCP - 08/09/2024 </span>"
+output:
+  xaringan::moon_reader:
+    css: ["xaringan-themer.css", "custom.css", "mytheme-fonts.css"]
+    lib_dir: libs
+    self_contained: false
+    nature:
+      #ratio: 16:9
+      #ratio: 191:100
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+      slideNumberFormat: "Slide %current% of %total%" # Slide 12 of 42
+---
+layout: true
+
+<div class="my-footer"><span>Tiago Ventura (Georgetown University) &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp ABCP, 2024</span></div> 
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+knitr::opts_chunk$set(messagwese=FALSE, warning = FALSE)
+xaringanthemer::style_mono_light(base_color ="#23395b", 
+                                  title_slide_text_color="#ffff", 
+                                  title_slide_background_color = "#23395b", 
+                                  background_color = "#fff", 
+                                  link_color =  "#DA291C")
+options(htmltools.dir.version = FALSE)
+knitr::opts_chunk$set(message=FALSE, warning = FALSE, error=TRUE, echo=FALSE, cache=TRUE)
+```
+
+```{r style-share-again, echo=FALSE}
+xaringanExtra::use_tile_view()
+xaringanExtra::use_panelset()
+
+#xaringanExtra::style_share_again(
+#  share_buttons = c("twitter", "linkedin", "pocket")
+#)
+library(icons)
+```
+
+---
+class: center, middle
+
+## Career Civil Service, Political Patronage, and Trust in Government Action, Guedes-Neto e Peters
+
+
+---
+class: middle
+
+## Resumo
+
+- **Pergunta de Pesquisa:** Medir como características do burocrata público afeta confiança do eleitor na ação do governo. 
+
+- **Métodos:** Três famílias diferentes de experimentos. Foco em medir diferença entre espólio vs mérito.
+
+- **Resultado Principal:** Sistema de méritos domina preferência dos eleitores.
+
+---
+class: middle
+
+## Qual sua quantidade de interesse?
+
+- Principal achado do artigo: sistema de méritos domina. 
+
+- **Qual paramêtro está sendo estimado?** 
+
+  - Nos experimentos 1 e 2, os parâmetros são condicionais ao grupo de referência (como em qualquer experimento)
+
+     - Experimento 1: "indicado político"
+
+     - Experimento 2: "Relação com oficiais eleitos"
+
+- Com essa comparação, não sabemos se o resultado é "eleitores preferem concurso público" ou "eleitores não gostam de indicações políticas". 
+
+- Quais outras formas de contratação existem no funcionalismo público? Contratos? Parceiria com setor privado? Temporário? É possível adicionar mais deles no conjoint?
+
+---
+class: middle
+
+## Porque três experimentos?
+
+**Porque fazemos múltiplos experimentos?** (Além de aumentar chances de publicação)
+
+  - Replicação e robustez dos resultados (desenho igual, amostra distinta) 
+  
+  - Mecanismos: variações no desenho para identificar causas dos efeitos
+  
+  - Testar hipóteses competitivas.
+
+- Cada experimento usa um desenho distinto. Portanto, é difícil entender como eles conversam entre si. 
+
+   - Os seus experimentos 1 e 2 se complementam, com conjoint permitindo testar mais condições, apesar disso estar escondidos nos slides. 
+
+   - O experimento 3 parece um artigo distinto sobre efeitos de correção.  Algo semelhante a este [artigo da Jane Esberg](https://jmummolo.scholar.princeton.edu/sites/g/files/toruqf3341/files/esberg_mummolo_westwood_2020.pdf)
+
+
+---
+class: middle
+
+## Brasil vs Estados Unidos
+
+É possível comparar as burocracias entre Brasil e Estados Unidos? 
+
+- Não me parece existir nos Estados Unidos algo semelhante aos concursos públicos no Brasil. 
+
+- A provisão de serviços nos Estados Unidos em diversas áreas se dá via agentes privados, por example, saúde. Isso afeta seus resultados? 
+
+- Seu desenho algumas vezes fala em interação usuário vs burocrata. Essas interações são comparáveis entre países? 
+
+---
+class: center, middle
+## Painel do Poder - Congresso em Foco: Survey Trimestral com Parlamentares Federais, Braga e Guimarães.
+
+---
+class: middle
+
+## Resumo
+
+- Apresentação sistemática do Painel do Poder, survey promovido trimestralmente pelo Congresso em Foco Análise junto a deputados federais e senadores.
+  
+  - Perfil da amostra
+  
+  - Comparação com dados da população do congresso
+  
+  - Efeito do alinhamento com governo em percepções do parlamentares. 
+
+
+---
+class: middle
+
+## non-probability sampling vs non-ignorable nonresponse
+
+- non-probability sampling: part os membros de uma população têm a chance de serem selecionados para a amostra
+
+- non-ignorable nonresponse: a decisão dos parlamentares em não responder é endogena as variáveis de interesse da pesquisa. ($(R_{i1}, R_{i0} \perp Y_i)$)
+
+  - Por exemplo, erros de survey no apoio a candidatos extremistas (Trump and Bolsonaro)
+  
+     - Republicanos muito interessados em política não respondem a surveys
+  
+  - Solução mais comum: pesos amostrais. Pode tornar o problema pior, porque o bias não vem de características demograficas
+  
+
+---
+
+## Randomized Response Instruments
+
+- [Bailey 2024](https://hdsr.mitpress.mit.edu/pub/ejk5yhgv/release/4). Elicitar willingness-to-respond nos participantes
+  
+  - Incentivos aleatórios (alguns participantes ganham mais do que outros).
+     
+  - Randomizar perguntas sobre interesse em política (Randomized Response Instruments)
+    
+  - Em resumo: 
+  
+     - usar estratégias experimentais para estimar bias sobre preferências políticas ~> responder a surveys.
+  
+---
+
+## Comentários mais simples
+
+- A estrutura do texto pode ser invertida: Introdução, dados da amostra, e resultados. 
+
+- O conceito de polarização usado no texto me parece distinto do usado na literatura em geral. Não se trate de polarização afetiva ou ideológica, ou até em evolução temporal nas posições partidárias. 
+
+- As tabelas 3 e 4 precisam ter os valores da populacao. 
+
+- A medida de discrepância é mais complicada do que o necessário. Simples diferença entre população e amostra é suficiente. 
+
+- A seção com o Wnominate esta subdesenvolvida. Ambos os pontos sobre o efeito explicativo do alinhamento com o governo e dispersão dos pontos ideias não contêm informação suficiente para o leitor compreender os resultados. 
+
+  

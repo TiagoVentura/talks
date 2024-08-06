@@ -1,7 +1,7 @@
 ---
-title: " <span style = 'font-size: 70%;'> Misinformation Exposure Beyond Traditional Feeds: Evidence from a WhatsApp Deactivation Experiment in Brazil </span>"
+title: " <span style = 'font-size: 70%;'> Misinformation Exposure Beyond Traditional Feeds: Evidence from a WhatsApp Deactivation Experiment</span>"
 author: "Tiago Ventura, Rajeshwari Majumdar, Jonathan Nagler, and  Joshua A. Tucker <br> <br><span style = 'font-size: 80%;'>Georgetown University & Center for Social Media and Politics, NYU</span>"
-date: " <span style = 'font-size: 80%;'> <br> McCourt Faculty Seminar <br> 12/04/2023 </span>"
+date: " <span style = 'font-size: 80%;'> <br> 14 Encontro da ABCP  </span>"
 output:
   xaringan::moon_reader:
     css: ["xaringan-themer.css", "custom.css", "mytheme-fonts.css"]
@@ -17,7 +17,7 @@ output:
 ---
 layout: true
 
-<div class="my-footer"><span>Tiago Ventura (Georgetown University) &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  McCourt School  Faculty Seminar</span></div> 
+<div class="my-footer"><span>Tiago Ventura (Georgetown University) &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  ABCP </span></div> 
 
 ```{r setup, include=FALSE}
 library(xaringanthemer)
@@ -43,73 +43,17 @@ xaringanExtra::use_panelset()
 
 
 ---
-class:middle
-### From Liberation to Turmoil: The Misinformation Turn
-
-.center[
-```{r out.width="100%"}
-knitr::include_graphics("output/time.png")
-```
-
-[From Liberation to Turmoil, Tucker et. al., 2019](https://muse.jhu.edu/article/671987)
-]
----
-class: middle
-
-### Insights
-
-`r icons::fontawesome("arrow-alt-circle-right")` **.red[Prevalence of misinformation]:** 
-   -  People .red[aren’t] actually exposed to a lot of .red[**misinformation**] – but exposure is heavily concentrated. .midgrey[(Grinberg et. al., 2019, Guess et. al. 2019)]
-
----
-class:middle 
-### .center[1% of users represented 80% of exposure to Fake News on Twitter in 20216]
-
-.center[
-```{r out.width="90%"}
-knitr::include_graphics("gringer.png")
-```
-]
-.center[[Grinberg et al., 2019](https://www.science.org/doi/pdf/10.1126/science.aau2706)]
-
-
----
-class: middle
-
-### Insights
+### Social Media, Politics and Misinformation
 
 `r icons::fontawesome("arrow-alt-circle-right")` .red[**Prevalence of misinformation**]: 
    -  People aren’t actually exposed to a lot of misinformation – but exposure is heavily concentrated. .midgrey[(Grinberg et. al. 2019, Guess et. al. 2019)]
 
-`r icons::fontawesome("arrow-alt-circle-right")` **.red[Mixed results for effects on political attitudes]:** 
-   - Mixed evidence from deactivating users from Facebook on polarization .midgrey[(Asimovic et. al. 2022, Alcott et. al. 2020, Arcenaux and Ladd 2023)]
-   - Null effects from Meta Election 2020 studies .midgrey[(Guess et al. 2023a,b; Nyhan et al. 2023)]
-   - Null effects of exposure to misinformation campaigns from Russian bots on Twitter .midgrey[(Eady et al. 2023)]
-
----
-### .center[Exposure to IRA Russian Misinformation on Twitter doesn’t lead to changes in attitudes]
-
-.center[
-
-```{r out.width="70%"}
-knitr::include_graphics("russian.png")
-```
-
-.center[[Eady et al., 2023](https://www.nature.com/articles/s41467-022-35576-9)]
-]
-
----
-### Insights
-
-`r icons::fontawesome("arrow-alt-circle-right")` .red[**Prevalence of misinformation**]: 
-   -  People aren’t actually exposed to a lot of misinformation – but exposure is heavily concentrated. .midgrey[(Grinberg et. al. 2019, Guess et. al. 2019)]
-
-`r icons::fontawesome("arrow-alt-circle-right")` .red[**Downstream effects**]: 
+`r icons::fontawesome("arrow-alt-circle-right")` .red[**Downstream effects on attitudes: less than you think**]: 
    - Mixed evidence from Deactivating users from Facebook .midgrey[(Asimovic et. al. 2022, Alcott et. al. 2020, Arcenaux and Ladd 2023)]
    - Meta Election 2020 studies .midgrey[(Guess et al. 2023a,b; Nyhan et al. 2023)]
    - Null effects of exposure to misinformation campaigns from Russian bots on Twitter .midgrey[(Eady et al. 2023)]
 
-`r icons::fontawesome("arrow-alt-circle-right")` **.red[Majority of scholarly work comes from Western countries]**:
+`r icons::fontawesome("arrow-alt-circle-right")` **.red[Majority of scholarly work comes from W.E.I.R.D countries]**:
    - Over 80% of existing studies on interventions to correct misinformation focus on Global North countries 
 .midgrey[(Blair et. al. 2023,  Badrinathan and Chauchard, 2023a)]
        - Despite the fact that the real-world effects of misinformation exposure may be more pronounced in these countries.
@@ -125,49 +69,6 @@ knitr::include_graphics("nyt.png")
 
 
 ---
-class:middle
-
-## WhatsApp 101
-
---
-
-.panelset.sideways[
-
-.panel[.panel-name[WhatsApp]
-
-#### WhatsApp is a worldwide popular end-to-end encrypted messaging app allowing both .red[direct] and .red[group-based] communications with close to 2 billion around the world
-
-]
-
-.panel[.panel-name[Usage in Brazil]
-
-
-- .red[66% of the Brazilian eligible voters] has a social media account, and .red[65% have an WhatsApp account] ([Datafolha 2018](http://media.folha.uol.com.br/datafolha/2018/10/27/44cc2204230d2fd45e18b039ee8c07a6.pdf)) – 150 million people in 2022. 
-
-
-- Most used app for all purposes: .red[talk to family & friends, do business & pay bills, consume news, talk politics, among others] ([Reuters Institute, 2021](https://reutersinstitute.politics.ox.ac.uk/digital-news-report/2021)). 
-
-
-- Used by .red[48% of population to read news], despite having no “news feed” ([Reuters Institute, 2021](https://reutersinstitute.politics.ox.ac.uk/digital-news-report/2021))
-
-
-- Across the world, .red[Brazilians are the most concerned about misinformation]. And among the most active social media users
-
-
-- And .red[WhatsApp is the main social media application] where users report to see more misinformation. 
-]
-.panel[.panel-name[Effects on Politics]
-
-Several claims about the role of WhatsApp on offline attitudes and behaviors: 
-
-- Powerful propaganda and organizational tool for political parties .midgrey[(Chauchard and Garimella, 2022; Gil de Zúñiga et al. 2021)]
-- Misinformation led episodes of offline violence against minority groups .midgrey[(Saha et al., 2021; Banaji et al., 2019)] 
-- Voting behavior .midgrey[(Tardáguila et al., 2018; Mello, 2020)]
-
-]
-]
-
----
 
 <br>
 <br>
@@ -179,11 +80,6 @@ Several claims about the role of WhatsApp on offline attitudes and behaviors:
 <br>
 
 .content-box-gray[Identify the causal effects of **.red[WhatsApp usage]** on **.red[exposure to online rumors]** and its downstream effects on **.red[belief accuracy]** and **.red[political attitudes]**]
-
----
-class: middle, inverse, center
-
-# WhatsApp Multimedia Constrained Deactivation
 
 ---
 class: middle
@@ -239,24 +135,9 @@ class: middle
 --
 
 ---
-class:center, middle, inverse
-
-# Overview of the Experiment
-
----
-class:middle
-
-.center[
-```{r out.width="120%"}
-knitr::include_graphics("output/research_design.png")
-```
-]
-
----
 class:middle
 
 ### Overview of the Experiment
-
 
 .panelset.sideways[
 
@@ -361,50 +242,7 @@ knitr::include_graphics("./output/iphone_compliance.jpeg")
   - How did you feel for the past three weeks? (Happy, Anxious, etc...).
 
 ]
-
-
-## Recruitment and Power Analysis
-
-
-
-.panel[.panel-name[Power Analysis]
-
-.pull-left[
-**Complete Responses:** 732.
 ]
-
-.pull-right[
-
-**Attrition Rate:** 5.3%.
-
-]
-
-.center[
-
-```{r  out.width="100%"}
-knitr::include_graphics("./output/sims_with_covariate.png")
-```
-
-]
-]
-
-]
-
-
----
-class:middle
-
-## Hypotheses
-
-`r icons::fontawesome("arrow-alt-circle-right")` H1: Deactivated users will report lower levels of previous exposure to FALSE rumors. .midgrey[(Machado et al., 2019; Resende et al., 2019; Garimella and Tyson, 2018; Garimella and Eckles, 2020; Batista Pereira et al., 2023).]
-
-`r icons::fontawesome("arrow-alt-circle-right")` H2a: Deactivated  will display a higher ability to accurately identify FALSE rumors. .midgrey[(Fazio et al., 2015; Dechêne et al., 2010; Pennycook et al., 2018)]
-
-`r icons::fontawesome("arrow-alt-circle-right")` H2b Deactivated users will display lower levels of mainstream news knowledge. .midgrey[((Valenzuela et al., 2021; Rossini et al., 2021a))]
-
-`r icons::fontawesome("arrow-alt-circle-right")` H3: Deactivated will display lower levels of outgroup political polarization. .midgrey[((Bail et al., 2018; Settle, 2018; Lelkes et al., 2017, Omundsmen et. al. 2021)]
-
-`r icons::fontawesome("arrow-alt-circle-right")` H4: Deactivated will display higher levels of the aggregated index of subjective well-being. .midgrey[((Allcott et al., 2020; Asimovic et al., 2021; Vanman et al., 2018; Tromholt, 2016)]
 
 ---
 class: center, middle, inverse
@@ -538,59 +376,6 @@ class: middle
 --
 
 
----
-class: middle, inverse, center
-
-# Understanding Causal Effects of Social Media Usage: Multi-country Designs
-
----
-class: middle
-
-## Multi-Country WhatsApp Deactivation
-
---
-
-`r icons::fontawesome("arrow-alt-circle-right")` .red[**Experimental**]
-
-- Multi-Country Deactivation: Mexico, South Africa and India. (TPP Grant)
-
-- Contextual Diversity
-
-- New treatment arm: overall reduction on WhatsApp usage.
-
---
-
-`r icons::fontawesome("arrow-alt-circle-right")` .red[**Computational**]
-
-- Developing a data donation pipeline for WhatsApp group data
-
---
----
-## Global Social Media Usage Reduction
-
-.pull-left[
-
-- Large-Scale Collaborative Project on Experimentally Reducing Social Media Usage
-
-- Platforms: Five major algorithmic-based platforms (No WhatsApp)
-
-- Open Collaboration: 76 Countries, more than 700 (potential) collaborators signed up
-  
-- Outcomes: News Knowledge, Affective Polarization and Subjective Well-Being
-   
-- Truly global, allowing for comparative perspective, contextual variation and heteregenous effects. 
-   
-]
-
-.pull-right[
-<br>
-<br>
-.center[
-```{r  out.width="100%"}
-knitr::include_graphics("global.png")
-```
-]
-]
 ---
 class:middle, center, inverse
 

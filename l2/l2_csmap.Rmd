@@ -373,23 +373,6 @@ $\frac{\sum_{k=1}^{n}\log(a+1)\mathbb(p_k=q_i)}{\sum_{k=1}^{n}\log(a+1)}$
 ]
 
 ---
-
-## Measurement Assumptions
-
-- We are interested in the probability of the voter **i**  being exposed to an outgroup **j** online and offline. We assume this probability increases with the number of outgroup neighbors and users on user **i** networks.
-  
-- Two way to measure: 
-  
-  - **Naive:** count the number of nearest neighbors and users I follow. 
-  
-  - **Weighted:** use some transformation function. 
-  
-- We assume proximity matters: 
-
-  - **Offline:** geographical (inverse distance)
-  
-  - **Online:** online interactions (retweets)
-
 ---
 ## As a consequence:
 
