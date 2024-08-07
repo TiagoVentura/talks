@@ -133,15 +133,17 @@ class: middle
 
 ## non-probability sampling vs non-ignorable nonresponse
 
-- non-probability sampling: part os membros de uma população têm a chance de serem selecionados para a amostra
+- non-probability sampling: parte dos membros de uma população têm a chance de serem selecionados para a amostra
 
-- non-ignorable nonresponse: a decisão dos parlamentares em não responder é endogena as variáveis de interesse da pesquisa. ($(R_{i1}, R_{i0} \perp Y_i)$)
+- non-ignorable nonresponse: a decisão dos parlamentares em não responder é endogena as variáveis de interesse da pesquisa. 
 
-  - Por exemplo, erros de survey no apoio a candidatos extremistas (Trump and Bolsonaro)
+$$(R_{i1}, R_{i0} \perp Y_i)$$
+
+- Por exemplo, erros de survey no apoio a candidatos extremistas (Trump and Bolsonaro)
   
-     - Republicanos muito interessados em política não respondem a surveys
+  - Republicanos muito interessados em política não respondem a surveys
   
-  - Solução mais comum: pesos amostrais. Pode tornar o problema pior, porque o bias não vem de características demograficas
+- Solução mais comum: pesos amostrais. Pode tornar o problema pior, porque o bias não vem de características demograficas
   
 
 ---

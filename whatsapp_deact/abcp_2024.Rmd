@@ -12,7 +12,7 @@ output:
       #ratio: 191:100
       highlightStyle: github
       highlightLines: true
-      countIncrementalSlides: false
+      countIncrementalSlides: true
       slideNumberFormat: "Slide %current% of %total%" # Slide 12 of 42
 ---
 layout: true
@@ -45,15 +45,15 @@ xaringanExtra::use_panelset()
 ---
 ### Social Media, Politics and Misinformation
 
-`r icons::fontawesome("arrow-alt-circle-right")` .red[**Prevalence of misinformation**]: 
+`r icons::fontawesome("arrow-alt-circle-right")` **Prevalence of misinformation**: 
    -  People aren’t actually exposed to a lot of misinformation – but exposure is heavily concentrated. .midgrey[(Grinberg et. al. 2019, Guess et. al. 2019)]
 
-`r icons::fontawesome("arrow-alt-circle-right")` .red[**Downstream effects on attitudes: less than you think**]: 
+`r icons::fontawesome("arrow-alt-circle-right")` **Downstream effects on attitudes: less than you think**: 
    - Mixed evidence from Deactivating users from Facebook .midgrey[(Asimovic et. al. 2022, Alcott et. al. 2020, Arcenaux and Ladd 2023)]
    - Meta Election 2020 studies .midgrey[(Guess et al. 2023a,b; Nyhan et al. 2023)]
    - Null effects of exposure to misinformation campaigns from Russian bots on Twitter .midgrey[(Eady et al. 2023)]
 
-`r icons::fontawesome("arrow-alt-circle-right")` **.red[Majority of scholarly work comes from W.E.I.R.D countries]**:
+`r icons::fontawesome("arrow-alt-circle-right")` **Majority of scholarly work comes from W.E.I.R.D countries]**:
    - Over 80% of existing studies on interventions to correct misinformation focus on Global North countries 
 .midgrey[(Blair et. al. 2023,  Badrinathan and Chauchard, 2023a)]
        - Despite the fact that the real-world effects of misinformation exposure may be more pronounced in these countries.
@@ -100,7 +100,6 @@ knitr::include_graphics("deactivation_studies.png")
 
 .center[Facebook Deactivation in Bosnia and Herzegovina [(Asimovic et. al, 2022)](https://www.pnas.org/doi/10.1073/pnas.2022819118)]
 ]
-f
 
 ---
 class: middle
