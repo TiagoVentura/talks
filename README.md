@@ -4,6 +4,9 @@ Repository to share source materials for presentations and talks.
 
 ## 2024
 
+- - [14 Encontro ABCP](https://tiagoventura.github.io/talks/whatsapp_deact/abcp_2024)
+
+
 - [SICSS-2024 Rutger University](https://tiagoventura.github.io/talks/survey_professionals/sicss_rutgers)
 
 - [iLCSS-UMD: Global Social Media Experiment](https://tiagoventura.github.io/talks/ai_elections/ilcss)

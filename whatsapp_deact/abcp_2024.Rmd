@@ -43,20 +43,24 @@ xaringanExtra::use_panelset()
 
 
 ---
+class:middle
 ### Social Media, Politics and Misinformation
 
 `r icons::fontawesome("arrow-alt-circle-right")` **Prevalence of misinformation**: 
    -  People aren’t actually exposed to a lot of misinformation – but exposure is heavily concentrated. .midgrey[(Grinberg et. al. 2019, Guess et. al. 2019)]
 
+
 `r icons::fontawesome("arrow-alt-circle-right")` **Downstream effects on attitudes: less than you think**: 
    - Mixed evidence from Deactivating users from Facebook .midgrey[(Asimovic et. al. 2022, Alcott et. al. 2020, Arcenaux and Ladd 2023)]
    - Meta Election 2020 studies .midgrey[(Guess et al. 2023a,b; Nyhan et al. 2023)]
    - Null effects of exposure to misinformation campaigns from Russian bots on Twitter .midgrey[(Eady et al. 2023)]
+   
 
 `r icons::fontawesome("arrow-alt-circle-right")` **Majority of scholarly work comes from W.E.I.R.D countries]**:
    - Over 80% of existing studies on interventions to correct misinformation focus on Global North countries 
 .midgrey[(Blair et. al. 2023,  Badrinathan and Chauchard, 2023a)]
        - Despite the fact that the real-world effects of misinformation exposure may be more pronounced in these countries.
+
 
 
 ---
@@ -106,41 +110,30 @@ class: middle
 
 ### Our Experiment
 
---
 
 `r icons::fontawesome("arrow-alt-circle-right")` **Our Design:** Cut the primary channels through which users are exposed to misinformation and polarizing content: videos, images and audios .midgrey[(Machado et al., 2019; Resende et al., 2019; Garimella and Tyson, 2018; Garimella and Eckles, 2020; Batista Pereira et al., 2023).]
 
---
 
 `r icons::fontawesome("arrow-alt-circle-right")` **Experiment:** Offer respondents a monetary incentive to
 
 - Disable their automatic download of media on WhatsApp.
 - Do not purposefully click and watch any media on WhatsApp.
 
---
 
 `r icons::fontawesome("arrow-alt-circle-right")` **Treatment Period:** Three weeks:
 
 - **Start:** Three weeks before general election in Brazil.
 - **End:** three days after the voting day.
 
---
 
-`r icons::fontawesome("arrow-alt-circle-right")` **Outcomes:** 
-- Exposure and Beliefs to online misinformation, 
-- Outgroup polarization 
-- Subjective well-being. 
+---
+class:middle, center, inverse
 
---
+# Overview of the Experiment
 
 ---
 class:middle
-
-### Overview of the Experiment
-
-.panelset.sideways[
-
-.panel[.panel-name[Recruitment]
+## Recruitment
 
 **Method:** Facebook Ads targeting adults Brazil
 
@@ -158,9 +151,9 @@ class:middle
   
   + More than 2 min to complete recruitment + other quality controls
 
-]
-
-.panel[.panel-name[Treatment Assignment]
+---
+class:middle
+## Treatment Assignment
 
 
 **Start**: September 15.
@@ -176,9 +169,9 @@ class:middle
 
 **Enrolled**: 773 respondents
 
-]
+---
 
-.panel[.panel-name[Deactivation]
+## Deactivation
 
 .center[
 ```{r  out.width="40%"}
@@ -186,10 +179,11 @@ knitr::include_graphics("./output/iphone_deact.jpeg")
 ```
 ]
 
-]
+
 
 ---
-.panel[.panel-name[Intervention]
+
+## Intervention
 
 
 .center[
@@ -198,10 +192,9 @@ knitr::include_graphics("./blur.jpg")
 ```
 ]
 
-]
-
-.panel[.panel-name[Compliance]
-
+---
+class:middle
+## Compliance
 
 **Compliance Tasks:**
 
@@ -211,19 +204,21 @@ knitr::include_graphics("./blur.jpg")
 
 - After the  first compliance check, the control group was re-activated
 
-]
-
-.panel[.panel-name[Compliance II]
+---
+class:middle
+## Compliance II
 
 .center[
 ```{r  out.width="40%"}
 knitr::include_graphics("./output/iphone_compliance.jpeg")
 ```
 ]
-]
 
-.panel[.panel-name[Outcomes]
 
+---
+class:middle
+
+## Outcomes
 
 **Self-Reported Exposure and Accuracy Judgment**
 
@@ -240,8 +235,6 @@ knitr::include_graphics("./output/iphone_compliance.jpeg")
 
   - How did you feel for the past three weeks? (Happy, Anxious, etc...).
 
-]
-]
 
 ---
 class: center, middle, inverse
@@ -334,45 +327,34 @@ class: middle
 ## Discussion
 
 
---
-
 `r icons::fontawesome("arrow-alt-circle-right")` **WhatsApp is an important vector through which voters receive misinformation in Brazil at .red[a higher rate] compared to true news.**
 
---
 
 `r icons::fontawesome("arrow-alt-circle-right")` **The null results provide support for a .red[minimalist view of the short-term causal effects] of exposure to misinformation on WhatsApp on political attitudes.**
---
 
 `r icons::fontawesome("arrow-alt-circle-right")`  **Exposure to misinformation .red[does not] mechanically affect attitudes**
 
---
 
 ---
 class: middle
 
 ### Limitations
 
---
 
 `r icons::fontawesome("arrow-alt-circle-right")` **Scope conditions**: focus on direct effects of exposure to misinformation on WhatsApp & and short-term effects.
 
---
 
 `r icons::fontawesome("arrow-alt-circle-right")` **Our study does not** rule out the use of WhatsApp (and other messaging apps) as a mobilization and organizational tool by malicious actors. 
 
---
 
 `r icons::fontawesome("arrow-alt-circle-right")` Larger effect might exist exactly on **hard to reach population**.
 
---
 
 `r icons::fontawesome("arrow-alt-circle-right")` **Small effect size & power constraints**
 
---
 
 `r icons::fontawesome("arrow-alt-circle-right")` Electoral context & role of **directional** motivated reasoning
 
---
 
 
 ---
@@ -380,7 +362,6 @@ class:middle, center, inverse
 
 # Thank you!
 
----
 
 
 
