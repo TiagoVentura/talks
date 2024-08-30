@@ -172,7 +172,7 @@ class:middle
 ## RQ1: Time Spent on Survey Platforms
 
 .center[
-```{r out.width="100%"}
+```{r out.width="90%"}
 knitr::include_graphics("output/desc_prop_survey_visits_blues.png")
 ```
 ]
@@ -183,7 +183,7 @@ class:middle
 ## RQ1: Prevalence of survey professionals
 
 .center[
-```{r out.width="100%"}
+```{r out.width="90%"}
 knitr::include_graphics("output/desc_survey_profesionals_all4.png")
 ```
 ]
@@ -194,7 +194,7 @@ class:middle
 ## RQ2: Demographics and Political Differences
 
 .center[
-```{r out.width="100%"}
+```{r out.width="90%"}
 knitr::include_graphics("output/tab1.png")
 ```
 ]
@@ -205,7 +205,7 @@ class:middle
 ## RQ3: Quality of Responses
 
 .center[
-```{r out.width="100%"}
+```{r out.width="90%"}
 knitr::include_graphics("output/tab2.png")
 ```
 ]
@@ -217,7 +217,7 @@ class:middle
 ## RQ3: Stability Over-Time 
 
 .center[
-```{r out.width="100%"}
+```{r out.width="90%"}
 knitr::include_graphics("output/between_waves_effects_no_controls.png")
 ```
 ]
@@ -228,7 +228,7 @@ class:middle
 ## RQ3: Stability Over-Time - Empirical p-value
 
 .center[
-```{r out.width="100%"}
+```{r out.width="90%"}
 knitr::include_graphics("output/between_waves_density_controls.png")
 ```
 ]
@@ -239,7 +239,7 @@ class:middle
 ## RQ4: Repeated Survey Taking
 
 .center[
-```{r out.width="100%"}
+```{r out.width="90%"}
 knitr::include_graphics("output/tab3.png")
 ```
 ]
