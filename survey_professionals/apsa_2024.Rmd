@@ -251,24 +251,24 @@ class:middle
 
 --
 
-`r icons::fontawesome("arrow-alt-circle-right")` **Professional survey taking represents a .red[substantial portion] of the online activity of the analyzed samples**
+- **Professional survey taking represents a .red[substantial portion] of the online activity of the analyzed samples**
 
-- 34.3% of Lucid,  7.9% of YouGov, 1.7% of Facebook
+   - 34.3% of Lucid,  7.9% of YouGov, 1.7% of Facebook
 
 --
 
-`r icons::fontawesome("arrow-alt-circle-right")` **Although prevalent, they .red[do not introduce substantive inferential problems]**
+- **Although prevalent, they .red[do not introduce substantive inferential problems]**
 
-- lack of robust cross-sample difference suggests that survey professionalism does not introduce systematic demographic or political bias
+   - lack of robust cross-sample difference suggests that survey professionalism does not introduce systematic demographic or political bias
 
-- Professionals speed through survey, and are more likely to straightline
-   - Observable behaviors:Easy to detect and control for
+   - Professionals speed through survey, and are more likely to straightline
+      - Observable behaviors:Easy to detect and control for
    
-- No evidence of random responses over time
+   - No evidence of random responses over time
 
 --
 
-`r icons::fontawesome("arrow-alt-circle-right")`  **One problematic consequence: many participants take one and the .red[same questionnaire repeatedly]**
+-  **One problematic consequence: many participants take one and the .red[same questionnaire repeatedly]**
 
 --
 
