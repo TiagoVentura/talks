@@ -1,0 +1,117 @@
+---
+title: "<span style = 'font-size: 90%;'> Partisan Motivated Reasoning Trumps Even Illusory Truth </span>  "
+author: " <span style = 'font-size: 90%; line-height: 1.8'> Tiago Ventura (Georgetown University) </strong>, Jim Bisbbee (Vanderbilt University), Sarah Graham (CSMaP-NYU),Joshua A. Tucker (CSMaP-NYU)</span>"
+date: 09-06-2024
+execute: 
+  echo: false
+  error: true
+  cache: true
+format:
+  revealjs: 
+    transition: slide
+    background-transition: fade
+    code-line-numbers: false
+    width: 1200
+    height: 800
+    center: false
+    slide-number: true
+    incremental: false
+    chalkboard: 
+      buttons: false
+    preview-links: auto
+    footer: "Annual Meeting APSA, 2024"
+    theme: [simple, ../custom.scss]
+editor_options: 
+  chunk_output_type: console
+---
+
+## Motivation
+
+
+## Theorethical Model
+
+
+## Experimental Design:
+
+- **Data:** Online survey fielded Qualtrics, with a nationally representative sample of Americans. 
+
+- **Design:** Modeled after previous work examining ”illusory truth effects” [(Pennycook, Cannon and Rand, 2018; Lyons, 2023)]{.midgray}
+
+  - [Familiarization stage]{.red}: show [X]{.red} headlines with questions about participants' familiarization
+  
+  - [Distraction stage]{.red}: distract participants with survey questions
+  
+  - [Accuracy Stage]{.red}: show [X + Y]{.red} headlines with questions about accuracy beliefs
+  
+- **Measuring PMR**: In previous work, partisan leaning is manipulated only with content of the headlines [(Pennycook, Cannon and Rand, 2018)]{.midgray}. We manipulate both the content and source (MSNBC, Democracy Now, Fox, Breitbart) 
+
+## Interventions 
+
+
+```{r echo=FALSE, out.width = "100%"}
+knitr::include_graphics("table1.png") 
+```
+
+
+
+## Study 1: PMR vs ITE on Belief Formation
+
+#### Familiarization stage
+
+- **Control Group**: 8 headlines, not repeated after in any accuracy stage
+
+- **Treatment 1 - Prior Exposure**: 8 headlines, that are repeated after
+
+- **Treatment 2 - Prior Exposure + Warning Labels**: 8 headlines with Warning Labels, that are repeated after, without the labels. 
+
+#### Acccuracy Stage
+
+
+
+Instead of training your own model, or use a pre-trained model, researchers can use the language capabilities of LLMs to perform computational text-analysis tasks. 
+
+#### Prompt Engineering: 
+
+- **Zero Shot:** *Classify the sentiment of the following review:*
+
+- **Few Shot:** *Given these examples, Classify the sentiment of the following review:*
+
+- **Role:** *Acting as a crowdworker, classify the sentiment of following review:* 
+
+- **Chain-of-thought:** prompting means guiding a language model through a series of connected logical steps or thoughts
+
+
+## Social Science Applicattions
+
+This is an area of active research! Hundreads of working papers, and we will discus some of my favorites. We will cover three core application:
+
+- Using LLMs to classification tasks. 
+
+- Using LLMs to build ideological scores.
+
+- Using LLMs to generate synthetic survey data, and examining sources of bias. 
+
+## LLMs: Classification 
+
+> **Rathje et. al. "GPT is an effective tool for multilingual psychological text analysis"**
+
+- Dictionaries show low accuracy on text classification tasks (Really?!?)
+
+- ML models are better but more expensive on time and resources
+  - And require retraining for multi-lingual tasks
+
+- Use LLMs with zero-shot prompting for measure psycological concepts (sentiment classification).
+
+## How does it work?
+
+> “Is the sentiment of this text positive, neutral, or negative? Answer only
+with a number: 1 if positive, 2 if neutral, and 3 if negative. Here is the text: [tweet, news headline or Reddit comment text]”
+
+- To think about this as next work prediction, think about this example: 
+
+  - P(w=positive|I love this class) > P(w=neutral|I love this class)
+     - Is this the most likely next work? 
+     - No... but it is more likely than the word negative
+     - Or other negative words that are close to negative in the embedding space. 
+     
+ 

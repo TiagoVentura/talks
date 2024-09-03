@@ -1,0 +1,24 @@
+\begin{table}
+
+\caption{Regression Models:Treatment effect of Prior Exposure on Accuracy Statements by Party}
+\centering
+\begin{threeparttable}
+\begin{tabular}[t]{lcccccc}
+\toprule
+  & Democrats: Full Model & Democrats: Prior Exposure vs Control & Democrats: Labels vs Control & Republicans: Full Model & Republicans: Prior Exposure vs Control & Republicans: Labels vs Control\\
+\midrule
+Intercept & 0.670*** & 0.670*** & 0.672*** & 0.697*** & 0.696*** & 0.700***\\
+ & (0.061) & (0.062) & (0.063) & (0.073) & (0.074) & (0.073)\\
+Prior Exposure & 0.017 & 0.031 & 0.000 & 0.020 & 0.034 & 0.001\\
+ & (0.016) & (0.021) & (0.021) & (0.016) & (0.021) & (0.021)\\
+\midrule
+Num.Obs. & 13382 & 8742 & 8758 & 14395 & 9851 & 9375\\
+\bottomrule
+\multicolumn{7}{l}{\rule{0pt}{1em}+ p $<$ 0.1, * p $<$ 0.05, ** p $<$ 0.01, *** p $<$ 0.001}\\
+\end{tabular}
+\begin{tablenotes}
+\item \textit{Note: } 
+\item Outcome: Accuracy Assessment for every headline. All models contain random intercepts at the headline and participant level
+\end{tablenotes}
+\end{threeparttable}
+\end{table}

@@ -1,0 +1,32 @@
+\begin{table}
+
+\caption{Regression Models: Wave 2 Treatment effects}
+\centering
+\begin{threeparttable}
+\begin{tabular}[t]{lccc}
+\toprule
+  & Model Illusory Truth & Model PMR for Democrats & Model PMR for Republicans\\
+\midrule
+Intercept & 0.485*** & 0.537*** & 0.541***\\
+ & (0.046) & (0.088) & (0.108)\\
+Exposure:Once & -0.061 & -0.018 & -0.040\\
+ & (0.051) & (0.107) & (0.132)\\
+Exposure:Twice & -0.036 & 0.007 & -0.023\\
+ & (0.051) & (0.108) & (0.133)\\
+Headline:True & 0.066 & -0.001 & 0.096\\
+ & (0.061) & (0.123) & (0.153)\\
+Exposure:Once x Headline:True & 0.106 & 0.198 & 0.111\\
+ & (0.067) & (0.151) & (0.187)\\
+Exposure:Twice x Headline:True & 0.091 & 0.165 & 0.104\\
+ & (0.068) & (0.152) & (0.188)\\
+\midrule
+Num.Obs. & 31018 & 13479 & 14134\\
+\bottomrule
+\multicolumn{4}{l}{\rule{0pt}{1em}+ p $<$ 0.1, * p $<$ 0.05, ** p $<$ 0.01, *** p $<$ 0.001}\\
+\end{tabular}
+\begin{tablenotes}
+\item \textit{Note: } 
+\item Outcome: Accuracy Assessment for every headline. All models contain random intercepts at the headline and participant level
+\end{tablenotes}
+\end{threeparttable}
+\end{table}

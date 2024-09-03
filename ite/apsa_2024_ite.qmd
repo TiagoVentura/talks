@@ -1,0 +1,108 @@
+---
+title: "<span style = 'font-size: 90%;'> Partisan Motivated Reasoning Trumps Even Illusory Truth </span>  "
+author: " <span style = 'font-size: 90%; line-height: 1.8'> Tiago Ventura (Georgetown University) </strong>, Jim Bisbbee (Vanderbilt University) and Sarah Graham (CSMaP-NYU),Joshua A. Tucker (CSMaP-NYU)</span>"
+date: 09-06-2024
+execute: 
+  echo: false
+  error: true
+  cache: true
+format:
+  revealjs: 
+    transition: slide
+    background-transition: fade
+    code-line-numbers: false
+    width: 1200
+    height: 800
+    center: true
+    slide-number: true
+    incremental: false
+    chalkboard: 
+      buttons: false
+    preview-links: auto
+    footer: "Annual Meeting APSA, 2024"
+    theme: [simple, ../custom.scss]
+editor_options: 
+  chunk_output_type: console
+---
+
+## Motivation
+
+
+## Theorethical Model
+
+**Bayesian Model for Belief Formation integrating both cognitive biases**
+
+$$ 
+\begin{align*}
+    \pi_i(\mu|x) &\sim \mathcal{N}\left(\hat{\mu}_{i,0} + (\mu_x - \hat{\mu}_{i,0}) \left(\frac{\hat{\sigma}_{i,0}^2}{\hat{\sigma}_{i,0}^2 + \hat{\sigma}_{i,x}^2}\right),\frac{\hat{\sigma}_{i,0}^2\hat{\sigma}_{i,x}^2}{\hat{\sigma}_{i,0}^2 + \hat{\sigma}_{i,x}^2}\right)
+\end{align*}
+$$
+
+
+## Design
+
+- **Data:** Online survey fielded Qualtrics, with a nationally representative sample of Americans. 
+
+- **Design:** Modeled after previous work examining ”illusory truth effects” [(Pennycook, Cannon and Rand, 2018; Lyons, 2023)]{.midgray}
+
+  - [Familiarization stage]{.red}: show [X]{.red} headlines with questions about participants' familiarization
+  
+  - [Distraction stage]{.red}: distract participants with survey questions
+  
+  - [Accuracy Stage]{.red}: show [X + Y]{.red} headlines with questions about accuracy beliefs
+  
+- **Measuring PMR**: In previous work, partisan leaning is manipulated only with content of the headlines [(Pennycook, Cannon and Rand, 2018)]{.midgray}. We manipulate both the content and source (MSNBC, Democracy Now, Fox, Breitbart) 
+
+## Experiments
+
+```{r echo=FALSE, out.width = "100%"}
+knitr::include_graphics("table1.png") 
+```
+
+##  
+
+#### Marginal Means ITE vs PMR for False Headlines without Warning Labels
+
+
+```{r echo=FALSE, out.width = "100%"}
+knitr::include_graphics("table_mm.png") 
+```
+
+##
+
+#### Marginal Effects ITE vs PMR for False Headlines without Warning Labels
+
+
+
+```{r echo=FALSE, out.width = "100%"}
+knitr::include_graphics("output/ite_pmr_false_nolabels.png") 
+```
+
+##
+
+#### Effects of ITE vs PMR over Time for False Headlines without Warning Labels
+
+
+
+```{r echo=FALSE, out.width = "100%"}
+knitr::include_graphics("output/main_figure_w2_ite_pmr.png") 
+```
+
+##
+
+#### Effects of ITE vs PMR over Time for False Headlines with Warning Labels
+
+
+```{r echo=FALSE, out.width = "100%"}
+knitr::include_graphics("output/ite_pmr_false_labels_tv.png") 
+```
+
+##
+
+#### Effects of ITE vs PMR over Time for TRUE Headlines
+
+```{r echo=FALSE, out.width = "100%"}
+knitr::include_graphics("output/h1_itt.png") 
+```
+
+## Discussion 

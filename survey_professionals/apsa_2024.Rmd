@@ -4,6 +4,8 @@ author: " <span style = 'font-size: 100%; line-height: 1.8'> Bernhard von Hohenb
 date: " <span style = 'font-size: 80%;'> <br> APSA 2024 </span>"
 output:
   xaringan::moon_reader:
+    includes: 
+      in_header: "no_favicon.html" 
     css: ["xaringan-themer.css", "custom.css", "mytheme-fonts.css"]
     lib_dir: libs
     self_contained: false
@@ -14,6 +16,8 @@ output:
       highlightLines: true
       countIncrementalSlides: false
       slideNumberFormat: "Slide %current% of %total%" # Slide 12 of 42
+      
+      
 ---
 layout: true
 
@@ -44,26 +48,15 @@ xaringanExtra::use_panelset()
 
 ---
 class:middle
-### Social Science Research x Online Surveys
+## Motivation
 
-The capacity to recruit participants online to answer surveys/complete tasks has profoundly affect social sciences: 
 
---
-- Reducing the costs of running surveys using high-quality survey panels
+.center[
+```{r out.width="80%"}
+knitr::include_graphics("output/survey-ad.png")
+```
+]
 
---
-
-- Recruit participants from convenience samples ~ Facebook Ads, MTurk, Google ADs, Lucid, etc...
-
---
-
-- Rely less on students' samples for experiments & be more creative with online experiments. 
-
---
-
-- Use surveys to collect digital trace data ~ augmenting survey data with social media/online behavioral data
-
---
 
 ---
 class:middle
@@ -72,21 +65,18 @@ class:middle
 
 --
 - **Inference**:
-
    - Representativeness of online surveys .red[(Ansolabehere and Schaffner 2014, Baker et. al 2014, Castorena et. al 2023)]
    - Inference from survey experiments .red[(Berinsky et al 2012, Coppock 2019)]
 
 --
 
 - **Quality issues**:
-
    - Low attentiveness, speeding and straightlinning .red[(Krupnikov, Nam, and Style 2021; Cornesse and Blom 2023)]
    - Cheating on surveys .red[(Munzert et. al 2022, Clifford, S and Jerit, 2016)]
 
 --
 
 - **Professionalism**:
-
    - How many surveys participants are completing per days? 
    - Does it matter for inference? 
    - Data Quality?
@@ -169,7 +159,7 @@ class:middle, center
 ---
 class:middle
 
-## RQ1: Time Spent on Survey Platforms
+#### RQ1: Time Spent on Survey Platforms vs Popular Domains
 
 .center[
 ```{r out.width="90%"}
@@ -180,7 +170,7 @@ knitr::include_graphics("output/desc_prop_survey_visits_blues.png")
 ---
 class:middle
 
-## RQ1: Prevalence of survey professionals
+#### RQ1: Prevalence of Survey Professionals Across The Three Online Panels
 
 .center[
 ```{r out.width="90%"}
@@ -191,7 +181,7 @@ knitr::include_graphics("output/desc_survey_profesionals_all4.png")
 ---
 class:middle
 
-## RQ2: Demographics and Political Differences
+#### RQ2: Demographics and Political Differences Between Professionals and Non-Professionals
 
 .center[
 ```{r out.width="90%"}
@@ -202,7 +192,7 @@ knitr::include_graphics("output/tab1.png")
 ---
 class:middle
 
-## RQ3: Quality of Responses
+#### RQ3: Data Quality Between Professionals and Non-Professionals
 
 .center[
 ```{r out.width="90%"}
@@ -214,7 +204,7 @@ knitr::include_graphics("output/tab2.png")
 ---
 class:middle
 
-## RQ3: Stability Over-Time 
+#### RQ3: Stability of Responses Across Survey Waves Between Professional and Non-Professionals 
 
 .center[
 ```{r out.width="90%"}
@@ -225,7 +215,7 @@ knitr::include_graphics("output/between_waves_effects_no_controls.png")
 ---
 class:middle
 
-## RQ3: Stability Over-Time - Empirical p-value
+#### RQ3: Empirical p-value for the Stability of Responses Across Survey Waves Between Professional and Non-Professionals 
 
 .center[
 ```{r out.width="90%"}
@@ -236,7 +226,7 @@ knitr::include_graphics("output/between_waves_density_controls.png")
 ---
 class:middle
 
-## RQ4: Repeated Survey Taking
+#### RQ4: Repeated Survey Taking Comparion Professionals and Non-Professionals
 
 .center[
 ```{r out.width="90%"}
@@ -276,5 +266,8 @@ class:middle
 class:middle, center
 
 ## Thank you!
+
+
+
 
 

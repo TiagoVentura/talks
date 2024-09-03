@@ -1,0 +1,50 @@
+\begin{table}
+
+\caption{\label{table:main\_wave2}Regression Models: Wave 2 Effects of Illusory Truth Effects vs Partisan-Motivated Reasoning}
+\centering
+\begin{threeparttable}
+\begin{tabular}[t]{lccc}
+\toprule
+  & Model: ITE & Model: PMR & Model ITE * PMR\\
+\midrule
+(Intercept) & 0.526*** & 0.514*** & 0.462***\\
+ & (0.054) & (0.038) & (0.057)\\
+seen\_w1once & 0.093 &  & 0.067\\
+ & (0.065) &  & (0.069)\\
+seen\_w1twice & 0.091 &  & 0.051\\
+ & (0.066) &  & (0.070)\\
+veracityFALSE & -0.030 & -0.191*** & -0.012\\
+ & (0.075) & (0.054) & (0.079)\\
+seen\_w1once × veracityFALSE & -0.172+ &  & -0.190+\\
+ & (0.093) &  & (0.098)\\
+seen\_w1twice × veracityFALSE & -0.155+ &  & -0.176+\\
+ & (0.093) &  & (0.099)\\
+pmrConcordant &  & 0.180*** & 0.130***\\
+ &  & (0.009) & (0.016)\\
+pmrConcordant × veracityFALSE &  & -0.015 & \\
+ &  & (0.013) & \\
+seen\_w1once × pmrConcordant &  &  & 0.058**\\
+ &  &  & (0.020)\\
+seen\_w1twice × pmrConcordant &  &  & 0.080**\\
+ &  &  & (0.027)\\
+veracityFALSE × pmrConcordant &  &  & -0.042+\\
+ &  &  & (0.022)\\
+seen\_w1once × veracityFALSE × pmrConcordant &  &  & 0.030\\
+ &  &  & (0.029)\\
+seen\_w1twice × veracityFALSE × pmrConcordant &  &  & 0.042\\
+ &  &  & (0.038)\\
+SD (Intercept links\_headline) & 0.106 & 0.106 & 0.110\\
+SD (Observations) & 0.446 & 0.432 & 0.437\\
+SD (Intercept w2\_response\_id) & 0.186 &  & 0.187\\
+SD (Intercept w1\_response\_id) &  & 0.191 & \\
+\midrule
+Num.Obs. & 20795 & 18593 & 18709\\
+\bottomrule
+\multicolumn{4}{l}{\rule{0pt}{1em}+ p $<$ 0.1, * p $<$ 0.05, ** p $<$ 0.01, *** p $<$ 0.001}\\
+\end{tabular}
+\begin{tablenotes}
+\item \textit{Note: } 
+\item Outcome: Accuracy Assessment for every headline. All models contain random intercepts at the headline and participant level
+\end{tablenotes}
+\end{threeparttable}
+\end{table}

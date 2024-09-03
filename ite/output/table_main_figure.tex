@@ -1,0 +1,36 @@
+\begin{table}
+
+\caption{Regression Models:Illusory Truth Effects vs Partisan-Motivated Reasoning}
+\centering
+\begin{threeparttable}
+\begin{tabular}[t]{lcccccc}
+\toprule
+  & T1 - ITE & T1 - PMR & T1 - ITE * PMR & T2 - ITE & T2 - PMR & T2 - ITE * PMR\\
+\midrule
+Intercept & 0.584*** & 0.514*** & 0.510*** & 0.485*** & 0.520*** & 0.515***\\
+ & (0.036) & (0.038) & (0.038) & (0.034) & (0.037) & (0.038)\\
+Prior Exposure & 0.029** &  & 0.015 & 0.028*** &  & 0.017\\
+ & (0.011) &  & (0.015) & (0.008) &  & (0.015)\\
+Headline:False & -0.197*** & -0.191*** & -0.199*** &  & -0.193*** & -0.201***\\
+ & (0.050) & (0.054) & (0.054) &  & (0.052) & (0.053)\\
+Concordant &  & 0.180*** & 0.175*** &  & 0.168*** & 0.172***\\
+ &  & (0.009) & (0.010) &  & (0.009) & (0.010)\\
+Prior Exposure x Headline:False &  &  & 0.029 &  &  & 0.029\\
+ &  &  & (0.020) &  &  & \vphantom{1} (0.021)\\
+Prior Exposure x Concordant &  &  & 0.019 &  &  & -0.017\\
+ &  &  & (0.020) &  &  & (0.021)\\
+Concordant x Headline:False &  & -0.015 & -0.024 &  & -0.017 & -0.016\\
+ &  & (0.013) & (0.015) &  & (0.013) & (0.015)\\
+Prior Exposure x Headline:False x Concordant &  &  & 0.034 &  &  & -0.002\\
+ &  &  & (0.029) &  &  & (0.029)\\
+\midrule
+Num.Obs. & 20945 & 18593 & 18593 & 20710 & 18133 & 18133\\
+\bottomrule
+\multicolumn{7}{l}{\rule{0pt}{1em}+ p $<$ 0.1, * p $<$ 0.05, ** p $<$ 0.01, *** p $<$ 0.001}\\
+\end{tabular}
+\begin{tablenotes}
+\item \textit{Note: } 
+\item T-1 indicates models from the Prior Exposure Treatment. T-2 indicates models from the Warning Labels treatment condition. Outcome: Accuracy Assessment for every headline. All models contain random intercepts at the headline and participant level
+\end{tablenotes}
+\end{threeparttable}
+\end{table}
