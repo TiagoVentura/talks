@@ -1,6 +1,6 @@
 ---
 title: "<span style = 'font-size: 90%;'> Partisan Motivated Reasoning Trumps Even Illusory Truth </span>  "
-author: " <span style = 'font-size: 90%; line-height: 1.8'> Tiago Ventura (Georgetown University) </strong>, Jim Bisbbee (Vanderbilt University), Sarah Graham (CSMaP-NYU) and Joshua A. Tucker (CSMaP-NYU)</span>"
+author: " <span style = 'font-size: 90%; line-height: 1.8'> Tiago Ventura (Georgetown University) </strong>, James Bisbee (Vanderbilt University), Sarah Graham (CSMaP-NYU) and Joshua A. Tucker (CSMaP-NYU)</span>"
 date: " <span style = 'font-size: 80%;'> <br> APSA 2024 </span>"
 output:
   xaringan::moon_reader:
@@ -49,21 +49,22 @@ xaringanExtra::use_panelset()
 class:middle
 ## Motivation
 
---
-
-- Several claims about effects of exposure to online misinformation: 
-  - Elections, turnout, and voting choices .midgrey[(Bovet and Makse, 2019; Recuero, Soares and Gruzd, 2020; Mello, 2020)]
-  - Vaccine hesitancy and distrust in science .midgrey[(Loomba et al., 2021, Van der Linden et al., 2017)]
-  - Episodes of offline violence against minority groups .midgrey[(Saha et al., 2021; Banaji et al., 2019)]
-  
---
-
-- Robust evidence that social media facilitates the spread of misinformation and polarizing content .midgrey[(Aruguete, Calvo and Ventura, 2021; Del Vicario et al., 2016; Nyhan et al., 2023; Eady et al., 2023)]. **.red[But]**:
 
 --
-  - Evidence for causal effects of exposure beliefs and attitudes is mixed .midgrey[Eady et al., 2023, Allen et. al. 2024, Ventura et. al. 2024)]
-  - Exposure to misinformation is concentrated among small set of (heavily engaged) users .midgrey[()]
-  - Still a small part of informational environment for most users .midgrey[()]
+
+- Scholarly evidence that social media facilitates the spread of misinformation and polarizing content .midgrey[(Aruguete, Calvo and Ventura, 2021; Del Vicario et al., 2016; Nyhan et al., 2023; Eady et al., 2023)].
+
+--
+
+- Often see claims that exposure to misinformation affect democratic outcomes, like elections .midgrey[(Bovet and Makse, 2019; Recuero, Soares and Gruzd, 2020; Mello, 2020)]), attitudes and behaviors, as vaccine hesitancy  .midgrey[(Loomba et al., 2021, Van der Linden et al., 2017)] and offline violence .midgrey[(Saha et al., 2021; Banaji et al., 2019)]
+
+--
+
+--
+- **.red[But]**:
+  - Evidence for causal effects of exposure beliefs and attitudes is mixed .midgrey[(Eady et al., 2023, Allen et. al. 2024, Ventura et. al. 2024)]
+  - Exposure to misinformation is concentrated among small set of (heavily engaged) users .midgrey[(Grinberg et al., 2019)]
+  - Still a small part of informational environment for most users .midgrey[(Allen et. al., 2020, Guess et. al., 2021)]
 --
 
 
@@ -129,12 +130,13 @@ class:middle
   - .red[Accuracy Stage]: show .red[X + Y] headlines with questions about accuracy beliefs
   
 - **Measuring PMR**: In previous work, partisan leaning is manipulated only with content of the headlines .midgrey[(Pennycook, Cannon and Rand, 2018)]. We manipulate both the content and source (MSNBC, Democracy Now, Fox, Breitbart) 
+
 ---
 class:middle
 ## Experiments
 
 ```{r echo=FALSE, out.width = "100%"}
-knitr::include_graphics("table1.png") 
+knitr::include_graphics("table1_.png") 
 ```
 
 ---
