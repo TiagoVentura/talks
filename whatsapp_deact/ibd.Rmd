@@ -71,12 +71,18 @@ class:middle
 
 - **A decade after**: gap between public discourse and scientific research on this issue .midgrey[(Budak et. al., 2024)]. Scientific research shows:
 
-  - People aren’t actually exposed to a lot of misinformation – but exposure is heavily concentrated .midgrey[(Grinberg et. al. 2019, Guess et. al. 2019)]
+--
+   - People aren’t actually exposed to a lot of misinformation – but exposure is heavily concentrated .midgrey[(Grinberg et. al. 2019, Guess et. al. 2019)]
+
+--
+
+   - Nulls effects from in-the-field studies for exposure to misinformation on attitudes .midgrey[(Eady et al. 2023, and Meta papers)]
   
-  - Nulls effects from in-the-field studies for exposure to misinformation on attitudes .midgrey[(Eady et al. 2023, and Meta papers)]
+--
   
   - Mixed evidence from many deactivation studies on Facebook .midgrey[(Asimovic et. al. 2022, Alcott et. al. 2020, Arcenaux and Ladd 2023)]
-    
+
+--
 
 ---
 class:middle
@@ -84,16 +90,21 @@ class:middle
 
 `r icons::fontawesome("arrow-alt-circle-right")` **Majority of scholarly work comes from W.E.I.R.D countries**:
 
+--
    - Over 80% of existing studies on interventions to correct misinformation focus on Global North countries .midgrey[(Blair et. al. 2023,  Badrinathan and Chauchard, 2023a)]
-   
+
+--
+
    - Spreading, production and exposure to misinformation differs greatly across the world
-   
+
+--
    - In the Global South:
    
       - Informal networks for information sharing matter more ~ easier to mix true and false information
       - The real-world effects of misinformation exposure may be more pronounced in these countries, fewer fact-checking agencies, for example,
       - Social media messaging apps are more prevalent vs feed-based platforms
 
+--
 
 
 ---
