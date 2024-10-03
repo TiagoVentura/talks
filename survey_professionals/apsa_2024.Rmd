@@ -1,5 +1,5 @@
 ---
-title: "<span style = 'font-size: 70%;'>Survey Professionalism: <br> New Evidence from Web Browsing Data </span>  "
+title: "<span style = 'font-size: 70%;'>Survey Professionalism: <br> New Evidence from Web Browsing Data </span> "
 author: " <span style = 'font-size: 100%; line-height: 1.8'> Bernhard von Hohenberg (Gesis), <strong> Tiago Ventura (Georgetown University) </strong>, Jonathan Nagler (NYU), Ericka Menchen-Trevino (Independent Researcher), Magdalena  Wojcieszak (UC-Davis)</span>"
 date: " <span style = 'font-size: 80%;'> <br> APSA 2024 </span>"
 output:
@@ -61,9 +61,10 @@ knitr::include_graphics("output/survey-ad.png")
 ---
 class:middle
 
-## Reducing Costs x Data Issues
+## Potential Issues with Online Samples
 
 --
+
 - **Inference**:
    - Representativeness of online surveys .red[(Ansolabehere and Schaffner 2014, Baker et. al 2014, Castorena et. al 2023)]
    - Inference from survey experiments .red[(Berinsky et al 2012, Coppock 2019)]
@@ -88,7 +89,6 @@ class:middle
 ### Contributtions and Research Questions
 
 **Our contribution**: We use high-quality digital trace data to identify the prevalence of survey professionalism, and then its consequences for data quality and inference from online surveys. 
-
 
 - **RQ1:** What is the degree of survey professionalism among online panel members? 
 

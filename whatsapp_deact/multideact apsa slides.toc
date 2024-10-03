@@ -1,0 +1,5 @@
+\babel@toc {english}{}
+\beamer@sectionintoc {1}{Introduction}{2}{0}{1}
+\beamer@sectionintoc {2}{Experimental Design}{16}{0}{2}
+\beamer@sectionintoc {3}{Results}{30}{0}{3}
+\beamer@sectionintoc {4}{Concluding thoughts}{40}{0}{4}

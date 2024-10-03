@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title> Misinformation Exposure Beyond Traditional Feeds: Evidence from WhatsApp Deactivation Experiments in the Global South</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Tiago Ventura   Georgetown University " />
+    <script src="libs/header-attrs/header-attrs.js"></script>
+    <link href="libs/panelset/panelset.css" rel="stylesheet" />
+    <script src="libs/panelset/panelset.js"></script>
+    <html>
+    <link rel="shortcut icon" href="#" />
+    </html>
+    <link rel="stylesheet" href="xaringan-themer.css" type="text/css" />
+    <link rel="stylesheet" href="custom.css" type="text/css" />
+    <link rel="stylesheet" href="mytheme-fonts.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+.title[
+# <span style="font-size: 70%;"> Misinformation Exposure Beyond Traditional Feeds: Evidence from WhatsApp Deactivation Experiments in the Global South</span>
+]
+.author[
+### Tiago Ventura<br> <br><span style="font-size: 80%;">Georgetown University </span>
+]
+.date[
+### <span style="font-size: 80%;"> <br>IDB - Governance &amp; Development Seminar - Oct 3rd, 2024 </span>
+]
+
+---
+
+layout: true
+
+&lt;div class="my-footer"&gt;&lt;span&gt;Tiago Ventura (Georgetown University) &amp;nbsp &amp;nbsp &amp;nbsp &amp;nbsp &amp;nbsp &amp;nbsp &amp;nbsp &amp;nbsp &amp;nbsp &amp;nbsp &amp;nbsp &amp;nbsp &amp;nbsp &amp;nbsp &amp;nbsp &amp;nbsp &amp;nbsp &amp;nbsp &amp;nbsp &amp;nbsp &amp;nbsp &amp;nbsp &amp;nbsp IDB - Governance &amp; Development Seminar&lt;/span&gt;&lt;/div&gt; 
+
+
+
+
+
+---
+class:middle
+
+## Presentation Today
+
+&lt;svg viewBox="0 0 512 512" style="height:1em;position:relative;display:inline-block;top:.1em;" xmlns="http://www.w3.org/2000/svg"&gt;  &lt;path d="M504 256C504 119 393 8 256 8S8 119 8 256s111 248 248 248 248-111 248-248zm-448 0c0-110.5 89.5-200 200-200s200 89.5 200 200-89.5 200-200 200S56 366.5 56 256zm72 20v-40c0-6.6 5.4-12 12-12h116v-67c0-10.7 12.9-16 20.5-8.5l99 99c4.7 4.7 4.7 12.3 0 17l-99 99c-7.6 7.6-20.5 2.2-20.5-8.5v-67H140c-6.6 0-12-5.4-12-12z"&gt;&lt;/path&gt;&lt;/svg&gt; .red[Misinformation Exposure Beyond Traditional Feeds: Evidence from a WhatsApp Deactivation Experiment in Brazil] (With Rajeshwari Majumdar, Jonathan Nagler, and Joshua A. Tucker)
+
+&lt;svg viewBox="0 0 512 512" style="height:1em;position:relative;display:inline-block;top:.1em;" xmlns="http://www.w3.org/2000/svg"&gt;  &lt;path d="M504 256C504 119 393 8 256 8S8 119 8 256s111 248 248 248 248-111 248-248zm-448 0c0-110.5 89.5-200 200-200s200 89.5 200 200-89.5 200-200 200S56 366.5 56 256zm72 20v-40c0-6.6 5.4-12 12-12h116v-67c0-10.7 12.9-16 20.5-8.5l99 99c4.7 4.7 4.7 12.3 0 17l-99 99c-7.6 7.6-20.5 2.2-20.5-8.5v-67H140c-6.6 0-12-5.4-12-12z"&gt;&lt;/path&gt;&lt;/svg&gt; .red[Reducing WhatsApp Usage to Mitigate Misinformation Exposure During Elections: Evidence from a Multi-Country Experiment] (With Rajeshwari Majumdar, Shelley Liu, Carolina Torreblanca, and Joshua A. Tucker)
+
+&lt;svg viewBox="0 0 512 512" style="height:1em;position:relative;display:inline-block;top:.1em;" xmlns="http://www.w3.org/2000/svg"&gt;  &lt;path d="M504 256C504 119 393 8 256 8S8 119 8 256s111 248 248 248 248-111 248-248zm-448 0c0-110.5 89.5-200 200-200s200 89.5 200 200-89.5 200-200 200S56 366.5 56 256zm72 20v-40c0-6.6 5.4-12 12-12h116v-67c0-10.7 12.9-16 20.5-8.5l99 99c4.7 4.7 4.7 12.3 0 17l-99 99c-7.6 7.6-20.5 2.2-20.5-8.5v-67H140c-6.6 0-12-5.4-12-12z"&gt;&lt;/path&gt;&lt;/svg&gt; .red[WhatsApp Links Explorer: Data Donation Pipeline for WhatsApp Data] (With Jonathan Nagler, and any others interested in collecting WhatsApp data)
+
+---
+class:middle, inverse
+
+# Motivation
+
+---
+class:middle
+### Social Media, Misinformation and Politics
+
+--
+
+- **From Liberation to Turmoil**: In the last 10 years, the general public, journalist accounts and the academic research on the effects of social media in society has been dominated by the issue of misinformation (.midgrey[Tucker et. al., 2018])
+
+--
+
+- **A decade after**: gap between public discourse and scientific research on this issue .midgrey[(Budak et. al., 2024)]. Scientific research shows:
+
+  - People aren’t actually exposed to a lot of misinformation – but exposure is heavily concentrated .midgrey[(Grinberg et. al. 2019, Guess et. al. 2019)]
+  
+  - Nulls effects from in-the-field studies for exposure to misinformation on attitudes .midgrey[(Eady et al. 2023, and Meta papers)]
+  
+  - Mixed evidence from many deactivation studies on Facebook .midgrey[(Asimovic et. al. 2022, Alcott et. al. 2020, Arcenaux and Ladd 2023)]
+    
+
+---
+class:middle
+### Social Media, Misinformation and Politics
+
+&lt;svg viewBox="0 0 512 512" style="height:1em;position:relative;display:inline-block;top:.1em;" xmlns="http://www.w3.org/2000/svg"&gt;  &lt;path d="M504 256C504 119 393 8 256 8S8 119 8 256s111 248 248 248 248-111 248-248zm-448 0c0-110.5 89.5-200 200-200s200 89.5 200 200-89.5 200-200 200S56 366.5 56 256zm72 20v-40c0-6.6 5.4-12 12-12h116v-67c0-10.7 12.9-16 20.5-8.5l99 99c4.7 4.7 4.7 12.3 0 17l-99 99c-7.6 7.6-20.5 2.2-20.5-8.5v-67H140c-6.6 0-12-5.4-12-12z"&gt;&lt;/path&gt;&lt;/svg&gt; **Majority of scholarly work comes from W.E.I.R.D countries**:
+
+   - Over 80% of existing studies on interventions to correct misinformation focus on Global North countries .midgrey[(Blair et. al. 2023,  Badrinathan and Chauchard, 2023a)]
+   
+   - Spreading, production and exposure to misinformation differs greatly across the world
+   
+   - In the Global South:
+   
+      - Informal networks for information sharing matter more ~ easier to mix true and false information
+      - The real-world effects of misinformation exposure may be more pronounced in these countries, fewer fact-checking agencies, for example,
+      - Social media messaging apps are more prevalent vs feed-based platforms
+
+
+
+---
+class:middle
+
+
+&lt;img src="whatsappmotivation.png" width="100%" /&gt;
+
+
+---
+
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+
+.content-box-gray[Identify the causal effects of **.red[WhatsApp usage]** on **.red[exposure to online rumors]** and its downstream effects on **.red[belief accuracy]** and **.red[political attitudes]**]
+
+---
+class:middle
+
+#### &lt;svg viewBox="0 0 512 512" style="height:1em;position:relative;display:inline-block;top:.1em;" xmlns="http://www.w3.org/2000/svg"&gt;  &lt;path d="M504 256C504 119 393 8 256 8S8 119 8 256s111 248 248 248 248-111 248-248zm-448 0c0-110.5 89.5-200 200-200s200 89.5 200 200-89.5 200-200 200S56 366.5 56 256zm72 20v-40c0-6.6 5.4-12 12-12h116v-67c0-10.7 12.9-16 20.5-8.5l99 99c4.7 4.7 4.7 12.3 0 17l-99 99c-7.6 7.6-20.5 2.2-20.5-8.5v-67H140c-6.6 0-12-5.4-12-12z"&gt;&lt;/path&gt;&lt;/svg&gt; .red[Misinformation Exposure Beyond Traditional Feeds: Evidence from a WhatsApp Deactivation Experiment in Brazil] (With Rajeshwari Majumdar, Jonathan Nagler, and Joshua A. Tucker)
+
+#### &lt;svg viewBox="0 0 512 512" style="height:1em;position:relative;display:inline-block;top:.1em;" xmlns="http://www.w3.org/2000/svg"&gt;  &lt;path d="M504 256C504 119 393 8 256 8S8 119 8 256s111 248 248 248 248-111 248-248zm-448 0c0-110.5 89.5-200 200-200s200 89.5 200 200-89.5 200-200 200S56 366.5 56 256zm72 20v-40c0-6.6 5.4-12 12-12h116v-67c0-10.7 12.9-16 20.5-8.5l99 99c4.7 4.7 4.7 12.3 0 17l-99 99c-7.6 7.6-20.5 2.2-20.5-8.5v-67H140c-6.6 0-12-5.4-12-12z"&gt;&lt;/path&gt;&lt;/svg&gt; .palegrey[Reducing WhatsApp Usage to Mitigate Misinformation Exposure During Elections: Evidence from a Multi-Country Experiment (With Rajeshwari Majumdar, Shelley Liu, Carolina Torreblanca, and Joshua A. Tucker)]
+
+#### &lt;svg viewBox="0 0 512 512" style="height:1em;position:relative;display:inline-block;top:.1em;" xmlns="http://www.w3.org/2000/svg"&gt;  &lt;path d="M504 256C504 119 393 8 256 8S8 119 8 256s111 248 248 248 248-111 248-248zm-448 0c0-110.5 89.5-200 200-200s200 89.5 200 200-89.5 200-200 200S56 366.5 56 256zm72 20v-40c0-6.6 5.4-12 12-12h116v-67c0-10.7 12.9-16 20.5-8.5l99 99c4.7 4.7 4.7 12.3 0 17l-99 99c-7.6 7.6-20.5 2.2-20.5-8.5v-67H140c-6.6 0-12-5.4-12-12z"&gt;&lt;/path&gt;&lt;/svg&gt; .palegrey[WhatsApp Links Explorer: Data Donation Pipeline for WhatsApp Data (With Jonathan Nagler, and any others interested in collecting WhatsApp data)]
+
+---
+class:middle
+
+## Deactivation Studies: A design to measure causal effects of social media usage
+
+.center[
+&lt;img src="deactivation_studies.png" width="90%" /&gt;
+]
+
+.pull-left[
+.center[Facebook Deactivation in the US [(Alcott et al., 2020)](https://www.aeaweb.org/articles?id=10.1257/aer.20190658)]
+]
+
+.pull-right[
+
+.center[Facebook Deactivation in Bosnia and Herzegovina [(Asimovic et. al, 2022)](https://www.pnas.org/doi/10.1073/pnas.2022819118)]
+]
+
+
+---
+class: middle
+
+### Multimedia Deactivation Experiment in Brazil, 2022
+
+&lt;svg viewBox="0 0 512 512" style="height:1em;position:relative;display:inline-block;top:.1em;" xmlns="http://www.w3.org/2000/svg"&gt;  &lt;path d="M504 256C504 119 393 8 256 8S8 119 8 256s111 248 248 248 248-111 248-248zm-448 0c0-110.5 89.5-200 200-200s200 89.5 200 200-89.5 200-200 200S56 366.5 56 256zm72 20v-40c0-6.6 5.4-12 12-12h116v-67c0-10.7 12.9-16 20.5-8.5l99 99c4.7 4.7 4.7 12.3 0 17l-99 99c-7.6 7.6-20.5 2.2-20.5-8.5v-67H140c-6.6 0-12-5.4-12-12z"&gt;&lt;/path&gt;&lt;/svg&gt; **Problem**: Fully deactivating WhatsApp is neither possible nor ideal
+
+&lt;svg viewBox="0 0 512 512" style="height:1em;position:relative;display:inline-block;top:.1em;" xmlns="http://www.w3.org/2000/svg"&gt;  &lt;path d="M504 256C504 119 393 8 256 8S8 119 8 256s111 248 248 248 248-111 248-248zm-448 0c0-110.5 89.5-200 200-200s200 89.5 200 200-89.5 200-200 200S56 366.5 56 256zm72 20v-40c0-6.6 5.4-12 12-12h116v-67c0-10.7 12.9-16 20.5-8.5l99 99c4.7 4.7 4.7 12.3 0 17l-99 99c-7.6 7.6-20.5 2.2-20.5-8.5v-67H140c-6.6 0-12-5.4-12-12z"&gt;&lt;/path&gt;&lt;/svg&gt; **Our Design:** Cut the primary channels through which users are exposed to misinformation and polarizing content: videos, images and audios .midgrey[(Machado et al., 2019; Resende et al., 2019; Garimella and Tyson, 2018; Garimella and Eckles, 2020; Batista Pereira et al., 2023).]
+
+
+&lt;svg viewBox="0 0 512 512" style="height:1em;position:relative;display:inline-block;top:.1em;" xmlns="http://www.w3.org/2000/svg"&gt;  &lt;path d="M504 256C504 119 393 8 256 8S8 119 8 256s111 248 248 248 248-111 248-248zm-448 0c0-110.5 89.5-200 200-200s200 89.5 200 200-89.5 200-200 200S56 366.5 56 256zm72 20v-40c0-6.6 5.4-12 12-12h116v-67c0-10.7 12.9-16 20.5-8.5l99 99c4.7 4.7 4.7 12.3 0 17l-99 99c-7.6 7.6-20.5 2.2-20.5-8.5v-67H140c-6.6 0-12-5.4-12-12z"&gt;&lt;/path&gt;&lt;/svg&gt; **Experiment:** Offer respondents a monetary incentive to
+
+- Disable their automatic download of media on WhatsApp.
+- Do not purposefully click and watch any media on WhatsApp.
+
+
+&lt;svg viewBox="0 0 512 512" style="height:1em;position:relative;display:inline-block;top:.1em;" xmlns="http://www.w3.org/2000/svg"&gt;  &lt;path d="M504 256C504 119 393 8 256 8S8 119 8 256s111 248 248 248 248-111 248-248zm-448 0c0-110.5 89.5-200 200-200s200 89.5 200 200-89.5 200-200 200S56 366.5 56 256zm72 20v-40c0-6.6 5.4-12 12-12h116v-67c0-10.7 12.9-16 20.5-8.5l99 99c4.7 4.7 4.7 12.3 0 17l-99 99c-7.6 7.6-20.5 2.2-20.5-8.5v-67H140c-6.6 0-12-5.4-12-12z"&gt;&lt;/path&gt;&lt;/svg&gt; **Treatment Period:** Three weeks:
+
+- **Start:** Three weeks before general election in Brazil.
+- **End:** three days after the voting day.
+
+
+---
+class:middle, center, inverse
+
+# Overview of the Experiment
+
+---
+class:middle
+
+.center[
+&lt;img src="output/research_design.png" width="120%" /&gt;
+]
+
+---
+class:middle
+## Recruitment
+
+**Method:** Facebook Ads targeting adults Brazil
+
+**Started Recruitment:** September 8th
+
+**Number of respondents:** 1,947
+
+**Screening variables:** 
+
+  + Willingness to join: .red[1,8861 participants]
+  
+  + More 5min WhatsApp daily
+
+  + Only WhatsApp mobile
+  
+  + More than 2 min to complete recruitment + other quality controls
+
+---
+class:middle
+## Treatment Assignment
+
+
+**Start**: September 15.
+
+**Treatment**:
+
+- Turn off the automatic download.
+- Three .red[weeks] without consuming any multimedia.
+  
+**Control**: Three .red[days] without consuming any multimedia.
+
+**Invited**: 1,135 respondents 
+
+**Enrolled**: 773 respondents
+
+---
+
+## Deactivation
+
+.center[
+&lt;img src="./output/iphone_deact.jpeg" width="40%" /&gt;
+]
+
+
+
+---
+### Treatment Media Intervention &amp; Compliance
+
+.pull-left[
+.center[
+#### Intervention: Adding Friction
+&lt;img src="blur.jpg" width="100%" /&gt;
+]
+]
+
+.pull-left[
+.center[
+
+#### Compliance: Monitoring Behavior
+
+&lt;img src="ss_tmedia_networkusage.jpeg" width="60%" /&gt;
+
+]]
+
+.center[
+&lt;img src="./blur.jpg" width="60%" /&gt;
+]
+
+---
+class:middle
+## Compliance
+
+**Compliance Tasks:**
+
+- Screenshots of WhatsApp storage intormation 
+
+- Every week + final survey
+
+- After the  first compliance check, the control group was re-activated
+
+---
+class:middle
+
+## Outcomes
+
+**Self-Reported Exposure and Accuracy Judgment**
+
+  - False Rumors published on fact-checking webpages during the month of the experiment + True News stories headlines from mainstream media.
+
+**Polarization**
+
+  - Affective polarization (Feeling Thermometer).
+  - Social Polarization (Willingness to engage with outgroup voter).
+  - Issue Polarization (Abortion, gun control, etc..).
+  - Perceptions about ideological polarization ('Where do I observe the two main candidates?').
+
+**Subjective Well-being**
+
+  - How did you feel for the past three weeks? (Happy, Anxious, etc...).
+
+
+---
+class: center, middle, inverse
+
+# Results
+
+---
+
+### First-Stage Results
+
+.center[
+&lt;img src="./output/models_compliance.png" width="90%" /&gt;
+]
+
+---
+### Effects on Exposure to Misinformation Rumors (H1)
+
+.center[
+&lt;img src="./output/exposure_h1.png" width="90%" /&gt;
+]
+
+---
+### Reduction in exposure is large for false news (H1)
+
+.center[
+&lt;img src="./output/difference_true_false_exposure.png" width="90%" /&gt;
+]
+
+---
+### Effects on Belief Accuracy (H2)
+
+.center[
+&lt;img src="./output/belief_accuracy_h2.png" width="90%" /&gt;
+]
+
+---
+### Effects on Polarization &amp; Subjective Well-Being (H3 &amp; H4)
+
+.center[
+&lt;img src="./output/pol_sw_index.png" width="90%" /&gt;
+]
+
+---
+class: middle, inverse, center
+
+## Additional Analyses  (Non Pre-Registered)
+
+---
+### Exposure and Partisanship
+
+.center[
+&lt;img src="output/sif_exposure_bothparties_counter_pro.png" width="90%" /&gt;
+]
+
+---
+### Belief Accuracy Conditional on WhatsApp usage for Politics
+
+.center[
+&lt;img src="output/sif_het_use_whatsapp_fac.png" width="90%" /&gt;
+]
+
+
+---
+### Polarization Outcomes
+
+.center[
+&lt;img src="output/pol_outcomes.png" width="90%" /&gt;
+]
+
+---
+
+class: middle
+
+## Discussion
+
+
+&lt;svg viewBox="0 0 512 512" style="height:1em;position:relative;display:inline-block;top:.1em;" xmlns="http://www.w3.org/2000/svg"&gt;  &lt;path d="M504 256C504 119 393 8 256 8S8 119 8 256s111 248 248 248 248-111 248-248zm-448 0c0-110.5 89.5-200 200-200s200 89.5 200 200-89.5 200-200 200S56 366.5 56 256zm72 20v-40c0-6.6 5.4-12 12-12h116v-67c0-10.7 12.9-16 20.5-8.5l99 99c4.7 4.7 4.7 12.3 0 17l-99 99c-7.6 7.6-20.5 2.2-20.5-8.5v-67H140c-6.6 0-12-5.4-12-12z"&gt;&lt;/path&gt;&lt;/svg&gt; **WhatsApp is an important vector through which voters receive misinformation in Brazil at .red[a higher rate] compared to true news.**
+
+
+&lt;svg viewBox="0 0 512 512" style="height:1em;position:relative;display:inline-block;top:.1em;" xmlns="http://www.w3.org/2000/svg"&gt;  &lt;path d="M504 256C504 119 393 8 256 8S8 119 8 256s111 248 248 248 248-111 248-248zm-448 0c0-110.5 89.5-200 200-200s200 89.5 200 200-89.5 200-200 200S56 366.5 56 256zm72 20v-40c0-6.6 5.4-12 12-12h116v-67c0-10.7 12.9-16 20.5-8.5l99 99c4.7 4.7 4.7 12.3 0 17l-99 99c-7.6 7.6-20.5 2.2-20.5-8.5v-67H140c-6.6 0-12-5.4-12-12z"&gt;&lt;/path&gt;&lt;/svg&gt; **The null results provide support for a .red[minimalist view of the short-term causal effects] of exposure to misinformation on WhatsApp on political attitudes.**
+
+&lt;svg viewBox="0 0 512 512" style="height:1em;position:relative;display:inline-block;top:.1em;" xmlns="http://www.w3.org/2000/svg"&gt;  &lt;path d="M504 256C504 119 393 8 256 8S8 119 8 256s111 248 248 248 248-111 248-248zm-448 0c0-110.5 89.5-200 200-200s200 89.5 200 200-89.5 200-200 200S56 366.5 56 256zm72 20v-40c0-6.6 5.4-12 12-12h116v-67c0-10.7 12.9-16 20.5-8.5l99 99c4.7 4.7 4.7 12.3 0 17l-99 99c-7.6 7.6-20.5 2.2-20.5-8.5v-67H140c-6.6 0-12-5.4-12-12z"&gt;&lt;/path&gt;&lt;/svg&gt;  **Exposure to misinformation .red[does not] mechanically affect attitudes**
+
+&lt;svg viewBox="0 0 512 512" style="height:1em;position:relative;display:inline-block;top:.1em;" xmlns="http://www.w3.org/2000/svg"&gt;  &lt;path d="M504 256C504 119 393 8 256 8S8 119 8 256s111 248 248 248 248-111 248-248zm-448 0c0-110.5 89.5-200 200-200s200 89.5 200 200-89.5 200-200 200S56 366.5 56 256zm72 20v-40c0-6.6 5.4-12 12-12h116v-67c0-10.7 12.9-16 20.5-8.5l99 99c4.7 4.7 4.7 12.3 0 17l-99 99c-7.6 7.6-20.5 2.2-20.5-8.5v-67H140c-6.6 0-12-5.4-12-12z"&gt;&lt;/path&gt;&lt;/svg&gt; **Limitation:** single-country, low-powered study: effects are likely larger among subgroups more exposure to misinformation, and vary contextually. 
+
+---
+class:middle
+
+
+#### .palegrey[Misinformation Exposure Beyond Traditional Feeds: Evidence from a WhatsApp Deactivation Experiment in Brazil (With Rajeshwari Majumdar, Jonathan Nagler, and Joshua A. Tucker)]
+
+#### &lt;svg viewBox="0 0 512 512" style="height:1em;position:relative;display:inline-block;top:.1em;" xmlns="http://www.w3.org/2000/svg"&gt;  &lt;path d="M504 256C504 119 393 8 256 8S8 119 8 256s111 248 248 248 248-111 248-248zm-448 0c0-110.5 89.5-200 200-200s200 89.5 200 200-89.5 200-200 200S56 366.5 56 256zm72 20v-40c0-6.6 5.4-12 12-12h116v-67c0-10.7 12.9-16 20.5-8.5l99 99c4.7 4.7 4.7 12.3 0 17l-99 99c-7.6 7.6-20.5 2.2-20.5-8.5v-67H140c-6.6 0-12-5.4-12-12z"&gt;&lt;/path&gt;&lt;/svg&gt; .red[Reducing WhatsApp Usage to Mitigate Misinformation Exposure During Elections: Evidence from a Multi-Country Experiment] (With Rajeshwari Majumdar, Shelley Liu, Carolina Torreblanca, and Joshua A. Tucker)
+
+#### .palegrey[WhatsApp Links Explorer: Data Donation Pipeline for WhatsApp Data (With Jonathan Nagler, and any others interested in collecting WhatsApp data)]
+
+
+---
+class: middle
+### Extension: Multi-Country Deactivation Experiment
+
+
+- **Problem**: Single country studies have limited power to speak of contextual effects (and in our case, limited statistical power)
+
+- **Summary**: Multicountry extension across three major Global South countries; Brazil (In the field), India and South Africa
+
+- **Stronger Treatment**: Replicate Multimedia Deactivation + Time Reduction
+
+- **More statistical power**: ~ 2500 participants across the three countries.  
+
+---
+class: middle
+## Experimental Conditions 
+
+- **Types of partial deactivation**
+   -  Time: Limit daily WhatsApp usage to 10 minutes 
+   -  Multimedia: Do not consume multimedia content received via WhatsApp
+
+- **Treatment and control**
+ 
+ - Treatment: Change settings and  behavior for .red[4 week (one month)] leading up to elections in South Africa and India
+ - Control: Change only behavior for .red[3 days] a month before election
+
+
+- **2x2 design**
+
+|Treatment|Control|
+|----------------|--------------|
+| Time Treatment | Time Control |
+| Media Treatment | Media Control|
+
+---
+class:middle
+
+### Treatment Time Intervention &amp; Compliance
+
+.pull-left[
+.center[
+#### Intervention: Adding Friction
+&lt;img src="time-limite.png" width="55%" /&gt;
+]
+]
+.pull-right[
+.center[
+#### Compliance: Monitoring Behavior
+
+&lt;img src="ss_ttime_actualsubject_lightmode.png" width="60%" /&gt;
+]
+]
+
+---
+class:middle 
+### Treatment Media Intervention &amp; Compliance
+
+.pull-left[
+.center[
+#### Intervention: Adding Friction
+&lt;img src="ss_tmedia_examplereal_dlpre.png" width="60%" /&gt;
+]
+]
+
+.pull-left[
+.center[
+
+#### Compliance: Monitoring Behavior
+
+&lt;img src="ss_tmedia_networkusage.jpeg" width="60%" /&gt;
+
+]]
+---
+class:middle
+
+
+## Implementation 
+
+- Used Meta Advertisements to recruit WhatsApp users in all the three countries
+- All participants could earn a total of $15 for completing surveys and uploading weekly screenshots
+- Participants in treatment conditions who successfully reduced usage or multimedia consumption received an additional $45 
+
+- Started with 1,498 respondents in SA and IN countries;  1,394 (93\%) completed the endline survey. Currently have 930 participants enrolled in Brazil. 
+
+- Timeline SA and IN: 
+
+&lt;img src="timelinefigure.png" width="100%" /&gt;
+
+---
+class: inverse, middle, center
+
+# (Very) Preliminary Results
+
+---
+class: middle, center
+#### Limiting WhatsApp usage reduces exposure to misinformation &amp; news
+
+&lt;img src="h1_itt.png" width="100%" /&gt;
+
+---
+class: middle, center
+
+#### Reduction in exposure to misinformation &amp; news has null effects on beleif accuracy
+
+&lt;img src="h2_itt.png" width="100%" /&gt;
+
+
+---
+class: middle, center
+
+#### Mostly nulls in polarization, except for identity-based prejudice in India
+
+&lt;img src="h_polarization.png" width="100%" /&gt;
+
+
+---
+class:middle
+
+## Next Steps
+
+- Aggregate results from the Brazil new experiment.
+
+- More HTEs and secondary outcomes to understand divergences in results across countries
+
+-  Analyze compliance data  and estimate complier effects
+
+-  2-week follow-up survey: effects of ``returning'' to WhatsApp?
+
+---
+class:middle
+
+#### &lt;svg viewBox="0 0 512 512" style="height:1em;position:relative;display:inline-block;top:.1em;" xmlns="http://www.w3.org/2000/svg"&gt;  &lt;path d="M504 256C504 119 393 8 256 8S8 119 8 256s111 248 248 248 248-111 248-248zm-448 0c0-110.5 89.5-200 200-200s200 89.5 200 200-89.5 200-200 200S56 366.5 56 256zm72 20v-40c0-6.6 5.4-12 12-12h116v-67c0-10.7 12.9-16 20.5-8.5l99 99c4.7 4.7 4.7 12.3 0 17l-99 99c-7.6 7.6-20.5 2.2-20.5-8.5v-67H140c-6.6 0-12-5.4-12-12z"&gt;&lt;/path&gt;&lt;/svg&gt; .palegrey[Misinformation Exposure Beyond Traditional Feeds: Evidence from a WhatsApp Deactivation Experiment in Brazil (With Rajeshwari Majumdar, Jonathan Nagler, and Joshua A. Tucker)]
+
+#### &lt;svg viewBox="0 0 512 512" style="height:1em;position:relative;display:inline-block;top:.1em;" xmlns="http://www.w3.org/2000/svg"&gt;  &lt;path d="M504 256C504 119 393 8 256 8S8 119 8 256s111 248 248 248 248-111 248-248zm-448 0c0-110.5 89.5-200 200-200s200 89.5 200 200-89.5 200-200 200S56 366.5 56 256zm72 20v-40c0-6.6 5.4-12 12-12h116v-67c0-10.7 12.9-16 20.5-8.5l99 99c4.7 4.7 4.7 12.3 0 17l-99 99c-7.6 7.6-20.5 2.2-20.5-8.5v-67H140c-6.6 0-12-5.4-12-12z"&gt;&lt;/path&gt;&lt;/svg&gt; .palegrey[Reducing WhatsApp Usage to Mitigate Misinformation Exposure During Elections: Evidence from a Multi-Country Experiment (With Rajeshwari Majumdar, Shelley Liu, Carolina Torreblanca, and Joshua A. Tucker)]
+
+#### &lt;svg viewBox="0 0 512 512" style="height:1em;position:relative;display:inline-block;top:.1em;" xmlns="http://www.w3.org/2000/svg"&gt;  &lt;path d="M504 256C504 119 393 8 256 8S8 119 8 256s111 248 248 248 248-111 248-248zm-448 0c0-110.5 89.5-200 200-200s200 89.5 200 200-89.5 200-200 200S56 366.5 56 256zm72 20v-40c0-6.6 5.4-12 12-12h116v-67c0-10.7 12.9-16 20.5-8.5l99 99c4.7 4.7 4.7 12.3 0 17l-99 99c-7.6 7.6-20.5 2.2-20.5-8.5v-67H140c-6.6 0-12-5.4-12-12z"&gt;&lt;/path&gt;&lt;/svg&gt; .red[WhatsApp Links Explorer: Data Donation Pipeline for WhatsApp Data] (With Jonathan Nagler, and any others interested in collecting WhatsApp data)
+
+---
+class:middle
+### WhatsApp Link Explore: A Data Donation Pipeline
+
+- WhatsApp is end-to-end encrypted. 
+
+- But, users can easily export their data. This makes Data Donation the easiest (possible only way to collect WhatsApp Data)
+
+- Develop a pipeline using [WhatsApp Web](https://github.com/pedroslopez/whatsapp-web.js); A WhatsApp API client that connects through the WhatsApp Web browser app
+---
+class:middle
+## Data Donation Pipeline: 
+
+- Recruit participants via surveys
+  
+- Ask them to authenticate in the web app (no need to download anything; but need two devices)
+  
+- Participants can choose which groups to donate the data. Only allow groups &gt;5 participants.
+  
+- Collect: 
+   - users' metadata, 
+   - groups' metadata,
+   - messages from donated groups.
+   - only collect messages that contains URLs, avoid collecting risky and private content (images, messages, videos.)
+
+---
+## Examples of the Data Pipeline
+
+.pull-left[
+&lt;img src="wpp_monitor.png" width="100%" /&gt;
+]
+
+.pull-right[
+&lt;img src="wpp_groups.png" width="100%" /&gt;
+
+]
+
+- Planned Data Collections: CSIP-Latinos in the US; online sample in Brazil. 
+
+---
+class:center, inverse, middle
+
+# Thank you
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": true,
+"slideNumberFormat": "Slide %current% of %total%"
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+// add `data-at-shortcutkeys` attribute to <body> to resolve conflicts with JAWS
+// screen reader (see PR #262)
+(function(d) {
+  let res = {};
+  d.querySelectorAll('.remark-help-content table tr').forEach(tr => {
+    const t = tr.querySelector('td:nth-child(2)').innerText;
+    tr.querySelectorAll('td:first-child .key').forEach(key => {
+      const k = key.innerText;
+      if (/^[a-z]$/.test(k)) res[k] = t;  // must be a single letter (key)
+    });
+  });
+  d.body.setAttribute('data-at-shortcutkeys', JSON.stringify(res));
+})(document);
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

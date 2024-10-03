@@ -1,7 +1,7 @@
 ---
-title: " <span style = 'font-size: 70%;'> Misinformation Exposure Beyond Traditional Feeds: Evidence from a WhatsApp Deactivation Experiment</span>"
-author: "Tiago Ventura, Rajeshwari Majumdar, Jonathan Nagler, and  Joshua A. Tucker <br> <br><span style = 'font-size: 80%;'>Georgetown University & Center for Social Media and Politics, NYU</span>"
-date: " <span style = 'font-size: 80%;'> <br> 14 Encontro da ABCP  </span>"
+title: " <span style = 'font-size: 70%;'> Misinformation Exposure Beyond Traditional Feeds: Evidence from WhatsApp Deactivation Experiments in the Global South</span>"
+author: "Tiago Ventura<br> <br><span style = 'font-size: 80%;'>Georgetown University </span>"
+date: " <span style = 'font-size: 80%;'> <br>CSMaP Meeting - Sept 23, 2023 </span>"
 output:
   xaringan::moon_reader:
     css: ["xaringan-themer.css", "custom.css", "mytheme-fonts.css"]
@@ -17,7 +17,7 @@ output:
 ---
 layout: true
 
-<div class="my-footer"><span>Tiago Ventura (Georgetown University) &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  ABCP </span></div> 
+<div class="my-footer"><span>Tiago Ventura (Georgetown University) &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp CSMaP Meeting</span></div> 
 
 ```{r setup, include=FALSE}
 library(xaringanthemer)
@@ -41,6 +41,21 @@ xaringanExtra::use_panelset()
 #)
 ```
 
+---
+class:middle
+
+## Presentation Today
+
+`r icons::fontawesome("arrow-alt-circle-right")` .red[Misinformation Exposure Beyond Traditional Feeds: Evidence from a WhatsApp Deactivation Experiment in Brazil] (With Rajeshwari Majumdar, Jonathan Nagler, and Joshua A. Tucker)
+
+`r icons::fontawesome("arrow-alt-circle-right")` .red[Reducing WhatsApp Usage to Mitigate Misinformation Exposure During Elections: Evidence from a Multi-Country Experiment] (With Rajeshwari Majumdar, Shelley Liu, Carolina Torreblanca, and Joshua A. Tucker)
+
+`r icons::fontawesome("arrow-alt-circle-right")` .red[WhatsApp Links Explorer: Data Donation Pipeline for WhatsApp Data] (With Jonathan Nagler, and any others interested in collecting WhatsApp data)
+
+---
+class:middle, inverse
+
+# Motivation
 
 ---
 class:middle
@@ -51,12 +66,13 @@ class:middle
 
 
 `r icons::fontawesome("arrow-alt-circle-right")` **Downstream effects on attitudes: less than you think**: 
-   - Mixed evidence from Deactivating users from Facebook .midgrey[(Asimovic et. al. 2022, Alcott et. al. 2020, Arcenaux and Ladd 2023)]
-   - Meta Election 2020 studies .midgrey[(Guess et al. 2023a,b; Nyhan et al. 2023)]
    - Null effects of exposure to misinformation campaigns from Russian bots on Twitter .midgrey[(Eady et al. 2023)]
+   - Mixed evidence from deactivating users from Facebook .midgrey[(Asimovic et. al. 2022, Alcott et. al. 2020, Arcenaux and Ladd 2023)]
+   - Meta Election 2020 studies .midgrey[(Guess et al. 2023a,b; Nyhan et al. 2023)]
    
 
 `r icons::fontawesome("arrow-alt-circle-right")` **Majority of scholarly work comes from W.E.I.R.D countries]**:
+   - As a consequence we know a lot about feed-based platforms, a little about other social media apps more prevalent in other parts of the world
    - Over 80% of existing studies on interventions to correct misinformation focus on Global North countries 
 .midgrey[(Blair et. al. 2023,  Badrinathan and Chauchard, 2023a)]
        - Despite the fact that the real-world effects of misinformation exposure may be more pronounced in these countries.
@@ -68,7 +84,7 @@ class:middle
 
 
 ```{r out.width="100%"}
-knitr::include_graphics("nyt.png")
+knitr::include_graphics("whatsappmotivation.png")
 ```
 
 
@@ -86,7 +102,7 @@ knitr::include_graphics("nyt.png")
 .content-box-gray[Identify the causal effects of **.red[WhatsApp usage]** on **.red[exposure to online rumors]** and its downstream effects on **.red[belief accuracy]** and **.red[political attitudes]**]
 
 ---
-class: middle
+class:middle
 
 ## Deactivation Studies
 
@@ -106,9 +122,14 @@ knitr::include_graphics("deactivation_studies.png")
 ]
 
 ---
+class:middle
+
+`r icons::fontawesome("arrow-alt-circle-right")` [Misinformation Exposure Beyond Traditional Feeds: Evidence from a WhatsApp Deactivation Experiment in Brazil]()(With Rajeshwari Majumdar, Jonathan Nagler, and Joshua A. Tucker)
+
+---
 class: middle
 
-### Our Experiment
+### Multimedia Deactivation Experiment in Brazil, 2022
 
 
 `r icons::fontawesome("arrow-alt-circle-right")` **Our Design:** Cut the primary channels through which users are exposed to misinformation and polarizing content: videos, images and audios .midgrey[(Machado et al., 2019; Resende et al., 2019; Garimella and Tyson, 2018; Garimella and Eckles, 2020; Batista Pereira et al., 2023).]
@@ -338,30 +359,78 @@ class: middle
 ---
 class: middle
 
-### Limitations
+## Extension: Multi-Country Deactivation Studies
 
+`r icons::fontawesome("arrow-alt-circle-right")` .red[Reducing WhatsApp Usage to Mitigate Misinformation Exposure During Elections: Evidence from a Multi-Country Experiment] (With Rajeshwari Majumdar, Shelley Liu, Carolina Torreblanca, and Joshua A. Tucker)
 
-`r icons::fontawesome("arrow-alt-circle-right")` **Scope conditions**: focus on direct effects of exposure to misinformation on WhatsApp & and short-term effects.
-
-
-`r icons::fontawesome("arrow-alt-circle-right")` **Our study does not** rule out the use of WhatsApp (and other messaging apps) as a mobilization and organizational tool by malicious actors. 
-
-
-`r icons::fontawesome("arrow-alt-circle-right")` Larger effect might exist exactly on **hard to reach population**.
-
-
-`r icons::fontawesome("arrow-alt-circle-right")` **Small effect size & power constraints**
-
-
-`r icons::fontawesome("arrow-alt-circle-right")` Electoral context & role of **directional** motivated reasoning
-
-
+--
+- **Summary**: Multicountry extension across three major Global South countries; Brazil (In the field), India and South Africa
+- **Stronger Treatment**: Replicate Multimedia + Time Reduction
+- **More statistical power**: ~ 2500 participants across the three countries.  
+--
 
 ---
-class:middle, center, inverse
+class: middle
+## Experimental Conditions 
 
-# Thank you!
+- **Types of partial deactivation**
+   -  Time: Limit daily WhatsApp usage to 10 minutes 
+   -  Multimedia: Do not consume multimedia content received via WhatsApp
+
+- **Treatment and control**
+ 
+ - Treatment: Change settings and  behavior for .red[4 week (one month)] leading up to elections in South Africa and India
+ - Control: Change only behavior for .red[3 days] a month before election
 
 
+- **2x2 design**
 
+|Treatment|Control|
+|----------------|--------------|
+| Time Treatment | Time Control |
+| Media Treatment | Media Control|
 
+---
+class:middle
+
+## Treatment Time Intervention & Compliance
+
+.pull-right[
+.center[
+#### Adding Friction
+```{r out.width="60%"}
+knitr::include_graphics("time-limit.png") 
+```
+]
+]
+.pull-left[
+.center[
+#### Monitoring Behavior
+
+```{r out.width="60%"}
+knitr::include_graphics("ss_ttime_actualsubject_lightmode.png")
+```
+]
+]
+
+## Treatment Media Intervention & Compliance
+
+.pull-right[
+.center[
+#### Adding Friction
+```{r out.width="60%"}
+knitr::include_graphics("ss_tmedia_examplereal_dlpost.png") 
+```
+]
+]
+
+.pull-left[
+.center[
+
+#### Monitoring Behavior
+
+```{r out.width="60%"}
+knitr::include_graphics("ss_tmedia_networkusage.png")
+```
+
+]]

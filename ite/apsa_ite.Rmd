@@ -52,26 +52,27 @@ class:middle
 
 --
 
-- Scholarly evidence that social media facilitates the spread of misinformation and polarizing content .midgrey[(Aruguete, Calvo and Ventura, 2021; Del Vicario et al., 2016; Nyhan et al., 2023; Eady et al., 2023)].
+- Scholarly evidence that social media facilitates the spread of misinformation and polarizing content .midgrey[( Vosoughi et. al., 2018; Del Vicario et al., 2016; Aruguete, Calvo and Ventura, 2021; Eady et al., 2023)].
 
 --
 
-- Often see claims that exposure to misinformation affect democratic outcomes, like elections .midgrey[(Bovet and Makse, 2019; Recuero, Soares and Gruzd, 2020; Mello, 2020)]), attitudes and behaviors, as vaccine hesitancy  .midgrey[(Loomba et al., 2021, Van der Linden et al., 2017)] and offline violence .midgrey[(Saha et al., 2021; Banaji et al., 2019)]
+- Often see claims that conflate prevalence/virality features of misinformation on social media with real-world impact .midgrey[(Altay, Berriche and Acerbi, 2023; Wagner and Boczkowski, 2019)]
 
 --
 
 --
 - **.red[But]**:
-  - Evidence for causal effects of exposure beliefs and attitudes is mixed .midgrey[(Eady et al., 2023, Allen et. al. 2024, Ventura et. al. 2024)]
-  - Exposure to misinformation is concentrated among small set of (heavily engaged) users .midgrey[(Grinberg et al., 2019)]
+  - Exposure to misinformation is concentrated among small set of (heavily engaged) users .midgrey[(Grinberg et al., 2019, Budak et. al., 2024)]
   - Still a small part of informational environment for most users .midgrey[(Allen et. al., 2020, Guess et. al., 2021)]
+  - Mixed evidence for causal effects of exposure beliefs and attitudes  .midgrey[(Eady et al., 2023, Allen et. al. 2024, Ventura et. al. 2024)]
+
 --
 
 
 ---
 class:middle
 
-## Exposure vs Directional Goals: Two distinct frameworks
+### Illusory Truth vs Directional Goals: Two distinct frameworks
 
 --
 
@@ -86,31 +87,39 @@ class:middle
 --
 
 `r icons::fontawesome("arrow-alt-circle-right")` **Political Science - Partisan Motivated Reasoning **: Directional goals dominate belief formation. 
-  - Partisan-motivated reasoning dominate information consumption .midgrey[(Stroud, 2011)] and belief formation .midgrey[(Flynn, Nyhan and Reifler, 2017, Peterson and Iyengar, 2021)]
+  - Partisan motivated reasoning dominate information consumption .midgrey[(Stroud, 2011)] and belief formation .midgrey[(Flynn, Nyhan and Reifler, 2017, Peterson and Iyengar, 2021)]
 
 ---
 class:middle
 
-### **Our Contributtion**:
+### **Our Contribution**:
  
-- **To which degree prior exposure to false news online trump partisan-motivated beliefs for political misinformation?**
+**To which degree prior exposure to false news online trump partisan-motivated beliefs for political misinformation?**
 
-  - **Model:** Situate both frameworks in a common model of Bayesian belief formation AND 
-  - **Experiments:** Measure the effect of both frameworks on belief for political misinformation through a set of survey experiments. 
+--
+
+- **Model:** Situate both frameworks in a common model of Bayesian belief formation AND 
+- **Experiments:** Measure the effect of both frameworks on belief for political misinformation through a set of survey experiments. 
 
 --
 
 ---
 class:middle
-#### Bayesian Model for Belief Formation integrating both cognitive biases**
+### Bayesian Model for Belief Formation
 
 $$ 
+\begin{align*}
+    \textbf{Prior:}~~\pi(\mu) \sim \mathcal{N}(\hat{\mu}_{i,0},\hat{\sigma}^2_{i,0})\\
+    \textbf{Signal:}~~x \sim \mathcal{N}(\mu_{x},\hat{\sigma}^2_{i,x})
+\end{align*}
+$$
+$$
 \begin{align*}
     \pi_i(\mu|x) &\sim \mathcal{N}\left(\hat{\mu}_{i,0} + (\mu_x - \hat{\mu}_{i,0}) \left(\frac{\hat{\sigma}_{i,0}^2}{\hat{\sigma}_{i,0}^2 + \hat{\sigma}_{i,x}^2}\right),\frac{\hat{\sigma}_{i,0}^2\hat{\sigma}_{i,x}^2}{\hat{\sigma}_{i,0}^2 + \hat{\sigma}_{i,x}^2}\right)
 \end{align*}
 $$
 
-- critical parameters are $\hat{\sigma}_{i,0}$ and $\hat{\sigma}_{i,x}$ which measures the (inverse) credibility of the signal
+- critical parameters are $\hat{\sigma}_{i,0}$ which measures the (inverse) credibility of the signal
 
   - .red[PMR]: Source alignment `r icons::fontawesome("arrow-alt-circle-right")` credibility of the signal
   - .red[ITE]: Familiarity (or prior exposure) `r icons::fontawesome("arrow-alt-circle-right")` credibility of the signal
