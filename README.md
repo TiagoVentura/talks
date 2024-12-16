@@ -4,8 +4,17 @@ Repository to share source materials for presentations and talks.
 
 ## 2024
 
-- - [14 Encontro ABCP](https://tiagoventura.github.io/talks/whatsapp_deact/abcp_2024)
+- [Governance & Development Seminar Series](https://tiagoventura.github.io/talks/whatsapp_deact/ibd)
 
+- [Technology & Public Policy Meeting, Georgetown University](https://tiagoventura.github.io/talks/whatsapp_deact/tpp_2024)
+
+- [WORKSHOP PROGRAM- DISINFORMATION, [SOCIAL] MEDIA and WAR: University of Manchester](https://tiagoventura.github.io/talks/whatsapp_deact/manchester)
+
+- [APSA - Prior Exposure vs PMR](https://tiagoventura.github.io/talks/ite/apsa_ite)
+
+- [APSA - Survey Professionals](https://tiagoventura.github.io/talks/survey_professionals/apsa_2024_ite)
+
+- [14 Encontro ABCP](https://tiagoventura.github.io/talks/whatsapp_deact/abcp_2024)
 
 - [SICSS-2024 Rutger University](https://tiagoventura.github.io/talks/survey_professionals/sicss_rutgers)
 
