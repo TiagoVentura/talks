@@ -8,7 +8,7 @@ Repository to share source materials for presentations and talks.
 
 - [Technology & Public Policy Meeting, Georgetown University](https://tiagoventura.github.io/talks/whatsapp_deact/tpp_2024)
 
-- [WORKSHOP PROGRAM- DISINFORMATION, [SOCIAL] MEDIA and WAR: University of Manchester](https://tiagoventura.github.io/talks/whatsapp_deact/manchester)
+- [DISINFORMATION, SOCIAL MEDIA and WAR: University of Manchester](https://tiagoventura.github.io/talks/whatsapp_deact/manchester)
 
 - [APSA - Prior Exposure vs PMR](https://tiagoventura.github.io/talks/ite/apsa_ite)
 
