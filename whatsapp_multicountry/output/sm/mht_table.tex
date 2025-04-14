@@ -1,0 +1,32 @@
+\begin{table}[H]
+
+\caption{\label{tab:mht}Unadjusted and FDR Adjusted P-Values Testing Each Hypothesis)}
+\centering
+\resizebox{\linewidth}{!}{
+\begin{threeparttable}
+\scalebox{.8}{\begin{tabular}[t]{l>{\raggedright\arraybackslash}p{5cm}rr}
+\toprule
+Hypotheses & Outcome & Unadjusted P-Value & FDR Adjusted P-Value\\
+\midrule
+\addlinespace[0.3em]
+\multicolumn{4}{l}{\textbf{Information Outcomes}}\\
+\hspace{1em}H1a & Misinformation Recall & 0.000 & 0.001\\
+\hspace{1em}H1b & News Recall & 0.000 & 0.000\\
+\hspace{1em}H2a & Misinformation Accuracy & 0.313 & 0.376\\
+\hspace{1em}H2b & News Accuracy & 0.648 & 0.648\\
+\hspace{1em}H3 & Online Incivility & 0.022 & 0.044\\
+\hspace{1em}H4 & Low-Quality Political Discussions & 0.049 & 0.074\\
+\addlinespace[0.3em]
+\multicolumn{4}{l}{\textbf{Attitudinal Outcomes}}\\
+\hspace{1em}H5 & Partisan Polarization & 0.885 & 0.885\\
+\hspace{1em}H6 & Identity-based Prejudice & 0.546 & 0.728\\
+\hspace{1em}H7 & Issue Polarization & 0.195 & 0.635\\
+\hspace{1em}H8 & Candidate Favorability & 0.317 & 0.635\\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}
+\item \textit{Note: } 
+\item The unadjusted p-values are estimated using multilevel models for the pooled treatment effects with covariates selected via Lasso. For Information Outcomes, we adjust for 6 comparisons, while for the Attitudinal Outcomes, we adjust for 5 simultaneous comparisons. We use Benjamini-Hochberg sharpened False Discovery Rate (FDR) for adjustment
+\end{tablenotes}
+\end{threeparttable}}
+\end{table}}

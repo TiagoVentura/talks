@@ -2,6 +2,10 @@
 
 Repository to share source materials for presentations and talks.
 
+## 2025
+
+- [Mortara Center Research Seminar](https://tiagoventura.github.io/talks/whatsapp_multicountry/mortara)
+
 ## 2024
 
 - [Governance & Development Seminar Series](https://tiagoventura.github.io/talks/whatsapp_deact/ibd)

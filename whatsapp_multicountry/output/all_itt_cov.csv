@@ -1,0 +1,23 @@
+term,estimate,std.error,statistic,p.value,dv,country,treatment,group
+treatment_pooled,-0.14378765325999796,0.03833072617920021,-3.7512373908017143,1.7596399470734707e-4,Misinformation Rumors,Pooled,"Treatment 
+ Pooled",information outcomes
+treatment_pooled,-0.1865302578669301,0.03934191098265549,-4.741260737160554,2.123923818713392e-6,News,Pooled,"Treatment 
+ Pooled",information outcomes
+treatment_pooled,0.041273353918038075,0.04092924373078571,1.0084074406435597,0.3132589023687498,Misinformation Rumors,Pooled,"Treatment 
+ Pooled",information outcomes
+treatment_pooled,-0.01870736506053472,0.04093879787911914,-0.4569593156050247,0.64770028843924,News,Pooled,"Treatment 
+ Pooled",information outcomes
+treatment_pooled,-0.09198896804422556,0.04014688874124127,-2.291310010026481,0.02194549007229524,Online Toxicity,Pooled,"Treatment 
+ Pooled",information outcomes
+treatment_pooled,-0.05866842559153795,0.04127186920444867,-1.4215112308316318,0.15516819094794987,Political Discussions,Pooled,"Treatment 
+ Pooled",information outcomes
+treatment_pooled,-0.004798687708508718,0.0366765585088653,-0.1308380039896273,0.8959034585593758,Partisan Polarization,Pooled,"Treatment 
+ Pooled",attitudes outcomes
+treatment_pooled,-0.02392146838082984,0.03932429051082711,-0.6083127774229918,0.5429800481592322,Identity-based Prejudice,Pooled,"Treatment 
+ Pooled",attitudes outcomes
+treatment_pooled,0.08097875229195221,0.03969925129289585,2.03980552919,0.04136969890142997,Issue Polarization,Pooled,"Treatment 
+ Pooled",attitudes outcomes
+treatment_pooled,-0.004472588166671956,0.03796908873221179,-0.11779550987426127,0.9062296873796422,Candidate Favorability,Pooled,"Treatment 
+ Pooled",attitudes outcomes
+treatment_pooled,0.1445506326808437,0.043428176551863505,3.3284987802381267,8.73153873514642e-4,Subjective Well-Being,Pooled,"Treatment 
+ Pooled",attitudes outcomes

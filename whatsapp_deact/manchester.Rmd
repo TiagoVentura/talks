@@ -53,8 +53,7 @@ knitr::include_graphics("nyt.png")
 class:middle
 ## Research on Social Media and its effects 
 
-- Existing research: focused primarily on feed-based platforms that are
-popular in advanced democracies (Twitter, Facebook)
+- Existing research: focused primarily on feed-based platforms that are popular in advanced democracies (Twitter, Facebook)
 
 - But in the Global South
    -  The types of social media platforms that are predominantly used are fundamentally different (message-based; WhatsApp)
