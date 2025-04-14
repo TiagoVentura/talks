@@ -1,7 +1,7 @@
 ---
 title: " <span style = 'font-size: 70%;'> Reducing Social Media Usage During Elections: Evidence from a WhatsApp Multi-Country Deactivation Experiment</span>"
 author: "Tiago Ventura<br> <br><span style = 'font-size: 80%;'>Georgetown University </span>"
-date: " <span style = 'font-size: 80%;'> <br> Mortara Research Seminar - April 11th, 2025 </span>"
+date: " <span style = 'font-size: 80%;'> <br> Mortara Research Seminar - April 14th, 2025 </span>"
 output:
   xaringan::moon_reader:
     css: ["xaringan-themer.css", "custom.css", "mytheme-fonts.css"]
@@ -22,7 +22,7 @@ layout: true
 ```{r setup, include=FALSE}
 library(xaringanthemer)
 options(htmltools.dir.version = FALSE)
-knitr::opts_chunk$set(messagwese=FALSE, warning = FALSE)
+knitr::opts_chunk$set(message=FALSE, warning = FALSE)
 xaringanthemer::style_mono_light(base_color ="#2e4a75", 
                                   title_slide_text_color="#ffff", 
                                   title_slide_background_color = "#2e4a75", 
@@ -46,60 +46,72 @@ class:middle, inverse, center
 # Motivation
 
 ---
-class:middle
-### Social Media Effects in Politics
+class: middle
+##Social Media Effects in Politics
+--
+
+**From Liberation to Turmoil:** Over the past decade, public debate and academic research have increasingly focused on the negative consequences of social media on society.
 
 --
 
-- **From Liberation to Turmoil**: In the last 10 years, the general public, journalist accounts and the academic research on social media has been dominated by the negative effects of social media in society. 
+- Facilitates the spread of misinformation .midgrey[(Guess, Nyhan, and Reifler 2018; Flaxman, Goel, and Rao 2016)]
 
---
-   - Facilitate the spread of misinformation .midgrey[(Guess, Nyhan and Reifler 2018; Flaxman, Goel and Rao 2016)]
+- Creates echo chambers .midgrey[(Guess et al. 2023; Sunstein 2018)]
 
-   - Creates echo-chambers .midgrey[(Guess et al. 2023; Sunstein 2018)]
+- Exposes users to incivility and radical groups .midgrey[(Bor and Petersen 2022)]
 
-   - Polarizes voters .midgrey[(Banks et al. 2021; Tokita, Guess and Tarnita 2021; Bail et al. 2018; Settle 2018)] 
+- - Polarizes voters around the world .midgrey[(Banks et al. 2021; Tokita, Guess, and Tarnita 2021; Bail et al. 2018; Settle 2018)]
 
-   - Facilitates exposure to uncivil interactions and radical groups (.midgrey[Bor and Petersen 2022])
+- Harms mental health .midgrey[(Tromholt 2016; Vanman, Baker, and Tobin 2018; Hanley, Watt, and Coventry 2019)]
 
-  -  Harms mental health (.midgrey[Tromholt 2016; Vanman, Baker and Tobin 2018; Hanley, Watt and Coventry 2019])
 
 ---
-class:middle
+class: center, middle
 
-- **A decade after**: gap between public discourse and scientific research on this issue .midgrey[(Budak et al.,, 2024)]. Scientific research shows:
+.center[
+```{r out.width="110%"}
+knitr::include_graphics("output/research_misinformation.png")
+```
+]
 
---
-- People aren’t actually exposed to a lot of misinformation/low-quality content – but exposure is heavily concentrated .midgrey[(Grinberg et al., 2019, Guess et al., 2019)]
+<!-- --- -->
+<!-- class:middle -->
 
---
+<!-- - **A decade after**: gap between public discourse and scientific research on this issue .midgrey[(Budak et al.,, 2024)]. Scientific research shows: -->
 
-   - Nulls effects from in-the-field studies for exposure to misinformation on attitudes .midgrey[(Eady et al. 2023, and Meta papers)]
-  
---
-  
-  - Mixed evidence from many deactivation studies on Facebook .midgrey[(Asimovic et al., 2022, Alcott et al., 2020, Arcenaux and Ladd 2023)]
+<!-- -- -->
+<!-- - People aren’t actually exposed to a lot of misinformation/low-quality content – but exposure is heavily concentrated .midgrey[(Grinberg et al., 2019, Guess et al., 2019)] -->
 
---
+<!-- -- -->
+
+<!--    - Nulls effects from in-the-field studies for exposure to misinformation on attitudes .midgrey[(Eady et al. 2023, and Meta papers)] -->
+
+<!-- -- -->
+
+<!--   - Mixed evidence from many deactivation studies on Facebook .midgrey[(Asimovic et al., 2022, Allcott et al., 2020, Arceneaux and Ladd 2023)] -->
+
+<!-- -- -->
 
 ---
 class:middle
 ### Challenges on Social Media Studies
 
-#### **Challenge 1:** Most of what is known comes from a small set of countries. Vast majority of studies comes from western, rich countries .midgrey[(Budak et al.,, 2024)]:
+--
+
+#### **Challenge 1:** Research is concentrated in a handful of high-income countries .midgrey[(Budak et al.,, 2024)]:
 
 
 --
 
-- The real-world effects of social media usage and exposure to low quality content may be more pronounced in lower income countries .midgrey[(Blair et al., 2023,  Badrinathan and Chauchard, 2023a)]: 
+- Effects of social media may be distinct in low-income countries: 
 
-  - Fewer fact-checking agencies, 
+  - Fewer fact-checking agencies and studies on corrections .midgrey[(Blair et al., 2023)], 
   - Less content moderation from platforms, and 
   - Weaker independent media infra-structure
 
 --
 
-- Low-income countries use more social media for news consumption .midgrey[(Reuters 2024)]
+- Heavier reliance on social media for news .midgrey[(Reuters 2024)]
    
 --
 
@@ -110,7 +122,7 @@ class:middle
 ---
 class:middle
 
-#### **Challenge 2:** As a consequence, we know a lot about a small set of platforms:
+#### **Challenge 2:**  Overemphasis on feed-based platforms
 
 
 --
@@ -128,7 +140,7 @@ class:middle
 
 --
 
-- With no news feed, most of the viral content has not metadata, no author information, and it travels through multimedia content. 
+- With no news feed, most of the viral content has no metadata, no author information, and it travels through quasi-anonymous, multimedia content. 
 
 --
 
@@ -175,7 +187,7 @@ class:middle
 
 ## Research Agenda
 
- `r icons::fontawesome("arrow-alt-circle-right")` Misinformation Exposure Beyond Traditional Feeds: Evidence from a WhatsApp Deactivation Experiment in Brazil (With Rajeshwari Majumdar, Jonathan Nagler, and Joshua A. Tucker) *(R&R at JOP)*
+ `r icons::fontawesome("arrow-alt-circle-right")` Misinformation Exposure Beyond Traditional Feeds: Evidence from a WhatsApp Deactivation Experiment in Brazil (With Rajeshwari Majumdar, Jonathan Nagler, and Joshua A. Tucker) 
 
 #### `r icons::fontawesome("arrow-alt-circle-right")` Reducing WhatsApp Usage to Mitigate Misinformation Exposure During Elections: Evidence from a Multi-Country Experiment (With Rajeshwari Majumdar, Shelley Liu, Carolina Torreblanca, and Joshua A. Tucker) *(Presentation Today!)*
 
@@ -183,39 +195,25 @@ class:middle
 
 
 ---
-
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-
-.content-box-gray[Understand information consumption via messaging apps, and identify causal effects of **.red[WhatsApp Usage]** on **.red[political]** and **.red[non-political]** attitudes.]
-
-
----
 class: middle
 
-### Studying Causal Effectcs of WhatsApp Usage
+### Studying Causal Effects of WhatsApp Usage
 
 --
 
 - **Problem I:** In a context of widely adoption of certain social media applications, RCTs "treating" users with social media have several theoretical and statistical constraints. 
   
-   - **Solution:** Instead of "activating", researchers have used deactivation designs to measure the short term causal effects of social media usage .midgrey[(Asimovic et al., 2022, Alcott et al., 2020, Arcenaux and Ladd 2023)]
+   - **Solution:** Instead of "activating", researchers have used deactivation designs to measure the short term causal effects of social media usage .midgrey[(Asimovic et al., 2022, Allcott et al., 2020, Arceneaux and Ladd 2023)]
    
 --
 
-- **Problem II **: Fully deactivating WhatsApp is neither possible nor ideal 
+- **Problem II **: Fully deactivating WhatsApp users has ethical and empirical challenges:
 
    - More embedded in users' personal and professional lives compared to feed-based .midgrey[((Rossini et al 2021; Gil de Zuniga et al 2021))] 
    
    - Most used for diversity of purposes other than sharing/receiving political information .midgrey[(Newman et. 2024)]
    
-   - Generate a subject pool for which our inferences are very limited.
+   - Leads to a subject pool with limited inferential value.
 
 ---
 class:middle
@@ -245,7 +243,7 @@ class:middle
    
 --
 
-- **Outcomes:** Recall, Accuracy, Polarization and Well-Being/Substitution Effects. 
+- **Outcomes:** Information consumption + Attitudes 
 
 --
 ---
@@ -318,7 +316,7 @@ class:middle, inverse, center
 ---
 class:middle
 
-## Theorethical Expectations
+## Theoretical Expectations
 
 We posit our interventions will affect the information consumption through three distinct mechanisms: 
 
@@ -521,7 +519,7 @@ class: middle
 
 --
 
-- Recents Facebook/Instagram deactivation experiment in US and France .midgrey[(Alcott et al., 2024, Arceunaux et al., 2024)]
+- Recent Facebook/Instagram deactivation experiment in US and France .midgrey[(Allcott et al., 2024, Arceunaux et al., 2024)]
 
 --
 
@@ -529,7 +527,7 @@ class: middle
 
 --
 
-- Removing re-shares from people Facebook' News Feed .midgrey[(Nyhan et al., 2024)]
+- Removing re-shares from people's Facebook News Feed .midgrey[(Nyhan et al., 2024)]
 
 --
 
@@ -550,7 +548,7 @@ Using several well-being items, we find that limiting WhatsApp usage makes parti
 
 --
 
- **This is occurs together as users report to spend more time in offline activities.** 
+ **This occurs alongside increased offline activity.** 
 
 --
 
@@ -564,7 +562,7 @@ knitr::include_graphics("output/itt_cov_substitution.png")
 ---
 class:middle
 
-## Key Takeways
+## Key Takeaways
 
 --
 
@@ -580,7 +578,7 @@ class:middle
 
 --
 
-   - ...none of this meaningfully change political attitudes (at least not within a short electoral period) 
+   - ...none of this change meaningfully political attitudes (at least not within a short electoral period) 
 
 --
 
