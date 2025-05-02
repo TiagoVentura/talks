@@ -4,6 +4,12 @@ Repository to share source materials for presentations and talks.
 
 ## 2025
 
+- [Media Effects Workshop - Columbia University](https://tiagoventura.github.io/talks/whatsapp_multicountry/meew)
+
+
+- [EBAPE-FGV  Research Seminar](https://tiagoventura.github.io/talks/whatsapp_multicountry/ebape_fgv)
+
+
 - [Mortara Center Research Seminar](https://tiagoventura.github.io/talks/whatsapp_multicountry/mortara)
 
 ## 2024
