@@ -4,11 +4,13 @@ author: "Rajeshwari Majumdar, <strong> Tiago Ventura </strong>, Shelley Liu, <br
 date: " <span style = 'font-size: 80%;'> <br> MEEW 2025 - May 2nd, 2025 </span> <br> <br> <span style = 'font-size: 70%;' > We gratefully acknowledge funding from McCourt School's Tech and Policy Program and Project Liberty’s Institute for this project. "
 output:
   xaringan::moon_reader:
+    includes: 
+      in_header: "no_favicon.html" 
     css: ["xaringan-themer.css", "custom.css", "mytheme-fonts.css"]
     lib_dir: libs
     self_contained: false
     nature:
-      #ratio: 14:9
+      #ratio: 16:9
       #ratio: 191:100
       highlightStyle: github
       highlightLines: true
@@ -272,6 +274,15 @@ class:middle,
 ---
 class:middle, inverse, center
 # Results
+
+---
+class: middle
+## Compliance Results
+
+```{r out.width="90%"}
+knitr::include_graphics("output/plot_compliance_main.png")
+```
+
 
 ---
 class:  middle
