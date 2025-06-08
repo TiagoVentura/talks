@@ -1,0 +1,29 @@
+\begin{table}
+
+\caption{Regression Models: Heterogenous effects of the Deactivation conditional on WhatsApp Usage for Politics }
+\centering
+\begin{threeparttable}
+\begin{tabular}[t]{lcccccc}
+\toprule
+  & False Rumors Exposure & True News Exposure & False Rumors Accuracy & True News Accuracy & Polarization Index & Subjective Well-Being Index\\
+\midrule
+Treatment & -0.313* & -0.305** & -0.298* & -0.119 & -0.014 & 0.172\\
+ & (0.137) & (0.103) & (0.144) & (0.134) & (0.262) & (0.474)\\
+WhatsApp usage for Politics & 0.036 & 0.060+ & -0.090* & 0.024 & -0.065 & -0.215+\\
+ & (0.042) & (0.034) & (0.041) & (0.040) & (0.077) & (0.122)\\
+Treatment x WhatsApp usage for Politics & -0.075 & -0.015 & 0.096* & 0.023 & 0.024 & 0.084\\
+ & (0.051) & (0.039) & (0.048) & (0.048) & (0.097) & (0.161)\\
+\midrule
+Num.Obs. & 517 & 517 & 517 & 517 & 517 & 517\\
+R2 & 0.137 & 0.137 & 0.187 & 0.110 & 0.135 & 0.133\\
+R2 Adj. & 0.083 & 0.085 & 0.137 & 0.057 & 0.084 & 0.081\\
+RMSE & 0.99 & 0.83 & 1.00 & 0.98 & 1.98 & 3.27\\
+\bottomrule
+\multicolumn{7}{l}{\rule{0pt}{1em}+ p $<$ 0.1, * p $<$ 0.05, ** p $<$ 0.01, *** p $<$ 0.001}\\
+\end{tabular}
+\begin{tablenotes}
+\item \textit{Note: } 
+\item  Robust standard errors in Parentheses. All models use the Covariate-Adjusted ITT estimator. 
+\end{tablenotes}
+\end{threeparttable}
+\end{table}
