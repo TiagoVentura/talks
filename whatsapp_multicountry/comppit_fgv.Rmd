@@ -60,8 +60,6 @@ class:middle
 
 `r icons::fontawesome("arrow-alt-circle-right")` Reducing WhatsApp Usage to Mitigate Misinformation Exposure During Elections: Evidence from a Multi-Country Experiment (With Rajeshwari Majumdar, Shelley Liu, Carolina Torreblanca, and Joshua A. Tucker) (Working Paper)
 
-`r icons::fontawesome("arrow-alt-circle-right")` WhatsApp Links Explorer: Data Donation Pipeline for WhatsApp Data (With Jonathan Nagler, and any others interested in collecting WhatsApp data) *(Software Development)*
-
 ---
 class: middle
 
