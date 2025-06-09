@@ -44,32 +44,17 @@ xaringanExtra::use_panelset()
 ```
 
 ---
-
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
+class: middle
+## Research Agenda 
 
 .content-box-gray[Understand information consumption via messaging apps, and identify causal effects of **.red[WhatsApp Usage]** on **.red[political]** and **.red[non-political]** attitudes.]
 
----
-class:middle
-
-
-```{r out.width="100%"}
-knitr::include_graphics("output_mpsa/whatsappmotivation.png")
-```
-
 
 
 ---
 class:middle
 
-## Research Papers
+## Papers
 
  `r icons::fontawesome("arrow-alt-circle-right")` Misinformation Beyond Traditional Feeds: Evidence from a WhatsApp Deactivation Experiment in Brazil (With Rajeshwari Majumdar, Jonathan Nagler, and Joshua A. Tucker), Forthcoming Journal of Politics 
 
@@ -82,23 +67,28 @@ class: middle
 
 ### Multimedia Deactivation Experiment in Brazil, 2022
 
+--
 `r icons::fontawesome("arrow-alt-circle-right")` **Problem**: Fully deactivating WhatsApp is neither possible nor ideal
 
-`r icons::fontawesome("arrow-alt-circle-right")` **Our Design:** Cut the primary channels through which users are exposed to misinformation and polarizing content: videos, images and audios .midgrey[(Machado et al., 2019; Resende et al., 2019; Garimella and Tyson, 2018; Garimella and Eckles, 2020; Batista Pereira et al., 2023).]
+--
 
-
-`r icons::fontawesome("arrow-alt-circle-right")` **Experiment:** Offer respondents a monetary incentive to
+`r icons::fontawesome("arrow-alt-circle-right")` **Partial Deactivation:** Offer respondents a monetary incentive to
 
 - Disable their automatic download of media on WhatsApp
 - Do not purposefully click and watch any media on WhatsApp
 
+--
+
+`r icons::fontawesome("arrow-alt-circle-right")` **Mechanism:** Cut the primary channels through which users are exposed to misinformation and polarizing content: videos, images and audios .midgrey[(Machado et al., 2019; Resende et al., 2019; Garimella and Tyson, 2018; Garimella and Eckles, 2020; Batista Pereira et al., 2023).]
+
+--
 
 `r icons::fontawesome("arrow-alt-circle-right")` **Treatment Period:** Three weeks:
 
 - **Start:** Three weeks before general election in Brazil.
 - **End:** three days after the voting day.
 
-
+--
 ---
 class:middle, center, inverse
 
@@ -142,7 +132,7 @@ knitr::include_graphics("output_mpsa/ss_tmedia_networkusage.jpeg")
 ---
 class: center, middle, inverse
 
-# Results
+# Pre-Registered Results
 
 ---
 
@@ -201,11 +191,11 @@ class:middle
 ## Downstream Effects: Measuring Polarization
 
 
-- Participants are asked about their feelings, traits and willingness to engage with voters/members of two main parties and ethnic/religious groups in *each* country
+- Participants are asked about their feelings towards with voters of two main Presidential Candidates (Lula and Bolsonaro) -- Affective Polarization
 
-- We also ask their feelings towards the leaders of the parties
+- We also ask their willingness to engage with voters from these candidates -- Social Polarization
 
-- And their agreement across several policy issues salient in the election
+- And their agreement across several policy issues salient in the election -- Ideological Polarization
 
 
 ---
@@ -214,7 +204,7 @@ class:middle
 ## Downstream consequences on political polarization 
 
 .center[
-Can this short-term reduction in exposure to political misinformation and toxic political content change political attitudes and reduce polarization?
+Can this short-term reduction in exposure to political misinformation change political attitudes and reduce polarization?
 ]
 
 --
@@ -234,6 +224,12 @@ knitr::include_graphics("output/output/pol_outcomes.png")
 ]
 
 ---
+class:inverse, center, middle
+
+# Additional Results
+
+
+---
 ### Exposure and Partisanship
 
 .center[
@@ -250,6 +246,23 @@ knitr::include_graphics("output/output/sif_exposure_bothparties_counter_pro.png"
 knitr::include_graphics("output/output/sif_het_use_whatsapp_fac.png")
 ```
 ]
+
+
+---
+
+class: middle
+
+## Discussion
+
+
+`r icons::fontawesome("arrow-alt-circle-right")` **WhatsApp is an important vector through which voters receive misinformation in Brazil at .red[a higher rate] compared to true news.**
+
+
+`r icons::fontawesome("arrow-alt-circle-right")` **The null results provide support for a .red[minimalist view of the short-term causal effects] of exposure to misinformation on WhatsApp on political attitudes.**
+
+`r icons::fontawesome("arrow-alt-circle-right")`  **Exposure to misinformation .red[does not] mechanically affect attitudes**
+
+`r icons::fontawesome("arrow-alt-circle-right")` **Limitation:** single-country, low-powered study: effects are likely larger among subgroups more exposure to misinformation, and vary contextually. 
 
 
 ---
