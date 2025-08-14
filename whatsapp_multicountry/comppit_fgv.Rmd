@@ -50,7 +50,6 @@ class: middle
 .content-box-gray[Understand information consumption via messaging apps, and identify causal effects of **.red[WhatsApp Usage]** on **.red[political]** and **.red[non-political]** attitudes.]
 
 
-
 ---
 class:middle
 
