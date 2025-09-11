@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Echo Chambers After the Ban: Political Information on X in Brazil  </title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Tiago Ventura , Christopher Barrie, Margaret E. Roberts, Christopher Schwarz, Joshua A. Tucker " />
+    <script src="libs/header-attrs/header-attrs.js"></script>
+    <link href="libs/panelset/panelset.css" rel="stylesheet" />
+    <script src="libs/panelset/panelset.js"></script>
+    <link rel="stylesheet" href="xaringan-themer.css" type="text/css" />
+    <link rel="stylesheet" href="custom.css" type="text/css" />
+    <link rel="stylesheet" href="mytheme-fonts.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+.title[
+# Echo Chambers After the Ban: Political Information on X in Brazil <br><span style = 'font-size: 80%;'>
+]
+.author[
+### <span style="font-size: 120%; line-height: 1.8">Tiago Ventura </strong>, Christopher Barrie, Margaret E. Roberts, Christopher Schwarz, Joshua A. Tucker </span>
+]
+.date[
+### <span style="font-size: 100%;"> <br> APSA, 09/11/2025 </span>
+]
+
+---
+
+layout: true
+&lt;div class="my-footer"&gt;&lt;span&gt;Tiago Ventura (Georgetown University) &amp;nbsp &amp;nbsp &amp;nbsp &amp;nbsp &amp;nbsp &amp;nbsp &amp;nbsp &amp;nbsp &amp;nbsp &amp;nbsp &amp;nbsp &amp;nbsp &amp;nbsp &amp;nbsp &amp;nbsp &amp;nbsp &amp;nbsp &amp;nbsp &amp;nbsp &amp;nbsp &amp;nbsp &amp;nbsp &amp;nbsp APSA 2025&lt;/span&gt;&lt;/div&gt; 
+
+
+
+
+
+---
+class:middle
+
+## Motivation
+
+Democratic governments often exert power over social media platforms. In recent years, these conflicts have escalated to full-scale block. 
+
+--
+
+- Block of Russian website VKontakte in Ukraine; 
+
+--
+
+- India and Nepal have blocked access to TikTok;
+
+--
+
+- US vs TikTok
+
+--
+
+Despite this increasing trend, we know little about the effects of these - often temporary -  blocks on the information environment in democracies and how voters react to them: 
+
+--
+
+   - Information control in authoritarian contexts .midgrey[(Roberts, 2018;  Boxell and Steinert-Threlkeld, 2022; Pan and Siegel, 2020; Lutscher, 2023)]
+
+--
+   -  .midgrey[Golovchenko (2022)]: looks at the block of VKontakte in Ukraine in 2017, and finds no partisan effects on compliance with the block
+
+--
+
+
+---
+class: middle
+## Research Questions
+
+- **RQ1:** How do partisan dynamics shape compliance with a state-imposed platform ban to social media platforms?
+
+- **RQ2:** What are the consequences for information environments in a polarized democracy? 
+
+---
+class: no-footer
+background-image: url("motivation_tw.jpg")
+background-size: cover
+background-position: center
+
+
+---
+class: middle
+
+# Design and Methods
+
+--
+
+- **Use X/Twitter data from Brazil from months before and after the Ban**
+
+--
+
+- **Pre-Ban Sharing Data:** 90 days of data, starting before August 30, via the X Decahose API. 
+
+    - Use this data to estimate the ideology of media organizations and politically engaged users in Brazil 
+
+--
+
+- **Ideology Estimation:** News sharing scores .midgrey[(Eady et. al 2024)]
+    
+    - Columns: Political news organizations ~ 242 domains
+    - Rows: Politically engaged users who share news often (&gt;5 unique)~ 9061
+
+--
+
+- **Users Timeline:** Scrappe the timelines for these politically engaged users (~ 7,000 users)
+
+--
+
+---
+class: middle, center, inverse
+
+# Validation
+
+---
+class: middle, center
+## Top-20 Domains: Ideology Score
+
+&lt;img src="output/fig2_ideo_news.png" width="90%" /&gt;
+
+---
+class: middle, center
+## Validating with survey data
+
+&lt;img src="output/fig_validation.png" width="80%" /&gt;
+
+---
+
+class: middle, center, inverse
+# Results
+
+---
+class: middle, center
+## The Effects of the Ban on Posting Frequency
+
+&lt;img src="output_9k/fig_tweets_sharing.png" width="100%" /&gt;
+---
+class: middle
+
+## Event Study Estimates: User posts
+
+
+&lt;img src="output_9k/event_study_user_poisson.png" width="100%" /&gt;
+
+
+## Event Study Estimates: News Sharing
+
+&lt;img src="output_9k/event_study_domains_ideology_poisson.png" width="100%" /&gt;
+]
+
+---
+class: middle, center
+
+## Tweets Posted Conditional on Users' Ideological Position
+
+&lt;img src="output_9k/counts_tweets_users.png" width="100%" /&gt;
+
+---
+class: middle, center
+## Concentration of Tweet Activity and News Sharing
+
+&lt;img src="output_9k/fig_cdf_user.png" width="100%" /&gt;
+---
+class: middle, center
+## Concentration of Tweet Engagement
+&lt;img src="output_9k/cdf_engagement.png" width="100%" /&gt;
+
+
+---
+class: middle, center
+## Changes Informational Environment
+
+&lt;img src="output_9k/fig_domain_ideology.png" width="100%" /&gt;
+---
+class:middle
+## Conclusion
+
+--
+
+The ban substantially reduced use of the platform. **But** compliance with the ban was strongly driven by partisan dynamics
+
+- Right-leaning users were the primary group to remain active
+   
+- After the ban: 
+       
+    - the information environment on X was still more conservative, 
+    - right-leaning users more active, 
+    - tweeting more frequently, and receiving a higher share of the engagement
+
+--
+
+- Bans in polarized society can backfire, increase fragmentation and create platform echo-chambers
+
+--
+
+- Even short bans can have long-lasting effects on information environments.
+
+--
+
+- Future research: multi-platform effects, user migration, separate effects on political elites.
+
+--
+---
+class: middle, inverse, center
+
+# Thank you!
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+  "highlightStyle": "github",
+  "highlightLines": true,
+  "countIncrementalSlides": false,
+  "slideNumberFormat": "Slide %current% of %total%"
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+// add `data-at-shortcutkeys` attribute to <body> to resolve conflicts with JAWS
+// screen reader (see PR #262)
+(function(d) {
+  let res = {};
+  d.querySelectorAll('.remark-help-content table tr').forEach(tr => {
+    const t = tr.querySelector('td:nth-child(2)').innerText;
+    tr.querySelectorAll('td:first-child .key').forEach(key => {
+      const k = key.innerText;
+      if (/^[a-z]$/.test(k)) res[k] = t;  // must be a single letter (key)
+    });
+  });
+  d.body.setAttribute('data-at-shortcutkeys', JSON.stringify(res));
+})(document);
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

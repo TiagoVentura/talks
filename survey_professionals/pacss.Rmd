@@ -393,8 +393,16 @@ knitr::include_graphics("ai_models.jpg")
 
 
 ---
-class:middle, center
+class: center
 
-## Thank you!
+## Check the pre-print
 
+
+.center[
+```{r out.width="50%"}
+knitr::include_graphics("output/qr_code.png")
+```
+
+**Forthcoming at Political Analysis**
+]
 

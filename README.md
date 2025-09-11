@@ -4,6 +4,8 @@ Repository to share source materials for presentations and talks.
 
 ## 2025
 
+- [APSA- Twitter Ban in Brazil](https://tiagoventura.github.io/talks/twitter_ban/apsa)
+
 - [COMPPIT  - Law School FGV - Rio](https://tiagoventura.github.io/talks/whatsapp_multicountry/comppit_fgv)
 
 
