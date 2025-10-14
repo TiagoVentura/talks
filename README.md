@@ -4,9 +4,10 @@ Repository to share source materials for presentations and talks.
 
 ## 2025
 
+- [GWU - WhatsApp Multicountry[(https://tiagoventura.github.io/talks/whatsapp_multicountry/comppit_fgv)
 - [APSA- Twitter Ban in Brazil](https://tiagoventura.github.io/talks/twitter_ban/apsa_2025)
 
-- [COMPPIT  - Law School FGV - Rio](https://tiagoventura.github.io/talks/whatsapp_multicountry/comppit_fgv)
+- [COMPPIT - Law School FGV - Rio](https://tiagoventura.github.io/talks/whatsapp_multicountry/comppit_fgv)
 
 
 - [Media Effects Workshop - Columbia University](https://tiagoventura.github.io/talks/whatsapp_multicountry/meew)
