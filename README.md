@@ -2,10 +2,16 @@
 
 Repository to share source materials for presentations and talks.
 
+## 2026
+
+[Western Ontario - Twitter Ban](https://tiagoventura.github.io/talks/twitter_ban/apsa_2025)
+
+
 ## 2025
 
-- [GWU - WhatsApp Multicountry[(https://tiagoventura.github.io/talks/whatsapp_multicountry/comppit_fgv)
-- [APSA- Twitter Ban in Brazil](https://tiagoventura.github.io/talks/twitter_ban/apsa_2025)
+- [GWU - WhatsApp Multicountry](https://tiagoventura.github.io/talks/whatsapp_multicountry/comppit_fgv)
+
+ [APSA- Twitter Ban in Brazil](https://tiagoventura.github.io/talks/twitter_ban/apsa_2025)
 
 - [COMPPIT - Law School FGV - Rio](https://tiagoventura.github.io/talks/whatsapp_multicountry/comppit_fgv)
 

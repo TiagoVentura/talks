@@ -1,0 +1,1214 @@
+---
+title: "Claude Code in Academic Research <br><span style = 'font-size: 80%;'> Five Case Studies  "
+author: " <span style = 'font-size: 120%; line-height: 1.8'>Tiago Ventura </span>"
+date: " <span style = 'font-size: 100%;'> <br> Georgetown University, McCourt School of Public Policy <br> <br> 2025 </span>"
+output:
+  xaringan::moon_reader:
+    includes:
+      in_header: "no_favicon.html"
+    css: ["xaringan-themer.css", "custom.css", "mytheme-fonts.css"]
+    lib_dir: libs
+    self_contained: false
+    nature:
+      #ratio: 16:9
+      #ratio: 191:100
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+      slideNumberFormat: "Slide %current% of %total%"
+---
+layout: true
+<div class="my-footer"><span>Tiago Ventura (Georgetown University) &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp Claude Code in Academic Research</span></div>
+```{r setup, include=FALSE}
+library(xaringanthemer)
+options(htmltools.dir.version = FALSE)
+knitr::opts_chunk$set(message=FALSE, warning = FALSE)
+xaringanthemer::style_mono_light(base_color ="#23395b",
+                                  title_slide_text_color="#ffff",
+                                  title_slide_background_color = "#23395b",
+                                  background_color = "#fff",
+                                  link_color =  "#C93312")
+options(htmltools.dir.version = FALSE)
+knitr::opts_chunk$set(message=FALSE, warning = FALSE, error=TRUE, echo=FALSE, cache=TRUE)
+```
+
+```{r style-share-again, echo=FALSE}
+xaringanExtra::use_tile_view()
+xaringanExtra::use_panelset()
+```
+
+---
+class: middle
+
+## Some caveats before we start
+
+- All of this I learned as a side project during parental leave!
+
+   - I saw too many academics on social media saying coding agents changed their workflow
+
+   - Being more productive (with much less time) was exactly what I needed
+
+   - Also a fun side project — lots of great content on YouTube
+
+- That's to say: this is not yet an active area of research for me
+
+- I am not saying we should all be using agents... but I don't see myself removing them from my research pipeline in the near future
+
+
+
+---
+class: middle
+
+## How all of this started? 
+
+```{r, out.width = "75%", fig.align = "center"}
+knitr::include_graphics("output/motivation_hall_tweet.png")
+```
+
+.footnote[.midgrey[Andy Hall (@ahall_research) — Stanford Political Science]]
+
+---
+class: middle
+
+## The Buzz: AI Is Reshaping Research
+
+```{r, out.width = "75%", fig.align = "center"}
+knitr::include_graphics("output/motivation_yanagizawa_tweet.png")
+```
+
+.footnote[.midgrey[David Yanagizawa-Drott (@YanagizawaD) — University of Zurich Economics]]
+
+---
+class: middle
+
+```{r, out.width = "75%", fig.align = "center"}
+knitr::include_graphics("output/motivation_cunningham_substack.png")
+```
+
+.footnote[.midgrey[Scott Cunningham — causalinf.substack.com]]
+
+---
+class: middle
+
+```{r, out.width = "75%", fig.align = "center"}
+knitr::include_graphics("output/motivation_karpathy_tweet.png")
+```
+
+.footnote[.midgrey[Andrej Karpathy — coined "vibe coding", February 2025]]
+
+---
+class: middle
+
+## What is an Agentic Coding Model?
+
+Drawing from Sol Messing's presentation — an agentic coding model is an LLM that:
+
+--
+
+- **Generates** code
+
+--
+
+- Can directly **edit files** in your codebase
+
+--
+
+- Can **execute** that code
+
+--
+
+- Can **evaluate** the results and iterate
+
+--
+
+.midgrey[Examples: Claude Code, Codex, GitHub Copilot Agent, Cursor, Windsurf]
+
+---
+class: middle
+
+## How Does It Work? LLMs + Tools
+
+The power of coding agents comes from combining an LLM with .red[direct access to tools]:
+
+--
+
+| Tool | What it does |
+|---|---|
+| **File read/write** | Read, create, and edit files in your project |
+| **Bash/terminal** | Run any shell command — install packages, execute scripts, run tests |
+| **Web search/fetch** | Look up documentation, APIs, error messages |
+| **Code search (grep/glob)** | Navigate large codebases — find functions, trace dependencies |
+| **Git** | Commit, branch, diff, create pull requests |
+| **Custom skills** | User-defined reusable workflows (e.g., `/review`, `/add-case-study`) |
+
+--
+
+The agent decides .red[which tools to use and when] — it plans, acts, observes the result, and iterates.
+
+---
+class: middle
+
+## Agents vs. Chatbots
+
+--
+
+| | **Chatbot** (ChatGPT, Claude.ai) | **Coding Agent** (Claude Code, Cursor) |
+|---|---|---|
+| **Input** | You paste code into a chat window | It reads your entire project |
+| **Output** | Suggests code you copy-paste | Directly edits your files |
+| **Execution** | You run the code yourself | It runs the code and checks the output |
+| **Iteration** | You report errors back | It sees the error and fixes it |
+| **Context** | One conversation | Your full codebase, terminal, git history |
+
+--
+
+Key shift: you go from .red[copy-pasting suggestions] to .red[reviewing autonomous work].
+
+---
+class: middle, center, inverse
+
+# Live-Demo on Claude Code
+
+---
+class: middle
+
+## A Framework for Evaluation
+
+Three dimensions for assessing agentic coding models in research:
+
+--
+
+| Dimension | Core Question |
+|---|---|
+| **Research Productivity** | Does it let me move faster, fail fast, scale? |
+| **Scientific Integrity** | Hallucinations, AI slop, p-hacking temptation, false confidence? |
+| **Technical Capability** | What can it handle? What's impressive vs. what falls short? |
+
+--
+
+Key tension: the same speed that helps you fail fast .red[enables p-hacking]. Impressive output can mask errors.
+
+--
+
+*I'll evaluate each case study through these three lenses.*
+
+---
+class: middle
+
+## Roadmap
+
+**Five case studies** of how I use Claude Code in my research workflow:
+
+--
+
+1. .red[Multi-Agent Tournament] — Selecting a replication paper from 285 candidates
+
+--
+
+2. .red[Data-to-Paper Pipeline] — Full paper writing with Claude (that failed)
+
+--
+
+3. .red[Coding Tasks, Plan Mode & Skills] — Country pipelines, verification, and reusable workflows
+
+--
+
+4. .red[Multi-Skill Peer Review] — Four specialized review skills as an orchestrated system
+
+--
+
+5. .red[Self-Updating Slide Deck] — A custom skill that captures new case studies as they happen
+
+--
+
+*For each, I'll assess: research productivity, scientific integrity, and technical capability.*
+
+---
+class: middle, inverse, center
+
+# Case Study 1
+## Multi-Agent Tournament
+
+.midgrey[Selecting a replication paper from ~285 candidates]
+
+---
+class: middle
+
+## The Problem
+
+I needed to find the best published survey experiment to replicate for the **Coppock & McGrath (2026)** replication competition.
+
+--
+
+- Search hundreds of papers across 8 political science journals
+
+--
+
+- Score them on a detailed rubric (statistical power, effect sizes, replicability, team fit)
+
+--
+
+- Make a **defensible, well-documented** decision
+
+--
+
+- Doing this manually would take weeks
+
+---
+class: middle
+
+## Prompt Architecture: Phased Checkpoints
+
+I wrote a ~900-line `instructions.md` with mandatory stop-and-check points:
+
+```
+Your task (in phases):
+0. Build a deep understanding of the RFP call
+1. Build a deep understanding of the research
+   pipeline and co-authors
+2. Search for high-impact survey experiments published
+   in four leading political science journals (2010-2025)
+3. Evaluate papers as candidates for a replication exercise
+4. Run a multi-agent tournament between the top papers
+```
+
+Key rule:
+
+```
+## IMPORTANT: Stop-and-Check Points
+At each of these points, you must:
+1. Summarize what you have completed
+2. Present key outputs for review
+3. List any issues or concerns
+4. Wait for human approval before proceeding
+
+Do not proceed past a checkpoint without explicit approval.
+```
+
+.footnote[.midgrey[`View full prompt →` replication_tournement/instructions.md]]
+
+---
+class: middle
+
+## Prompt Refinement: Real Conversation Excerpts
+
+The instruction file evolved through dialogue:
+
+> *"Even though the RFP talks about replication + extension, I want your focus to be only on the replication"* — scoping
+
+--
+
+> *"Add as criteria to the soft scoring: a) experiment ran with low statistical power; b) effect sizes are larger than 0.3 sd"* — iterative rubric refinement
+
+--
+
+> *"Using multiple models (from OpenAI or Google) would improve this task?"* — multi-model idea
+
+--
+
+> *"Save for me two instructions.md files, one with the multi model competition, and one without it"* — multi-trial design
+
+---
+class: middle
+
+## The Tournament Design
+
+A **multi-agent debate format** with 3-judge panels:
+
+| Judge | Model | Role |
+|-------|-------|------|
+| Judge 1 | Claude Opus | Native (Claude Code) |
+| Judge 2 | GPT-5 | OpenAI API |
+| Judge 3 | Claude Sonnet | Anthropic API |
+
+--
+
+**20 Champion Agents** (one per shortlisted paper) argue for their paper. Winners decided by **majority vote (2 of 3)**.
+
+--
+
+```
+STAGE 1: INTRA-JOURNAL ELIMINATION (5 per journal)
+  12 matches → 8 papers advance (2 per journal)
+
+STAGE 2: CROSS-JOURNAL BRACKET
+  Quarterfinals → Semifinals → Final
+  7 matches → 1 champion
+
+Total: 19 matches per trial
+```
+
+---
+class: middle
+
+## Output: Trial Results
+
+I ran **3 independent trials** with different model/filter configurations:
+
+.panelset[
+.panel[.panel-name[Trial Design]
+
+| | Trial 1 | Trial 2 | Trial 3 |
+|---|---|---|---|
+| **Scoring model** | Claude Opus | Claude Opus | GPT-5 |
+| **Judge model** | Claude Opus | Claude Opus | GPT-5 |
+| **Hard filters** | H1-H5 | H1-H7 | H1-H7 |
+| **Papers scored** | 285 | 263 | 263 |
+]
+
+.panel[.panel-name[Cross-Trial Consistency]
+
+| Paper | Trial 1 | Trial 2 | Trial 3 | Consistency |
+|-------|---------|---------|---------|-------------|
+| **P176 — Druckman et al. (2022)** | **1st** | **2nd** | **3rd** | .red[Top 3 in all 3 trials] |
+| **P042 — Clayton et al. (2019)** | **2nd** | **3rd** | **5th** | Top 5 in all 3 trials |
+| P233 — Morris & Shapiro (2025) | Filtered | **1st** | Not top 18 | Champion in 1 trial |
+| P144 — Albertson & Jessee (2023) | — | — | **1st** | Champion in 1 trial |
+]
+]
+
+---
+class: middle
+
+## Model Sensitivity
+
+Each trial produced a **different champion paper**.
+
+--
+
+But .red[P176 (Druckman et al. 2022)] was the **only paper in the top 3 across all three trials**.
+
+--
+
+Qualitative pattern in judge disagreements:
+
+> Claude favored **theoretical ambition**; GPT favored **execution certainty**
+
+--
+
+This is why multi-model judging matters — single-model results are not robust.
+
+---
+class: middle
+
+## Case Study 1: Lessons
+
+--
+
+- .red[Checkpoint architecture works]: mandatory stops kept Claude on track across a very long task
+
+--
+
+- .red[Multi-model judging reveals real disagreements]: different models have different evaluation biases
+
+--
+
+- .red[Sensitivity to model choice was higher than expected]: each trial had a different champion
+
+--
+
+- .red[Deep evaluations via web search sometimes hallucinated paper details]: had to add explicit verification steps
+
+--
+
+- The prompt was ~900 lines — probably too long for most use cases, but necessary here
+
+---
+class: middle, inverse, center
+
+# Case Study 2
+## Data-to-Paper Pipeline
+
+.midgrey[Full paper writing with Claude — that failed (and that's the point)]
+
+---
+class: middle
+
+## The Problem
+
+I had data on mobile internet coverage in Brazil (ANATEL regulatory data with a **30,000-inhabitant threshold** creating a natural experiment).
+
+--
+
+**Goal**: Estimate causal effects of internet speed on mental health using a **fuzzy regression discontinuity design**.
+
+--
+
+Produce a complete paper — from literature review to LaTeX.
+
+---
+class: middle
+
+## Prompt Architecture: 7 Phases
+
+```
+Phase 1: Literature review
+         (every citation must be confirmed real)
+Phase 2: Build the instrument
+         (first-stage RD plots, covariate balance, McCrary tests)
+Phase 3: Download mental health outcome data from DataSUS
+Phase 4: Merge datasets at municipality level
+Phase 5: Estimate fuzzy RD using rdrobust in R
+Phase 6: Write the paper in LaTeX
+         (Significance Statement, Abstract, Intro,
+          Results, Discussion, Methods)
+Phase 7: Organize code and final validation
+```
+
+---
+class: middle
+
+## Key Design Choices
+
+Two rules in the instruction file shaped the entire project:
+
+--
+
+**Model selection rule:**
+
+> Use Opus for tasks requiring intellectual judgment — literature synthesis, evaluating replication strength, and all writing. Use Sonnet for coding tasks.
+
+--
+
+**Null results handling:**
+
+> If the analysis finds no significant effects, write the paper with null findings.
+
+--
+
+This second rule turned out to be critical.
+
+---
+class: middle
+
+## Prompt Refinement: Conversation Excerpts
+
+> *"Please read @instructions.md file, and grill me on it"* — using Claude to stress-test my own research design before execution
+
+--
+
+> *"Which of your models do you suggest me to use for each of these tasks?"* — model-selection dialogue
+
+--
+
+> *"Instead of defining the model for each task, give a general recommendation to use Opus on tasks that require intellectual judgment and Sonnet on coding"* — the Opus/Sonnet split
+
+---
+class: middle
+
+## The Estimation Mistake
+
+DataSUS data downloaded successfully. Claude ran the first estimation — confidently, but **wrong**.
+
+--
+
+The instruction said: *"fuzzy RDD around the 30,000 population threshold."*
+
+--
+
+Claude used **30,000 as a bandwidth** (a smoothing parameter) instead of using it as the **cutoff** for the fuzzy RD.
+
+--
+
+This is a subtle but fundamental misunderstanding of the research design. Claude executed confidently and without flagging uncertainty.
+
+--
+
+.red[Catching this required domain expertise] — knowing what a fuzzy RD should look like.
+
+---
+class: middle
+
+## After the Correction
+
+I caught the mistake and corrected the approach.
+
+--
+
+Corrected estimation showed **null results**.
+
+--
+
+Claude delivered this much faster than doing it manually.
+
+--
+
+Project killed → moved to the `_Died` folder.
+
+--
+
+But Claude helped me .red[fail fast].
+
+.footnote[.midgrey[`View full prompt →` _Died/AV_internet_speed_politics/instructions.md]]
+
+---
+class: middle
+
+## P-Hacking on Steroids
+
+The speed that helps you "fail fast" also creates a temptation:
+
+--
+
+- Claude makes it **trivially easy** to keep re-running specifications
+
+--
+
+- Tweak bandwidths, add covariates, try different outcomes — until something is significant
+
+--
+
+- The same tool that efficiently delivered null results could also be used to .red[p-hack your way to a false positive]
+
+--
+
+- The acceleration of the research pipeline amplifies both **good practices** (failing fast) and **bad ones** (specification searching)
+
+---
+class: middle
+
+## Case Study 2: Lessons
+
+--
+
+- .red[Domain expertise is essential]: Claude executed the wrong estimation confidently — you must know what correct output looks like
+
+--
+
+- .red[Failing fast has value]: Claude helped me assess an idea's viability in days, not months
+
+--
+
+- .red[P-hacking risk is real]: the speed that helps you fail fast also makes specification searching trivially easy
+
+--
+
+- .red[The Opus/Sonnet split is a useful heuristic]: judgment vs. coding maps well to model strengths
+
+---
+class: middle, inverse, center
+
+# Case Study 3
+## Coding Tasks, Plan Mode & Skills
+
+.midgrey[Country pipelines, verification, and reusable workflows]
+
+---
+class: middle
+
+## CLAUDE.md: Instant Onboarding
+
+The Global Social Media Study (23-country experiment, registered report at *Nature*) uses a `CLAUDE.md` that documents the project architecture:
+
+- Language, dependencies, path management, country-folder pattern
+- Numbered script pipeline (`00_` through `05_`)
+
+--
+
+Once in place, Claude could replicate the UK pilot pipeline across 23 countries — adapting for each while respecting shared utilities.
+
+--
+
+The `CLAUDE.md` replaced hours of onboarding with a single file read.
+
+.footnote[.midgrey[`View project docs →` gsm_second_stage_code/CLAUDE.md]]
+
+---
+class: middle
+
+## Coding Tasks: Tests and Verification
+
+Beyond pipeline replication, Claude handled tedious verification tasks:
+
+--
+
+- Running **consistency checks** on country data (e.g., verifying participant counts match across waves)
+
+--
+
+- Having Claude **verify if numbers** in code output match expectations
+
+--
+
+- **Testing if the pipeline works** correctly end-to-end before replicating across countries
+
+--
+
+These are tedious-but-critical tasks where Claude excels — freeing researcher time for design and interpretation.
+
+---
+class: middle
+
+## Plan Mode
+
+For complex analyses, Claude writes a **structured plan before coding**:
+
+```
+# Plan: Missing Data Robustness Analysis
+
+### Module 1: Data Loading & Match Indicator
+  Input: model_row_counts.csv, timelines parquet
+  Steps: Load, clean, create matched indicator
+  Test: Print dimensions, verify no unexpected NAs
+
+### Module 2: Summary Statistics & Balance Table
+### Module 3: Statistical Tests
+### Module 4: Visualizations
+### Module 5: Additional Analysis
+```
+
+Each module specifies .red[inputs, steps, outputs, and verification].
+
+---
+class: middle
+
+## Plan → Code
+
+The plan produced `code/09_missing_data_analysis.R` — **541 lines, 5 modules**:
+
+| Module | Content | Output |
+|--------|---------|--------|
+| 1 | Data Loading & Match Indicator | Analytical dataset |
+| 2 | Balance Table | `balance_table.tex` |
+| 3 | Statistical Tests | `logistic_regression_table.tex` |
+| 4 | Visualizations | 4 PDF figures |
+| 5 | Additional Analysis | `fig_ideology_deciles.pdf` |
+
+--
+
+Each module has **built-in verification steps** — Claude checks its own output before proceeding.
+
+--
+
+Plan Mode is valuable for non-trivial analyses where you want Claude to .red[think through the structure before writing code].
+
+.footnote[.midgrey[`View full plan →` SVTR_twitter_ban/plans/missing_data_analysis.md]]
+
+---
+class: middle
+
+## The APSR-Tables Skill
+
+Academic papers need appendix regression tables, but main figures are visualizations. Converting figure code back into tables is tedious.
+
+--
+
+I built a reusable **Claude Code skill** (`/apsr-tables`):
+
+```
+Step 1: Scan the manuscript .tex for figures
+Step 2: Locate figure-producing R code
+        (ggsave, save_function, pdf, png)
+Step 3: Trace back to the regression models
+        (feols, lm, glm, fixest, ivreg)
+Step 4: Classify each figure
+        (model-based → needs table; descriptive → skip)
+Step 5: Generate appendix tables using modelsummary
+```
+
+.footnote[.midgrey[Invoke with `/apsr-tables` in any project]]
+
+---
+class: middle
+
+## Building the Skill: Conversation History
+
+> *"I would like your help to build a skill for me called apsr-tables"* — skill creation
+
+--
+
+> *"Please add this recommendation of using the .tex directly and avoid save_kable"* — iterative improvement based on real bugs
+
+--
+
+The key rule that emerged:
+
+```
+Save tables by passing the file path directly
+to modelsummary's output argument:
+  output = "path/to/table.tex"
+
+Never use save_kable — it produces HTML in
+interactive R sessions even when saving to .tex files.
+```
+
+---
+class: middle
+
+## Cross-Cutting Pattern
+
+Three tools that work together:
+
+--
+
+1. .red[CLAUDE.md] — Project documentation that makes onboarding instant
+
+--
+
+2. .red[Custom skills] — Reusable workflows invocable with a slash command
+
+--
+
+3. .red[Numbered pipelines] — Sequential scripts that Claude can replicate across contexts
+
+---
+class: middle
+
+## Case Study 3: Lessons
+
+--
+
+- .red[CLAUDE.md makes onboarding instant]: Claude reads it once and understands the project
+
+--
+
+- .red[Plan Mode structures complex analyses]: structured planning before coding produces well-organized scripts with built-in verification
+
+--
+
+- .red[Skills save hours per paper]: the `apsr-tables` skill can be invoked on any paper project
+
+--
+
+- .red[Claude excels at repetitive-but-slightly-different tasks]: country pipelines and verification checks are ideal
+
+--
+
+- .red[Over-engineering risk]: Claude sometimes builds abstractions when you need copy-paste-modify
+
+---
+class: middle, inverse, center
+
+# Case Study 4
+## Multi-Skill Peer Review
+
+.midgrey[Four specialized review skills as an orchestrated system]
+
+---
+class: middle
+
+## The Problem
+
+Peer reviewing manuscripts requires checking multiple dimensions simultaneously:
+
+--
+
+- Substantive theory and causal inference
+
+--
+
+- Statistical methods and transparency
+
+--
+
+- Writing quality (typos, grammar, clarity)
+
+--
+
+- Consistency between code, figures, tables, and text
+
+--
+
+Asking Claude to "review this paper" produces muddled, unfocused feedback.
+
+---
+class: middle
+
+## Architecture: Four Specialized Skills
+
+```
+/substantive-review ─┐
+                     │
+/technical-review  ──┼──→ /meta-review (orchestrator)
+                     │         ↓
+/writing-review   ───┘    Unified prioritized
+                          action plan
+```
+
+--
+
+Each skill has a **narrow scope** and produces a separate markdown file.
+
+--
+
+The .red[meta-reviewer] runs all three, reads their outputs, and synthesizes.
+
+---
+class: middle
+
+## Technical Review in Action
+
+Concrete findings from `/technical-review` on a manuscript:
+
+.panelset[
+.panel[.panel-name[Clustering Issue]
+
+> *"The paper mentions that errors are 'clustered at the user level'... the choice of clustering level affects the standard errors. The paper should justify why user-level clustering is sufficient and whether two-way clustering would be more appropriate."*
+
+]
+
+.panel[.panel-name[Numerical Error]
+
+> *"Text claims 'long-term 17% increase' in likes share, but the numbers given are 73% (before) and 80% (after) = 7pp increase, not 17%."*
+
+]
+
+.panel[.panel-name[Code Bug]
+
+> *"Code line 529: `1.26-1.30/sd(...)` has operator precedence issue (division before subtraction). Makes the '0.94 standard deviations' claim unverifiable."*
+
+]
+
+.panel[.panel-name[Unverifiable Stats]
+
+> *"Multiple key numbers (beta=1.76, z=12.6, user counts) are only computed as console output and not saved to any artifact."*
+
+]
+]
+
+.footnote[.midgrey[`View full review →` SVTR_twitter_ban/review/MAIN_MOST_UPDATED_technical_review.md]]
+
+---
+class: middle
+
+## Separation of Concerns
+
+The **writing reviewer** is explicitly scoped:
+
+.panelset[
+.panel[.panel-name[What to review]
+```
+- Typos and errors: grammar, spelling, punctuation,
+  wrong words, subject-verb agreement, tense
+  inconsistencies, missing articles, duplicated words
+- Clarity suggestions: awkward sentences, unclear
+  phrasing, unnecessarily complex constructions,
+  poor flow between sentences
+```
+]
+
+.panel[.panel-name[What NOT to review]
+```
+- Arguments, claims, or theoretical contributions
+- Paper structure or section organization
+- Statistical methods or results interpretation
+- Figure or table content
+- Citation completeness or accuracy
+- LaTeX commands, formatting, or markup
+```
+]
+]
+
+--
+
+This prevents the "do everything at once" failure mode.
+
+---
+class: middle
+
+## Meta-Reviewer Output
+
+The meta-reviewer synthesizes a **prioritized action plan**:
+
+```
+## Submission Readiness Verdict
+[Overall assessment: submit as-is, minor fixes,
+ substantial revision, or major revision needed]
+
+## Priority Action List
+
+### Must Fix Before Submission
+1. [Issue] [Substantive] — show-stoppers
+
+### Should Fix
+1. [Issue] [Technical] — high-impact improvements
+
+### Optional / Nice to Have
+1. [Issue] [Writing] — minor improvements
+
+## Cross-Cutting Themes
+- [Theme]: [Substantive] flagged X,
+  while [Technical] flagged Y. Together,
+  these suggest Z.
+```
+
+---
+class: middle
+
+## Reuse Across Projects
+
+> *"/meta-review"* — first invocation on a manuscript
+
+--
+
+> *"I need you to edit the meta-review skill... actually call the three other reviews"* — upgrading to orchestrator pattern
+
+--
+
+> *"Now I need you to run the /meta-review in this project. However, adjust it given this grant call"* — reuse across different contexts (papers, grants)
+
+--
+
+The same skill system works for manuscripts, grant proposals, and working papers.
+
+---
+class: middle
+
+## Case Study 4: Lessons
+
+--
+
+- .red[Specialized > generalist]: narrow-scope reviewers produce more thorough feedback
+
+--
+
+- .red[The technical reviewer catches what humans miss]: figure-text inconsistencies, table-code mismatches
+
+--
+
+- .red[The orchestrator pattern works]: run sub-skills, then synthesize
+
+--
+
+- .red[Scope creep prevention matters]: explicitly telling the writing reviewer NOT to comment on substance is essential
+
+--
+
+- The substantive reviewer sometimes hedges too much ("could be improved" instead of "this is wrong")
+
+---
+class: middle, inverse, center
+
+# Case Study 5
+## Building a Self-Updating Slide Deck
+
+.midgrey[A custom skill that captures new case studies as they happen]
+
+---
+class: middle
+
+## The Problem
+
+This talk grows every time I try something new with Claude Code.
+
+--
+
+- Adding a case study manually = copy exact xaringan formatting, find insertion points, update title count, update roadmap
+
+--
+
+- Easy to break formatting or forget a step when you have 50+ slides
+
+--
+
+- I wanted to capture experiences .red[immediately] — right from the conversation where they happen
+
+--
+
+- Ideal workflow: type `/add-case-study` and have it done
+
+---
+class: middle
+
+## The Approach: One Prompt, One Skill
+
+I wrote a ~150-line implementation plan specifying exactly what the skill should do:
+
+--
+
+| Component | What the plan specified |
+|---|---|
+| **Input modes** | Freeform description *or* structured follow-up questions |
+| **Insertion strategy** | Grep for unique anchor strings (`# Cross-Cutting Lessons`, `## Roadmap`) |
+| **Formatting rules** | Match exact xaringan patterns: `.red[]`, `--` reveals, `.midgrey[]` |
+| **Workflow** | 7 steps: gather → read → generate → preview → insert → notes → report |
+| **Safety** | Preview before editing; never touch Cross-Cutting Lessons or anything after it |
+
+--
+
+Claude Code built the full `SKILL.md` from this plan in a single pass.
+
+.footnote[.midgrey[See: ~/.claude/skills/add-case-study/SKILL.md]]
+
+---
+class: middle
+
+## The Prompt: Robust Insertion via Anchor Strings
+
+The plan specified how to find each edit location in the Rmd:
+
+--
+
+- .red[Cross-cutting boundary]: grep for `# Cross-Cutting Lessons` — unique string, always the insertion ceiling
+
+--
+
+- .red[Roadmap entry]: find last numbered `.red[]` item near `## Roadmap`
+
+--
+
+- .red[Title count word]: match `Case Studies` in the YAML title (line 2) and swap the number word (Four → Five → Six...)
+
+--
+
+- .red[Notes insertion]: grep for `## General Slide Design Notes` — unique heading in `notes.md`
+
+--
+
+No hardcoded line numbers. The skill works regardless of how many slides exist.
+
+---
+class: middle
+
+## The Result: `/add-case-study` in Action
+
+Invoking the skill triggers a 7-step workflow:
+
+--
+
+1. .red[Gather] — extracts structure from conversation context, or asks follow-up questions
+
+--
+
+2. .red[Read state] — finds current case study count, anchor strings, and insertion points
+
+--
+
+3. .red[Generate] — produces slides matching exact xaringan formatting of existing case studies
+
+--
+
+4. .red[Preview] — shows all slides for human approval before any file edits
+
+--
+
+5. .red[Insert] — updates title count, adds roadmap entry, inserts slides before Cross-Cutting Lessons
+
+--
+
+6–7: Update `notes.md` and suggest render command (never auto-renders)
+
+---
+class: middle
+
+## Case Study 5: Lessons
+
+--
+
+- .red[Skills as living documentation]: the presentation becomes an artifact that grows with your work — no context switching to "update the talk"
+
+--
+
+- .red[Plan-first prompting]: a detailed plan ensured the skill matched exact formatting conventions on the first try
+
+--
+
+- .red[Anchor-string insertion is robust]: grepping for unique strings beats fragile line-number-based editing
+
+--
+
+- .red[Preview-before-edit is essential]: one wrong insertion could break 50+ existing slides
+
+--
+
+- This case study was added by the skill it describes
+
+---
+class: middle, inverse, center
+
+# Cross-Cutting Lessons
+
+---
+class: middle
+
+## Research Productivity
+
+--
+
+- .red[Checkpoint architecture]: mandatory stop-and-check points keep Claude on track across long tasks
+
+--
+
+- .red[CLAUDE.md as documentation]: a well-written project file makes Claude immediately productive
+
+--
+
+- .red[Failing fast]: Claude helps you assess viability quickly — not every project should survive
+
+--
+
+- .red[Skills for repetitive workflows]: the upfront cost of building a skill pays off across projects
+
+---
+class: middle
+
+## Scientific Integrity
+
+--
+
+- .red[Citation hallucination]: Claude will invent plausible-sounding citations. Verification steps are mandatory.
+
+--
+
+- .red[Domain expertise is non-negotiable]: Claude executes wrong specifications confidently — you must know what correct output looks like
+
+--
+
+- .red[Hedging in reviews]: the substantive reviewer needs explicit instructions to be direct, not equivocate
+
+---
+class: middle
+
+## Technical Capability
+
+--
+
+- .red[Separation of concerns]: narrow-scope skills outperform broad "do everything" prompts
+
+--
+
+- .red[Multi-model validation]: different models have different biases — use this to your advantage
+
+--
+
+- .red[Plan Mode]: structured planning before coding produces well-organized analysis scripts with built-in verification
+
+--
+
+- .red[Over-engineering risk]: Claude sometimes builds abstractions when you need simple copy-paste-modify
+
+---
+class: middle
+
+## Practical Tips
+
+--
+
+1. **Start with `CLAUDE.md`** — invest 30 minutes documenting your project for Claude
+
+--
+
+2. **Use checkpoints** — don't let Claude run unsupervised across long tasks
+
+--
+
+3. **Build skills for repetitive workflows** — the upfront cost pays off across projects
+
+--
+
+4. **Separate judgment from coding** — Opus for thinking, Sonnet for executing
+
+--
+
+5. **Run multiple trials** — if the result is sensitive to model choice, you want to know
+
+--
+
+6. **Let projects die** — Claude helps you fail fast, and that's valuable
+
+---
+class: middle, inverse, center
+
+# Thank you!
+
+.midgrey[Tiago Ventura — Georgetown University]

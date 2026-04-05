@@ -1,0 +1,94 @@
+---
+title: "JAWS Online seminar"
+subtitle: "Not Me, Us: Political Parasocial Relationships in the Digital Era, by Samantha Register"
+author: "Tiago Ventura"
+execute: 
+  echo: true
+  error: true
+format:
+  revealjs: 
+    transition: slide
+    background-transition: fade
+    code-line-numbers: false
+    width: 1600
+    height: 1200
+    center: true
+    slide-number: true
+    incremental: true
+    chalkboard: 
+      buttons: false
+    preview-links: auto
+    footer: "JAWS, October 2025"
+    theme: default
+---
+
+# Summary
+
+> Parasocial connections matter for politics, what you call "Political Parasocial Bonds". These bonds have consequences for political behavior online and offline, which you examine with 2024 Cooperative Election Study. Then the paper presents results on what makes political bonds emerge and the effects on online and offline behavior. 
+
+- **Research Question:** 
+
+   - What causes political parasocial relations to emerge?
+   - How does it affect political behavior?
+   
+     
+
+## General Comment: Further Theoretical Development
+
+You seem to have three theoretical arguments in the paper: 
+
+-  Political vs Non-Political parasocial bonds
+
+-  How online media facilitates the formation of political bonds
+
+-  The effects of political parasocial bonds on online and offline behavior. 
+
+
+## Comment 1: Political Parasocial Bonds
+
+- What is the difference between political and non-political parasocial relationships? 
+
+   - Critical theoretical work for you to push forward. 
+   - Right now, you assume things you observe on non-political arena will just transfer to political (some exposure, socio and demographic homophilly, and other factors)
+
+## Comment 1: Political Parasocial Bonds
+   
+- Key theoretical question: Is there something unique about politics that lead to parasocial bonds? 
+
+   - Prior work (Kim and Peterson, 2024) assume politicians use entertainment to build parasocial bonds ~ use these as valence stocks in the electoral arena. 
+   - Your argument seems to be about the existence of "political" parasocial bonds. 
+      - Is this just about politicians being able to share more of their live online now? 
+      - Is the non-political component still a necessary condition? 
+
+   
+## Comment 2: Political Parasocial Bonds vs Partisan Feelings 
+
+- Your motivation states that the literature has not looked to what you call "Political Parasocial Bonds".
+
+- However, going through the index you use, I had a hard time separating political parasocial bonds to measures of affective partisanship and ingroup favoritism (feeling thermometers, traits, like-dislike scale)
+
+- Somewhat connected to the previous point: Can you compare measures of PII vs Affective Partisan measures?
+
+
+## Comment 3: Political Parasocial Bonds vs Partisan Feelings vs Origins
+
+- Your results for predicting voters forming parasocial bonds make me even more puzzled on separating these two. 
+
+-  Political interest, strength of partisanship and (maybe) social media consumption are all predictors of strong ingroup feelings. 
+
+- This makes the  motivation of the paper not so novel. And will make reviewers ask you if this is just a new term for ingroup affective polarization or if there is something new here. 
+
+
+
+
+## Minor Comments
+
+- Have you standardized the offline and online participation index? Same for the other co-variates. Make sure they are in the same scale.
+
+- How comparable online and offline activities are? Costs of acting online are just so much smaller. 
+
+- The role of online media and misinformation comes in the conclusion, but your theory and results really do not speak too much about this. 
+
+# thanks! and I hope this is helpful!
+
+

@@ -1,0 +1,103 @@
+---
+title: "TITLE <br><span style = 'font-size: 80%;'>  "
+author: " <span style = 'font-size: 120%; line-height: 1.8'>Tiago Ventura </strong>, Co-Author 1, Co-Author 2 </span>"
+date: " <span style = 'font-size: 100%;'> <br> Conference, MM/DD/YYYY </span>"
+output:
+  xaringan::moon_reader:
+    includes:
+      in_header: "no_favicon.html"
+    css: ["xaringan-themer.css", "custom.css", "mytheme-fonts.css"]
+    lib_dir: libs
+    self_contained: false
+    nature:
+      #ratio: 16:9
+      #ratio: 191:100
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+      slideNumberFormat: "Slide %current% of %total%"
+---
+layout: true
+<div class="my-footer"><span>Tiago Ventura (Georgetown University) &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp Conference YYYY</span></div>
+```{r setup, include=FALSE}
+library(xaringanthemer)
+options(htmltools.dir.version = FALSE)
+knitr::opts_chunk$set(message=FALSE, warning = FALSE)
+xaringanthemer::style_mono_light(base_color ="#23395b",
+                                  title_slide_text_color="#ffff",
+                                  title_slide_background_color = "#23395b",
+                                  background_color = "#fff",
+                                  link_color =  "#C93312")
+options(htmltools.dir.version = FALSE)
+knitr::opts_chunk$set(message=FALSE, warning = FALSE, error=TRUE, echo=FALSE, cache=TRUE)
+```
+
+```{r style-share-again, echo=FALSE}
+xaringanExtra::use_tile_view()
+xaringanExtra::use_panelset()
+```
+
+
+---
+class: middle
+
+## Motivation
+
+<!-- Add motivation content here -->
+
+--
+
+<!-- Add bullet points here -->
+
+---
+class: middle
+
+## Research Questions
+
+- **RQ1:**
+
+- **RQ2:**
+
+---
+class: middle
+
+# Design and Methods
+
+--
+
+<!-- Add methods content here -->
+
+---
+class: middle, center, inverse
+
+# Results
+
+---
+class: middle, center
+
+## Result 1
+
+<!-- Add figure or content -->
+
+---
+class: middle, center
+
+## Result 2
+
+<!-- Add figure or content -->
+
+---
+class: middle
+
+## Conclusion
+
+<!-- Add conclusion content here -->
+
+--
+
+<!-- Add bullet points here -->
+
+---
+class: middle, inverse, center
+
+# Thank you!
