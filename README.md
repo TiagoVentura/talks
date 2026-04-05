@@ -4,7 +4,7 @@ Repository to share source materials for presentations and talks.
 
 ## 2026
 
-[Western Ontario - Twitter Ban](https://tiagoventura.github.io/talks/twitter_ban/apsa_2025)
+[Western Ontario - Twitter Ban](https://tiagoventura.github.io/talks/twitter_ban/twitter_ban_western.qmd)
 
 
 ## 2025
