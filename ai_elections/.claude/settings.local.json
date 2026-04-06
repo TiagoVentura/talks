@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(find /Users/tb186/.claude -type f -name *history* -o -name *conversation* -o -name *log* -o -name *insight*)",
+      "Bash(python3 -c \"import sys,json; [print\\(json.dumps\\({''''display'''':json.loads\\(l\\)[''''display''''][:120],''''timestamp'''':json.loads\\(l\\).get\\(''''timestamp'''',''''''''\\)},indent=2\\)\\) for l in sys.stdin]\")",
+      "Bash(python3 -c \"import sys,json; [print\\(json.dumps\\({''''display'''':json.loads\\(l\\)[''''display''''][:150],''''timestamp'''':json.loads\\(l\\).get\\(''''timestamp'''',''''''''\\)},indent=2\\)\\) for l in sys.stdin]\")"
+    ]
+  }
+}
