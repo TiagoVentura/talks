@@ -2,7 +2,8 @@
 title: "The Partisan Effects of Social Media Bans"
 subtitle: "Evidence from Brazil's X Ban"
 author: "Tiago Ventura, Christopher Barrie, Margaret E. Roberts, Christopher Schwarz, Joshua A. Tucker"
-date: "Georgetown University, McCourt School of Public Policy -- 2025"
+date: "2026-01-01"
+date-format: "[Georgetown University, McCourt School of Public Policy --] YYYY"
 execute:
   echo: false
   error: true
@@ -44,11 +45,13 @@ We know a lot about information control under authoritarianism (Roberts 2018; Pa
    
    - Dectect no partisan cleavage on who complies with th eBan
 
-## 
+## {.center}
 
 ::: {.center .larger-font}
 
-**RQ:** How do partisan dynamics shape compliance with state-imposed platform bans and what are the consequences for the information environment in a polarized democracy? 
+How do [partisan dynamics]{.red} shape compliance with platform bans ---
+
+and what are the consequences for the [information environment]{.blue} in a polarized democracy?
 
 :::
 
@@ -71,12 +74,11 @@ We know a lot about information control under authoritarianism (Roberts 2018; Pa
 
 ## The sorting ratchet: a theory of partisan platform segmentation {.center}
 
-When platform governance gets **politicized**, partisans face different incentives to exit or circumvent it.
-
+When platform governance gets **politicized**, partisans face different incentives to exit or circumvent it. Exit or Circumvention depends on two distinct types incentives:
 
 - **Reputational incentives:** Complying signals respect for institutional authority; circumventing signals defiance and partisan loyalty
 - **Informational incentives:** If your co-partisans leave, the remaining content becomes less useful, lowering the payoff to staying
-- **Ratchet effect:** Co-partisans make similar exit/stay decisions, the platform sorts along partisan lines, and **the effect doesn't fully reverse** even after the ban lifts. Particularly true as digital space becomes more fragmented with more platforms
+
 
 
 ## 
@@ -95,7 +97,7 @@ In Brazil, conservatives opposed the Supreme Court's ban. Liberals were more sym
 
 ::: {.fragment}
 
-Sorting Ratchet: A **one-way filter** that made X more conservative; during and (in a smaller dosage) after the ban.
+**Ratchet effect:** Co-partisans make similar exit/stay decisions, the platform sorts along partisan lines, and **the effect doesn't fully reverse** even after the ban lifts. Particularly true as digital space becomes more fragmented with more platforms
 
 :::
 
@@ -104,58 +106,65 @@ Sorting Ratchet: A **one-way filter** that made X more conservative; during and 
 # Data & Design {background-color="#23395b"}
 
 
-## We track 7,500 politically engaged users across 7 months {.center}
+## Pre-ban data: 14M tweets via the X Decahose to estimate ideology {.center}
 
-:::: {.columns}
+**Source:** X Decahose API --- a 10% real-time sample of all public tweets
 
-::: {.column width="50%"}
+- 90 days before the ban (June -- August 2024)
+- Filtered to Portuguese-language tweets containing a URL
+- **~14 million tweets** total
+- Feeds the user × news-domain matrix used for ideology recovery
+- [The Decahose was retired shortly after collection --- this dataset is no longer reproducible.]{.midgray}
 
-**Pre-ban: Ideology estimation**
 
-- X Decahose API (10% of all tweets)
-- 90 days before ban
-- ~14 million tweets in Portuguese with URLs
-- Built user-domain sharing matrix
+## Panel data: 7,471 politically engaged users tracked across 7 months {.center}
 
-:::
+**Source:** Full timelines scraped via public *Nitter* instances (Decahose access was lost mid-project)
 
-::: {.column width="50%"}
-
-**Panel: Effects of the ban**
-
-- Scraped timelines via Nitter instances
-- June 1 -- December 31, 2024
-- 7,471 users, ~6.7 million tweets
-- ~430,000 political news shares
-
-:::
-
-::::
+- **Sample frame:** users from the pre-ban data who shared ≥5 distinct political news domains → 9,061 candidates
+- **Successfully collected: 7,471 of 9,061** (~18% attrition: account deletion, handle changes, suspension, private settings)
+- **Window:** June 1 -- December 31, 2024
+- **~6.7M tweets**, **~430K political news shares**
+- Non-random sample, but a small share of users generates most political content on the platform (Grinberg et al. 2019; Baribi-Bartov et al. 2024).{.midgray}
 
 
 
 ## Correspondence Analysis recovers ideology from news-sharing behavior {.center}
 
-:::: {.columns}
 
-::: {.column width="55%"}
+$$
+\underbrace{\begin{array}{c|cccccc}
+ & \text{folha} & \text{globo} & \text{jovempan} & \text{oeste} & \cdots \\
+\hline
+\text{user}_1 & 12 & 8 & 0 & 0 & \cdots \\
+\text{user}_2 & 0 & 1 & 15 & 9 & \cdots \\
+\text{user}_3 & 7 & 11 & 2 & 0 & \cdots \\
+\vdots & \vdots & \vdots & \vdots & \vdots & \ddots
+\end{array}}_{\textbf{9{,}061 users}\;\times\;\textbf{242 domains}}
+$$
 
-- Matrix of 9,061 users x 242 political news domains
-- Each cell = count of shares by user $i$ of domain $j$
-- First dimension of CA = ideological placement
-- Filtered to: domains with >100 shares, shared by >10 users; users sharing >5 distinct news domains
+[Each cell = number of times user $i$ shared a link from domain $j$. CA decomposes this matrix; the first dimension orders users and domains from left to right --- *user*$_1$ looks left-leaning, *user*$_2$ right-leaning.]{.midgray}
+
+## Processing and Estimation
+
+:::fragment
+**Filtering**
+
+- Domains: >100 total shares, shared by >10 distinct users
+- Users: shared >5 distinct political news domains
+- **Intuition:** Capture politics as a core dimension of this non-random sample
 
 :::
 
-::: {.column width="45%"}
 
-::: {.fragment}
-**Intuition:** Users who share from the same outlets cluster together. Domains shared by similar users cluster together. The first dimension separates left from right.
+::: fragment
+
+**Estimation**
+
+- Correspondence Analysis on the user × domain matrix
+- First CA dimension = ideological position for users *and* domains
+- **Intuition:** Users sharing similar outlets cluster together; left and right separate cleanly
 :::
-
-:::
-
-::::
 
 # Results: Validation {background-color="#23395b"}
 

@@ -2,7 +2,8 @@
 title: "Coding Agents for Academic Research"
 subtitle: "Or how I started using Claude Code"
 author: "Tiago Ventura"
-date: "Georgetown University, McCourt School of Public Policy — 2025"
+date: "2026-01-01"
+date-format: "[Georgetown University, McCourt School of Public Policy —] YYYY"
 execute:
   echo: false
   error: true

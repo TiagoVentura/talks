@@ -2,6 +2,11 @@
 
 Repository to share source materials for presentations and talks.
 
+## Building a new talk
+
+- Start from `template/` — it holds `template.qmd` plus the shared SCSS/CSS, modeled on `twitter_ban/twitter_ban_western.qmd`.
+- Or use the **`presentation` Claude Code skill**, which converts a paper (`.tex`) into a Quarto reveal.js deck following the Rhetoric of Decks philosophy (assertion-driven titles, one idea per slide). Run it from inside Claude Code, then layer the template's styling on top.
+
 ## 2026
 
 [Western Ontario - Twitter Ban](https://tiagoventura.github.io/talks/twitter_ban/twitter_ban_western.qmd)
@@ -11,7 +16,7 @@ Repository to share source materials for presentations and talks.
 
 - [GWU - WhatsApp Multicountry](https://tiagoventura.github.io/talks/whatsapp_multicountry/comppit_fgv)
 
- [APSA- Twitter Ban in Brazil](https://tiagoventura.github.io/talks/twitter_ban/apsa_2025)
+-  [APSA- Twitter Ban in Brazil](https://tiagoventura.github.io/talks/twitter_ban/apsa_2025)
 
 - [COMPPIT - Law School FGV - Rio](https://tiagoventura.github.io/talks/whatsapp_multicountry/comppit_fgv)
 

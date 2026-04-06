@@ -1,0 +1,191 @@
+---
+title: "Talk Title"
+subtitle: "Subtitle / Paper Tagline"
+author: "Tiago Ventura, Coauthor One, Coauthor Two"
+date: "2026-01-01"
+date-format: "[Venue Name --] YYYY"
+execute:
+  echo: false
+  error: true
+format:
+  revealjs:
+    transition: slide
+    background-transition: fade
+    code-line-numbers: false
+    width: 1200
+    height: 900
+    center: true
+    slide-number: true
+    incremental: true
+    chalkboard:
+      buttons: false
+    preview-links: auto
+    footer: "Venue / Conference Name"
+    theme: [simple, custom.scss]
+---
+
+## Top-line motivation goes here {.center}
+
+Open with the puzzle or empirical hook. One short paragraph, then a few punchy bullets.
+
+- Bullet one
+- Bullet two
+- **Bullet three -- the headline fact**
+
+##
+
+A second motivation slide if you need to set up the gap in the literature. Cite work inline (Author Year).
+
+- Key prior study one
+- Key prior study two
+
+##
+
+::: {.center .larger-font}
+
+**RQ:** State the research question in one sentence.
+
+:::
+
+# Section: Context {background-color="#23395b"}
+
+## Section header slide with assertion as the title
+
+- Background point one
+- Background point two
+- Background point three
+
+## Theory: name your mechanism here {.center}
+
+State the mechanism in one sentence at the top of the slide.
+
+- **Mechanism component A:** one-line description
+- **Mechanism component B:** one-line description
+- **Prediction:** what we should observe if the theory is right
+
+# Data & Design {background-color="#23395b"}
+
+## One-line description of the data {.center}
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+**Source A**
+
+- Bullet
+- Bullet
+- Bullet
+
+:::
+
+::: {.column width="50%"}
+
+**Source B**
+
+- Bullet
+- Bullet
+- Bullet
+
+:::
+
+::::
+
+## Method in plain language {.center}
+
+:::: {.columns}
+
+::: {.column width="55%"}
+
+- What you did, step by step
+- Sample / filtering rules
+- Identification strategy
+
+:::
+
+::: {.column width="45%"}
+
+::: {.fragment}
+**Intuition:** one or two sentences explaining why this works.
+:::
+
+:::
+
+::::
+
+# Results {background-color="#23395b"}
+
+## Headline result as the slide title {.center}
+
+![](output/figure_one.png){fig-align="center" width="85%"}
+
+::: aside
+[One-line caption with the key number.]{.midgray}
+:::
+
+## Second result, again with the punchline as the title {.center}
+
+![](output/figure_two.png){fig-align="center" width="85%"}
+
+::: aside
+[Caption.]{.midgray}
+:::
+
+## Model spec slide (only if needed)
+
+$$y_{ij} \sim \text{Distribution}(\theta_{ij})$$
+
+$$\theta_{ij} = f(\alpha_i + \tau_j + \beta \cdot X_{ij})$$
+
+::: {.fragment}
+
+Where:
+
+- $y_{ij}$ — outcome
+- $\alpha_i$ — unit fixed effects
+- $\tau_j$ — time fixed effects
+- $\beta$ — **parameter of interest**
+
+:::
+
+# Discussion {background-color="#23395b"}
+
+## Headline takeaway
+
+::: {.nonincremental}
+
+1. Takeaway one
+2. Takeaway two
+3. Takeaway three
+4. Takeaway four
+
+:::
+
+## Implications
+
+1. Implication one
+2. Implication two
+3. Implication three
+
+## Limitations and next steps {.center}
+
+::: {.nonincremental}
+
+- Limitation one
+- Limitation two
+- Scope condition
+- Next step
+
+:::
+
+## {background-color="#23395b"}
+
+<br>
+
+::: {.center .larger-font}
+Thank you
+:::
+
+<br>
+
+[tiago.ventura@georgetown.edu]{style="color: white; font-size: 0.8em;"}
