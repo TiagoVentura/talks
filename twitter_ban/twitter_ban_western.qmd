@@ -20,7 +20,7 @@ format:
     chalkboard:
       buttons: false
     preview-links: auto
-    footer: "Comparative Politics, Workshop, University of Western Ontario"
+    footer: "Workshop, University of Western Ontario"
     theme: [simple, custom.scss]
 ---
 
@@ -125,7 +125,7 @@ In Brazil, conservatives opposed the Supreme Court's ban. Liberals were more sym
 - **Successfully collected: 7,471 of 9,061** (~18% attrition: account deletion, handle changes, suspension, private settings)
 - **Window:** June 1 -- December 31, 2024
 - **~6.7M tweets**, **~430K political news shares**
-- Non-random sample, but a small share of users generates most political content on the platform (Grinberg et al. 2019; Baribi-Bartov et al. 2024).{.midgray}
+- Non-random sample, but a small share of users generates most political content on the platform (Grinberg et al. 2019; Baribi-Bartov et al. 2024).
 
 
 
