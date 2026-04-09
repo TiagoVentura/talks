@@ -1,0 +1,224 @@
+---
+title: "The Partisan Effects of Social Media Bans"
+subtitle: "Evidence from Brazil's X Ban"
+author: "Tiago Ventura, Christopher Barrie, Margaret E. Roberts, Christopher Schwarz, Joshua A. Tucker"
+date: "2026-01-01"
+date-format: "[Georgetown University, McCourt School of Public Policy --] YYYY"
+execute:
+  echo: false
+  error: true
+format:
+  revealjs:
+    transition: slide
+    background-transition: fade
+    code-line-numbers: false
+    width: 1200
+    height: 900
+    center: true
+    slide-number: true
+    incremental: true
+    chalkboard:
+      buttons: false
+    preview-links: auto
+    footer: "CPAC WashU"
+    theme: [simple, custom.scss]
+---
+
+
+Democratic governments increasingly intervene in major online platforms -- sometimes these conflicts escalate to full nation-wide bans: 
+
+- Ukraine blocked VKontakte to curb Russian propaganda (2017)
+- India and Nepal have blocked TikTok and other platforms during political turmoil
+- The US forced a sale of TikTok
+- **Brazil banned X nationwide for 39 days (Aug 30 -- Oct 8, 2024)**
+
+:::fragment
+
+We know a lot about information control under authoritarianism (Roberts 2018; Pan and Siegel 2020; Boxell and Steinert-Threlkeld 2022) -- but almost nothing about bans and escalation of platform government policies in democracies
+
+:::
+
+## {.center}
+
+::: {.center .larger-font}
+
+How do [partisan dynamics]{.red} shape compliance with platform bans ---
+
+and what are the consequences for the [information environment]{.blue} in a polarized democracy?
+
+:::
+
+# Context: The X Ban in Brazil {background-color="#23395b"}
+
+## The ban followed a year-long escalation between Brazil's Supreme Court and X
+
+- After Bolsonaro's 2022 defeat, right-leaning supporters contested the results -- truck lockouts, encampments, and a strong digital campaign on social media
+
+- **January 8, 2023:** Bolsonaro supporters stormed Congress, the Supreme Court, and the presidential palace
+
+- Supreme Court opened judicial inquiries, requested removal of accounts spreading misinformation. Meta and Google complied. **X refused.**
+
+- **August 2024:** X's legal representative in Brazil resigned; leadership refused to name a replacement
+
+- **August 30:** Supreme Court ordered a nationwide ban on X -- affecting ~40 million users
+
+- **October 8:** Ban lifted after X complied with court demands (~39 days total)
+
+
+## The sorting ratchet: a theory of partisan platform segmentation {.center}
+
+When platform governance gets **politicized**, partisans face different incentives to exit or circumvent it. Exit or Circumvention depends on two distinct types incentives:
+
+- **Reputational incentives:** Complying signals respect for institutional authority; circumventing signals defiance and partisan loyalty
+- **Informational incentives:** If your co-partisans leave, the remaining content becomes less useful, lowering the payoff to staying
+
+:::fragment
+
+**Ratchet effect:** Co-partisans make similar exit/stay decisions, the platform sorts along partisan lines, and **the effect doesn't fully reverse** even after the ban lifts. Particularly true as digital space becomes more fragmented with more platforms
+
+:::
+
+
+
+# Data & Design {background-color="#23395b"}
+
+## Pre-ban data: 14M tweets via the X Decahose to estimate ideology {.center}
+
+**Source:** X Decahose API --- a 10% real-time sample of all public tweets
+
+- 90 days before the ban (June -- August 2024)
+- Filtered to Portuguese-language tweets containing a URL
+- **~14 million tweets** total
+- Feeds the user × news-domain matrix used for ideology recovery
+- [The Decahose was retired shortly after collection --- this dataset is no longer reproducible.]{.midgray}
+
+
+## Panel data: 7,471 politically engaged users tracked across 7 months {.center}
+
+**Source:** Full timelines scraped via public *Nitter* instances (Decahose access was lost mid-project)
+
+- **Sample frame:** users from the pre-ban data who shared ≥5 distinct political news domains → 9,061 candidates
+- **Successfully collected: 7,471 of 9,061** (~18% attrition: account deletion, handle changes, suspension, private settings)
+- **Window:** June 1 -- December 31, 2024
+- **~6.7M tweets**, **~430K political news shares**
+- Non-random sample, but a small share of users generates most political content on the platform (Grinberg et al. 2019; Baribi-Bartov et al. 2024).
+
+
+
+## Correspondence Analysis recovers ideology from news-sharing behavior {.center}
+
+
+$$
+\underbrace{\begin{array}{c|cccccc}
+ & \text{folha} & \text{globo} & \text{jovempan} & \text{oeste} & \cdots \\
+\hline
+\text{user}_1 & 12 & 8 & 0 & 0 & \cdots \\
+\text{user}_2 & 0 & 1 & 15 & 9 & \cdots \\
+\text{user}_3 & 7 & 11 & 2 & 0 & \cdots \\
+\vdots & \vdots & \vdots & \vdots & \vdots & \ddots
+\end{array}}_{\textbf{9{,}061 users}\;\times\;\textbf{242 domains}}
+$$
+
+[Each cell = number of times user $i$ shared a link from domain $j$. CA decomposes this matrix; the first dimension orders users and domains from left to right --- *user*$_1$ looks left-leaning, *user*$_2$ right-leaning.]{.midgray}
+
+# Results: Validation {background-color="#23395b"}
+
+
+## Behavioral scores correlate at r = 0.85 with survey-based measures {.center}
+
+![](output/fig_validation.png){fig-align="center" width="65%"}
+
+::: aside
+[Survey-based ideology from Mont'Alverne et al. (2024), matched on 24 organizations]{.midgray}
+:::
+
+# Results: General Effects of the Ban {background-color="#23395b"}
+
+## The ban cut posting and news sharing sharply -- but not to zero {.center}
+
+![](output/fig_tweets_sharing.png){fig-align="center" width="85%"}
+
+::: aside
+[Daily averages dropped from 37,207 tweets to 11,305 during the ban. News sharing fell from 2,587 to 395 per day.]{.midgray}
+:::
+
+
+## Results: Partisan Effects of the Ban
+
+We identify the causal effects of the ban using a Poisson event-study model:
+
+$$y_{ij} \sim \text{Poisson}(\lambda_{ij})$$
+
+$$\lambda_{ij} = \exp\left(\alpha_i + \tau_j + \sum_{t=1}^{6} \beta_t \cdot \text{Right-leaning}_i \cdot \text{Month}_t\right)$$
+
+::: {.fragment}
+
+Where: 
+
+-  $y_{ij}$ - Count of tweets by user $i$ on day $j$ 
+- $\alpha_i$ - User fixed effects (absorbs baseline activity differences) 
+- $\tau_j$ - Day fixed effects (absorbs platform-wide shocks) 
+- $\text{Right-leaning}_i$ - Binary: ideology score > 0 
+- $\text{Month}_t$ - Monthly indicators (June = baseline) 
+- $\beta_t$ - **Parameters of interest:** how much more active right-leaning users are in month $t$ relative to left-leaning users 
+
+:::
+
+## Right-leaning users were 5.8x more active during the ban {.center}
+
+![](output/event_study_user_poisson_cs_recentered.png){fig-align="center" width="85%"}
+
+::: aside
+[Poisson event-study: right-leaning users' posting rate increased 5.8x relative to left-leaning users during the ban (exp(1.76), z = 12.6). Effects persist at smaller magnitude post-ban.]{.midgray}
+:::
+
+
+## Right-leaning users produced the vast majority of content during and after the ban {.center}
+
+![](output/counts_tweets_users_CS_recentered.png){fig-align="center" width="80%"}
+
+::: aside
+[Centrist and left-leaning users largely went silent during the ban, while right-leaning users continued producing most of the platform's content.]{.midgray}
+:::
+
+
+## 9% of politically engaged users never returned to X {.center}
+
+![](output/cdf_dropout.png){fig-align="center" width="80%"}
+
+::: aside
+[Of 7,291 pre-ban users, 2,346 went silent during the ban and 656 never came back. Dropout was disproportionately left-leaning -- the share of right-leaning users among dropouts fell from 70% to 50%.]{.midgray}
+:::
+
+## Engagement became concentrated among right-leaning users -- and stayed that way {.center}
+
+![](output/cdf_engagement_CS_recentered.png){fig-align="center" width="80%"}
+
+::: aside
+[Right-leaning users received 73% of likes pre-ban, 90% during, and 80% after. Similar patterns for retweets, quotes, and replies.]{.midgray}
+:::
+
+
+## Implications
+
+
+1. Conflicts over platform regulation in **polarized democracies** can generate durable partisan shifts in participation
+
+2. **These changes are sticky.** Three months after the ban lifted, X was still more conservative. 9% of users never came back.
+
+3. **The so-called Echo Chambers** are not anymore a space in the platform user graph, but the platform entirely 
+
+4. **Policy Trade-off:** Measures to curb misinformation may produce unintended downstream effects in the digital ecosystem.
+
+## {background-color="#23395b"}
+
+<br>
+
+::: {.center .larger-font}
+Thank you
+
+:::
+
+<br>
+
+[tiago.ventura@georgetown.edu]{style="color: white; font-size: 0.8em;"}
