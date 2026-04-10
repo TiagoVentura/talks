@@ -9,6 +9,9 @@ Repository to share source materials for presentations and talks.
 
 ## 2026
 
+[CPAC WashU](https://tiagoventura.github.io/talks/twitter_ban/washu.html)
+
+
 [Western Ontario - Twitter Ban](https://tiagoventura.github.io/talks/twitter_ban/twitter_ban_western.qmd)
 
 

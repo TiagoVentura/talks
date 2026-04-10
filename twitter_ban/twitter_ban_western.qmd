@@ -24,7 +24,7 @@ format:
     theme: [simple, custom.scss]
 ---
 
-## Democracies are banning social media platforms {.center}
+## Motivation {.center}
 
 Democratic governments increasingly intervene in major online platforms -- sometimes shutting them down entirely.
 
