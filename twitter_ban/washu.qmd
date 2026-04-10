@@ -25,32 +25,25 @@ format:
 ---
 
 
-Democratic governments increasingly intervene in major online platforms -- sometimes these conflicts escalate to full nation-wide bans: 
+## Democratic Platform Bans
+
+We know a lot about information control under authoritarianism (Roberts 2018; Pan and Siegel 2020; Boxell and Steinert-Threlkeld 2022) -- but almost nothing about bans and escalation of platform government policies in democracies
+
+
+
+:::fragment
+
+However, democratic governments have increased efforts to regulate online platforms -- sometimes conflicts around these policies escalate to full nation-wide bans: 
 
 - Ukraine blocked VKontakte to curb Russian propaganda (2017)
 - India and Nepal have blocked TikTok and other platforms during political turmoil
 - The US forced a sale of TikTok
 - **Brazil banned X nationwide for 39 days (Aug 30 -- Oct 8, 2024)**
 
-:::fragment
-
-We know a lot about information control under authoritarianism (Roberts 2018; Pan and Siegel 2020; Boxell and Steinert-Threlkeld 2022) -- but almost nothing about bans and escalation of platform government policies in democracies
-
 :::
 
-## {.center}
 
-::: {.center .larger-font}
-
-How do [partisan dynamics]{.red} shape compliance with platform bans ---
-
-and what are the consequences for the [information environment]{.blue} in a polarized democracy?
-
-:::
-
-# Context: The X Ban in Brazil {background-color="#23395b"}
-
-## The ban followed a year-long escalation between Brazil's Supreme Court and X
+## Context: The X Ban in Brazil 
 
 - After Bolsonaro's 2022 defeat, right-leaning supporters contested the results -- truck lockouts, encampments, and a strong digital campaign on social media
 
@@ -64,8 +57,17 @@ and what are the consequences for the [information environment]{.blue} in a pola
 
 - **October 8:** Ban lifted after X complied with court demands (~39 days total)
 
+## {.center}
 
-## The sorting ratchet: a theory of partisan platform segmentation {.center}
+::: {.center .larger-font}
+
+How do [partisan dynamics]{.red} in [polarized democracies]{.red}  shape compliance with platform bans 
+
+and what are the consequences for the [information environment]{.red} in the short and lon run?
+:::
+
+
+## A theory of partisan platform segmentation {.center}
 
 When platform governance gets **politicized**, partisans face different incentives to exit or circumvent it. Exit or Circumvention depends on two distinct types incentives:
 
@@ -87,11 +89,12 @@ When platform governance gets **politicized**, partisans face different incentiv
 **Source:** X Decahose API --- a 10% real-time sample of all public tweets
 
 - 90 days before the ban (June -- August 2024)
-- Filtered to Portuguese-language tweets containing a URL
-- **~14 million tweets** total
+- Filtered to Portuguese-language tweets containing a URL, **~14 million tweets** total
 - Feeds the user × news-domain matrix used for ideology recovery
-- [The Decahose was retired shortly after collection --- this dataset is no longer reproducible.]{.midgray}
-
+   - Domains: >100 total shares, shared by >10 distinct users
+   - Users: shared >5 distinct political news domains
+   
+- Use correspondence Analysis recovers ideology from news-sharing behavior (Eady et. al, 2024)
 
 ## Panel data: 7,471 politically engaged users tracked across 7 months {.center}
 
@@ -103,26 +106,7 @@ When platform governance gets **politicized**, partisans face different incentiv
 - **~6.7M tweets**, **~430K political news shares**
 - Non-random sample, but a small share of users generates most political content on the platform (Grinberg et al. 2019; Baribi-Bartov et al. 2024).
 
-
-
-## Correspondence Analysis recovers ideology from news-sharing behavior {.center}
-
-
-$$
-\underbrace{\begin{array}{c|cccccc}
- & \text{folha} & \text{globo} & \text{jovempan} & \text{oeste} & \cdots \\
-\hline
-\text{user}_1 & 12 & 8 & 0 & 0 & \cdots \\
-\text{user}_2 & 0 & 1 & 15 & 9 & \cdots \\
-\text{user}_3 & 7 & 11 & 2 & 0 & \cdots \\
-\vdots & \vdots & \vdots & \vdots & \vdots & \ddots
-\end{array}}_{\textbf{9{,}061 users}\;\times\;\textbf{242 domains}}
-$$
-
-[Each cell = number of times user $i$ shared a link from domain $j$. CA decomposes this matrix; the first dimension orders users and domains from left to right --- *user*$_1$ looks left-leaning, *user*$_2$ right-leaning.]{.midgray}
-
 # Results: Validation {background-color="#23395b"}
-
 
 ## Behavioral scores correlate at r = 0.85 with survey-based measures {.center}
 
@@ -132,7 +116,7 @@ $$
 [Survey-based ideology from Mont'Alverne et al. (2024), matched on 24 organizations]{.midgray}
 :::
 
-# Results: General Effects of the Ban {background-color="#23395b"}
+# Results {background-color="#23395b"}
 
 ## The ban cut posting and news sharing sharply -- but not to zero {.center}
 
@@ -143,7 +127,7 @@ $$
 :::
 
 
-## Results: Partisan Effects of the Ban
+## Partisan Effects
 
 We identify the causal effects of the ban using a Poisson event-study model:
 
@@ -153,6 +137,7 @@ $$\lambda_{ij} = \exp\left(\alpha_i + \tau_j + \sum_{t=1}^{6} \beta_t \cdot \tex
 
 ::: {.fragment}
 
+::: nonincremental 
 Where: 
 
 -  $y_{ij}$ - Count of tweets by user $i$ on day $j$ 
@@ -161,7 +146,7 @@ Where:
 - $\text{Right-leaning}_i$ - Binary: ideology score > 0 
 - $\text{Month}_t$ - Monthly indicators (June = baseline) 
 - $\beta_t$ - **Parameters of interest:** how much more active right-leaning users are in month $t$ relative to left-leaning users 
-
+:::
 :::
 
 ## Right-leaning users were 5.8x more active during the ban {.center}

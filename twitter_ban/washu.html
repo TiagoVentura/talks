@@ -340,33 +340,21 @@ Tiago Ventura, Christopher Barrie, Margaret E. Roberts, Christopher Schwarz, Jos
 
   <p class="date">Georgetown University, McCourt School of Public Policy – 2026</p>
 </section>
-<section class="slide level2 center">
-
-<p>Democratic governments increasingly intervene in major online platforms – sometimes these conflicts escalate to full nation-wide bans:</p>
+<section id="democratic-platform-bans" class="slide level2 center">
+<h2>Democratic Platform Bans</h2>
+<p>We know a lot about information control under authoritarianism (Roberts 2018; Pan and Siegel 2020; Boxell and Steinert-Threlkeld 2022) – but almost nothing about bans and escalation of platform government policies in democracies</p>
+<div class="fragment">
+<p>However, democratic governments have increased efforts to regulate online platforms – sometimes conflicts around these policies escalate to full nation-wide bans:</p>
 <ul>
 <li class="fragment">Ukraine blocked VKontakte to curb Russian propaganda (2017)</li>
 <li class="fragment">India and Nepal have blocked TikTok and other platforms during political turmoil</li>
 <li class="fragment">The US forced a sale of TikTok</li>
 <li class="fragment"><strong>Brazil banned X nationwide for 39 days (Aug 30 – Oct 8, 2024)</strong></li>
 </ul>
-<div class="fragment">
-<p>We know a lot about information control under authoritarianism (Roberts 2018; Pan and Siegel 2020; Boxell and Steinert-Threlkeld 2022) – but almost nothing about bans and escalation of platform government policies in democracies</p>
 </div>
 </section>
-<section id="section" class="slide level2 center">
-<h2></h2>
-<div class="center larger-font">
-<p>How do <span class="red">partisan dynamics</span> shape compliance with platform bans —</p>
-<p>and what are the consequences for the <span class="blue">information environment</span> in a polarized democracy?</p>
-</div>
-</section>
-<section>
-<section id="context-the-x-ban-in-brazil" class="title-slide slide level1 center" data-background-color="#23395b">
-<h1>Context: The X Ban in Brazil</h1>
-
-</section>
-<section id="the-ban-followed-a-year-long-escalation-between-brazils-supreme-court-and-x" class="slide level2 center">
-<h2>The ban followed a year-long escalation between Brazil’s Supreme Court and X</h2>
+<section id="context-the-x-ban-in-brazil" class="slide level2 center">
+<h2>Context: The X Ban in Brazil</h2>
 <ul>
 <li class="fragment"><p>After Bolsonaro’s 2022 defeat, right-leaning supporters contested the results – truck lockouts, encampments, and a strong digital campaign on social media</p></li>
 <li class="fragment"><p><strong>January 8, 2023:</strong> Bolsonaro supporters stormed Congress, the Supreme Court, and the presidential palace</p></li>
@@ -376,8 +364,15 @@ Tiago Ventura, Christopher Barrie, Margaret E. Roberts, Christopher Schwarz, Jos
 <li class="fragment"><p><strong>October 8:</strong> Ban lifted after X complied with court demands (~39 days total)</p></li>
 </ul>
 </section>
-<section id="the-sorting-ratchet-a-theory-of-partisan-platform-segmentation" class="slide level2 center">
-<h2>The sorting ratchet: a theory of partisan platform segmentation</h2>
+<section id="section" class="slide level2 center">
+<h2></h2>
+<div class="center larger-font">
+<p>How do <span class="red">partisan dynamics</span> in <span class="red">polarized democracies</span> shape compliance with platform bans</p>
+<p>and what are the consequences for the <span class="red">information environment</span> in the short and lon run?</p>
+</div>
+</section>
+<section id="a-theory-of-partisan-platform-segmentation" class="slide level2 center">
+<h2>A theory of partisan platform segmentation</h2>
 <p>When platform governance gets <strong>politicized</strong>, partisans face different incentives to exit or circumvent it. Exit or Circumvention depends on two distinct types incentives:</p>
 <ul>
 <li class="fragment"><strong>Reputational incentives:</strong> Complying signals respect for institutional authority; circumventing signals defiance and partisan loyalty</li>
@@ -386,7 +381,7 @@ Tiago Ventura, Christopher Barrie, Margaret E. Roberts, Christopher Schwarz, Jos
 <div class="fragment">
 <p><strong>Ratchet effect:</strong> Co-partisans make similar exit/stay decisions, the platform sorts along partisan lines, and <strong>the effect doesn’t fully reverse</strong> even after the ban lifts. Particularly true as digital space becomes more fragmented with more platforms</p>
 </div>
-</section></section>
+</section>
 <section>
 <section id="data-design" class="title-slide slide level1 center" data-background-color="#23395b">
 <h1>Data &amp; Design</h1>
@@ -397,10 +392,13 @@ Tiago Ventura, Christopher Barrie, Margaret E. Roberts, Christopher Schwarz, Jos
 <p><strong>Source:</strong> X Decahose API — a 10% real-time sample of all public tweets</p>
 <ul>
 <li class="fragment">90 days before the ban (June – August 2024)</li>
-<li class="fragment">Filtered to Portuguese-language tweets containing a URL</li>
-<li class="fragment"><strong>~14 million tweets</strong> total</li>
-<li class="fragment">Feeds the user × news-domain matrix used for ideology recovery</li>
-<li class="fragment"><span class="midgray">The Decahose was retired shortly after collection — this dataset is no longer reproducible.</span></li>
+<li class="fragment">Filtered to Portuguese-language tweets containing a URL, <strong>~14 million tweets</strong> total</li>
+<li class="fragment">Feeds the user × news-domain matrix used for ideology recovery
+<ul>
+<li class="fragment">Domains: &gt;100 total shares, shared by &gt;10 distinct users</li>
+<li class="fragment">Users: shared &gt;5 distinct political news domains</li>
+</ul></li>
+<li class="fragment">Use correspondence Analysis recovers ideology from news-sharing behavior (Eady et. al, 2024)</li>
 </ul>
 </section>
 <section id="panel-data-7471-politically-engaged-users-tracked-across-7-months" class="slide level2 center">
@@ -413,20 +411,6 @@ Tiago Ventura, Christopher Barrie, Margaret E. Roberts, Christopher Schwarz, Jos
 <li class="fragment"><strong>~6.7M tweets</strong>, <strong>~430K political news shares</strong></li>
 <li class="fragment">Non-random sample, but a small share of users generates most political content on the platform (Grinberg et al.&nbsp;2019; Baribi-Bartov et al.&nbsp;2024).</li>
 </ul>
-</section>
-<section id="correspondence-analysis-recovers-ideology-from-news-sharing-behavior" class="slide level2 center">
-<h2>Correspondence Analysis recovers ideology from news-sharing behavior</h2>
-<p><span class="math display">\[
-\underbrace{\begin{array}{c|cccccc}
-&amp; \text{folha} &amp; \text{globo} &amp; \text{jovempan} &amp; \text{oeste} &amp; \cdots \\
-\hline
-\text{user}_1 &amp; 12 &amp; 8 &amp; 0 &amp; 0 &amp; \cdots \\
-\text{user}_2 &amp; 0 &amp; 1 &amp; 15 &amp; 9 &amp; \cdots \\
-\text{user}_3 &amp; 7 &amp; 11 &amp; 2 &amp; 0 &amp; \cdots \\
-\vdots &amp; \vdots &amp; \vdots &amp; \vdots &amp; \vdots &amp; \ddots
-\end{array}}_{\textbf{9{,}061 users}\;\times\;\textbf{242 domains}}
-\]</span></p>
-<p><span class="midgray">Each cell = number of times user <span class="math inline">\(i\)</span> shared a link from domain <span class="math inline">\(j\)</span>. CA decomposes this matrix; the first dimension orders users and domains from left to right — <em>user</em><span class="math inline">\(_1\)</span> looks left-leaning, <em>user</em><span class="math inline">\(_2\)</span> right-leaning.</span></p>
 </section></section>
 <section>
 <section id="results-validation" class="title-slide slide level1 center" data-background-color="#23395b">
@@ -445,8 +429,8 @@ Tiago Ventura, Christopher Barrie, Margaret E. Roberts, Christopher Schwarz, Jos
 <p><span class="midgray">Survey-based ideology from Mont’Alverne et al.&nbsp;(2024), matched on 24 organizations</span></p>
 </div></aside></section></section>
 <section>
-<section id="results-general-effects-of-the-ban" class="title-slide slide level1 center" data-background-color="#23395b">
-<h1>Results: General Effects of the Ban</h1>
+<section id="results" class="title-slide slide level1 center" data-background-color="#23395b">
+<h1>Results</h1>
 
 </section>
 <section id="the-ban-cut-posting-and-news-sharing-sharply-but-not-to-zero" class="slide level2 center">
@@ -460,21 +444,23 @@ Tiago Ventura, Christopher Barrie, Margaret E. Roberts, Christopher Schwarz, Jos
 <aside><div>
 <p><span class="midgray">Daily averages dropped from 37,207 tweets to 11,305 during the ban. News sharing fell from 2,587 to 395 per day.</span></p>
 </div></aside></section>
-<section id="results-partisan-effects-of-the-ban" class="slide level2 center">
-<h2>Results: Partisan Effects of the Ban</h2>
+<section id="partisan-effects" class="slide level2 center">
+<h2>Partisan Effects</h2>
 <p>We identify the causal effects of the ban using a Poisson event-study model:</p>
 <p><span class="math display">\[y_{ij} \sim \text{Poisson}(\lambda_{ij})\]</span></p>
 <p><span class="math display">\[\lambda_{ij} = \exp\left(\alpha_i + \tau_j + \sum_{t=1}^{6} \beta_t \cdot \text{Right-leaning}_i \cdot \text{Month}_t\right)\]</span></p>
 <div class="fragment">
+<div>
 <p>Where:</p>
 <ul>
-<li class="fragment"><span class="math inline">\(y_{ij}\)</span> - Count of tweets by user <span class="math inline">\(i\)</span> on day <span class="math inline">\(j\)</span></li>
-<li class="fragment"><span class="math inline">\(\alpha_i\)</span> - User fixed effects (absorbs baseline activity differences)</li>
-<li class="fragment"><span class="math inline">\(\tau_j\)</span> - Day fixed effects (absorbs platform-wide shocks)</li>
-<li class="fragment"><span class="math inline">\(\text{Right-leaning}_i\)</span> - Binary: ideology score &gt; 0</li>
-<li class="fragment"><span class="math inline">\(\text{Month}_t\)</span> - Monthly indicators (June = baseline)</li>
-<li class="fragment"><span class="math inline">\(\beta_t\)</span> - <strong>Parameters of interest:</strong> how much more active right-leaning users are in month <span class="math inline">\(t\)</span> relative to left-leaning users</li>
+<li><span class="math inline">\(y_{ij}\)</span> - Count of tweets by user <span class="math inline">\(i\)</span> on day <span class="math inline">\(j\)</span></li>
+<li><span class="math inline">\(\alpha_i\)</span> - User fixed effects (absorbs baseline activity differences)</li>
+<li><span class="math inline">\(\tau_j\)</span> - Day fixed effects (absorbs platform-wide shocks)</li>
+<li><span class="math inline">\(\text{Right-leaning}_i\)</span> - Binary: ideology score &gt; 0</li>
+<li><span class="math inline">\(\text{Month}_t\)</span> - Monthly indicators (June = baseline)</li>
+<li><span class="math inline">\(\beta_t\)</span> - <strong>Parameters of interest:</strong> how much more active right-leaning users are in month <span class="math inline">\(t\)</span> relative to left-leaning users</li>
 </ul>
+</div>
 </div>
 </section>
 <section id="right-leaning-users-were-5.8x-more-active-during-the-ban" class="slide level2 center">
