@@ -12,7 +12,7 @@ Repository to share source materials for presentations and talks.
 
 ## 2026
 
-- [Georgetown McCourt Faculty Retreat - Coding Agents for Academic Research](https://tiagoventura.github.io/talks/agentic_ai/claude_faculty_retreat.html) ([full prompt](https://tiagoventura.github.io/talks/agentic_ai/instructions_multimodel.html))
+- [Georgetown McCourt Faculty Retreat - Coding Agents for Academic Research](https://tiagoventura.github.io/talks/agentic_ai/claude_faculty_retreat.html) 
 
 - [CPAC WashU](https://tiagoventura.github.io/talks/twitter_ban/washu.html)
 
