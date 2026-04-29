@@ -53,14 +53,18 @@ body {
   text-align: center;
 }
 
-code.sourceCode {
-  font-size: 1.6em;
-}
-
-code {
-  font-size: 1.2em;
-}
 
 .larger-font {
     font-size: 62px;
+}
+
+.reveal .subtitle {
+    font-size: 1.5em;
+    color: #D50032;
+    font-weight: bold;
+}
+
+.reveal pre code {
+    font-size: 1.4em;
+    line-height: 1.4;
 }

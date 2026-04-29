@@ -9,10 +9,11 @@ Repository to share source materials for presentations and talks.
 
 ## 2026
 
-[CPAC WashU](https://tiagoventura.github.io/talks/twitter_ban/washu.html)
+- [Georgetown McCourt Faculty Retreat - Coding Agents for Academic Research](https://tiagoventura.github.io/talks/agentic_ai/claude_faculty_retreat.html) ([full prompt](https://tiagoventura.github.io/talks/agentic_ai/instructions_multimodel.html))
 
+- [CPAC WashU](https://tiagoventura.github.io/talks/twitter_ban/washu.html)
 
-[Western Ontario - Twitter Ban](https://tiagoventura.github.io/talks/twitter_ban/twitter_ban_western.qmd)
+- [Western Ontario - Twitter Ban](https://tiagoventura.github.io/talks/twitter_ban/twitter_ban_western.qmd)
 
 
 ## 2025

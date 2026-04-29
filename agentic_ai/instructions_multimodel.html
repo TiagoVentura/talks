@@ -1,0 +1,1522 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.450">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Tiago Ventura">
+
+<title>Full Prompt: Replication Tournament</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="instructions_multimodel_files/libs/clipboard/clipboard.min.js"></script>
+<script src="instructions_multimodel_files/libs/quarto-html/quarto.js"></script>
+<script src="instructions_multimodel_files/libs/quarto-html/popper.min.js"></script>
+<script src="instructions_multimodel_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="instructions_multimodel_files/libs/quarto-html/anchor.min.js"></script>
+<link href="instructions_multimodel_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="instructions_multimodel_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="instructions_multimodel_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="instructions_multimodel_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="instructions_multimodel_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+
+
+</head>
+
+<body>
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+<div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+  <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul class="collapse">
+  <li><a href="#replication-tournament-finding-the-best-survey-experiment-to-replicate" id="toc-replication-tournament-finding-the-best-survey-experiment-to-replicate" class="nav-link active" data-scroll-target="#replication-tournament-finding-the-best-survey-experiment-to-replicate">Replication Tournament: Finding the Best Survey Experiment to Replicate</a>
+  <ul class="collapse">
+  <li><a href="#project-overview" id="toc-project-overview" class="nav-link" data-scroll-target="#project-overview">Project Overview</a></li>
+  <li><a href="#important-stop-and-check-points" id="toc-important-stop-and-check-points" class="nav-link" data-scroll-target="#important-stop-and-check-points">IMPORTANT: Stop-and-Check Points</a></li>
+  <li><a href="#phase-0-deep-understanding-of-the-rfp" id="toc-phase-0-deep-understanding-of-the-rfp" class="nav-link" data-scroll-target="#phase-0-deep-understanding-of-the-rfp">PHASE 0: Deep Understanding of the RFP</a></li>
+  <li><a href="#checkpoint-0-rfp-understanding-complete" id="toc-checkpoint-0-rfp-understanding-complete" class="nav-link" data-scroll-target="#checkpoint-0-rfp-understanding-complete">🛑 CHECKPOINT 0: RFP Understanding Complete</a></li>
+  <li><a href="#phase-1-research-pipeline-and-co-author-profiles" id="toc-phase-1-research-pipeline-and-co-author-profiles" class="nav-link" data-scroll-target="#phase-1-research-pipeline-and-co-author-profiles">PHASE 1: Research Pipeline and Co-Author Profiles</a></li>
+  <li><a href="#checkpoint-1-research-profiles-complete" id="toc-checkpoint-1-research-profiles-complete" class="nav-link" data-scroll-target="#checkpoint-1-research-profiles-complete">🛑 CHECKPOINT 1: Research Profiles Complete</a></li>
+  <li><a href="#phase-2-systematic-search-for-survey-experiments" id="toc-phase-2-systematic-search-for-survey-experiments" class="nav-link" data-scroll-target="#phase-2-systematic-search-for-survey-experiments">PHASE 2: Systematic Search for Survey Experiments</a></li>
+  <li><a href="#checkpoint-2-search-complete" id="toc-checkpoint-2-search-complete" class="nav-link" data-scroll-target="#checkpoint-2-search-complete">🛑 CHECKPOINT 2: Search Complete</a></li>
+  <li><a href="#phase-3-evaluate-replication-strength" id="toc-phase-3-evaluate-replication-strength" class="nav-link" data-scroll-target="#phase-3-evaluate-replication-strength">PHASE 3: Evaluate Replication Strength</a></li>
+  <li><a href="#checkpoint-3-evaluation-complete" id="toc-checkpoint-3-evaluation-complete" class="nav-link" data-scroll-target="#checkpoint-3-evaluation-complete">🛑 CHECKPOINT 3: Evaluation Complete</a></li>
+  <li><a href="#phase-4-multi-agent-tournament" id="toc-phase-4-multi-agent-tournament" class="nav-link" data-scroll-target="#phase-4-multi-agent-tournament">PHASE 4: Multi-Agent Tournament</a></li>
+  <li><a href="#checkpoint-4-final-tournament-complete" id="toc-checkpoint-4-final-tournament-complete" class="nav-link" data-scroll-target="#checkpoint-4-final-tournament-complete">🛑 CHECKPOINT 4 (FINAL): Tournament Complete</a></li>
+  <li><a href="#appendix-a-directory-structure" id="toc-appendix-a-directory-structure" class="nav-link" data-scroll-target="#appendix-a-directory-structure">Appendix A: Directory Structure</a></li>
+  <li><a href="#appendix-b-rfp-quick-reference" id="toc-appendix-b-rfp-quick-reference" class="nav-link" data-scroll-target="#appendix-b-rfp-quick-reference">Appendix B: RFP Quick Reference</a></li>
+  <li><a href="#appendix-c-evaluation-rubric-quick-reference" id="toc-appendix-c-evaluation-rubric-quick-reference" class="nav-link" data-scroll-target="#appendix-c-evaluation-rubric-quick-reference">Appendix C: Evaluation Rubric Quick Reference</a></li>
+  </ul></li>
+  </ul>
+</nav>
+</div>
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Full Prompt: Replication Tournament</h1>
+<p class="subtitle lead">instructions_multimodel.md — companion to the Coding Agents for Academic Research talk</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Tiago Ventura </p>
+          </div>
+  </div>
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<section id="replication-tournament-finding-the-best-survey-experiment-to-replicate" class="level1">
+<h1>Replication Tournament: Finding the Best Survey Experiment to Replicate</h1>
+<section id="project-overview" class="level2">
+<h2 class="anchored" data-anchor-id="project-overview">Project Overview</h2>
+<p>You are tasked with running a tournament to decide strong candidates of political science papers for use as a replication in a grant proposal. Your task is to search for academic articles publishing survey experiments in four leading political science journals, evaluate their strength as replication candidates, and run a multi-agent tournament to select the best paper.</p>
+<p><strong>Your task (in phases)</strong>: 0. Build a deep understanding of the RFP call 1. Build a deep understanding of the research pipeline and co-authors 2. Search for high-impact survey experiments published in four leading political science journals in the last five years 3. Evaluate papers as candidates for a replication exercise 4. Run a multi-agent tournament between the top papers</p>
+<p><strong>RFP</strong>: <code>rfp.pdf</code> — Coppock &amp; McGrath (2026), “Call for Proposals: Data Collection for Replication Political Science Survey Experiments”</p>
+<p><strong>Model selection</strong>: Use <code>claude-opus-4-6</code> for tasks requiring intellectual judgment — literature synthesis, evaluating replication strength, tournament argumentation, and all writing. Use <code>claude-sonnet-4-6</code> for coding tasks — data collection scripts, web scraping, database construction, and producing tables.</p>
+<hr>
+</section>
+<section id="important-stop-and-check-points" class="level2">
+<h2 class="anchored" data-anchor-id="important-stop-and-check-points">IMPORTANT: Stop-and-Check Points</h2>
+<p>Throughout this project, there are mandatory <strong>STOP AND CHECK</strong> points marked with 🛑. At each of these points, you must: 1. Summarize what you have completed 2. Present key outputs for review 3. List any issues or concerns 4. <strong>Wait for human approval before proceeding</strong></p>
+<p>Do not proceed past a 🛑 checkpoint without explicit approval.</p>
+<hr>
+</section>
+<section id="phase-0-deep-understanding-of-the-rfp" class="level2">
+<h2 class="anchored" data-anchor-id="phase-0-deep-understanding-of-the-rfp">PHASE 0: Deep Understanding of the RFP</h2>
+<section id="task-0.1-read-and-summarize-the-rfp" class="level3">
+<h3 class="anchored" data-anchor-id="task-0.1-read-and-summarize-the-rfp">Task 0.1: Read and Summarize the RFP</h3>
+<p>Read <code>rfp.pdf</code> carefully. Create <code>notes/rfp_summary.md</code> containing:</p>
+<p><strong>1. Overview</strong> - Who is running the competition? (Alexander Coppock and Mary McGrath, Northwestern) - What is the structure? (Replication of an existing, previously published survey experiment) - What is the sample platform? (Rep Data — repdata.com — large samples of Americans, quota sampled to U.S. Census margins, filtered for quality and attention)</p>
+<p><strong>2. Replication Study Requirements</strong></p>
+<p>Extract and list every eligibility criterion:</p>
+<table class="table">
+<colgroup>
+<col style="width: 23%">
+<col style="width: 28%">
+<col style="width: 47%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Criterion</th>
+<th>Requirement</th>
+<th>Implication for Search</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Design</td>
+<td>Random assignment to control + treatment(s)</td>
+<td>Must be a true experiment, not observational</td>
+</tr>
+<tr class="even">
+<td>Type</td>
+<td>Information-provision experiments, vignette-based studies</td>
+<td>No standalone conjoint or list experiments</td>
+</tr>
+<tr class="odd">
+<td>Publication</td>
+<td>Published in peer-reviewed journal</td>
+<td>Must be published, not working papers</td>
+</tr>
+<tr class="even">
+<td>Data</td>
+<td>Replication data publicly available</td>
+<td>Check for replication materials on journal/Dataverse</td>
+</tr>
+<tr class="odd">
+<td>Estimands</td>
+<td>Theoretically meaningful; 1-2 main estimates</td>
+<td>Prefer papers with clean, focal treatment effects</td>
+</tr>
+<tr class="even">
+<td>Survey time</td>
+<td>Total survey should remain under roughly 10 minutes</td>
+<td>Excludes long covariate batteries, long treatments, long outcome batteries</td>
+</tr>
+<tr class="odd">
+<td>Topic</td>
+<td>About politics (treatment or outcome is “political”)</td>
+<td>Broadly defined — IR, comparative, American</td>
+</tr>
+<tr class="even">
+<td>Sample</td>
+<td>Will be fielded on Americans</td>
+<td>Can replicate non-US studies, but must work on US sample</td>
+</tr>
+<tr class="odd">
+<td>Time period</td>
+<td>Any time period for original study</td>
+<td>Not restricted to recent publications</td>
+</tr>
+</tbody>
+</table>
+<p><strong>3. Reanalysis Requirements</strong> - Authors must provide their own reanalysis of the existing experiment - Difference-in-means and covariate-adjusted estimates of average treatment effects - Proposed analyses of heterogeneous treatment effects - 1-2 main estimates chosen for replication (not 10 or 12) - Provide replication dataset and cleaning/analysis code</p>
+<p><strong>4. Deliverables</strong> 1. Replication proposal and reanalysis document (~4 pages) 2. Replication experiment survey instrument (e.g., Qualtrics PDF export)</p>
+<p><strong>5. Logistics</strong> - Rolling evaluation, applications open February 1, 2026 - Email to alex.coppock@northwestern.edu and mary.mcgrath@northwestern.edu - Subject line: “Replication+Novel submission” (per RFP instructions) - IRB approval required before fielding</p>
+</section>
+<section id="task-0.2-derive-evaluation-criteria-from-the-rfp" class="level3">
+<h3 class="anchored" data-anchor-id="task-0.2-derive-evaluation-criteria-from-the-rfp">Task 0.2: Derive Evaluation Criteria from the RFP</h3>
+<p>Based on the RFP, construct a scoring rubric that will be used in Phases 3 and 4 to evaluate candidate papers. Save as <code>notes/evaluation_rubric.md</code>.</p>
+<p><strong>RFP-Derived Criteria (Hard Filters — must pass all):</strong></p>
+<table class="table">
+<colgroup>
+<col style="width: 11%">
+<col style="width: 46%">
+<col style="width: 42%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>#</th>
+<th>Hard Filter</th>
+<th>Pass/Fail</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>H1</td>
+<td>Is a survey experiment with random assignment to control + treatment</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>H2</td>
+<td>Is NOT a standalone conjoint or list experiment</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>H3</td>
+<td>Published in a peer-reviewed journal</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>H4</td>
+<td>Replication data publicly available (or likely obtainable)</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>H5</td>
+<td>Can be administered to a US sample in &lt;5 minutes (replication portion)</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>H6</td>
+<td>Treatment or outcome is “political”</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>RFP-Derived Criteria (Soft Scoring — 1 to 5 scale):</strong></p>
+<table class="table">
+<colgroup>
+<col style="width: 7%">
+<col style="width: 38%">
+<col style="width: 33%">
+<col style="width: 20%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>#</th>
+<th>Soft Criterion</th>
+<th>Description</th>
+<th>Weight</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>S1</td>
+<td>Theoretical importance</td>
+<td>Is the estimand theoretically meaningful? Would a null replication be informative?</td>
+<td>20%</td>
+</tr>
+<tr class="even">
+<td>S2</td>
+<td>Design simplicity</td>
+<td>Few conditions, clean treatment, short instrument — fits in ~10 min</td>
+<td>10%</td>
+</tr>
+<tr class="odd">
+<td>S3</td>
+<td>Replication feasibility</td>
+<td>Can the exact stimuli and measures be deployed on a US sample? Any localization needed?</td>
+<td>15%</td>
+</tr>
+<tr class="even">
+<td>S4</td>
+<td>Data availability</td>
+<td>Replication data and code are publicly posted and well-documented</td>
+<td>10%</td>
+</tr>
+<tr class="odd">
+<td>S5</td>
+<td>Fit with researchers</td>
+<td>Aligns with Ventura/Asimovic expertise (see Phase 1)</td>
+<td>15%</td>
+</tr>
+<tr class="even">
+<td>S6</td>
+<td>Impact and visibility</td>
+<td>Published in a top journal, well-cited, addresses a live debate</td>
+<td>10%</td>
+</tr>
+<tr class="odd">
+<td>S7</td>
+<td>Low statistical power</td>
+<td>Original experiment was underpowered; replication with adequate power is especially valuable</td>
+<td>10%</td>
+</tr>
+<tr class="even">
+<td>S8</td>
+<td>Large effect sizes</td>
+<td>Original reports effect sizes &gt; 0.3 SD; large effects are more theoretically interesting and more likely to replicate if real</td>
+<td>10%</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="task-0.3-document-key-strategic-insights" class="level3">
+<h3 class="anchored" data-anchor-id="task-0.3-document-key-strategic-insights">Task 0.3: Document Key Strategic Insights</h3>
+<p>Create <code>notes/rfp_strategy.md</code> with strategic observations:</p>
+<ol type="1">
+<li><p><strong>The “small telescopes” logic</strong>: The RFP references Simonsohn (2015) — if the original had 33% power, replicate with 2.5x the sample. This means papers with smaller original samples are MORE feasible (lower replication N needed).</p></li>
+<li><p><strong>Non-US studies are welcome</strong>: The RFP explicitly encourages replicating experiments originally conducted in Brazil, Ukraine, etc. on a US sample. This is a strength for Ventura (Latin America expertise) and Asimovic (Bosnia, Cyprus, Israel).</p></li>
+<li><p><strong>Estimand focus</strong>: You don’t need to replicate the paper’s main finding. You can replicate “the effect of condition 2 vs condition 4 on outcome 3.” Pick the most theoretically meaningful estimand.</p></li>
+<li><p><strong>Survey time constraint (~10 min total, ~5 min for replication)</strong>: This is a binding constraint. Experiments with long vignettes, many conditions, or extensive outcome batteries will not fit. Prefer simple 2-arm or 2×2 designs with 1-3 outcome measures.</p></li>
+</ol>
+<hr>
+</section>
+</section>
+<section id="checkpoint-0-rfp-understanding-complete" class="level2">
+<h2 class="anchored" data-anchor-id="checkpoint-0-rfp-understanding-complete">🛑 CHECKPOINT 0: RFP Understanding Complete</h2>
+<p><strong>Before proceeding, confirm:</strong> - [ ] RFP fully read and summarized in <code>notes/rfp_summary.md</code> - [ ] Evaluation rubric created in <code>notes/evaluation_rubric.md</code> - [ ] Strategic insights documented in <code>notes/rfp_strategy.md</code> - [ ] All hard filters and soft criteria clearly defined</p>
+<p><strong>Present for review:</strong> 1. The evaluation rubric (hard filters + soft scoring) 2. Key strategic insights about what makes a strong replication candidate 3. Any ambiguities or questions about the RFP</p>
+<p><strong>STOP and wait for approval to proceed to Phase 1.</strong></p>
+<hr>
+</section>
+<section id="phase-1-research-pipeline-and-co-author-profiles" class="level2">
+<h2 class="anchored" data-anchor-id="phase-1-research-pipeline-and-co-author-profiles">PHASE 1: Research Pipeline and Co-Author Profiles</h2>
+<section id="task-1.1-profile-tiago-ventura" class="level3">
+<h3 class="anchored" data-anchor-id="task-1.1-profile-tiago-ventura">Task 1.1: Profile Tiago Ventura</h3>
+<p>Query https://www.venturatiago.com/ and compile a researcher profile. Save as <code>notes/profile_ventura.md</code>.</p>
+<p><strong>Information to extract:</strong></p>
+<ol type="1">
+<li><p><strong>Institutional affiliation</strong>: Georgetown University, McCourt School of Public Policy, Assistant Professor in Computational Social Science</p></li>
+<li><p><strong>Research areas</strong>:</p>
+<ul>
+<li>Social media and political behavior</li>
+<li>Online misinformation and disinformation</li>
+<li>Fact-checking and corrections</li>
+<li>Political communication in digital environments</li>
+<li>Latin American politics (Brazil, Mexico)</li>
+<li>Computational social science methods</li>
+</ul></li>
+<li><p><strong>Methodological strengths</strong>:</p>
+<ul>
+<li>Survey experiments (multiple published)</li>
+<li>Digital field experiments (e.g., WhatsApp deactivation in Brazil)</li>
+<li>Large-scale online experiments</li>
+<li>Computational text analysis / LLMs in social science</li>
+<li>Cross-national comparative designs</li>
+</ul></li>
+<li><p><strong>Key publications relevant to replication topics</strong>:</p>
+<ul>
+<li>Ventura et al.&nbsp;(2025) “Misinformation Beyond Traditional Feeds” — <em>Journal of Politics</em> (WhatsApp deactivation experiment, Brazil)</li>
+<li>Ventura et al.&nbsp;(2024) “Voting for Law and Order” — <em>Comparative Political Studies</em> (survey experiment, Mexico)</li>
+<li>Aruguete, Calvo, Scartascini, Ventura (2025) “Keep your promises” — <em>JITP</em> (survey experiment, social media and trust)</li>
+<li>Ventura, Calvo, Aruguete (2025) “The fact-checking dilemma” — <em>Research &amp; Politics</em></li>
+<li>Aruguete et al.&nbsp;(2024) “Framing fact-checks as confirmation” — <em>Nature: Scientific Reports</em> (four-country study)</li>
+</ul></li>
+<li><p><strong>Topics Ventura could naturally replicate</strong>:</p>
+<ul>
+<li>Misinformation correction experiments</li>
+<li>Social media effects on attitudes/behavior</li>
+<li>Media framing experiments</li>
+<li>Trust and credibility experiments</li>
+<li>Political communication experiments (especially cross-national)</li>
+</ul></li>
+</ol>
+</section>
+<section id="task-1.2-profile-nejla-asimovic" class="level3">
+<h3 class="anchored" data-anchor-id="task-1.2-profile-nejla-asimovic">Task 1.2: Profile Nejla Asimovic</h3>
+<p>Query https://nejlaasimovic.com/ and compile a researcher profile. Save as <code>notes/profile_asimovic.md</code>.</p>
+<p><strong>Information to extract:</strong></p>
+<ol type="1">
+<li><p><strong>Institutional affiliation</strong>: Georgetown University, McCourt School of Public Policy, Assistant Professor in Computational Social Science</p></li>
+<li><p><strong>Research areas</strong>:</p>
+<ul>
+<li>Intergroup relations in divided societies</li>
+<li>Digital technologies and political behavior</li>
+<li>Social media effects on polarization/tolerance</li>
+<li>Conflict and post-conflict societies (Bosnia, Cyprus, Israel)</li>
+<li>Migration and integration</li>
+</ul></li>
+<li><p><strong>Methodological strengths</strong>:</p>
+<ul>
+<li>Survey experiments</li>
+<li>Platform deactivation experiments (Facebook deactivation in Bosnia)</li>
+<li>Longitudinal experimental designs (intergroup contact over years)</li>
+<li>Cross-national experimental designs</li>
+</ul></li>
+<li><p><strong>Key publications relevant to replication topics</strong>:</p>
+<ul>
+<li>Asimovic, Nagler, Bonneau, Tucker (2021) “Testing the Effects of Facebook Usage in an Ethnically Polarized Setting” — <em>PNAS</em> (Facebook deactivation experiment, Bosnia)</li>
+<li>Asimovic, Nagler, Tucker (2023) “Replicating the Effects of Facebook Deactivation” — <em>Research &amp; Politics</em></li>
+<li>Asimovic, Ditlmann, Samii (2024) “Estimating the Effect of Intergroup Contact Over Years” — <em>PSRM</em></li>
+<li>Asimovic (2025) “Unlocking Outgroup Access Online” — <em>Comparative Political Studies</em> (Cyprus)</li>
+<li>Rathje, Asimovic, Ventura et al.&nbsp;(2025) “Global Examination of Social Media Reduction” — <em>Nature</em> (registered report)</li>
+</ul></li>
+<li><p><strong>Topics Asimovic could naturally replicate</strong>:</p>
+<ul>
+<li>Intergroup contact and tolerance experiments</li>
+<li>Social media and polarization/affective polarization experiments</li>
+<li>Prejudice reduction experiments</li>
+<li>Media exposure and outgroup attitudes experiments</li>
+<li>Trust across group lines experiments</li>
+</ul></li>
+</ol>
+</section>
+<section id="task-1.3-identify-joint-strengths-and-target-topics" class="level3">
+<h3 class="anchored" data-anchor-id="task-1.3-identify-joint-strengths-and-target-topics">Task 1.3: Identify Joint Strengths and Target Topics</h3>
+<p>Create <code>notes/target_topics.md</code> synthesizing the overlap and defining the search strategy.</p>
+<p><strong>Joint expertise areas (highest fit for replication):</strong></p>
+<table class="table">
+<colgroup>
+<col style="width: 18%">
+<col style="width: 20%">
+<col style="width: 28%">
+<col style="width: 32%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Priority</th>
+<th>Topic Area</th>
+<th>Why Strong Fit</th>
+<th>Example Designs</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>Social media effects on political attitudes</td>
+<td>Both work on this; Ventura + Asimovic both published platform experiments</td>
+<td>Information exposure treatments, social media content experiments</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>Misinformation and fact-checking</td>
+<td>Ventura’s core area; corrections are classic survey experiments</td>
+<td>Correction treatments, source credibility manipulations</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>Intergroup relations and polarization</td>
+<td>Asimovic’s core area; highly relevant to US politics</td>
+<td>Outgroup exposure, perspective-taking, affective polarization</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>Political communication and framing</td>
+<td>Ventura’s area; classic survey experiment designs</td>
+<td>News framing, issue framing, elite cue experiments</td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td>Trust in institutions / democratic attitudes</td>
+<td>Both touch on this; highly policy relevant</td>
+<td>Institutional trust manipulations, democratic norm violations</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Topics to AVOID (low fit):</strong> - Formal theory / game-theoretic experiments - Purely American institutional politics (Congress, courts) with no communication/media angle - Economic voting experiments with no digital/communication dimension - International security/defense experiments with no public opinion angle</p>
+<hr>
+</section>
+</section>
+<section id="checkpoint-1-research-profiles-complete" class="level2">
+<h2 class="anchored" data-anchor-id="checkpoint-1-research-profiles-complete">🛑 CHECKPOINT 1: Research Profiles Complete</h2>
+<p><strong>Before proceeding, confirm:</strong> - [ ] Ventura profile complete in <code>notes/profile_ventura.md</code> - [ ] Asimovic profile complete in <code>notes/profile_asimovic.md</code> - [ ] Target topics and search strategy defined in <code>notes/target_topics.md</code> - [ ] Joint strengths clearly articulated</p>
+<p><strong>Present for review:</strong> 1. Summary of each researcher’s profile 2. The priority topic list (what to search for) 3. Any adjustments to the search scope based on researcher fit</p>
+<p><strong>STOP and wait for approval to proceed to Phase 2.</strong></p>
+<hr>
+</section>
+<section id="phase-2-systematic-search-for-survey-experiments" class="level2">
+<h2 class="anchored" data-anchor-id="phase-2-systematic-search-for-survey-experiments">PHASE 2: Systematic Search for Survey Experiments</h2>
+<section id="task-2.1-define-the-search-parameters" class="level3">
+<h3 class="anchored" data-anchor-id="task-2.1-define-the-search-parameters">Task 2.1: Define the Search Parameters</h3>
+<p><strong>Journals to search:</strong> 1. <em>American Political Science Review</em> (APSR) 2. <em>American Journal of Political Science</em> (AJPS) 3. <em>Journal of Politics</em> (JoP) 4. <em>Journal of Experimental Political Science</em> (JEPS)</p>
+<p><strong>Time window</strong>: 2019–2025</p>
+<p><strong>Design filter</strong>: Survey experiments only - INCLUDE: information-provision experiments, vignette experiments, priming experiments, framing experiments, endorsement experiments, persuasion experiments - EXCLUDE: conjoint experiments, list experiments, field experiments,natural experiments, observational studies, formal models</p>
+<p><strong>Topic filter</strong>: About politics (broadly defined) — the treatment or the outcome must be political.</p>
+</section>
+<section id="task-2.2-search-each-journal-systematically" class="level3">
+<h3 class="anchored" data-anchor-id="task-2.2-search-each-journal-systematically">Task 2.2: Search Each Journal Systematically</h3>
+<p>For each journal, conduct a systematic search. Use web searches, journal archives, and article databases to identify all survey experiments published in each journal during 2019–2025.</p>
+<p><strong>Search strategy per journal:</strong></p>
+<ol type="1">
+<li>Search the journal’s website/archive for each year (2019, 2020, 2021, 2022, 2023, 2024, 2025)</li>
+<li>Use Google Scholar queries like: <code>site:cambridge.org "survey experiment" "American Political Science Review" 2024</code></li>
+<li>Use keyword searches: “survey experiment,” “experimental,” “randomized,” “treatment group,” “vignette,” “information treatment”</li>
+<li>For JEPS, note that nearly all articles are experiments — focus on identifying which are survey experiments vs.&nbsp;lab/field</li>
+</ol>
+<p><strong>For each paper found, record:</strong></p>
+<table class="table">
+<colgroup>
+<col style="width: 35%">
+<col style="width: 65%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Field</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>id</code></td>
+<td>Sequential ID (e.g., P001)</td>
+</tr>
+<tr class="even">
+<td><code>authors</code></td>
+<td>Full author list</td>
+</tr>
+<tr class="odd">
+<td><code>year</code></td>
+<td>Publication year</td>
+</tr>
+<tr class="even">
+<td><code>title</code></td>
+<td>Full title</td>
+</tr>
+<tr class="odd">
+<td><code>journal</code></td>
+<td>APSR / AJPS / JoP / JEPS</td>
+</tr>
+<tr class="even">
+<td><code>volume_issue</code></td>
+<td>Volume and issue number</td>
+</tr>
+<tr class="odd">
+<td><code>doi</code></td>
+<td>DOI</td>
+</tr>
+<tr class="even">
+<td><code>design</code></td>
+<td>Brief description of experimental design</td>
+</tr>
+<tr class="odd">
+<td><code>n_conditions</code></td>
+<td>Number of treatment conditions (including control)</td>
+</tr>
+<tr class="even">
+<td><code>n_subjects</code></td>
+<td>Total sample size</td>
+</tr>
+<tr class="odd">
+<td><code>sample_country</code></td>
+<td>Country where original sample was drawn</td>
+</tr>
+<tr class="even">
+<td><code>topic_area</code></td>
+<td>Primary topic (e.g., misinformation, polarization, representation)</td>
+</tr>
+<tr class="odd">
+<td><code>treatments_brief</code></td>
+<td>1-sentence description of what treatments manipulate</td>
+</tr>
+<tr class="even">
+<td><code>outcomes_brief</code></td>
+<td>1-sentence description of key outcome measures</td>
+</tr>
+<tr class="odd">
+<td><code>replication_data</code></td>
+<td>Yes/No/Unknown — is replication data publicly available?</td>
+</tr>
+<tr class="even">
+<td><code>replication_url</code></td>
+<td>URL to replication materials if available</td>
+</tr>
+<tr class="odd">
+<td><code>survey_duration_est</code></td>
+<td>Estimated survey length (short/medium/long) based on design complexity</td>
+</tr>
+</tbody>
+</table>
+<p>Save the full database as <code>data/processed/candidate_papers.csv</code>.</p>
+</section>
+<section id="task-2.3-search-apsr-20192025" class="level3">
+<h3 class="anchored" data-anchor-id="task-2.3-search-apsr-20192025">Task 2.3: Search APSR (2019–2025)</h3>
+<p>Search the <em>American Political Science Review</em> for each year. For each volume: 1. Review tables of contents 2. Read abstracts of all empirical papers 3. Flag all papers that use survey experiments 4. Record details in the database format above</p>
+<p>Expected yield: ~5–15 survey experiments per year in APSR.</p>
+</section>
+<section id="task-2.4-search-ajps-20192025" class="level3">
+<h3 class="anchored" data-anchor-id="task-2.4-search-ajps-20192025">Task 2.4: Search AJPS (2019–2025)</h3>
+<p>Search the <em>American Journal of Political Science</em> using the same approach.</p>
+<p>Expected yield: ~5–15 survey experiments per year in AJPS.</p>
+</section>
+<section id="task-2.5-search-jop-20192025" class="level3">
+<h3 class="anchored" data-anchor-id="task-2.5-search-jop-20192025">Task 2.5: Search JoP (2019–2025)</h3>
+<p>Search the <em>Journal of Politics</em> using the same approach.</p>
+<p>Expected yield: ~5–15 survey experiments per year in JoP.</p>
+</section>
+<section id="task-2.6-search-jeps-20192025" class="level3">
+<h3 class="anchored" data-anchor-id="task-2.6-search-jeps-20192025">Task 2.6: Search JEPS (2019–2025)</h3>
+<p>Search the <em>Journal of Experimental Political Science</em> using the same approach. Note that JEPS publishes primarily experimental work, so a higher proportion of articles will be relevant, but many may be conjoint or list experiments (exclude those).</p>
+<p>Expected yield: ~10–20 survey experiments per year in JEPS.</p>
+</section>
+<section id="task-2.7-compile-and-deduplicate-the-database" class="level3">
+<h3 class="anchored" data-anchor-id="task-2.7-compile-and-deduplicate-the-database">Task 2.7: Compile and Deduplicate the Database</h3>
+<ol type="1">
+<li>Merge all journal-specific results into <code>data/processed/candidate_papers.csv</code></li>
+<li>Remove any duplicates (e.g., papers appearing in multiple search queries)</li>
+<li>Add a <code>notes</code> column for any flags or concerns</li>
+<li>Print summary statistics:
+<ul>
+<li>Total papers found by journal</li>
+<li>Total papers found by year</li>
+<li>Distribution by topic area</li>
+<li>Distribution by sample country</li>
+</ul></li>
+</ol>
+</section>
+<section id="task-2.8-verify-key-details" class="level3">
+<h3 class="anchored" data-anchor-id="task-2.8-verify-key-details">Task 2.8: Verify Key Details</h3>
+<p>For each paper in the database, verify: 1. The paper actually exists (check DOI resolves) 2. The design is indeed a survey experiment (not conjoint/list/field) 3. The topic is political (treatment or outcome) 4. Note replication data availability (check journal dataverse, author websites, GitHub)</p>
+<p>Mark each paper as <code>verified: Yes/No</code> in the database.</p>
+<p><strong>CRITICAL</strong>: Do not include any paper you cannot verify exists. If uncertain, flag it for manual review rather than including it.</p>
+<hr>
+</section>
+</section>
+<section id="checkpoint-2-search-complete" class="level2">
+<h2 class="anchored" data-anchor-id="checkpoint-2-search-complete">🛑 CHECKPOINT 2: Search Complete</h2>
+<p><strong>Before proceeding, confirm:</strong> - [ ] All four journals searched for 2019–2025 - [ ] Database compiled in <code>data/processed/candidate_papers.csv</code> - [ ] Papers verified to exist - [ ] Summary statistics produced</p>
+<p><strong>Present for review:</strong> 1. Total number of candidate papers found (by journal and year) 2. Distribution of topics 3. Any gaps or issues with the search (e.g., journal access problems) 4. Sample of 5–10 entries from the database to check quality</p>
+<p><strong>STOP and wait for approval to proceed to Phase 3.</strong></p>
+<hr>
+</section>
+<section id="phase-3-evaluate-replication-strength" class="level2">
+<h2 class="anchored" data-anchor-id="phase-3-evaluate-replication-strength">PHASE 3: Evaluate Replication Strength</h2>
+<section id="task-3.1-apply-hard-filters" class="level3">
+<h3 class="anchored" data-anchor-id="task-3.1-apply-hard-filters">Task 3.1: Apply Hard Filters</h3>
+<p>Go through every paper in <code>data/processed/candidate_papers.csv</code> and apply the hard filters from the evaluation rubric (Phase 0, Task 0.2):</p>
+<table class="table">
+<colgroup>
+<col style="width: 9%">
+<col style="width: 38%">
+<col style="width: 51%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>#</th>
+<th>Hard Filter</th>
+<th>Action if Fail</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>H1</td>
+<td>Survey experiment with random assignment</td>
+<td>Remove</td>
+</tr>
+<tr class="even">
+<td>H2</td>
+<td>Not a standalone conjoint or list experiment</td>
+<td>Remove</td>
+</tr>
+<tr class="odd">
+<td>H3</td>
+<td>Published in peer-reviewed journal</td>
+<td>Remove (should already pass)</td>
+</tr>
+<tr class="even">
+<td>H4</td>
+<td>Replication data publicly available or likely obtainable</td>
+<td>Flag, do not remove yet</td>
+</tr>
+<tr class="odd">
+<td>H5</td>
+<td>Can be administered to US sample in ~5 minutes</td>
+<td>Remove if clearly too long</td>
+</tr>
+<tr class="even">
+<td>H6</td>
+<td>Treatment or outcome is political</td>
+<td>Remove</td>
+</tr>
+</tbody>
+</table>
+<p>Save the filtered list as <code>data/processed/candidate_papers_filtered.csv</code> with a <code>hard_filter_pass</code> column (Yes/No) and <code>hard_filter_notes</code> column explaining any failures.</p>
+<p>Report: - How many papers passed all hard filters - How many failed each filter - How many are borderline (especially H4 and H5)</p>
+</section>
+<section id="task-3.2-deep-read-of-filtered-candidates" class="level3">
+<h3 class="anchored" data-anchor-id="task-3.2-deep-read-of-filtered-candidates">Task 3.2: Deep Read of Filtered Candidates</h3>
+<p>For each paper that passed hard filters, conduct a deeper evaluation. This requires reading at least the abstract, introduction, research design section, and main results.</p>
+<p>For each paper, create an evaluation entry documenting:</p>
+<ol type="1">
+<li><strong>Design summary</strong> (2-3 sentences):
+<ul>
+<li>What is the treatment? What is the control?</li>
+<li>How many arms? What is the unit of randomization?</li>
+<li>What are the main outcome measures?</li>
+</ul></li>
+<li><strong>Key estimand for replication</strong>:
+<ul>
+<li>Which specific treatment effect would you replicate?</li>
+<li>Why is this estimand theoretically meaningful?</li>
+<li>What was the original estimate and standard error?</li>
+</ul></li>
+<li><strong>Replication feasibility assessment</strong>:
+<ul>
+<li>Can the exact stimuli be reused? Any localization/temporalization needed?</li>
+<li>Estimated survey time for replication portion</li>
+<li>Sample size needed (apply “small telescopes” logic: ~2.5x original N if original had ~33% power)</li>
+<li>Any complications (deception, hard-to-implement treatments, etc.)?</li>
+</ul></li>
+<li><strong>Data availability check</strong>:
+<ul>
+<li>Is replication data posted? Where?</li>
+<li>Is analysis code posted?</li>
+<li>Would you need to contact authors?</li>
+</ul></li>
+</ol>
+<p>Save all evaluations to <code>notes/deep_evaluations/</code> with one file per paper (e.g., <code>notes/deep_evaluations/P001_AuthorYear.md</code>).</p>
+</section>
+<section id="task-3.3-score-each-candidate" class="level3">
+<h3 class="anchored" data-anchor-id="task-3.3-score-each-candidate">Task 3.3: Score Each Candidate</h3>
+<p>Apply the soft scoring rubric from Phase 0 (Task 0.2) to each paper that passed hard filters:</p>
+<table class="table">
+<thead>
+<tr class="header">
+<th>Criterion</th>
+<th>Weight</th>
+<th>Score (1-5)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>S1: Theoretical importance</td>
+<td>20%</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>S2: Design simplicity</td>
+<td>10%</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>S3: Replication feasibility</td>
+<td>15%</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>S4: Data availability</td>
+<td>10%</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>S5: Fit with researchers</td>
+<td>15%</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>S6: Impact and visibility</td>
+<td>10%</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>S7: Low statistical power</td>
+<td>10%</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>S8: Large effect sizes</td>
+<td>10%</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><strong>Weighted total</strong></td>
+<td><strong>100%</strong></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Scoring guidelines:</strong></p>
+<p><em>S1 — Theoretical importance (20%):</em> - 5: Addresses a fundamental, contested question in political science; null replication would reshape the debate - 4: Important question with ongoing disagreement; replication would be informative either way - 3: Solid contribution but narrower theoretical stakes - 2: Incremental contribution; replication value is modest - 1: Primarily methodological or niche; limited theoretical payoff</p>
+<p><em>S2 — Design simplicity (10%):</em> - 5: 2-arm design, single short treatment, 1-2 outcome measures; clearly fits in &lt;5 min - 4: 3-4 arms or slightly longer treatment, but still concise - 3: Moderate complexity; may need to select a subset of conditions - 2: Complex multi-factorial design; challenging to fit in time window - 1: Very complex; would require substantial simplification</p>
+<p><em>S3 — Replication feasibility (15%):</em> - 5: Stimuli can be directly reused on US sample with zero modification - 4: Minor localization needed (e.g., updating politician names, policy context) - 3: Moderate adaptation needed (e.g., translating from non-US context) - 2: Substantial redesign needed; unclear if “replication” is the right frame - 1: Fundamental obstacles to replication (e.g., requires real social media feed)</p>
+<p><em>S4 — Data availability (10%):</em> - 5: Full replication data and code on Dataverse/GitHub, well-documented - 4: Data available but code missing, or minor documentation gaps - 3: Data available upon request (authors responsive to such requests) - 2: No public data; would need to contact authors with uncertain response - 1: No data available and authors unlikely to share</p>
+<p><em>S5 — Fit with researchers (15%):</em> - 5: Directly in Ventura/Asimovic’s area; they could write the proposal with deep expertise - 4: Adjacent to their expertise; natural intellectual fit - 3: General political behavior/communication; reasonable but not distinctive fit - 2: Outside their main areas; they could do it but others would be better positioned - 1: No meaningful connection to their research profiles</p>
+<p><em>S6 — Impact and visibility (10%):</em> - 5: Highly cited, widely discussed, in a top journal - 4: Well-cited, in a good journal, active research area - 3: Moderate citations, solid journal - 2: Few citations, niche audience - 1: Minimal impact</p>
+<p><em>S7 — Low statistical power (10%):</em> - 5: Original study severely underpowered (e.g., N &lt; 200 per arm, post-hoc power &lt; 50%); replication with adequate power would be a major contribution - 4: Moderately underpowered (e.g., N ~200–400 per arm, power ~50–65%); replication adds clear value - 3: Borderline power (e.g., N ~400–600 per arm, power ~65–80%); replication useful but less urgent - 2: Reasonably powered (e.g., N ~600–1000 per arm, power ~80%); less replication value on power grounds alone - 1: Well-powered original study (N &gt; 1000 per arm); little value added from a power perspective</p>
+<p><em>S8 — Large effect sizes (10%):</em> - 5: Reported effect sizes &gt; 0.5 SD; striking and potentially implausible — high-value replication target - 4: Reported effect sizes ~0.3–0.5 SD; large and noteworthy, worth verifying - 3: Reported effect sizes ~0.2–0.3 SD; moderate, at the threshold of interest - 2: Reported effect sizes ~0.1–0.2 SD; small effects, less interesting to replicate on this criterion - 1: Reported effect sizes &lt; 0.1 SD; negligible effects</p>
+<p>Save scores to <code>data/processed/candidate_scores.csv</code>.</p>
+</section>
+<section id="task-3.4-rank-and-select-top-candidates-for-tournament" class="level3">
+<h3 class="anchored" data-anchor-id="task-3.4-rank-and-select-top-candidates-for-tournament">Task 3.4: Rank and Select Top Candidates for Tournament</h3>
+<ol type="1">
+<li>Rank all scored papers by weighted total score <strong>within each journal</strong></li>
+<li>Select the <strong>top 5 papers per journal</strong> (20 papers total) for the tournament
+<ul>
+<li>APSR: top 5</li>
+<li>AJPS: top 5</li>
+<li>JoP: top 5</li>
+<li>JEPS: top 5</li>
+</ul></li>
+<li>Within each journal’s top 5, ensure some topic diversity (don’t send 5 misinformation papers from the same journal)</li>
+</ol>
+<p>Save the shortlist as <code>data/processed/tournament_shortlist.csv</code> with a <code>journal_rank</code> column (1–5 within each journal).</p>
+<p>Create <code>notes/shortlist_rationale.md</code> explaining: - Why each paper was selected (organized by journal) - Any hard choices or tradeoffs made within each journal’s top 5 - Overall topic coverage across the 20 papers</p>
+<hr>
+</section>
+</section>
+<section id="checkpoint-3-evaluation-complete" class="level2">
+<h2 class="anchored" data-anchor-id="checkpoint-3-evaluation-complete">🛑 CHECKPOINT 3: Evaluation Complete</h2>
+<p><strong>Before proceeding, confirm:</strong> - [ ] Hard filters applied; filtered candidate list produced - [ ] Deep evaluations completed for all filtered candidates - [ ] Scoring rubric applied to all candidates - [ ] Top 5 papers per journal selected (20 total) - [ ] Shortlist rationale documented</p>
+<p><strong>Present for review:</strong> 1. Summary of filtering (how many in, how many out, why) 2. Ranked list of all scored papers with weighted totals, organized by journal 3. The 20-paper shortlist (5 per journal) with brief justification for each 4. Any papers the human should consider adding or removing</p>
+<p><strong>STOP and wait for approval to proceed to Phase 4.</strong></p>
+<hr>
+</section>
+<section id="phase-4-multi-agent-tournament" class="level2">
+<h2 class="anchored" data-anchor-id="phase-4-multi-agent-tournament">PHASE 4: Multi-Agent Tournament</h2>
+<section id="task-4.0-api-setup-for-multi-model-judging" class="level3">
+<h3 class="anchored" data-anchor-id="task-4.0-api-setup-for-multi-model-judging">Task 4.0: API Setup for Multi-Model Judging</h3>
+<p>The tournament uses a <strong>3-judge panel</strong> from different model providers to reduce single-model bias. Before running matches, ensure access to all three:</p>
+<table class="table">
+<colgroup>
+<col style="width: 24%">
+<col style="width: 24%">
+<col style="width: 51%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Judge</th>
+<th>Model</th>
+<th>Access Method</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Judge 1</td>
+<td>Claude Opus 4.6 (<code>claude-opus-4-6</code>)</td>
+<td>Native (Claude Code)</td>
+</tr>
+<tr class="even">
+<td>Judge 2</td>
+<td>GPT-5 (<code>gpt-5</code>)</td>
+<td>OpenAI API via Python (<code>openai</code> package)</td>
+</tr>
+<tr class="odd">
+<td>Judge 3</td>
+<td>Claude Sonnet 4.6 (<code>claude-sonnet-4-6</code>)</td>
+<td>Anthropic API via Python (<code>anthropic</code> package)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Setup steps:</strong> 1. Verify environment variables <code>OPENAI_API_KEY</code> and <code>ANTHROPIC_API_KEY</code> are set 2. Install packages if needed: <code>pip install openai anthropic</code> 3. Create a helper script <code>code/judge_api.py</code> that: - Takes a match transcript (both champions’ arguments and rebuttals) as input - Sends the transcript + judge system prompt to each external model - Returns each judge’s decision and reasoning - Saves raw responses for auditability 4. Test with a dummy matchup to confirm all three APIs respond correctly</p>
+</section>
+<section id="task-4.1-tournament-design" class="level3">
+<h3 class="anchored" data-anchor-id="task-4.1-tournament-design">Task 4.1: Tournament Design</h3>
+<p>The tournament uses a <strong>multi-agent debate format</strong> with 20 papers (5 per journal) competing in two stages. Each match is decided by a <strong>panel of 3 judges</strong> (Claude Opus 4.6, GPT-5, Claude Sonnet 4.6) with majority vote.</p>
+<p><strong>Agents:</strong> - <strong>20 Champion Agents</strong> (Claude Opus 4.6): Each assigned one paper from the shortlist. Each champion argues persuasively for why their paper is the best replication candidate. - <strong>3 Judge Agents</strong> (one per model provider): Each independently evaluates arguments in every matchup and selects a winner with written justification. The winner is decided by <strong>majority vote (2 of 3)</strong>. Split decisions (2-1) are flagged for human review.</p>
+<p><strong>Tournament structure — 2 stages, 5 rounds total:</strong></p>
+<pre><code>STAGE 1: INTRA-JOURNAL ELIMINATION (5 → 2 per journal)
+  Each journal's 5 papers compete internally. Papers seeded 1–5 by Phase 3 score.
+
+  Per journal (×4 journals = 12 matches):
+    Match A: Seed #4 vs Seed #5
+    Match B: Seed #3 vs Winner(A)
+    Match C: Seed #1 vs Seed #2
+    → Winners of Match B and Match C advance (2 per journal → 8 total)
+
+STAGE 2: CROSS-JOURNAL BRACKET (8 → 1)
+  The 8 advancing papers (2 per journal) compete in a seeded single-elimination bracket.
+
+  Round 3 (Quarterfinals): 8 papers → 4 winners
+    Match QF1: Highest seed vs Lowest seed
+    Match QF2: 2nd seed vs 7th seed
+    Match QF3: 3rd seed vs 6th seed
+    Match QF4: 4th seed vs 5th seed
+
+  Round 4 (Semifinals): 4 winners → 2 winners
+    Match SF1: Winner(QF1) vs Winner(QF4)
+    Match SF2: Winner(QF2) vs Winner(QF3)
+
+  Round 5 (Final): 2 winners → 1 champion
+    Match F: Winner(SF1) vs Winner(SF2)</code></pre>
+<p><strong>Seeding for Stage 2</strong>: Rank the 8 advancing papers by their Phase 3 weighted scores (ignoring journal of origin). Seed 1 vs 8, 2 vs 7, 3 vs 6, 4 vs 5.</p>
+<p><strong>Total matches</strong>: 12 (Stage 1) + 4 + 2 + 1 (Stage 2) = <strong>19 matches</strong>. <strong>Total judge calls</strong>: 19 matches × 3 judges = <strong>57 judge decisions</strong>.</p>
+</section>
+<section id="task-4.2-prepare-champion-briefs" class="level3">
+<h3 class="anchored" data-anchor-id="task-4.2-prepare-champion-briefs">Task 4.2: Prepare Champion Briefs</h3>
+<p>For each of the 20 papers, prepare a <strong>champion brief</strong> that the champion agent will use as its argument foundation. Save each to <code>notes/tournament/champion_brief_P{id}.md</code>.</p>
+<p>Each brief should contain:</p>
+<ol type="1">
+<li><strong>Paper summary</strong> (from deep evaluation in Phase 3)</li>
+<li><strong>The case for replication</strong> — structured around the evaluation criteria:
+<ul>
+<li>Why this estimand is theoretically important</li>
+<li>Why the design is feasible for this RFP</li>
+<li>Why the data is available and the reanalysis is straightforward</li>
+<li>How it fits Ventura and Asimovic’s expertise</li>
+<li>Why it stands out from competing candidates</li>
+</ul></li>
+<li><strong>Preemptive defense</strong> — anticipate weaknesses and address them:
+<ul>
+<li>If sample was non-US: explain why transport to US sample works</li>
+<li>If design is complex: explain which subset of conditions to replicate</li>
+<li>If topic is niche: explain broader relevance</li>
+</ul></li>
+<li><strong>Concrete proposal sketch</strong> — a 3-sentence summary of what the full proposal would look like</li>
+</ol>
+</section>
+<section id="task-4.3-run-stage-1-intra-journal-elimination" class="level3">
+<h3 class="anchored" data-anchor-id="task-4.3-run-stage-1-intra-journal-elimination">Task 4.3: Run Stage 1 — Intra-Journal Elimination</h3>
+<p>Run the intra-journal elimination for all 4 journals. Each journal’s 5 papers compete in 3 matches to produce 2 advancing papers. <strong>Run all 4 journals in parallel</strong> where possible.</p>
+<p><strong>Per journal, 3 matches:</strong></p>
+<p><strong>Match A</strong> (Play-in): Seed #4 vs Seed #5 <strong>Match B</strong> (Lower bracket): Seed #3 vs Winner(A) <strong>Match C</strong> (Upper bracket): Seed #1 vs Seed #2</p>
+<p>Winners of Match B and Match C advance to Stage 2.</p>
+<p><strong>Match protocol (all rounds):</strong></p>
+<ol type="1">
+<li><strong>Champion A opening argument</strong> (Claude Opus 4.6): Present the case for your paper. Be specific about estimands, feasibility, and fit.</li>
+<li><strong>Champion B opening argument</strong> (Claude Opus 4.6): Same.</li>
+<li><strong>Champion A rebuttal</strong> (Claude Opus 4.6): Respond to Champion B. Identify weaknesses in the opponent.</li>
+<li><strong>Champion B rebuttal</strong> (Claude Opus 4.6): Same.</li>
+<li><strong>3-Judge Panel</strong> — the full debate transcript (steps 1–4) is sent to all three judges independently:
+<ul>
+<li><strong>Judge 1</strong> (Claude Opus 4.6): Evaluates and picks a winner with justification.</li>
+<li><strong>Judge 2</strong> (GPT-5): Evaluates and picks a winner with justification.</li>
+<li><strong>Judge 3</strong> (Claude Sonnet 4.6): Evaluates and picks a winner with justification.</li>
+</ul></li>
+<li><strong>Majority vote</strong>: Winner decided by 2-of-3 agreement. If the vote is split 2-1, flag the match as a <strong>split decision</strong> for human review.</li>
+</ol>
+<p><strong>Word limits by round:</strong></p>
+<table class="table">
+<colgroup>
+<col style="width: 14%">
+<col style="width: 18%">
+<col style="width: 20%">
+<col style="width: 18%">
+<col style="width: 30%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Round</th>
+<th>Opening</th>
+<th>Rebuttal</th>
+<th>Closing</th>
+<th>Judge decision</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Stage 1 (intra-journal)</td>
+<td>~400 words</td>
+<td>~200 words</td>
+<td>—</td>
+<td>~400 words per judge</td>
+</tr>
+<tr class="even">
+<td>Quarterfinals</td>
+<td>~500 words</td>
+<td>~300 words</td>
+<td>—</td>
+<td>~500 words per judge</td>
+</tr>
+<tr class="odd">
+<td>Semifinals</td>
+<td>~500 words</td>
+<td>~300 words</td>
+<td>—</td>
+<td>~500 words per judge</td>
+</tr>
+<tr class="even">
+<td>Final</td>
+<td>~600 words</td>
+<td>~400 words</td>
+<td>~200 words</td>
+<td>~800 words per judge</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Agent prompts:</strong></p>
+<p>For Champion agents (Claude Opus 4.6), use this system prompt template:</p>
+<pre><code>You are a research advocate arguing that a specific paper is the best candidate for a survey experiment replication proposal. You are arguing before a panel evaluating proposals for the Coppock &amp; McGrath (2026) Replication competition.
+
+Your paper: [PAPER DETAILS FROM CHAMPION BRIEF]
+
+Evaluation criteria: [RUBRIC FROM PHASE 0]
+
+Your goal: Make the most compelling, evidence-based case for why this paper should be selected. Be specific about estimands and feasibility. Acknowledge weaknesses honestly but explain why they are manageable.</code></pre>
+<p>For all three Judge agents (Claude Opus 4.6, GPT-5, Claude Sonnet 4.6), use this <strong>identical</strong> system prompt so they evaluate on the same criteria:</p>
+<pre><code>You are a senior political scientist evaluating which survey experiment is a stronger candidate for replication in the Coppock &amp; McGrath (2026) Replication competition.
+
+RFP requirements: [KEY CRITERIA FROM PHASE 0]
+Evaluation rubric: [RUBRIC FROM PHASE 0]
+Researcher profiles: Tiago Ventura (social media, misinformation, political communication, computational social science) and Nejla Asimovic (intergroup relations, digital technologies, divided societies).
+
+You will read arguments from two champion agents, each advocating for a different paper. Your task:
+1. Evaluate both papers against the rubric criteria
+2. Weigh the relative strengths and weaknesses
+3. Identify which paper is the stronger replication candidate overall
+4. Declare a winner with explicit justification
+5. Assign a confidence score (1-10) for your decision
+
+Be rigorous. Focus on feasibility, theoretical importance, and fit with the RFP and researcher profiles.</code></pre>
+<p><strong>Recording results per match:</strong></p>
+<p>For each match, record in the transcript:</p>
+<pre><code>MATCH RESULT: [Paper X] defeats [Paper Y]
+  Judge 1 (Claude Opus 4.6):    Paper X  (confidence: 8/10)
+  Judge 2 (GPT-5):         Paper Y  (confidence: 6/10)
+  Judge 3 (Claude Sonnet 4.6): Paper X  (confidence: 7/10)
+  Verdict: Paper X wins 2-1 (SPLIT DECISION)</code></pre>
+<p>Save all Stage 1 transcripts to <code>notes/tournament/stage1_{journal}_match{A|B|C}.md</code> (e.g., <code>stage1_APSR_matchA.md</code>).</p>
+<p>After Stage 1, compile a summary of which 8 papers advanced:</p>
+<table class="table">
+<colgroup>
+<col style="width: 9%">
+<col style="width: 45%">
+<col style="width: 45%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Journal</th>
+<th>Advancing Paper 1 (upper bracket winner)</th>
+<th>Advancing Paper 2 (lower bracket winner)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>APSR</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>AJPS</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>JoP</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>JEPS</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="task-4.4-run-stage-2-quarterfinals-round-3" class="level3">
+<h3 class="anchored" data-anchor-id="task-4.4-run-stage-2-quarterfinals-round-3">Task 4.4: Run Stage 2 — Quarterfinals (Round 3)</h3>
+<p>The 8 advancing papers are seeded by Phase 3 weighted score and compete cross-journal.</p>
+<p>Run 4 quarterfinal matches using the standard match protocol (see word limits table above). Each match judged by all 3 models with majority vote.</p>
+<p>Save all transcripts to <code>notes/tournament/stage2_QF{1-4}.md</code>.</p>
+</section>
+<section id="task-4.5-run-stage-2-semifinals-round-4" class="level3">
+<h3 class="anchored" data-anchor-id="task-4.5-run-stage-2-semifinals-round-4">Task 4.5: Run Stage 2 — Semifinals (Round 4)</h3>
+<p>Run 2 semifinal matches using the standard match protocol. Champions should directly compare their paper to the new opponent.</p>
+<p>Save all transcripts to <code>notes/tournament/stage2_SF{1-2}.md</code>.</p>
+</section>
+<section id="task-4.6-run-stage-2-final-round-5" class="level3">
+<h3 class="anchored" data-anchor-id="task-4.6-run-stage-2-final-round-5">Task 4.6: Run Stage 2 — Final (Round 5)</h3>
+<p>Run the championship match with the enhanced protocol (opening arguments + rebuttals + closing statements). All 3 judges provide extended decisions (~800 words each).</p>
+<p>Save the final match transcript to <code>notes/tournament/stage2_final.md</code>.</p>
+</section>
+<section id="task-4.7-compile-tournament-results" class="level3">
+<h3 class="anchored" data-anchor-id="task-4.7-compile-tournament-results">Task 4.7: Compile Tournament Results</h3>
+<p>Create <code>notes/tournament/tournament_results.md</code> containing:</p>
+<ol type="1">
+<li><strong>Stage 1 results by journal:</strong></li>
+</ol>
+<pre><code>APSR:  [#4 vs #5] → winner vs #3 → ADVANCING: ___, ___  |  [#1 vs #2] → ADVANCING: ___
+AJPS:  [#4 vs #5] → winner vs #3 → ADVANCING: ___, ___  |  [#1 vs #2] → ADVANCING: ___
+JoP:   [#4 vs #5] → winner vs #3 → ADVANCING: ___, ___  |  [#1 vs #2] → ADVANCING: ___
+JEPS:  [#4 vs #5] → winner vs #3 → ADVANCING: ___, ___  |  [#1 vs #2] → ADVANCING: ___</code></pre>
+<ol start="2" type="1">
+<li><strong>Stage 2 bracket with results:</strong></li>
+</ol>
+<pre><code>QUARTERFINALS          SEMIFINALS           FINAL
+(1) ___________  ┐
+                 ├→ ___  ┐
+(8) ___________  ┘        │
+                          ├→ ___  ┐
+(4) ___________  ┐        │       │
+                 ├→ ___  ┘        │
+(5) ___________  ┘                ├→ CHAMPION: ___
+                                  │
+(3) ___________  ┐                │
+                 ├→ ___  ┐        │
+(6) ___________  ┘        │       │
+                          ├→ ___  ┘
+(2) ___________  ┐        │
+                 ├→ ___  ┘
+(7) ___________  ┘</code></pre>
+<ol start="3" type="1">
+<li><p><strong>Match-by-match summary</strong>: For each of the 19 matches:</p>
+<ul>
+<li>Winner and vote breakdown (e.g., “Paper X wins 3-0” or “Paper X wins 2-1 — SPLIT”)</li>
+<li>Each judge’s pick and confidence score</li>
+<li>Key arguments that decided it (2-3 sentences)</li>
+</ul></li>
+<li><p><strong>Split decision log</strong>: List all matches where the vote was 2-1, with a brief note on where the judges disagreed and why.</p></li>
+<li><p><strong>Final ranking</strong> (1st through 20th):</p>
+<ul>
+<li>1st: Tournament champion</li>
+<li>2nd: Final runner-up</li>
+<li>3rd–4th: Semifinal losers (ranked by Phase 3 scores)</li>
+<li>5th–8th: Quarterfinal losers (ranked by Phase 3 scores)</li>
+<li>9th–20th: Stage 1 eliminated papers (ranked by Phase 3 scores)</li>
+</ul></li>
+<li><p><strong>Champion paper profile</strong>: A detailed summary of the winning paper including:</p>
+<ul>
+<li>Full citation</li>
+<li>Design description</li>
+<li>Proposed estimand for replication</li>
+<li>Proposed reanalysis approach</li>
+<li>Why this paper is the strongest candidate</li>
+</ul></li>
+<li><p><strong>Runner-up paper profile</strong>: Same detail for the 2nd place paper (as a backup option).</p></li>
+<li><p><strong>Top 5 summary table</strong>:</p></li>
+</ol>
+<table class="table">
+<thead>
+<tr class="header">
+<th>Rank</th>
+<th>Paper</th>
+<th>Journal</th>
+<th>Topic</th>
+<th>Key Estimand</th>
+<th>Weighted Score</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr>
+</section>
+</section>
+<section id="checkpoint-4-final-tournament-complete" class="level2">
+<h2 class="anchored" data-anchor-id="checkpoint-4-final-tournament-complete">🛑 CHECKPOINT 4 (FINAL): Tournament Complete</h2>
+<p><strong>Before proceeding, confirm:</strong> - [ ] All 3 judge APIs tested and working - [ ] All 19 matches completed with full transcripts and 3-judge votes - [ ] Stage 1 results compiled (8 advancing papers) - [ ] Stage 2 bracket filled out - [ ] Final ranking produced (1st through 20th) - [ ] Champion and runner-up profiles written - [ ] Split decision log reviewed - [ ] All tournament materials saved to <code>notes/tournament/</code></p>
+<p><strong>Present for review:</strong> 1. Stage 1 results: which 8 papers advanced (2 per journal) 2. The complete Stage 2 bracket with results and vote breakdowns 3. The champion paper — full profile with proposed estimand and reanalysis plan 4. The runner-up paper — as a backup option 5. Top 5 summary table 6. Split decision log — any matches where judges disagreed 7. Your overall assessment: do you agree with the tournament outcome? Any concerns?</p>
+<p><strong>STOP and wait for final approval.</strong></p>
+<hr>
+</section>
+<section id="appendix-a-directory-structure" class="level2">
+<h2 class="anchored" data-anchor-id="appendix-a-directory-structure">Appendix A: Directory Structure</h2>
+<pre><code>replication_tournement/
+├── CLAUDE.md
+├── README.md
+├── instructions.md                    # This file
+├── rfp.pdf                            # The RFP document
+├── code/                              # Any scripts used for search/scraping
+├── data/
+│   ├── raw/                           # Raw search results
+│   └── processed/
+│       ├── candidate_papers.csv       # Full database of found papers
+│       ├── candidate_papers_filtered.csv  # After hard filters
+│       ├── candidate_scores.csv       # Scored papers
+│       └── tournament_shortlist.csv   # Top 8 for tournament
+├── literature/                        # Downloaded papers (if needed)
+├── notes/
+│   ├── rfp_summary.md
+│   ├── rfp_strategy.md
+│   ├── evaluation_rubric.md
+│   ├── profile_ventura.md
+│   ├── profile_asimovic.md
+│   ├── target_topics.md
+│   ├── deep_evaluations/
+│   │   ├── P001_AuthorYear.md
+│   │   └── ...
+│   ├── shortlist_rationale.md
+│   └── tournament/
+│       ├── champion_brief_P{id}.md    # One per shortlisted paper (20 total)
+│       ├── stage1_APSR_match{A,B,C}.md   # Intra-journal elimination
+│       ├── stage1_AJPS_match{A,B,C}.md
+│       ├── stage1_JoP_match{A,B,C}.md
+│       ├── stage1_JEPS_match{A,B,C}.md
+│       ├── stage2_QF{1-4}.md          # Cross-journal quarterfinals
+│       ├── stage2_SF{1-2}.md          # Semifinals
+│       ├── stage2_final.md            # Championship match
+│       └── tournament_results.md
+├── output/
+│   ├── figures/
+│   ├── paper/
+│   └── tables/
+├── budget/
+└── submission/</code></pre>
+</section>
+<section id="appendix-b-rfp-quick-reference" class="level2">
+<h2 class="anchored" data-anchor-id="appendix-b-rfp-quick-reference">Appendix B: RFP Quick Reference</h2>
+<table class="table">
+<colgroup>
+<col style="width: 42%">
+<col style="width: 57%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Item</th>
+<th>Detail</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Organizers</strong></td>
+<td>Alexander Coppock &amp; Mary McGrath (Northwestern)</td>
+</tr>
+<tr class="even">
+<td><strong>Platform</strong></td>
+<td>Rep Data (repdata.com), US quota sample</td>
+</tr>
+<tr class="odd">
+<td><strong>Proposal parts</strong></td>
+<td>(1) Replication + reanalysis (~4 pp), (2) Replication survey instrument</td>
+</tr>
+<tr class="even">
+<td><strong>Survey time</strong></td>
+<td>~10 min total</td>
+</tr>
+<tr class="odd">
+<td><strong>Eligible designs</strong></td>
+<td>Survey experiments with random assignment; no standalone conjoints or list experiments</td>
+</tr>
+<tr class="even">
+<td><strong>Data requirement</strong></td>
+<td>Replication data must be publicly available</td>
+</tr>
+<tr class="odd">
+<td><strong>Estimands</strong></td>
+<td>1-2 theoretically meaningful estimates</td>
+</tr>
+<tr class="even">
+<td><strong>Sample</strong></td>
+<td>Americans only; can replicate non-US studies</td>
+</tr>
+<tr class="odd">
+<td><strong>Topic</strong></td>
+<td>Political (treatment or outcome)</td>
+</tr>
+<tr class="even">
+<td><strong>Timeline</strong></td>
+<td>Rolling review, applications open Feb 1, 2026</td>
+</tr>
+<tr class="odd">
+<td><strong>Submission</strong></td>
+<td>Email to alex.coppock@northwestern.edu and mary.mcgrath@northwestern.edu</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="appendix-c-evaluation-rubric-quick-reference" class="level2">
+<h2 class="anchored" data-anchor-id="appendix-c-evaluation-rubric-quick-reference">Appendix C: Evaluation Rubric Quick Reference</h2>
+<p><strong>Hard Filters (must pass all):</strong> H1: Survey experiment with random assignment | H2: Not standalone conjoint/list | H3: Published in peer-reviewed journal | H4: Replication data available | H5: Fits in ~5 min survey time | H6: Political topic</p>
+<p><strong>Soft Scoring (weighted):</strong> S1: Theoretical importance (20%) | S2: Design simplicity (10%) | S3: Replication feasibility (15%) | S4: Data availability (10%) | S5: Fit with researchers (15%) | S6: Impact and visibility (10%) | S7: Low statistical power (10%) | S8: Large effect sizes (10%)</p>
+</section>
+</section>
+
+</main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>

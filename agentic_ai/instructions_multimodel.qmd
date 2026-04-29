@@ -1,0 +1,901 @@
+---
+title: "Full Prompt: Replication Tournament"
+subtitle: "instructions_multimodel.md — companion to the Coding Agents for Academic Research talk"
+author: "Tiago Ventura"
+format:
+  html:
+    toc: true
+    toc-depth: 2
+    code-copy: true
+    theme: cosmo
+---
+
+# Replication Tournament: Finding the Best Survey Experiment to Replicate
+
+## Project Overview
+
+You are tasked with running a tournament to decide strong candidates of political science papers for use as a replication in a grant proposal. Your task is to search for academic articles publishing survey experiments in four leading political science journals, evaluate their strength as replication candidates, and run a multi-agent tournament to select the best paper.
+
+**Your task (in phases)**:
+0. Build a deep understanding of the RFP call
+1. Build a deep understanding of the research pipeline and co-authors
+2. Search for high-impact survey experiments published in four leading political science journals in the last five years
+3. Evaluate papers as candidates for a replication exercise
+4. Run a multi-agent tournament between the top papers
+
+**RFP**: `rfp.pdf` — Coppock & McGrath (2026), "Call for Proposals: Data Collection for Replication Political Science Survey Experiments"
+
+**Model selection**: Use `claude-opus-4-6` for tasks requiring intellectual judgment — literature synthesis, evaluating replication strength, tournament argumentation, and all writing. Use `claude-sonnet-4-6` for coding tasks — data collection scripts, web scraping, database construction, and producing tables.
+
+---
+
+## IMPORTANT: Stop-and-Check Points
+
+Throughout this project, there are mandatory **STOP AND CHECK** points marked with 🛑. At each of these points, you must:
+1. Summarize what you have completed
+2. Present key outputs for review
+3. List any issues or concerns
+4. **Wait for human approval before proceeding**
+
+Do not proceed past a 🛑 checkpoint without explicit approval.
+
+---
+
+## PHASE 0: Deep Understanding of the RFP
+
+### Task 0.1: Read and Summarize the RFP
+
+Read `rfp.pdf` carefully. Create `notes/rfp_summary.md` containing:
+
+**1. Overview**
+- Who is running the competition? (Alexander Coppock and Mary McGrath, Northwestern)
+- What is the structure? (Replication of an existing, previously published survey experiment)
+- What is the sample platform? (Rep Data — repdata.com — large samples of Americans, quota sampled to U.S. Census margins, filtered for quality and attention)
+
+**2. Replication Study Requirements**
+
+Extract and list every eligibility criterion:
+
+| Criterion | Requirement | Implication for Search |
+|-----------|-------------|----------------------|
+| Design | Random assignment to control + treatment(s) | Must be a true experiment, not observational |
+| Type | Information-provision experiments, vignette-based studies | No standalone conjoint or list experiments |
+| Publication | Published in peer-reviewed journal | Must be published, not working papers |
+| Data | Replication data publicly available | Check for replication materials on journal/Dataverse |
+| Estimands | Theoretically meaningful; 1-2 main estimates | Prefer papers with clean, focal treatment effects |
+| Survey time | Total survey should remain under roughly 10 minutes | Excludes long covariate batteries, long treatments, long outcome batteries |
+| Topic | About politics (treatment or outcome is "political") | Broadly defined — IR, comparative, American |
+| Sample | Will be fielded on Americans | Can replicate non-US studies, but must work on US sample |
+| Time period | Any time period for original study | Not restricted to recent publications |
+
+**3. Reanalysis Requirements**
+- Authors must provide their own reanalysis of the existing experiment
+- Difference-in-means and covariate-adjusted estimates of average treatment effects
+- Proposed analyses of heterogeneous treatment effects
+- 1-2 main estimates chosen for replication (not 10 or 12)
+- Provide replication dataset and cleaning/analysis code
+
+**4. Deliverables**
+1. Replication proposal and reanalysis document (~4 pages)
+2. Replication experiment survey instrument (e.g., Qualtrics PDF export)
+
+**5. Logistics**
+- Rolling evaluation, applications open February 1, 2026
+- Email to alex.coppock@northwestern.edu and mary.mcgrath@northwestern.edu
+- Subject line: "Replication+Novel submission" (per RFP instructions)
+- IRB approval required before fielding
+
+### Task 0.2: Derive Evaluation Criteria from the RFP
+
+Based on the RFP, construct a scoring rubric that will be used in Phases 3 and 4 to evaluate candidate papers. Save as `notes/evaluation_rubric.md`.
+
+**RFP-Derived Criteria (Hard Filters — must pass all):**
+
+| # | Hard Filter | Pass/Fail |
+|---|------------|-----------|
+| H1 | Is a survey experiment with random assignment to control + treatment | |
+| H2 | Is NOT a standalone conjoint or list experiment | |
+| H3 | Published in a peer-reviewed journal | |
+| H4 | Replication data publicly available (or likely obtainable) | |
+| H5 | Can be administered to a US sample in <5 minutes (replication portion) | |
+| H6 | Treatment or outcome is "political" | |
+
+**RFP-Derived Criteria (Soft Scoring — 1 to 5 scale):**
+
+| # | Soft Criterion | Description | Weight |
+|---|---------------|-------------|--------|
+| S1 | Theoretical importance | Is the estimand theoretically meaningful? Would a null replication be informative? | 20% |
+| S2 | Design simplicity | Few conditions, clean treatment, short instrument — fits in ~10 min | 10% |
+| S3 | Replication feasibility | Can the exact stimuli and measures be deployed on a US sample? Any localization needed? | 15% |
+| S4 | Data availability | Replication data and code are publicly posted and well-documented | 10% |
+| S5 | Fit with researchers | Aligns with Ventura/Asimovic expertise (see Phase 1) | 15% |
+| S6 | Impact and visibility | Published in a top journal, well-cited, addresses a live debate | 10% |
+| S7 | Low statistical power | Original experiment was underpowered; replication with adequate power is especially valuable | 10% |
+| S8 | Large effect sizes | Original reports effect sizes > 0.3 SD; large effects are more theoretically interesting and more likely to replicate if real | 10% |
+
+### Task 0.3: Document Key Strategic Insights
+
+Create `notes/rfp_strategy.md` with strategic observations:
+
+1. **The "small telescopes" logic**: The RFP references Simonsohn (2015) — if the original had 33% power, replicate with 2.5x the sample. This means papers with smaller original samples are MORE feasible (lower replication N needed).
+
+2. **Non-US studies are welcome**: The RFP explicitly encourages replicating experiments originally conducted in Brazil, Ukraine, etc. on a US sample. This is a strength for Ventura (Latin America expertise) and Asimovic (Bosnia, Cyprus, Israel).
+
+3. **Estimand focus**: You don't need to replicate the paper's main finding. You can replicate "the effect of condition 2 vs condition 4 on outcome 3." Pick the most theoretically meaningful estimand.
+
+4. **Survey time constraint (~10 min total, ~5 min for replication)**: This is a binding constraint. Experiments with long vignettes, many conditions, or extensive outcome batteries will not fit. Prefer simple 2-arm or 2×2 designs with 1-3 outcome measures.
+
+
+
+---
+
+## 🛑 CHECKPOINT 0: RFP Understanding Complete
+
+**Before proceeding, confirm:**
+- [ ] RFP fully read and summarized in `notes/rfp_summary.md`
+- [ ] Evaluation rubric created in `notes/evaluation_rubric.md`
+- [ ] Strategic insights documented in `notes/rfp_strategy.md`
+- [ ] All hard filters and soft criteria clearly defined
+
+**Present for review:**
+1. The evaluation rubric (hard filters + soft scoring)
+2. Key strategic insights about what makes a strong replication candidate
+3. Any ambiguities or questions about the RFP
+
+**STOP and wait for approval to proceed to Phase 1.**
+
+---
+
+## PHASE 1: Research Pipeline and Co-Author Profiles
+
+### Task 1.1: Profile Tiago Ventura
+
+Query https://www.venturatiago.com/ and compile a researcher profile. Save as `notes/profile_ventura.md`.
+
+**Information to extract:**
+
+1. **Institutional affiliation**: Georgetown University, McCourt School of Public Policy, Assistant Professor in Computational Social Science
+
+2. **Research areas**:
+   - Social media and political behavior
+   - Online misinformation and disinformation
+   - Fact-checking and corrections
+   - Political communication in digital environments
+   - Latin American politics (Brazil, Mexico)
+   - Computational social science methods
+
+3. **Methodological strengths**:
+   - Survey experiments (multiple published)
+   - Digital field experiments (e.g., WhatsApp deactivation in Brazil)
+   - Large-scale online experiments
+   - Computational text analysis / LLMs in social science
+   - Cross-national comparative designs
+
+4. **Key publications relevant to replication topics**:
+   - Ventura et al. (2025) "Misinformation Beyond Traditional Feeds" — *Journal of Politics* (WhatsApp deactivation experiment, Brazil)
+   - Ventura et al. (2024) "Voting for Law and Order" — *Comparative Political Studies* (survey experiment, Mexico)
+   - Aruguete, Calvo, Scartascini, Ventura (2025) "Keep your promises" — *JITP* (survey experiment, social media and trust)
+   - Ventura, Calvo, Aruguete (2025) "The fact-checking dilemma" — *Research & Politics*
+   - Aruguete et al. (2024) "Framing fact-checks as confirmation" — *Nature: Scientific Reports* (four-country study)
+
+5. **Topics Ventura could naturally replicate**:
+   - Misinformation correction experiments
+   - Social media effects on attitudes/behavior
+   - Media framing experiments
+   - Trust and credibility experiments
+   - Political communication experiments (especially cross-national)
+
+### Task 1.2: Profile Nejla Asimovic
+
+Query https://nejlaasimovic.com/ and compile a researcher profile. Save as `notes/profile_asimovic.md`.
+
+**Information to extract:**
+
+1. **Institutional affiliation**: Georgetown University, McCourt School of Public Policy, Assistant Professor in Computational Social Science
+
+2. **Research areas**:
+   - Intergroup relations in divided societies
+   - Digital technologies and political behavior
+   - Social media effects on polarization/tolerance
+   - Conflict and post-conflict societies (Bosnia, Cyprus, Israel)
+   - Migration and integration
+
+3. **Methodological strengths**:
+   - Survey experiments
+   - Platform deactivation experiments (Facebook deactivation in Bosnia)
+   - Longitudinal experimental designs (intergroup contact over years)
+   - Cross-national experimental designs
+
+4. **Key publications relevant to replication topics**:
+   - Asimovic, Nagler, Bonneau, Tucker (2021) "Testing the Effects of Facebook Usage in an Ethnically Polarized Setting" — *PNAS* (Facebook deactivation experiment, Bosnia)
+   - Asimovic, Nagler, Tucker (2023) "Replicating the Effects of Facebook Deactivation" — *Research & Politics*
+   - Asimovic, Ditlmann, Samii (2024) "Estimating the Effect of Intergroup Contact Over Years" — *PSRM*
+   - Asimovic (2025) "Unlocking Outgroup Access Online" — *Comparative Political Studies* (Cyprus)
+   - Rathje, Asimovic, Ventura et al. (2025) "Global Examination of Social Media Reduction" — *Nature* (registered report)
+
+5. **Topics Asimovic could naturally replicate**:
+   - Intergroup contact and tolerance experiments
+   - Social media and polarization/affective polarization experiments
+   - Prejudice reduction experiments
+   - Media exposure and outgroup attitudes experiments
+   - Trust across group lines experiments
+
+### Task 1.3: Identify Joint Strengths and Target Topics
+
+Create `notes/target_topics.md` synthesizing the overlap and defining the search strategy.
+
+**Joint expertise areas (highest fit for replication):**
+
+| Priority | Topic Area | Why Strong Fit | Example Designs |
+|----------|-----------|---------------|-----------------|
+| 1 | Social media effects on political attitudes | Both work on this; Ventura + Asimovic both published platform experiments | Information exposure treatments, social media content experiments |
+| 2 | Misinformation and fact-checking | Ventura's core area; corrections are classic survey experiments | Correction treatments, source credibility manipulations |
+| 3 | Intergroup relations and polarization | Asimovic's core area; highly relevant to US politics | Outgroup exposure, perspective-taking, affective polarization |
+| 4 | Political communication and framing | Ventura's area; classic survey experiment designs | News framing, issue framing, elite cue experiments |
+| 5 | Trust in institutions / democratic attitudes | Both touch on this; highly policy relevant | Institutional trust manipulations, democratic norm violations |
+
+**Topics to AVOID (low fit):**
+- Formal theory / game-theoretic experiments
+- Purely American institutional politics (Congress, courts) with no communication/media angle
+- Economic voting experiments with no digital/communication dimension
+- International security/defense experiments with no public opinion angle
+
+---
+
+## 🛑 CHECKPOINT 1: Research Profiles Complete
+
+**Before proceeding, confirm:**
+- [ ] Ventura profile complete in `notes/profile_ventura.md`
+- [ ] Asimovic profile complete in `notes/profile_asimovic.md`
+- [ ] Target topics and search strategy defined in `notes/target_topics.md`
+- [ ] Joint strengths clearly articulated
+
+**Present for review:**
+1. Summary of each researcher's profile
+2. The priority topic list (what to search for)
+3. Any adjustments to the search scope based on researcher fit
+
+**STOP and wait for approval to proceed to Phase 2.**
+
+---
+
+## PHASE 2: Systematic Search for Survey Experiments
+
+### Task 2.1: Define the Search Parameters
+
+**Journals to search:**
+1. *American Political Science Review* (APSR)
+2. *American Journal of Political Science* (AJPS)
+3. *Journal of Politics* (JoP)
+4. *Journal of Experimental Political Science* (JEPS)
+
+**Time window**: 2019–2025
+
+**Design filter**: Survey experiments only
+- INCLUDE: information-provision experiments, vignette experiments, priming experiments, framing experiments, endorsement experiments, persuasion experiments
+- EXCLUDE: conjoint experiments, list experiments, field experiments,natural experiments, observational studies, formal models
+
+**Topic filter**: About politics (broadly defined) — the treatment or the outcome must be political.
+
+### Task 2.2: Search Each Journal Systematically
+
+For each journal, conduct a systematic search. Use web searches, journal archives, and article databases to identify all survey experiments published in each journal during 2019–2025.
+
+**Search strategy per journal:**
+
+1. Search the journal's website/archive for each year (2019, 2020, 2021, 2022, 2023, 2024, 2025)
+2. Use Google Scholar queries like: `site:cambridge.org "survey experiment" "American Political Science Review" 2024`
+3. Use keyword searches: "survey experiment," "experimental," "randomized," "treatment group," "vignette," "information treatment"
+4. For JEPS, note that nearly all articles are experiments — focus on identifying which are survey experiments vs. lab/field
+
+**For each paper found, record:**
+
+| Field | Description |
+|-------|-------------|
+| `id` | Sequential ID (e.g., P001) |
+| `authors` | Full author list |
+| `year` | Publication year |
+| `title` | Full title |
+| `journal` | APSR / AJPS / JoP / JEPS |
+| `volume_issue` | Volume and issue number |
+| `doi` | DOI |
+| `design` | Brief description of experimental design |
+| `n_conditions` | Number of treatment conditions (including control) |
+| `n_subjects` | Total sample size |
+| `sample_country` | Country where original sample was drawn |
+| `topic_area` | Primary topic (e.g., misinformation, polarization, representation) |
+| `treatments_brief` | 1-sentence description of what treatments manipulate |
+| `outcomes_brief` | 1-sentence description of key outcome measures |
+| `replication_data` | Yes/No/Unknown — is replication data publicly available? |
+| `replication_url` | URL to replication materials if available |
+| `survey_duration_est` | Estimated survey length (short/medium/long) based on design complexity |
+
+Save the full database as `data/processed/candidate_papers.csv`.
+
+### Task 2.3: Search APSR (2019–2025)
+
+Search the *American Political Science Review* for each year. For each volume:
+1. Review tables of contents
+2. Read abstracts of all empirical papers
+3. Flag all papers that use survey experiments
+4. Record details in the database format above
+
+Expected yield: ~5–15 survey experiments per year in APSR.
+
+### Task 2.4: Search AJPS (2019–2025)
+
+Search the *American Journal of Political Science* using the same approach.
+
+Expected yield: ~5–15 survey experiments per year in AJPS.
+
+### Task 2.5: Search JoP (2019–2025)
+
+Search the *Journal of Politics* using the same approach.
+
+Expected yield: ~5–15 survey experiments per year in JoP.
+
+### Task 2.6: Search JEPS (2019–2025)
+
+Search the *Journal of Experimental Political Science* using the same approach. Note that JEPS publishes primarily experimental work, so a higher proportion of articles will be relevant, but many may be conjoint or list experiments (exclude those).
+
+Expected yield: ~10–20 survey experiments per year in JEPS.
+
+### Task 2.7: Compile and Deduplicate the Database
+
+1. Merge all journal-specific results into `data/processed/candidate_papers.csv`
+2. Remove any duplicates (e.g., papers appearing in multiple search queries)
+3. Add a `notes` column for any flags or concerns
+4. Print summary statistics:
+   - Total papers found by journal
+   - Total papers found by year
+   - Distribution by topic area
+   - Distribution by sample country
+
+### Task 2.8: Verify Key Details
+
+For each paper in the database, verify:
+1. The paper actually exists (check DOI resolves)
+2. The design is indeed a survey experiment (not conjoint/list/field)
+3. The topic is political (treatment or outcome)
+4. Note replication data availability (check journal dataverse, author websites, GitHub)
+
+Mark each paper as `verified: Yes/No` in the database.
+
+**CRITICAL**: Do not include any paper you cannot verify exists. If uncertain, flag it for manual review rather than including it.
+
+---
+
+## 🛑 CHECKPOINT 2: Search Complete
+
+**Before proceeding, confirm:**
+- [ ] All four journals searched for 2019–2025
+- [ ] Database compiled in `data/processed/candidate_papers.csv`
+- [ ] Papers verified to exist
+- [ ] Summary statistics produced
+
+**Present for review:**
+1. Total number of candidate papers found (by journal and year)
+2. Distribution of topics
+3. Any gaps or issues with the search (e.g., journal access problems)
+4. Sample of 5–10 entries from the database to check quality
+
+**STOP and wait for approval to proceed to Phase 3.**
+
+---
+
+## PHASE 3: Evaluate Replication Strength
+
+### Task 3.1: Apply Hard Filters
+
+Go through every paper in `data/processed/candidate_papers.csv` and apply the hard filters from the evaluation rubric (Phase 0, Task 0.2):
+
+| # | Hard Filter | Action if Fail |
+|---|------------|----------------|
+| H1 | Survey experiment with random assignment | Remove |
+| H2 | Not a standalone conjoint or list experiment | Remove |
+| H3 | Published in peer-reviewed journal | Remove (should already pass) |
+| H4 | Replication data publicly available or likely obtainable | Flag, do not remove yet |
+| H5 | Can be administered to US sample in ~5 minutes | Remove if clearly too long |
+| H6 | Treatment or outcome is political | Remove |
+
+Save the filtered list as `data/processed/candidate_papers_filtered.csv` with a `hard_filter_pass` column (Yes/No) and `hard_filter_notes` column explaining any failures.
+
+Report:
+- How many papers passed all hard filters
+- How many failed each filter
+- How many are borderline (especially H4 and H5)
+
+### Task 3.2: Deep Read of Filtered Candidates
+
+For each paper that passed hard filters, conduct a deeper evaluation. This requires reading at least the abstract, introduction, research design section, and main results.
+
+For each paper, create an evaluation entry documenting:
+
+1. **Design summary** (2-3 sentences):
+   - What is the treatment? What is the control?
+   - How many arms? What is the unit of randomization?
+   - What are the main outcome measures?
+
+2. **Key estimand for replication**:
+   - Which specific treatment effect would you replicate?
+   - Why is this estimand theoretically meaningful?
+   - What was the original estimate and standard error?
+
+3. **Replication feasibility assessment**:
+   - Can the exact stimuli be reused? Any localization/temporalization needed?
+   - Estimated survey time for replication portion
+   - Sample size needed (apply "small telescopes" logic: ~2.5x original N if original had ~33% power)
+   - Any complications (deception, hard-to-implement treatments, etc.)?
+
+4. **Data availability check**:
+   - Is replication data posted? Where?
+   - Is analysis code posted?
+   - Would you need to contact authors?
+
+Save all evaluations to `notes/deep_evaluations/` with one file per paper (e.g., `notes/deep_evaluations/P001_AuthorYear.md`).
+
+### Task 3.3: Score Each Candidate
+
+Apply the soft scoring rubric from Phase 0 (Task 0.2) to each paper that passed hard filters:
+
+| Criterion | Weight | Score (1-5) |
+|-----------|--------|-------------|
+| S1: Theoretical importance | 20% | |
+| S2: Design simplicity | 10% | |
+| S3: Replication feasibility | 15% | |
+| S4: Data availability | 10% | |
+| S5: Fit with researchers | 15% | |
+| S6: Impact and visibility | 10% | |
+| S7: Low statistical power | 10% | |
+| S8: Large effect sizes | 10% | |
+| **Weighted total** | **100%** | |
+
+**Scoring guidelines:**
+
+*S1 — Theoretical importance (20%):*
+- 5: Addresses a fundamental, contested question in political science; null replication would reshape the debate
+- 4: Important question with ongoing disagreement; replication would be informative either way
+- 3: Solid contribution but narrower theoretical stakes
+- 2: Incremental contribution; replication value is modest
+- 1: Primarily methodological or niche; limited theoretical payoff
+
+*S2 — Design simplicity (10%):*
+- 5: 2-arm design, single short treatment, 1-2 outcome measures; clearly fits in <5 min
+- 4: 3-4 arms or slightly longer treatment, but still concise
+- 3: Moderate complexity; may need to select a subset of conditions
+- 2: Complex multi-factorial design; challenging to fit in time window
+- 1: Very complex; would require substantial simplification
+
+*S3 — Replication feasibility (15%):*
+- 5: Stimuli can be directly reused on US sample with zero modification
+- 4: Minor localization needed (e.g., updating politician names, policy context)
+- 3: Moderate adaptation needed (e.g., translating from non-US context)
+- 2: Substantial redesign needed; unclear if "replication" is the right frame
+- 1: Fundamental obstacles to replication (e.g., requires real social media feed)
+
+*S4 — Data availability (10%):*
+- 5: Full replication data and code on Dataverse/GitHub, well-documented
+- 4: Data available but code missing, or minor documentation gaps
+- 3: Data available upon request (authors responsive to such requests)
+- 2: No public data; would need to contact authors with uncertain response
+- 1: No data available and authors unlikely to share
+
+*S5 — Fit with researchers (15%):*
+- 5: Directly in Ventura/Asimovic's area; they could write the proposal with deep expertise
+- 4: Adjacent to their expertise; natural intellectual fit
+- 3: General political behavior/communication; reasonable but not distinctive fit
+- 2: Outside their main areas; they could do it but others would be better positioned
+- 1: No meaningful connection to their research profiles
+
+*S6 — Impact and visibility (10%):*
+- 5: Highly cited, widely discussed, in a top journal
+- 4: Well-cited, in a good journal, active research area
+- 3: Moderate citations, solid journal
+- 2: Few citations, niche audience
+- 1: Minimal impact
+
+*S7 — Low statistical power (10%):*
+- 5: Original study severely underpowered (e.g., N < 200 per arm, post-hoc power < 50%); replication with adequate power would be a major contribution
+- 4: Moderately underpowered (e.g., N ~200–400 per arm, power ~50–65%); replication adds clear value
+- 3: Borderline power (e.g., N ~400–600 per arm, power ~65–80%); replication useful but less urgent
+- 2: Reasonably powered (e.g., N ~600–1000 per arm, power ~80%); less replication value on power grounds alone
+- 1: Well-powered original study (N > 1000 per arm); little value added from a power perspective
+
+*S8 — Large effect sizes (10%):*
+- 5: Reported effect sizes > 0.5 SD; striking and potentially implausible — high-value replication target
+- 4: Reported effect sizes ~0.3–0.5 SD; large and noteworthy, worth verifying
+- 3: Reported effect sizes ~0.2–0.3 SD; moderate, at the threshold of interest
+- 2: Reported effect sizes ~0.1–0.2 SD; small effects, less interesting to replicate on this criterion
+- 1: Reported effect sizes < 0.1 SD; negligible effects
+
+Save scores to `data/processed/candidate_scores.csv`.
+
+### Task 3.4: Rank and Select Top Candidates for Tournament
+
+1. Rank all scored papers by weighted total score **within each journal**
+2. Select the **top 5 papers per journal** (20 papers total) for the tournament
+   - APSR: top 5
+   - AJPS: top 5
+   - JoP: top 5
+   - JEPS: top 5
+3. Within each journal's top 5, ensure some topic diversity (don't send 5 misinformation papers from the same journal)
+
+Save the shortlist as `data/processed/tournament_shortlist.csv` with a `journal_rank` column (1–5 within each journal).
+
+Create `notes/shortlist_rationale.md` explaining:
+- Why each paper was selected (organized by journal)
+- Any hard choices or tradeoffs made within each journal's top 5
+- Overall topic coverage across the 20 papers
+
+---
+
+## 🛑 CHECKPOINT 3: Evaluation Complete
+
+**Before proceeding, confirm:**
+- [ ] Hard filters applied; filtered candidate list produced
+- [ ] Deep evaluations completed for all filtered candidates
+- [ ] Scoring rubric applied to all candidates
+- [ ] Top 5 papers per journal selected (20 total)
+- [ ] Shortlist rationale documented
+
+**Present for review:**
+1. Summary of filtering (how many in, how many out, why)
+2. Ranked list of all scored papers with weighted totals, organized by journal
+3. The 20-paper shortlist (5 per journal) with brief justification for each
+4. Any papers the human should consider adding or removing
+
+**STOP and wait for approval to proceed to Phase 4.**
+
+---
+
+## PHASE 4: Multi-Agent Tournament
+
+### Task 4.0: API Setup for Multi-Model Judging
+
+The tournament uses a **3-judge panel** from different model providers to reduce single-model bias. Before running matches, ensure access to all three:
+
+| Judge | Model | Access Method |
+|-------|-------|---------------|
+| Judge 1 | Claude Opus 4.6 (`claude-opus-4-6`) | Native (Claude Code) |
+| Judge 2 | GPT-5 (`gpt-5`) | OpenAI API via Python (`openai` package) |
+| Judge 3 | Claude Sonnet 4.6 (`claude-sonnet-4-6`) | Anthropic API via Python (`anthropic` package) |
+
+**Setup steps:**
+1. Verify environment variables `OPENAI_API_KEY` and `ANTHROPIC_API_KEY` are set
+2. Install packages if needed: `pip install openai anthropic`
+3. Create a helper script `code/judge_api.py` that:
+   - Takes a match transcript (both champions' arguments and rebuttals) as input
+   - Sends the transcript + judge system prompt to each external model
+   - Returns each judge's decision and reasoning
+   - Saves raw responses for auditability
+4. Test with a dummy matchup to confirm all three APIs respond correctly
+
+### Task 4.1: Tournament Design
+
+The tournament uses a **multi-agent debate format** with 20 papers (5 per journal) competing in two stages. Each match is decided by a **panel of 3 judges** (Claude Opus 4.6, GPT-5, Claude Sonnet 4.6) with majority vote.
+
+**Agents:**
+- **20 Champion Agents** (Claude Opus 4.6): Each assigned one paper from the shortlist. Each champion argues persuasively for why their paper is the best replication candidate.
+- **3 Judge Agents** (one per model provider): Each independently evaluates arguments in every matchup and selects a winner with written justification. The winner is decided by **majority vote (2 of 3)**. Split decisions (2-1) are flagged for human review.
+
+**Tournament structure — 2 stages, 5 rounds total:**
+
+```
+STAGE 1: INTRA-JOURNAL ELIMINATION (5 → 2 per journal)
+  Each journal's 5 papers compete internally. Papers seeded 1–5 by Phase 3 score.
+
+  Per journal (×4 journals = 12 matches):
+    Match A: Seed #4 vs Seed #5
+    Match B: Seed #3 vs Winner(A)
+    Match C: Seed #1 vs Seed #2
+    → Winners of Match B and Match C advance (2 per journal → 8 total)
+
+STAGE 2: CROSS-JOURNAL BRACKET (8 → 1)
+  The 8 advancing papers (2 per journal) compete in a seeded single-elimination bracket.
+
+  Round 3 (Quarterfinals): 8 papers → 4 winners
+    Match QF1: Highest seed vs Lowest seed
+    Match QF2: 2nd seed vs 7th seed
+    Match QF3: 3rd seed vs 6th seed
+    Match QF4: 4th seed vs 5th seed
+
+  Round 4 (Semifinals): 4 winners → 2 winners
+    Match SF1: Winner(QF1) vs Winner(QF4)
+    Match SF2: Winner(QF2) vs Winner(QF3)
+
+  Round 5 (Final): 2 winners → 1 champion
+    Match F: Winner(SF1) vs Winner(SF2)
+```
+
+**Seeding for Stage 2**: Rank the 8 advancing papers by their Phase 3 weighted scores (ignoring journal of origin). Seed 1 vs 8, 2 vs 7, 3 vs 6, 4 vs 5.
+
+**Total matches**: 12 (Stage 1) + 4 + 2 + 1 (Stage 2) = **19 matches**.
+**Total judge calls**: 19 matches × 3 judges = **57 judge decisions**.
+
+### Task 4.2: Prepare Champion Briefs
+
+For each of the 20 papers, prepare a **champion brief** that the champion agent will use as its argument foundation. Save each to `notes/tournament/champion_brief_P{id}.md`.
+
+Each brief should contain:
+
+1. **Paper summary** (from deep evaluation in Phase 3)
+2. **The case for replication** — structured around the evaluation criteria:
+   - Why this estimand is theoretically important
+   - Why the design is feasible for this RFP
+   - Why the data is available and the reanalysis is straightforward
+   - How it fits Ventura and Asimovic's expertise
+   - Why it stands out from competing candidates
+3. **Preemptive defense** — anticipate weaknesses and address them:
+   - If sample was non-US: explain why transport to US sample works
+   - If design is complex: explain which subset of conditions to replicate
+   - If topic is niche: explain broader relevance
+4. **Concrete proposal sketch** — a 3-sentence summary of what the full proposal would look like
+
+### Task 4.3: Run Stage 1 — Intra-Journal Elimination
+
+Run the intra-journal elimination for all 4 journals. Each journal's 5 papers compete in 3 matches to produce 2 advancing papers. **Run all 4 journals in parallel** where possible.
+
+**Per journal, 3 matches:**
+
+**Match A** (Play-in): Seed #4 vs Seed #5
+**Match B** (Lower bracket): Seed #3 vs Winner(A)
+**Match C** (Upper bracket): Seed #1 vs Seed #2
+
+Winners of Match B and Match C advance to Stage 2.
+
+**Match protocol (all rounds):**
+
+1. **Champion A opening argument** (Claude Opus 4.6): Present the case for your paper. Be specific about estimands, feasibility, and fit.
+2. **Champion B opening argument** (Claude Opus 4.6): Same.
+3. **Champion A rebuttal** (Claude Opus 4.6): Respond to Champion B. Identify weaknesses in the opponent.
+4. **Champion B rebuttal** (Claude Opus 4.6): Same.
+5. **3-Judge Panel** — the full debate transcript (steps 1–4) is sent to all three judges independently:
+   - **Judge 1** (Claude Opus 4.6): Evaluates and picks a winner with justification.
+   - **Judge 2** (GPT-5): Evaluates and picks a winner with justification.
+   - **Judge 3** (Claude Sonnet 4.6): Evaluates and picks a winner with justification.
+6. **Majority vote**: Winner decided by 2-of-3 agreement. If the vote is split 2-1, flag the match as a **split decision** for human review.
+
+**Word limits by round:**
+
+| Round | Opening | Rebuttal | Closing | Judge decision |
+|-------|---------|----------|---------|---------------|
+| Stage 1 (intra-journal) | ~400 words | ~200 words | — | ~400 words per judge |
+| Quarterfinals | ~500 words | ~300 words | — | ~500 words per judge |
+| Semifinals | ~500 words | ~300 words | — | ~500 words per judge |
+| Final | ~600 words | ~400 words | ~200 words | ~800 words per judge |
+
+**Agent prompts:**
+
+For Champion agents (Claude Opus 4.6), use this system prompt template:
+```
+You are a research advocate arguing that a specific paper is the best candidate for a survey experiment replication proposal. You are arguing before a panel evaluating proposals for the Coppock & McGrath (2026) Replication competition.
+
+Your paper: [PAPER DETAILS FROM CHAMPION BRIEF]
+
+Evaluation criteria: [RUBRIC FROM PHASE 0]
+
+Your goal: Make the most compelling, evidence-based case for why this paper should be selected. Be specific about estimands and feasibility. Acknowledge weaknesses honestly but explain why they are manageable.
+```
+
+For all three Judge agents (Claude Opus 4.6, GPT-5, Claude Sonnet 4.6), use this **identical** system prompt so they evaluate on the same criteria:
+```
+You are a senior political scientist evaluating which survey experiment is a stronger candidate for replication in the Coppock & McGrath (2026) Replication competition.
+
+RFP requirements: [KEY CRITERIA FROM PHASE 0]
+Evaluation rubric: [RUBRIC FROM PHASE 0]
+Researcher profiles: Tiago Ventura (social media, misinformation, political communication, computational social science) and Nejla Asimovic (intergroup relations, digital technologies, divided societies).
+
+You will read arguments from two champion agents, each advocating for a different paper. Your task:
+1. Evaluate both papers against the rubric criteria
+2. Weigh the relative strengths and weaknesses
+3. Identify which paper is the stronger replication candidate overall
+4. Declare a winner with explicit justification
+5. Assign a confidence score (1-10) for your decision
+
+Be rigorous. Focus on feasibility, theoretical importance, and fit with the RFP and researcher profiles.
+```
+
+**Recording results per match:**
+
+For each match, record in the transcript:
+```
+MATCH RESULT: [Paper X] defeats [Paper Y]
+  Judge 1 (Claude Opus 4.6):    Paper X  (confidence: 8/10)
+  Judge 2 (GPT-5):         Paper Y  (confidence: 6/10)
+  Judge 3 (Claude Sonnet 4.6): Paper X  (confidence: 7/10)
+  Verdict: Paper X wins 2-1 (SPLIT DECISION)
+```
+
+Save all Stage 1 transcripts to `notes/tournament/stage1_{journal}_match{A|B|C}.md` (e.g., `stage1_APSR_matchA.md`).
+
+After Stage 1, compile a summary of which 8 papers advanced:
+
+| Journal | Advancing Paper 1 (upper bracket winner) | Advancing Paper 2 (lower bracket winner) |
+|---------|------------------------------------------|------------------------------------------|
+| APSR | | |
+| AJPS | | |
+| JoP | | |
+| JEPS | | |
+
+### Task 4.4: Run Stage 2 — Quarterfinals (Round 3)
+
+The 8 advancing papers are seeded by Phase 3 weighted score and compete cross-journal.
+
+Run 4 quarterfinal matches using the standard match protocol (see word limits table above). Each match judged by all 3 models with majority vote.
+
+Save all transcripts to `notes/tournament/stage2_QF{1-4}.md`.
+
+### Task 4.5: Run Stage 2 — Semifinals (Round 4)
+
+Run 2 semifinal matches using the standard match protocol. Champions should directly compare their paper to the new opponent.
+
+Save all transcripts to `notes/tournament/stage2_SF{1-2}.md`.
+
+### Task 4.6: Run Stage 2 — Final (Round 5)
+
+Run the championship match with the enhanced protocol (opening arguments + rebuttals + closing statements). All 3 judges provide extended decisions (~800 words each).
+
+Save the final match transcript to `notes/tournament/stage2_final.md`.
+
+### Task 4.7: Compile Tournament Results
+
+Create `notes/tournament/tournament_results.md` containing:
+
+1. **Stage 1 results by journal:**
+
+```
+APSR:  [#4 vs #5] → winner vs #3 → ADVANCING: ___, ___  |  [#1 vs #2] → ADVANCING: ___
+AJPS:  [#4 vs #5] → winner vs #3 → ADVANCING: ___, ___  |  [#1 vs #2] → ADVANCING: ___
+JoP:   [#4 vs #5] → winner vs #3 → ADVANCING: ___, ___  |  [#1 vs #2] → ADVANCING: ___
+JEPS:  [#4 vs #5] → winner vs #3 → ADVANCING: ___, ___  |  [#1 vs #2] → ADVANCING: ___
+```
+
+2. **Stage 2 bracket with results:**
+```
+QUARTERFINALS          SEMIFINALS           FINAL
+(1) ___________  ┐
+                 ├→ ___  ┐
+(8) ___________  ┘        │
+                          ├→ ___  ┐
+(4) ___________  ┐        │       │
+                 ├→ ___  ┘        │
+(5) ___________  ┘                ├→ CHAMPION: ___
+                                  │
+(3) ___________  ┐                │
+                 ├→ ___  ┐        │
+(6) ___________  ┘        │       │
+                          ├→ ___  ┘
+(2) ___________  ┐        │
+                 ├→ ___  ┘
+(7) ___________  ┘
+```
+
+3. **Match-by-match summary**: For each of the 19 matches:
+   - Winner and vote breakdown (e.g., "Paper X wins 3-0" or "Paper X wins 2-1 — SPLIT")
+   - Each judge's pick and confidence score
+   - Key arguments that decided it (2-3 sentences)
+
+4. **Split decision log**: List all matches where the vote was 2-1, with a brief note on where the judges disagreed and why.
+
+5. **Final ranking** (1st through 20th):
+   - 1st: Tournament champion
+   - 2nd: Final runner-up
+   - 3rd–4th: Semifinal losers (ranked by Phase 3 scores)
+   - 5th–8th: Quarterfinal losers (ranked by Phase 3 scores)
+   - 9th–20th: Stage 1 eliminated papers (ranked by Phase 3 scores)
+
+6. **Champion paper profile**: A detailed summary of the winning paper including:
+   - Full citation
+   - Design description
+   - Proposed estimand for replication
+   - Proposed reanalysis approach
+   - Why this paper is the strongest candidate
+
+7. **Runner-up paper profile**: Same detail for the 2nd place paper (as a backup option).
+
+8. **Top 5 summary table**:
+
+| Rank | Paper | Journal | Topic | Key Estimand | Weighted Score |
+|------|-------|---------|-------|-------------|---------------|
+| 1 | | | | | |
+| 2 | | | | | |
+| 3 | | | | | |
+| 4 | | | | | |
+| 5 | | | | | |
+
+---
+
+## 🛑 CHECKPOINT 4 (FINAL): Tournament Complete
+
+**Before proceeding, confirm:**
+- [ ] All 3 judge APIs tested and working
+- [ ] All 19 matches completed with full transcripts and 3-judge votes
+- [ ] Stage 1 results compiled (8 advancing papers)
+- [ ] Stage 2 bracket filled out
+- [ ] Final ranking produced (1st through 20th)
+- [ ] Champion and runner-up profiles written
+- [ ] Split decision log reviewed
+- [ ] All tournament materials saved to `notes/tournament/`
+
+**Present for review:**
+1. Stage 1 results: which 8 papers advanced (2 per journal)
+2. The complete Stage 2 bracket with results and vote breakdowns
+3. The champion paper — full profile with proposed estimand and reanalysis plan
+4. The runner-up paper — as a backup option
+5. Top 5 summary table
+6. Split decision log — any matches where judges disagreed
+7. Your overall assessment: do you agree with the tournament outcome? Any concerns?
+
+**STOP and wait for final approval.**
+
+---
+
+## Appendix A: Directory Structure
+
+```
+replication_tournement/
+├── CLAUDE.md
+├── README.md
+├── instructions.md                    # This file
+├── rfp.pdf                            # The RFP document
+├── code/                              # Any scripts used for search/scraping
+├── data/
+│   ├── raw/                           # Raw search results
+│   └── processed/
+│       ├── candidate_papers.csv       # Full database of found papers
+│       ├── candidate_papers_filtered.csv  # After hard filters
+│       ├── candidate_scores.csv       # Scored papers
+│       └── tournament_shortlist.csv   # Top 8 for tournament
+├── literature/                        # Downloaded papers (if needed)
+├── notes/
+│   ├── rfp_summary.md
+│   ├── rfp_strategy.md
+│   ├── evaluation_rubric.md
+│   ├── profile_ventura.md
+│   ├── profile_asimovic.md
+│   ├── target_topics.md
+│   ├── deep_evaluations/
+│   │   ├── P001_AuthorYear.md
+│   │   └── ...
+│   ├── shortlist_rationale.md
+│   └── tournament/
+│       ├── champion_brief_P{id}.md    # One per shortlisted paper (20 total)
+│       ├── stage1_APSR_match{A,B,C}.md   # Intra-journal elimination
+│       ├── stage1_AJPS_match{A,B,C}.md
+│       ├── stage1_JoP_match{A,B,C}.md
+│       ├── stage1_JEPS_match{A,B,C}.md
+│       ├── stage2_QF{1-4}.md          # Cross-journal quarterfinals
+│       ├── stage2_SF{1-2}.md          # Semifinals
+│       ├── stage2_final.md            # Championship match
+│       └── tournament_results.md
+├── output/
+│   ├── figures/
+│   ├── paper/
+│   └── tables/
+├── budget/
+└── submission/
+```
+
+## Appendix B: RFP Quick Reference
+
+| Item | Detail |
+|------|--------|
+| **Organizers** | Alexander Coppock & Mary McGrath (Northwestern) |
+| **Platform** | Rep Data (repdata.com), US quota sample |
+| **Proposal parts** | (1) Replication + reanalysis (~4 pp), (2) Replication survey instrument |
+| **Survey time** | ~10 min total |
+| **Eligible designs** | Survey experiments with random assignment; no standalone conjoints or list experiments |
+| **Data requirement** | Replication data must be publicly available |
+| **Estimands** | 1-2 theoretically meaningful estimates |
+| **Sample** | Americans only; can replicate non-US studies |
+| **Topic** | Political (treatment or outcome) |
+| **Timeline** | Rolling review, applications open Feb 1, 2026 |
+| **Submission** | Email to alex.coppock@northwestern.edu and mary.mcgrath@northwestern.edu |
+
+## Appendix C: Evaluation Rubric Quick Reference
+
+**Hard Filters (must pass all):**
+H1: Survey experiment with random assignment | H2: Not standalone conjoint/list | H3: Published in peer-reviewed journal | H4: Replication data available | H5: Fits in ~5 min survey time | H6: Political topic
+
+**Soft Scoring (weighted):**
+S1: Theoretical importance (20%) | S2: Design simplicity (10%) | S3: Replication feasibility (15%) | S4: Data availability (10%) | S5: Fit with researchers (15%) | S6: Impact and visibility (10%) | S7: Low statistical power (10%) | S8: Large effect sizes (10%)
