@@ -163,7 +163,7 @@ Key tension: the same speed that helps you fail fast [enables p-hacking]{.red}. 
 
 ## Roadmap
 
-**Five case studies** of how I use Claude Code in my research workflow:
+**Six case studies** of how I use Claude Code in my research workflow:
 
 ::: {.incremental}
 1. [Multi-Agent Tournament]{.red} — Selecting a replication paper from 285 candidates
@@ -171,6 +171,7 @@ Key tension: the same speed that helps you fail fast [enables p-hacking]{.red}. 
 3. [Coding Tasks, Plan Mode & Skills]{.red} — Country pipelines, verification, and reusable workflows
 4. [Multi-Skill Peer Review]{.red} — Four specialized review skills as an orchestrated system
 5. [Self-Updating Slide Deck]{.red} — A custom skill that captures new case studies as they happen
+6. [Obsidian Vault as Retrieval System]{.red} — Structured literature notes that keep Claude honest with reviewers
 :::
 
 ::: {.fragment}
@@ -829,6 +830,75 @@ Invoking the skill triggers a 7-step workflow:
 - [Anchor-string insertion is robust]{.red}: grepping for unique strings beats fragile line-number-based editing
 - [Preview-before-edit is essential]{.red}: one wrong insertion could break 50+ existing slides
 - This case study was added by the skill it describes
+:::
+
+# Case Study 6: The Obsidian Vault as a Retrieval System {background-color="#23395b"}
+
+[Structured literature notes that keep Claude honest with reviewers]{.midgrey}
+
+## The Problem
+
+AJPS Reviewer 3 challenged the theoretical backbone of a WhatsApp paper — and demanded specific citations.
+
+::: {.incremental}
+- Reviewer named exact papers: Gursky et al. (2022), Nizaruddin (2021), Ozawa et al. — work Claude may know vaguely but hasn't *read*
+- Default AI move: cite from training data, paraphrase without opening the paper, invent page numbers
+- I needed grounded, verifiable responses to a reviewer who clearly knows this literature
+- The vault had 154 annotated papers — but not the reviewer's specific ones. Yet.
+:::
+
+## The Setup: Notes Before Web
+
+The vault's `context/lit_review.md` is wired into CLAUDE.md as an explicit protocol:
+
+::: {.fragment}
+| Step | Rule |
+|---|---|
+| **1** | Read `literature/README.md` — map query to one of 17 topic groups |
+| **2** | Grep `source_topic:` and `tags:` in `literature/*.md` |
+| **3** | Read every candidate note in full — body, not just frontmatter |
+| **4** | Only then: `WebSearch` or `WebFetch` |
+:::
+
+::: {.fragment}
+When a reviewer names specific papers, the workflow extends: **download PDF → write vault note → synthesize from the note**, never from training data.
+:::
+
+::: aside
+[See: _art/context/lit_review.md]{.midgrey}
+:::
+
+## In Practice: One Session, 14 Papers
+
+Reviewer 3 wanted engagement with the chat apps literature. Here's what one session looked like:
+
+::: {.incremental}
+- 29 Claude prompts, 14 new `literature/*.md` notes created
+- Each note: YAML frontmatter, verbatim abstract, key findings, **exact quotes with page numbers**, and a `## Relevance to AJPS Reviewer 3 Concerns` section
+- Notes tagged `context/ajps-rr-reviewer3` — grepable, scoped to the revision task
+- But Claude tried to write notes without opening the PDFs. I caught it:
+:::
+
+::: {.fragment}
+> *"How did you write the reviews without downloading the papers?"*
+:::
+
+::: {.fragment}
+After correction: every claim traced to a page number in a downloaded file.
+:::
+
+::: aside
+[See: _art/literature/GurskyEtAl2022-ChatAppsCascadeLogic.md]{.midgrey}
+:::
+
+## Case Study 6: Lessons
+
+::: {.incremental}
+- [The vault is a retrieval system, not memory]{.red}: Claude reads notes fresh each session — the knowledge lives in the files, not in the model
+- ["Notes first, web second" must be explicit]{.red}: the default is to reach for training data or the web; the protocol has to override that in CLAUDE.md
+- [Verbatim quotes with page numbers]{.red}: protect against paraphrase drift — if Claude can't cite a page number, it hasn't read the paper
+- [Tag by revision task]{.red}: `context/ajps-rr-reviewer3` in frontmatter lets you grep all reviewer-relevant notes in one command
+- [You still have to supervise]{.red}: Claude will shortcut the grounding step if unchallenged — "how did you write this without downloading the papers?" is a question worth asking
 :::
 
 # Cross-Cutting Lessons {background-color="#23395b"}

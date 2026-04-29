@@ -2,10 +2,13 @@
 
 Repository to share source materials for presentations and talks.
 
+<!--
 ## Building a new talk
 
 - Start from `template/` — it holds `template.qmd` plus the shared SCSS/CSS, modeled on `twitter_ban/twitter_ban_western.qmd`.
 - Or use the **`presentation` Claude Code skill**, which converts a paper (`.tex`) into a Quarto reveal.js deck following the Rhetoric of Decks philosophy (assertion-driven titles, one idea per slide). Run it from inside Claude Code, then layer the template's styling on top.
+-->
+
 
 ## 2026
 

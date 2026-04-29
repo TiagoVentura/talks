@@ -213,6 +213,28 @@ Claude Code built the full SKILL.md from this plan in a single pass.
 
 ---
 
+### Case Study 6: The Obsidian Vault as a Retrieval System — Structured literature notes that keep Claude honest with reviewers
+
+**Project location**: `_art/literature/`, `_art/context/lit_review.md`, `artigos/VMLTT_WhatsApp_Multicountry/`
+
+**Problem**: AJPS Reviewer 3 challenged the theoretical backbone of the WhatsApp multicountry paper and named specific papers (Gursky et al. 2022, Nizaruddin 2021, Ozawa et al.) that needed to be engaged. The risk: Claude citing from training data, paraphrasing without reading, inventing page numbers.
+
+**What I did**: The vault's `context/lit_review.md` protocol (notes first, web second) is wired into CLAUDE.md. When the reviewer named specific papers not yet in the vault, the workflow was: download PDF → write structured vault note → synthesize from the note. One session: 29 Claude prompts, 14 new literature notes created, each with YAML frontmatter, verbatim quotes with page numbers, and a `## Relevance to AJPS Reviewer 3 Concerns` section. Notes tagged `context/ajps-rr-reviewer3` for scoped retrieval.
+
+**Key design features to highlight**:
+- `context/lit_review.md` as an explicit override in CLAUDE.md — 4-step protocol (README → grep frontmatter → read notes → only then web)
+- Verbatim quotes with page numbers as the grounding mechanism
+- Task-scoped frontmatter tags (`context/ajps-rr-reviewer3`) for grepable retrieval
+- The supervison moment: catching Claude writing notes without downloading PDFs
+
+**Outputs**: 14 new annotated literature notes ready to ground the reviewer response memo; Overleaf edits to `r1_ajps.tex` driven by those notes.
+
+**What worked**: The protocol forces grounding before synthesis. Tagging by revision task keeps retrieval scoped. The vault compounds — each R&R adds notes that stay useful for future papers.
+
+**What didn't work / lessons**: Claude will shortcut the grounding step if not supervised — it tried to write notes without reading the PDFs. "Notes first, web second" must be explicit and enforced, not assumed.
+
+---
+
 ## General Slide Design Notes
 
 - Use `.red[]` for emphasis on key terms
