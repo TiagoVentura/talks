@@ -328,7 +328,6 @@
 
 <section id="title-slide" class="quarto-title-block center">
   <h1 class="title">Coding Agents for Academic Research</h1>
-  <p class="subtitle">Or how I used my free time during the parental leave</p>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
@@ -340,12 +339,9 @@ Tiago Ventura
 
   <p class="date">Georgetown University, McCourt School of Public Policy</p>
 </section>
-<section id="section" class="slide level2 center">
+<section id="section" class="slide level2 split-images center">
 <h2></h2>
-<div class="center larger-font">
-<p><strong>Takeaway:</strong> Even though I started using CC under severe time constraints, agents already changed how I work</p>
-<p>and I don’t see myself removing them from my research pipeline in the near future.</p>
-</div>
+<p><img src="img/caetano.jpeg" class="left-half"> <img src="img/claude.png" class="right-half"></p>
 </section>
 <section id="six-ways-i-have-used-claude-code-cc" class="slide level2 center">
 <h2>Six ways I have used Claude Code (CC)</h2>
@@ -359,8 +355,8 @@ Tiago Ventura
 </ol>
 </section>
 <section>
-<section id="using-cc-as-a-thinking-partner-multi-agent-tournament" class="title-slide slide level1 center" data-background-color="#23395b">
-<h1>Using CC as a Thinking Partner: Multi-Agent Tournament</h1>
+<section id="using-cc-to-develop-ideas-multi-agent-tournament" class="title-slide slide level1 center" data-background-color="#23395b">
+<h1>Using CC to Develop Ideas: Multi-Agent Tournament</h1>
 
 </section>
 <section id="the-problem" class="slide level2 center">
@@ -370,12 +366,16 @@ Tiago Ventura
 <ul>
 <li class="fragment"><p>I had some papers in mind, but not sold on anything.</p></li>
 <li class="fragment"><p>My goal was to do a broad search on what could be an interesting paper to work on this task. But… I was <span class="red">severely</span> time-constrained</p></li>
-<li class="fragment"><p>Built a workflow in CC to:</p>
+</ul>
+</div>
+<div class="fragment">
 <ul>
-<li class="fragment">Search <span class="red">hundreds of papers</span> across 8 political science journals</li>
-<li class="fragment">Score them on a detailed rubric <span class="red">statistical power, effect sizes, replicability, team fit</span></li>
-<li class="fragment">Make a <strong>defensible, well-documented</strong> decision, make the papers compete among each other</li>
-<li class="fragment">List <strong>winning</strong> papers for me to use in the replication</li>
+<li><p>Built a workflow in CC to:</p>
+<ul>
+<li>Search <span class="red">hundreds of papers</span> across 8 political science journals</li>
+<li>Score them on a detailed rubric <span class="red">statistical power, effect sizes, replicability, team fit</span></li>
+<li>Make a <strong>defensible, well-documented</strong> decision, make the papers compete among each other</li>
+<li>List <strong>winning</strong> papers for me to use in the replication</li>
 </ul></li>
 </ul>
 </div>
@@ -406,33 +406,29 @@ Do not proceed past a checkpoint without explicit approval.</code></pre>
 <section id="phase-1-understand-the-rfp-and-my-research-pipeline" class="slide level2 center">
 <h2>Phase 1 — Understand the RFP and My Research Pipeline</h2>
 <p>Before searching, CC read two things:</p>
-<div>
 <ul>
-<li class="fragment"><strong>The RFP</strong> (<code>rfp.pdf</code>): Coppock &amp; McGrath (2026) competition rules — what counts as a valid replication, length constraints, submission format</li>
-<li class="fragment"><strong>My research pipeline</strong>: CV, paper statuses, and co-author profile (Nejla Asimovic — intergroup relations, polarization) — to ground the <em>researcher fit</em> criterion before any paper was seen</li>
+<li><p><strong>The RFP</strong> (<code>rfp.pdf</code>): Coppock &amp; McGrath (2026) competition rules — what counts as a valid replication, length constraints, submission format</p></li>
+<li><p><strong>My research pipeline</strong>: CV, paper statuses, and co-author profile (Nejla Asimovic — intergroup relations, polarization) — to ground the <em>researcher fit</em> criterion before any paper was seen</p></li>
+<li><p><strong>Stop-and-check:</strong> Claude summarized its understanding of the RFP constraints and the team’s research areas before proceeding to search.</p></li>
 </ul>
-</div>
-<div class="fragment">
-<p>Stop-and-check: Claude summarized its understanding of the RFP constraints and the team’s research areas before proceeding to search.</p>
-</div>
 </section>
 <section id="phase-2-finding-the-papers" class="slide level2 center">
 <h2>Phase 2 — Finding the Papers</h2>
 <p>A systematic journal-by-journal search across <strong>8 leading journals</strong> (APSR, AJPS, JoP, JEPS, Political Behavior, Political Communication, BJPS, Political Psychology), 2010–2025.</p>
-<div>
 <ul>
-<li class="fragment">Filter applied at abstract level: paper must explicitly mention “survey experiment” — conjoint, list, field, and natural experiments excluded</li>
-<li class="fragment">Per paper: authors, year, title, DOI, design, N conditions, N subjects, country, replication data URL</li>
-<li class="fragment">Output: <code>candidate_papers.csv</code> — ~299 papers, then hard-filtered to 285 eligible</li>
+<li>Filter applied at abstract level: paper must explicitly mention “survey experiment” — conjoint, list, field, and natural experiments excluded</li>
+<li>Per paper: authors, year, title, DOI, design, N conditions, N subjects, country, replication data URL</li>
+<li>Output: <code>candidate_papers.csv</code> — ~299 papers, then hard-filtered to 285 eligible</li>
 </ul>
-</div>
 </section>
 <section id="phase-3-cross-model-deep-research" class="slide level2 center">
 <h2>Phase 3 — Cross-Model Deep Research</h2>
 <p>Before scoring, I used GPT Deep Research to run live web searches on every candidate paper.</p>
-<div class="fragment">
 <ul>
 <li><strong><code>gpt-5-search-api</code></strong> evaluated each of the 285 papers using real-time web retrieval with deep-research</li>
+</ul>
+<div class="fragment">
+<ul>
 <li>Each paper got a structured 6-section markdown assessment:
 <ul>
 <li>Design summary (arms, randomization, outcomes)</li>
@@ -445,13 +441,12 @@ Do not proceed past a checkpoint without explicit approval.</code></pre>
 </ul>
 </div>
 <div class="fragment">
-<p>Output: <strong>285 individual <code>.md</code> files</strong> — these files, not training data, fed the scoring step. This is already 285 lit reviews, for <strong>free</strong>.</p>
+<p>Output: <strong>285 individual .md files</strong> — these files, not training data, fed the scoring step. This is already 285 lit reviews, for <strong>“free”</strong>.</p>
 </div>
 </section>
 <section id="the-scoring-rubric" class="slide level2 center">
 <h2>The Scoring Rubric</h2>
 <p>Each paper scored on 8 criteria using the deep evaluation files as input:</p>
-<div class="fragment">
 <table>
 <colgroup>
 <col style="width: 33%">
@@ -508,23 +503,18 @@ Do not proceed past a checkpoint without explicit approval.</code></pre>
 </tr>
 </tbody>
 </table>
-</div>
-<div class="fragment">
 <p>Top 18 by weighted total → tournament shortlist.</p>
-</div>
 </section>
 <section id="the-tournament" class="slide level2 center">
 <h2>The Tournament</h2>
 <p>Top 18 papers compete in a two-stage multi-agent debate:</p>
-<div>
 <ul>
-<li class="fragment"><strong>Champion agents</strong> (one per paper, Claude Opus): write a 5–6 page advocacy brief arguing why their paper is the best replication candidate</li>
-<li class="fragment"><strong>Judge agent</strong> (Claude Opus or GPT-5.2): reads both briefs head-to-head and picks a winner with written reasoning</li>
-<li class="fragment"><strong>Stage 1:</strong> 18 papers → 3 groups of 6 → top 2 per group advance</li>
-<li class="fragment"><strong>Stage 2:</strong> Full round-robin among 6 finalists (15 matches) → ranked by record</li>
-<li class="fragment"><strong>Three independent trials</strong> with different models and filters — <span class="red">P176 (Druckman et al.&nbsp;2022)</span> placed top 3 in all three</li>
+<li><strong>Champion agents</strong> (one per paper, Claude Opus): write a 5–6 page advocacy brief arguing why their paper is the best replication candidate</li>
+<li><strong>Judge agent</strong> (Claude Opus or GPT-5.2): reads both briefs head-to-head and picks a winner with written reasoning</li>
+<li><strong>Stage 1:</strong> 18 papers → 3 groups of 6 → top 2 per group advance</li>
+<li><strong>Stage 2:</strong> Full round-robin among 6 finalists (15 matches) → ranked by record</li>
+<li><strong>Three independent trials</strong> with different models and filters — <span class="red">P176 (Druckman et al.&nbsp;2022)</span> placed top 3 in all three</li>
 </ul>
-</div>
 </section>
 <section id="prompt-refinement-real-conversation-excerpts" class="slide level2 center">
 <h2>Prompt Refinement: Real Conversation Excerpts</h2>
@@ -557,19 +547,17 @@ Do not proceed past a checkpoint without explicit approval.</code></pre>
 </section>
 <section id="case-study-1-lessons" class="slide level2 center">
 <h2>Case Study 1: Lessons</h2>
-<div>
 <ul>
-<li class="fragment"><p><span class="red">The prompt was ~900 lines</span>:</p>
+<li><p><span class="red">The prompt was ~900 lines</span>:</p>
 <ul>
-<li class="fragment">My input to CC was much shorter. CC wrote most of the prompt</li>
-<li class="fragment">Plan-Mode + Refinement + Cross-checked with GPT.</li>
+<li>My input to CC was much shorter. CC wrote most of the prompt</li>
+<li>Plan-Mode + Refinement + Cross-checked with GPT.</li>
 </ul></li>
-<li class="fragment"><p><span class="red">Checkpoint architecture works</span>: mandatory stops kept Claude on track across a very long task</p></li>
-<li class="fragment"><p><span class="red">Multi-model tournament</span>: different models have different evaluation biases, running many with CC + Plugins is relatively easy.</p></li>
-<li class="fragment"><p><span class="red">Literature Reviews via web search sometimes hallucinated paper details</span>: deep research or better yet pdfs</p></li>
-<li class="fragment"><p><span class="red">Takeaway</span>: not a replacement, but it broadened the perspective on options for me to work on + opens up more diversity in the research pipeline</p></li>
+<li><p><span class="red">Checkpoint architecture works</span>: mandatory stops kept Claude on track across a very long task</p></li>
+<li><p><span class="red">Multi-model tournament</span>: different models have different evaluation biases, running many with CC + Plugins is relatively easy.</p></li>
+<li><p><span class="red">Literature Reviews via web search sometimes hallucinated paper details</span>: deep research or better yet pdfs</p></li>
+<li><p><span class="red">Takeaway</span>: not a replacement, but it broadened the perspective on options for me to work on + opens up more diversity in the research pipeline</p></li>
 </ul>
-</div>
 <!--
 # Case Study 2: A Second Brain (RAG-Based) to support Claude Code and Me {background-color="#23395b"}
 

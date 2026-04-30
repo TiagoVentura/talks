@@ -1,6 +1,5 @@
 ---
 title: "Coding Agents for Academic Research"
-subtitle: "Or how I used my free time during the parental leave"
 author: "Tiago Ventura"
 date: "2026-01-01"
 date-format: "[Georgetown University, McCourt School of Public Policy]"
@@ -24,15 +23,10 @@ format:
     theme: [simple, custom_quarto.scss]
 ---
 
-## {.center}
+## {.split-images}
 
-::: {.center .larger-font}
-
-**Takeaway:** Even though I started using CC under severe time constraints, agents already changed how I work
-
-and I don't see myself removing them from my research pipeline in the near future.
-
-:::
+<img src="img/caetano.jpeg" class="left-half">
+<img src="img/claude.png" class="right-half">
 
 ## Six ways I have used Claude Code (CC)
 
@@ -43,7 +37,7 @@ and I don't see myself removing them from my research pipeline in the near futur
 5. [Pre-Submission Peer Review]{.red} — Four specialized review skills as an orchestrated system
 6. [Building Skills to Manage Tasks I dislike]{.red} — Custom skills to write cover letters for paper submissions, social media threads, build presentations, all based on .tex files of papers.
 
-# Using CC as a Thinking Partner: Multi-Agent Tournament {background-color="#23395b"}
+# Using CC to Develop Ideas: Multi-Agent Tournament {background-color="#23395b"}
 
 ## The Problem
 
@@ -54,7 +48,9 @@ and I don't see myself removing them from my research pipeline in the near futur
 - I had some papers in mind, but not sold on anything. 
 
 - My goal was to do a broad search on what could be an interesting paper to work on this task. But... I was [severely]{.red} time-constrained
+:::
 
+:::fragment
 - Built a workflow in CC to: 
 
    - Search [hundreds of papers]{.red} across 8 political science journals
@@ -96,33 +92,28 @@ Do not proceed past a checkpoint without explicit approval.
 
 Before searching, CC read two things:
 
-::: {.incremental}
 - **The RFP** (`rfp.pdf`): Coppock & McGrath (2026) competition rules — what counts as a valid replication, length constraints, submission format
 - **My research pipeline**: CV, paper statuses, and co-author profile (Nejla Asimovic — intergroup relations, polarization) — to ground the *researcher fit* criterion before any paper was seen
-:::
 
-::: {.fragment}
-Stop-and-check: Claude summarized its understanding of the RFP constraints and the team's research areas before proceeding to search.
-:::
+- **Stop-and-check:** Claude summarized its understanding of the RFP constraints and the team's research areas before proceeding to search.
 
 
 ## Phase 2 — Finding the Papers
 
 A systematic journal-by-journal search across **8 leading journals** (APSR, AJPS, JoP, JEPS, Political Behavior, Political Communication, BJPS, Political Psychology), 2010–2025.
 
-::: {.incremental}
 - Filter applied at abstract level: paper must explicitly mention "survey experiment" — conjoint, list, field, and natural experiments excluded
 - Per paper: authors, year, title, DOI, design, N conditions, N subjects, country, replication data URL
 - Output: `candidate_papers.csv` — ~299 papers, then hard-filtered to 285 eligible
-:::
 
 
 ## Phase 3 — Cross-Model Deep Research
 
 Before scoring, I used GPT Deep Research to run live web searches on every candidate paper.
 
-::: {.fragment}
 - **`gpt-5-search-api`** evaluated each of the 285 papers using real-time web retrieval with deep-research
+
+::: {.fragment}
 - Each paper got a structured 6-section markdown assessment:
   - Design summary (arms, randomization, outcomes)
   - Key estimand + original effect size
@@ -134,14 +125,13 @@ Before scoring, I used GPT Deep Research to run live web searches on every candi
 
 
 ::: {.fragment}
-Output: **285 individual `.md` files** — these files, not training data, fed the scoring step. This is already 285 lit reviews, for **free**.
+Output: **285 individual .md files** — these files, not training data, fed the scoring step. This is already 285 lit reviews, for **"free"**.
 :::
 
 ## The Scoring Rubric
 
 Each paper scored on 8 criteria using the deep evaluation files as input:
 
-::: {.fragment}
 | Criterion | Weight | What it captures |
 |---|---|---|
 | **S1** Theoretical importance | 20% | Does a null replication reshape a debate? |
@@ -152,23 +142,19 @@ Each paper scored on 8 criteria using the deep evaluation files as input:
 | **S6** Impact & visibility | 10% | Top journal, citations, active debate |
 | **S7** Low statistical power | 10% | Underpowered originals are worth verifying |
 | **S8** Large effect sizes | 10% | Effects >0.3 SD worth checking |
-:::
 
-::: {.fragment}
 Top 18 by weighted total → tournament shortlist.
-:::
 
 ## The Tournament
 
 Top 18 papers compete in a two-stage multi-agent debate:
 
-::: {.incremental}
 - **Champion agents** (one per paper, Claude Opus): write a 5–6 page advocacy brief arguing why their paper is the best replication candidate
 - **Judge agent** (Claude Opus or GPT-5.2): reads both briefs head-to-head and picks a winner with written reasoning
 - **Stage 1:** 18 papers → 3 groups of 6 → top 2 per group advance
 - **Stage 2:** Full round-robin among 6 finalists (15 matches) → ranked by record
 - **Three independent trials** with different models and filters — [P176 (Druckman et al. 2022)]{.red} placed top 3 in all three
-:::
+
 
 
 ## Prompt Refinement: Real Conversation Excerpts
@@ -198,7 +184,6 @@ The instruction file evolved through dialogue:
 
 ## Case Study 1: Lessons
 
-::: {.incremental}
 - [The prompt was ~900 lines]{.red}:
    - My input to CC was much shorter. CC wrote most of the prompt
    - Plan-Mode + Refinement + Cross-checked with GPT.
@@ -210,8 +195,8 @@ The instruction file evolved through dialogue:
 - [Literature Reviews via web search sometimes hallucinated paper details]{.red}: deep research or better yet pdfs
 
 - [Takeaway]{.red}: not a replacement, but it broadened the perspective on options for me to work on + opens up more diversity in the research pipeline
-   
-:::
+  
+
 
 <!--
 # Case Study 2: A Second Brain (RAG-Based) to support Claude Code and Me {background-color="#23395b"}

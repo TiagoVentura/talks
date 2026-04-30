@@ -68,3 +68,20 @@ body {
     font-size: 1.4em;
     line-height: 1.4;
 }
+
+.reveal section.split-images {
+    height: 100%;
+    padding: 0 !important;
+}
+.reveal section.split-images img {
+    position: absolute;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    object-fit: contain;
+    margin: 0;
+    border: none;
+    box-shadow: none;
+}
+.reveal section.split-images img.left-half { left: 0; }
+.reveal section.split-images img.right-half { right: 0; }
