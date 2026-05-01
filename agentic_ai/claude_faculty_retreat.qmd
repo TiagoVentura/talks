@@ -23,10 +23,6 @@ format:
     theme: [simple, custom_quarto.scss]
 ---
 
-## {.split-images}
-
-<img src="img/caetano.jpeg" class="left-half">
-<img src="img/claude.png" class="right-half">
 
 ## Six ways I have used Claude Code (CC)
 
