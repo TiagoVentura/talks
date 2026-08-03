@@ -12,6 +12,8 @@ Repository to share source materials for presentations and talks.
 
 ## 2026
 
+- [ABCP - Mesa: Novas Fronteiras nos Estudos de Comportamento Político](https://tiagoventura.github.io/talks/abcp/2026/mesa_comportamento_politico/abcp_2026.html)
+
 - [Georgetown McCourt Faculty Retreat - Coding Agents for Academic Research](https://tiagoventura.github.io/talks/agentic_ai/claude_faculty_retreat.html) 
 
 - [CPAC WashU](https://tiagoventura.github.io/talks/twitter_ban/washu.html)

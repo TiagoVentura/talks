@@ -1,0 +1,168 @@
+---
+title: "Novas Fronteiras nos Estudos de Comportamento Político"
+subtitle: "Da consolidação das mídias digitais ao estudos políticos sobre IA"
+author: "Tiago Ventura"
+date: "2026-01-01"
+date-format: "[Georgetown University, McCourt School of Public Policy --] YYYY"
+execute:
+  echo: false
+  error: true
+format:
+  revealjs:
+    transition: slide
+    background-transition: fade
+    code-line-numbers: false
+    width: 1500
+    height: 1000
+    center: true
+    slide-number: true
+    incremental: false
+    chalkboard:
+      buttons: false
+    preview-links: auto
+    footer: "Tiago Ventura (Georgetown University) -- ABCP 2026"
+    theme: [simple, custom_quarto.scss]
+---
+
+## A maior transformação do campo em vinte anos veio da consolidação das mídias digitais
+
+<br>
+
+A internet e as redes sociais se tornaram o principal meio informacional dos eleitores. Para o estudo do comportamento político, isso produziu duas mudanças:
+
+<br>
+
+::: {.incremental}
+- [Novos dados e avanços metodológicos]{.red} -- rastros digitais em larga escala e novas formas de medir conceitos clássicos.
+
+- [Novas questões substantivas]{.red} -- em geral, sobre como esse novo ambiente informacional altera atitudes e comportamento político.
+:::
+
+
+## O campo se organizou em três frentes/gerações distintas de estudos
+
+<br>
+
+::: {.incremental}
+- [Estudos Descritivos:]{.red} entender o que usuários consomem online.
+
+- [Estudos Causais:]{.red} via experimentos digitais de campos (com ou sem coloboração com plataformas)
+
+- [Estudos Metodológicos:]{.red} avanço de uso de dados digitais, novas metodológias com base nesses dados, e novas formas de medir conceitos clássicos de comportamento político.
+
+:::
+
+<br>
+
+::: {.fragment}
+Alguns estudos/casos emblemáticos de cada frente nos próximos slides.
+:::
+
+
+## Descritivo: as dietas informacionais são bem mais moderadas do que se assume no debate público
+
+![](output/guess_2021.png){fig-align="center" width="46%"}
+
+::: aside
+[Guess, A. (2021). "(Almost) Everything in Moderation: New Evidence on Americans' Online Media Diets." *American Journal of Political Science*.]{.midgrey}
+:::
+
+## Métodos: as redes viraram instrumento de medição -- ideologia estimada a partir de quem você segue
+
+![](output/barbera_2015.png){fig-align="center" width="46%"}
+
+::: aside
+[Barberá, P. (2015). "Birds of the Same Feather Tweet Together: Bayesian Ideal Point Estimation Using Twitter Data." *Political Analysis*.]{.midgrey}
+:::
+
+## Experimentos: dentro das plataformas -- sair da bolha pode aumentar a polarização
+
+![](output/bail_2018.png){fig-align="center" width="40%"}
+
+::: aside
+[Bail, C. et al. (2018). "Exposure to Opposing Views on Social Media Can Increase Political Polarization." *PNAS*.]{.midgrey}
+:::
+
+## Experimentos de desativação para medir efeitos causais das platformas
+
+![](output/ventura_jop.png){fig-align="center" width="55%"}
+
+::: aside
+[Ventura, T., Majumdar, R., Nagler, J., Tucker, J. (2025). "Misinformation Beyond Traditional Feeds: Evidence from a WhatsApp Deactivation Experiment in Brazil." *Journal of Politics*.]{.midgrey}
+:::
+
+# O que vem depois? {background-color="#23395b"}
+
+## Minha aposta 
+
+> A nova fronteira deste campo de conhecimento (comportamento politico, CSS, Polcom) será em torno do uso, efeitos e avanços metodológicos em torno de IA
+
+<br>
+
+::: {.incremental}
+- Os dados, os métodos, os desenhos experimentais e centros de pesquisa construídos na geração das plataformas estão sendo redirecionados para [IA, interações humano-IA e estudos metodológicos com IA]{.red}.
+
+- E, dado o ritmo de adoção da IA entre os cidadãos, essas questões se tornam cada vez mais [centrais na ciência política global]{.red} -- não um nicho.
+:::
+
+## As mesmas três frentes, com novas perguntas
+
+<br>
+
+::: {.incremental}
+- [Estudos descritivos:]{.red} como eleitores usam IA? Que tipo de conversa política têm com esses modelos? Como usam durante eleições? Como elites e campanhas usam IA para chegar ao eleitor? E a politização da própria IA?
+
+- [Estudos Causais:]{.red} quais os efeitos do uso de IA sobre atitudes políticas? Comparação entre modelos e entre prompts; o papel de memória e *agreeability*.
+
+- [Estudos Metodológicos:]{.red} IA como nova fronteira de pesquisa -- *silicon samples*, survey baseados em conversas com IA chatbots, ou surveys adaptáveis, e agentes de IA na produção científica.
+:::
+
+## Descritivo: 81 mil entrevistas sobre o que as pessoas querem da IA
+
+![](output/anthropic_81k.png){fig-align="center" width="60%"}
+
+::: aside
+[Huang, S. et al. (2026). "What 81,000 People Want from AI." Anthropic. O maior estudo qualitativo multilíngue sobre uso de IA -- 159 países, 70 idiomas.]{.midgrey}
+:::
+
+## Causal: Sycophantic Models 
+
+![](output/cheng_2026.png){fig-align="center" width="46%"}
+
+::: aside
+[Cheng, M. et al. (2026). "Sycophantic AI Decreases Prosocial Intentions and Promotes Dependence." *Science*.]{.midgrey}
+:::
+
+## Causal: Como IA infere preferência política dos usuários
+
+![](output/bisbee_2026.png){fig-align="center" width="46%"}
+
+::: aside
+[Bisbee, J., Clinton, J., Larson, J., Lee, D. (2026). "AI Pandering: Constructing Diverging Political Realities through Conversation." Working paper.]{.midgrey}
+:::
+
+## Métodos: LLMs como instrumento de medição -- pontos ideais estimados com ChatGPT
+
+![](output/wu_2023.png){fig-align="center" width="46%"}
+
+::: aside
+[Wu, P., Tucker, J., Nagler, J., Messing, S. (2023). "Large Language Models Can Be Used to Estimate the Latent Positions of Politicians." Working paper.]{.midgrey}
+:::
+
+## Métodos: IA dentro de surveys -- tratamentos personalizados gerados por LLMs em tempo real
+
+![](output/velez_2024.png){fig-align="center" width="46%"}
+
+::: aside
+[Velez, Y., Liu, P. (2024). "Confronting Core Issues: A Critical Assessment of Attitude Polarization Using Tailored Experiments." *American Political Science Review*.]{.midgrey}
+:::
+
+## E a ciência política brasileira? 
+
+
+##  {background-color="#23395b"}
+
+
+[**Obrigado!**]{style="color:white; font-size:1.2em;"}
+
+[tv186@georgetown.edu | tiagoventura.github.io]{style="color:#cccccc;"}
