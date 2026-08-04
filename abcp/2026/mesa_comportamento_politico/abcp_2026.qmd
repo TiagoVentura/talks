@@ -46,13 +46,14 @@ A internet e as redes sociais se tornaram o principal meio informacional dos ele
 <br>
 
 ::: {.incremental}
-- [Novas revistas:]{.red} o *Journal of Quantitative Description: Digital Media* (2021), criado exclusivamente para estudos descritivos de mídia digital.
+- [Novas revistas e Conferências:]{.red} o *Journal of Quantitative Description: Digital Media* (2021), criado exclusivamente para estudos descritivos de mídia digital, e conferências no tema: IC2S2, PaCSS, ICWSM, várias outras.
 
-- [Centros de pesquisa dedicados:]{.red} Center for Social Media and Politics (NYU), Computational Social Science Lab (Penn), Stanford Internet Observatory -- todos criados nos últimos anos.
+- [Centros de pesquisa dedicados:]{.red} Center for Social Media and Politics (NYU), Computational Social Science Lab (Penn), Stanford Internet Observatory, e diversos outros da rede financiada pela Knight Foundation
 
 - [Colaborações academia-plataformas:]{.red} Social Science One (2018) e os Meta 2020 Election Studies, que produziram uma série de artigos na *Science* e na *Nature*.
 
-- [Um volume de pesquisa que exige revisões sistemáticas:]{.red} só a revisão de Lorenz-Spreen et al. (2023) cobre 496 estudos sobre mídia digital e variáveis políticas.
+- [Alto volume de pesquisa:]{.red} Por exemplo, Lorenz-Spreen et al. (2023) cobre 496 estudos sobre mídia digital e seus efeitos políticos. 
+
 :::
 
 ## O campo se organizou em três frentes/gerações distintas de estudos
@@ -173,18 +174,20 @@ Alguns estudos/casos emblemáticos de cada frente nos próximos slides.
 [Velez, Y., Liu, P. (2024). "Confronting Core Issues: A Critical Assessment of Attitude Polarization Using Tailored Experiments." *American Political Science Review*.]{.midgrey}
 :::
 
-## E a ciência política brasileira? 
+## E a ciência política brasileira?
 
-**Algumas reflexões desorganizadas:**
+::: {.notes}
+Algumas reflexões desorganizadas:
 
-- No campo do desenvolvimento de IA, aposto em ampliação das desigualdades. Não somente no Sul vs Norte Global, mas também Universidades vs "Frontier Models"
+- No campo do desenvolvimento de IA, aposto na ampliação das desigualdades -- não só Sul vs. Norte Global, mas também universidades vs. "frontier models".
 
-- Este não necessariamente é o caso no ciências sociais:
+- Este não é necessariamente o caso nas ciências sociais:
 
-  - LLMs e acesso via a APIs podem reduzir custos de produzir análises quantitativas mais sofisticadas
-  - Sobretudo o advento de agentes, pode reduzir barreiras por exemplo, na capacidade de pesquisadores brasileiros em publicar internacionalmente
-  - O Brasil como no caso das redes sociais, eh um caso interessantissimo. Adocao muito forte de IA pela ppopulacao, uma populacao muito conectada tecnologicamente, provavelmente usando IA de forma mais integradas com midias sociais,
-  - E modelos tendem a variar qualidade de respostas, inferencia, e recomendacoes baseado em linguagem, o que torna estudos sobre a realidade brasileira bastante promissores. 
+  - LLMs e o acesso via APIs podem reduzir os custos de produzir análises quantitativas mais sofisticadas.
+  - Sobretudo o advento de agentes pode reduzir barreiras -- por exemplo, na capacidade de pesquisadores brasileiros publicarem internacionalmente.
+  - O Brasil, como no caso das redes sociais, é um caso interessantíssimo: adoção muito forte de IA pela população, uma população muito conectada tecnologicamente, provavelmente usando IA de forma mais integrada com as mídias sociais.
+  - E os modelos tendem a variar em qualidade de respostas, inferência e recomendações conforme a língua, o que torna estudos sobre a realidade brasileira bastante promissores.
+:::
 
 ##  {background-color="#23395b"}
 
