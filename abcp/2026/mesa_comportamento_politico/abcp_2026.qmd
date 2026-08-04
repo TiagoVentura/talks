@@ -33,11 +33,27 @@ A internet e as redes sociais se tornaram o principal meio informacional dos ele
 <br>
 
 ::: {.incremental}
-- [Novos dados e avanços metodológicos]{.red} -- rastros digitais em larga escala e novas formas de medir conceitos clássicos.
-
 - [Novas questões substantivas]{.red} -- em geral, sobre como esse novo ambiente informacional altera atitudes e comportamento político.
+
+- [Novos dados e avanços metodológicos]{.red} -- rastros digitais em larga escala, necessidade de compreender o ambiente informacional digital, e  novas formas de medir conceitos clássicos de comportamento político
+
+
 :::
 
+
+## Essa transformação se institucionalizou: revistas, centros e colaborações com plataformas
+
+<br>
+
+::: {.incremental}
+- [Novas revistas:]{.red} o *Journal of Quantitative Description: Digital Media* (2021), criado exclusivamente para estudos descritivos de mídia digital.
+
+- [Centros de pesquisa dedicados:]{.red} Center for Social Media and Politics (NYU), Computational Social Science Lab (Penn), Stanford Internet Observatory -- todos criados nos últimos anos.
+
+- [Colaborações academia-plataformas:]{.red} Social Science One (2018) e os Meta 2020 Election Studies, que produziram uma série de artigos na *Science* e na *Nature*.
+
+- [Um volume de pesquisa que exige revisões sistemáticas:]{.red} só a revisão de Lorenz-Spreen et al. (2023) cobre 496 estudos sobre mídia digital e variáveis políticas.
+:::
 
 ## O campo se organizou em três frentes/gerações distintas de estudos
 
@@ -141,12 +157,12 @@ Alguns estudos/casos emblemáticos de cada frente nos próximos slides.
 [Bisbee, J., Clinton, J., Larson, J., Lee, D. (2026). "AI Pandering: Constructing Diverging Political Realities through Conversation." Working paper.]{.midgrey}
 :::
 
-## Métodos: LLMs como instrumento de medição -- pontos ideais estimados com ChatGPT
+## Métodos: Amostras do vale do silício reproduzem experimentos de ciências sociais 
 
-![](output/wu_2023.png){fig-align="center" width="46%"}
+![](output/willer_2023.png){fig-align="center" width="46%"}
 
 ::: aside
-[Wu, P., Tucker, J., Nagler, J., Messing, S. (2023). "Large Language Models Can Be Used to Estimate the Latent Positions of Politicians." Working paper.]{.midgrey}
+[Ashokkumar, Ashwini, Luke Hewitt, Isaias Ghezae, and Robb Willer. "Large language models can predict the results of social science experiments." Nature (2026): 1-8.]{.midgrey}
 :::
 
 ## Métodos: IA dentro de surveys -- tratamentos personalizados gerados por LLMs em tempo real
@@ -159,6 +175,16 @@ Alguns estudos/casos emblemáticos de cada frente nos próximos slides.
 
 ## E a ciência política brasileira? 
 
+**Algumas reflexões desorganizadas:**
+
+- No campo do desenvolvimento de IA, aposto em ampliação das desigualdades. Não somente no Sul vs Norte Global, mas também Universidades vs "Frontier Models"
+
+- Este não necessariamente é o caso no ciências sociais:
+
+  - LLMs e acesso via a APIs podem reduzir custos de produzir análises quantitativas mais sofisticadas
+  - Sobretudo o advento de agentes, pode reduzir barreiras por exemplo, na capacidade de pesquisadores brasileiros em publicar internacionalmente
+  - O Brasil como no caso das redes sociais, eh um caso interessantissimo. Adocao muito forte de IA pela ppopulacao, uma populacao muito conectada tecnologicamente, provavelmente usando IA de forma mais integradas com midias sociais,
+  - E modelos tendem a variar qualidade de respostas, inferencia, e recomendacoes baseado em linguagem, o que torna estudos sobre a realidade brasileira bastante promissores. 
 
 ##  {background-color="#23395b"}
 
