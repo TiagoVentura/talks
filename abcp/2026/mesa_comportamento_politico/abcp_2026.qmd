@@ -136,7 +136,7 @@ Alguns estudos/casos emblemáticos de cada frente nos próximos slides.
 
 ## Descritivo: 81 mil entrevistas sobre o que as pessoas querem da IA
 
-![](output/anthropic_81k.png){fig-align="center" width="60%"}
+![](output/anthropic_81k.png){fig-align="center" width="50%"}
 
 ::: aside
 [Huang, S. et al. (2026). "What 81,000 People Want from AI." Anthropic. O maior estudo qualitativo multilíngue sobre uso de IA -- 159 países, 70 idiomas.]{.midgrey}
@@ -144,7 +144,7 @@ Alguns estudos/casos emblemáticos de cada frente nos próximos slides.
 
 ## Causal: Sycophantic Models 
 
-![](output/cheng_2026.png){fig-align="center" width="46%"}
+![](output/cheng_2026.png){fig-align="center" width="40%"}
 
 ::: aside
 [Cheng, M. et al. (2026). "Sycophantic AI Decreases Prosocial Intentions and Promotes Dependence." *Science*.]{.midgrey}
@@ -152,7 +152,7 @@ Alguns estudos/casos emblemáticos de cada frente nos próximos slides.
 
 ## Causal: Como IA infere preferência política dos usuários
 
-![](output/bisbee_2026.png){fig-align="center" width="46%"}
+![](output/bisbee_2026.png){fig-align="center" width="40%"}
 
 ::: aside
 [Bisbee, J., Clinton, J., Larson, J., Lee, D. (2026). "AI Pandering: Constructing Diverging Political Realities through Conversation." Working paper.]{.midgrey}
@@ -160,7 +160,7 @@ Alguns estudos/casos emblemáticos de cada frente nos próximos slides.
 
 ## Métodos: Amostras do vale do silício reproduzem experimentos de ciências sociais 
 
-![](output/willer_2023.png){fig-align="center" width="46%"}
+![](output/willer_2023.png){fig-align="center" width="40%"}
 
 ::: aside
 [Ashokkumar, Ashwini, Luke Hewitt, Isaias Ghezae, and Robb Willer. "Large language models can predict the results of social science experiments." Nature (2026): 1-8.]{.midgrey}
@@ -172,6 +172,14 @@ Alguns estudos/casos emblemáticos de cada frente nos próximos slides.
 
 ::: aside
 [Velez, Y., Liu, P. (2024). "Confronting Core Issues: A Critical Assessment of Attitude Polarization Using Tailored Experiments." *American Political Science Review*.]{.midgrey}
+:::
+
+## Métodos: conversas com LLMs dentro de surveys -- estudando efeitos de persuasão com eleitores
+
+![](output/rand_ai.png){fig-align="center" width="40%"}
+
+::: aside
+[Lin, H., Czarnek, G., Lewis, B., White, J., Berinsky, A., Costello, T., Pennycook, G., Rand, D. (2025). "Persuading Voters Using Human-Artificial Intelligence Dialogues." *Nature*.]{.midgrey}
 :::
 
 ## E a ciência política brasileira?
