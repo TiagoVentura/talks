@@ -1,0 +1,99 @@
+/*-- scss:defaults --*/
+@import 'https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible&display=swap';
+
+$presentation-font-size-root: 32px;
+$presentation-heading-color: #012169;
+$code-block-bg:#F0F0F0;
+$font-family-sans-serif: "Palatino Linotype", "Book Antiqua", Palatino,
+  FreeSerif, serif !default;
+$font-family-sans-serif: "Palatino Linotype", "Book Antiqua", Palatino,
+  FreeSerif, serif !default;
+
+/*-- scss:rules --*/
+
+.reveal .slides > section > section { 
+  text-align:left; 
+}
+
+/* Apply font globally */
+body {
+  font-family: $font-family-sans-serif;
+}
+
+/* make bold red */
+
+.reveal b, 
+.reveal strong {
+  color: #D50032;
+}
+.blue {
+  color: #041E42;
+  font-weight: bold;
+}
+
+.red {
+  color: #D50032;
+  font-weight: bold;
+}
+.midgray {
+  color: gray;
+  opacity: .8;}
+
+.center h1 {
+  text-align: center;
+}
+
+.centered h2 {
+  text-align: center;
+}
+.centered h3 {
+  text-align: center;
+}
+.centered p {
+  text-align: center;
+}
+
+code.sourceCode {
+  font-size: 1.6em;
+  /* or try font-size: xx-large; */
+}
+
+code {
+  font-size: 1.2em;
+  /* or try font-size: xx-large; */
+}
+
+.larger-font {
+    font-size: 62px; /* Adjust the font size as needed */
+}
+/* ---- ics_lisboa additions ---- */
+.smaller { font-size: 0.75em; }
+.small-table table { font-size: 0.7em; }
+.box {
+  background: #f3f4f7;
+  border-left: 6px solid #D50032;
+  padding: 0.6em 0.9em;
+  margin: 0.4em 0;
+}
+.phone img { max-height: 520px; border: 1px solid #ddd; border-radius: 12px; }
+.reveal .slide-number { font-size: 0.5em; }
+
+/* Beamer-style title slide */
+.reveal .beamer-title { text-align: center !important; }
+.reveal .beamer-title h2 { display: none; }
+.beamer-titlebox {
+  color: #012169;
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+  font-weight: bold;
+  font-size: 1.5em;
+  line-height: 1.35;
+  margin: 0 0 1.2em 0;
+}
+.beamer-authors { font-size: 0.85em; line-height: 1.45; margin-bottom: 2.2em; }
+.reveal .beamer-authors strong { color: inherit; font-weight: bold; }
+.beamer-venue { font-size: 0.75em; line-height: 1.45; }
+
+/* volume x selectivity table */
+.mech-table table { font-size: 0.72em; width: 100%; }
+.mech-table th, .mech-table td { vertical-align: top; padding: 0.5em 0.6em !important; line-height: 1.35; }
+.mech-table th:first-child, .mech-table td:first-child { width: 18%; }
