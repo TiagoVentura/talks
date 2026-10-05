@@ -13,6 +13,7 @@ Talks are organized by **research project / topic**, not by venue. Each topic fo
 - `survey_professionals/` — Survey professionals project
 - `ite/` — Prior exposure vs. PMR (individual treatment effects)
 - `agentic_ai/` — Agentic AI / Claude Code talks
+- `brazilian_elections/` — Brazilian elections (Swarthmore College, 2026)
 - `sciencespo_conference/`, `training_css/`, `reu/`, `abcp/`, `l2/` — venue- or program-specific decks
 - `template/` — base template (`template.qmd` + shared SCSS/CSS) for new talks, modeled on `twitter_ban/twitter_ban_western.qmd`. See [[template/CLAUDE]].
 
