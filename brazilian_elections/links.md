@@ -14,6 +14,8 @@ Running list of links shared for the Brazilian election project. Add new entries
 
 | Date added | Source | Link | Notes |
 |------------|--------|------|-------|
+| 2026-10-05 | Nexo Jornal (expresso) | https://www.nexojornal.com.br/expresso/2026/10/05/eleicoes-2026-lula-flavio-bolsonaro-segundo-turno | Lula vs. Flávio Bolsonaro in the 2026 second round |
+| 2026-10-05 | Nexo Jornal (entrevista) | https://www.nexojornal.com.br/entrevista/2026/10/05/resultado-eleicoes-2026-primeiro-turno-analise | Interview analyzing the 2026 first-round results |
 
 ## Data
 
