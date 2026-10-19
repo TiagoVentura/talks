@@ -66,3 +66,16 @@ code {
 .larger-font {
     font-size: 62px; /* Adjust the font size as needed */
 }
+/* headline cards for press-claim slides */
+.headline {
+  border-left: 6px solid #D50032;
+  background: #F6F6F6;
+  padding: 10px 18px;
+  margin: 10px 0;
+  font-size: 0.72em;
+  line-height: 1.25;
+}
+.headline.right { border-left-color: #012169; }
+.headline .src { display: block; color: gray; font-size: 0.75em; margin-top: 4px; }
+.smaller { font-size: 0.75em; }
+.reveal .slide-credit { font-size: 0.45em; color: gray; }
