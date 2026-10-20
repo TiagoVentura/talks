@@ -26,7 +26,7 @@ format:
 
 ## AI and Surveys {.center}
 
-Surveys have mostly been used as **static and non-interactive instruments**: same pre-defined questions for everyone. LLMs allow you to very easily change this.
+Surveys have mostly been used as **static and non-interactive instruments**. They use the same **pre-defined** and **non-interactive** questions for everyone. 
 
 <br>
 
