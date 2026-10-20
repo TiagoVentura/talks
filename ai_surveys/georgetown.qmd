@@ -16,7 +16,7 @@ format:
     height: 1000
     center: true
     slide-number: true
-    incremental: true
+    incremental: false
     chalkboard:
       buttons: false
     preview-links: auto
@@ -26,9 +26,7 @@ format:
 
 ## AI and Surveys {.center}
 
-::: {.incremental}
-
-Surveys have mostly been used as **static and non-interactive instruments**: same pre-defined questions for everyone. LLMs allow you to very easily change this
+Surveys have mostly been used as **static and non-interactive instruments**. They use the same **pre-defined** questions for everyone. 
 
 - LLMs add an [adaptive layer]{.red} on top of static surveys on platforms like Qualtrics [(Velez 2025, [Surveys That Listen](https://newinstruments.substack.com/p/surveys-that-listen))]{.midgrey}. Some examples:
 
@@ -38,7 +36,6 @@ Surveys have mostly been used as **static and non-interactive instruments**: sam
 
    - **Dynamic Conversations:** LLMs can be easily added in surveys for users to have conversations with, which allows tests for persuasion theories, biases, and human-machine interactions
 
-:::
 
 ## Four of my papers now put AI inside surveys {.center}
 
