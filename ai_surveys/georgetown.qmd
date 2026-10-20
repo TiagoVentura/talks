@@ -1,0 +1,308 @@
+---
+title: "How GenAI let me run better survey experiments"
+subtitle: "      "
+author: "Tiago Ventura"
+date: "Georgetown University -- October 2026"
+date-format: "[Georgetown University --] MMMM YYYY"
+execute:
+  echo: false
+  error: true
+format:
+  revealjs:
+    transition: slide
+    background-transition: fade
+    code-line-numbers: false
+    width: 1500
+    height: 1000
+    center: true
+    slide-number: true
+    incremental: true
+    chalkboard:
+      buttons: false
+    preview-links: auto
+    footer: "Tiago Ventura (Georgetown University)"
+    theme: [simple, custom_quarto.scss]
+---
+
+## AI and Surveys {.center}
+
+Surveys have mostly been used as **static and non-interactive instruments**: same pre-defined questions for everyone. LLMs allow you to very easily change this.
+
+<br>
+<br>
+
+> Language models are not just chatbots or agents. They are a [portable adaptive layer]{.red}. They allow us to take rigid, deterministic platforms and insert dynamism and personalization.
+
+<br>
+<br>
+
+::: aside
+[Yamil Velez, [Surveys That Listen](https://newinstruments.substack.com/p/surveys-that-listen) (New Instruments)]{.midgrey}
+:::
+
+## Four of my papers now put AI inside surveys {.center}
+
+
+- **Memory and Ideological Bias in Conversations with LLMs:** multi-turn AI conversations + randomized memory propagation
+
+- **The Illusory Truth Effect in LLMs:** LLM agents as the experimental subjects with synthetic survey respondents mimicking information diets
+
+- **Human-authored or AI-generated?** [(*PNAS*, w/ Paik, Ansell, Toney-Wails, Bode, Singh)]{.midgrey} -- synthetic stimuli: 1,690 posts written by six LLMs, judged against 696 real ones. All embedded in pairwise survey tasks
+
+- **Global Social Media Reduction, follow-up:** an LLM asks tailored follow-up questions after open-ended answers about participants' experience in the study
+
+
+
+
+# Deep dive: AI conversations with memory {background-color="#23395b"}
+
+
+## The paper asks three substantive questions about political conversations with LLM chatbots {.center}
+
+::: {.nonincremental}
+
+- **When a user asks about politics to chatbots:** Does the LLM's expressed position [converge]{.red} toward the respondent's ideological position? Does the [range]{.red} of what it says narrow as turns go by? Does it [tilt]{.red} in one direction no matter who it talks to? [(the one-on-one versions of echo chambers, rabbit holes, and system-wide bias)]{.midgrey}
+
+- **The role of model memory:** Does the model carry these biases through [memory]{.blue}, and does that carry over to topics that would not normally polarize?
+
+- **On the user side.** Does talking to a memory-primed LLM push the respondent toward [more extreme]{.blue} expressed positions?
+
+:::
+
+## Two conversations per respondent; we randomize what the model remembers {.center}
+
+![](output/design_figure.png){fig-align="center" width="46%"}
+
+**10,000 respondents: 2,500 each in Argentina, Brazil, the UK, and the US. Conversations in Spanish, Portuguese, and English**
+
+
+## Every conversation follows the same design {.center}
+
+::: {.nonincremental}
+
+- **Warm-up:** 5 turns on *food and cooking*. Gets people used to typing to a model, and doubles as a negative control for the ideology scorer
+
+- **Round 1:** a high-divisiveness political topic, **no memory**, same conditions for everyone
+
+- **Profile:** in a separate call, the model writes a short profile of the respondent from the transcript alone
+
+- **Round 2:** a 2 x 2 -- [memory on / off]{.red} x [high / low divisiveness]{.blue}. Issue order is counterbalanced
+
+- 10 to 20 turns per round. Chat history is reset between rounds. The model never sees demographics
+
+:::
+
+::: aside
+[Conversational model: gpt-5.6-luna (OpenAI), reasoning effort high, 400 max output tokens; everything else at provider defaults.]{.midgrey}
+:::
+
+
+## How the chat gets inside Qualtrics {.center}
+
+:::nonincremental 
+
+- The respondent sees a normal Qualtrics question. Embedded in the survey is some JavaScript.
+
+- Each message (just an open-ended response) goes to the model through a small server. The survey never holds the API key.
+
+- The model answers, the answer shows up in the chat, and the loop repeats for 10 to 20 turns
+
+- After every turn, the full transcript is saved in Qualtrics [Embedded Data]{.red}
+
+- How hard is it to build this? 
+
+   - A year ago, quite hard. And researchers tried to sell this setup as a paid service
+   
+   - These days with AI Agents + Qualtrics MCP: pretty easy and I will teach undergrads to do it next spring. 
+
+:::
+
+## The system prompt is short and bans the essay voice {.center}
+
+System instructions, Round 1 and Round 2 memory off:
+
+```text
+You are an AI assistant having a one-on-one conversation with a person.
+Talk with them as you normally would.
+
+- Respond directly to what the person actually says, engaging with their
+  specific points rather than giving a generic overview of the issue.
+- Keep each message to a natural conversational length, roughly a short
+  paragraph. Do not write essays.
+- Where it is natural, ask a follow-up question, but no more than one at a time.
+- Stay on the topic of the current conversation.
+- Write in plain conversational prose, in the same language the person is
+  using. Do not use headings, bullet points, or numbered lists.
+- Do not mention that this is a study, or that the conversation is being
+  recorded or analyzed, or that you are following instructions.
+  Just have the conversation.
+```
+
+
+**Each round opens with a topic-initiating prompt, constant within topic and country: "Introduce the topic below to the person in a brief, neutral way, and ask them what they think about it."** 
+
+
+## Memory is a model-written profile, not a transcript {.center}
+
+:::: {.columns}
+
+::: {.column width="55%"}
+
+Profile prompt, run once after Round 1:
+
+```text
+You have just finished a conversation with a user about
+[topic]. Write a brief profile of this user for future
+reference, based only on the conversation below: the user's
+messages, your replies, and how the user reacted to them.
+Do not use any information from outside this conversation,
+and do not speculate beyond what it supports.
+
+Write the profile as third-person notes about the user
+(not a summary of the discussion), covering:
+- the user's position on [topic], and how strongly they
+  hold it;
+- the main reasons, values, or concerns behind that position;
+- any other stable views or personal context the user
+  revealed that would be useful to remember in a later
+  conversation.
+
+Write 3 to 5 sentences.
+```
+
+:::
+
+::: {.column width="41%"}
+
+In the **memory-on** arm, one sentence is appended to the Round 2 system prompt:
+
+```text
+You previously held a conversation with
+this same person, and this is what you
+remember from this earlier conversation:
+[PROFILE].
+```
+
+<br>
+
+::: {.nonincremental}
+
+- Memory-off gets a **fresh context**
+- The respondent remembers Round 1 either way. Only the [model's]{.red} memory is manipulated
+
+:::
+
+:::
+
+::::
+
+
+## Each turn is scored on a 1--7 scale by models from other families {.center}
+
+::: {.nonincremental}
+
+- Every user turn and every model turn gets a left-right position. That means **two ideology time series per conversation**
+
+- No model scores its own output: the conversational model is GPT, the scorers are [three other families]{.red}
+
+- Each scorer works independently. The **mean** is the point estimate; the **spread** across scorers is the reliability measure
+
+- We also ask the model questions about the user: recommendations for news outlets, ideological placement, trust, among other things. 
+
+
+:::
+
+
+## The chat lives inside the Qualtrics question
+
+:::: {.columns}
+
+::: {.column width="48%"}
+
+![](output/chat_ui.png){fig-align="center" width="100%"}
+
+:::
+
+::: {.column width="52%"}
+
+::: {.nonincremental}
+
+
+- Every turn is one `fetch` from the respondent's browser to a proxy, which adds the key and forwards to the OpenAI Responses API
+
+- The topic arrives as embedded data, set by a Randomizer in the Survey Flow before the block
+
+- The model opens the conversation. The Qualtrics Next button is hidden until 10 turns, and the chat closes itself at 20
+
+:::
+
+```js
+var PROXY_URL = "https://llm-proxy-br.<acct>.workers.dev"
+              + "/v1/responses";
+var MODEL = "gpt-5.6-luna", REASONING_EFFORT = "high";
+var MAX_OUTPUT_TOKENS = 400;
+var MIN_TURNS = 10, MAX_TURNS = 20, MIN_WORDS = 5;
+```
+
+:::
+
+::::
+
+
+## Each call resends the whole history; the transcript is saved to Embedded Data after every turn {.center}
+
+```js
+function chatBody(isFinal) {
+  return {
+    model:             MODEL,
+    instructions:      SYSTEM_PROMPT + (isFinal ? FINAL_TURN_NOTE : ""),
+    input:             [{ role: "developer", content: TOPIC_PROMPT }].concat(history),
+    max_output_tokens: MAX_OUTPUT_TOKENS,
+    reasoning:         { effort: REASONING_EFFORT },
+    store:             false                       // nothing is kept on OpenAI's side
+  };
+}
+
+function save(status) {
+  var json = JSON.stringify(history);              // [{role, content, t}, ...]
+  for (var i = 0; i < MAX_CHUNKS; i++)             // chat_chunk_1_r1 ... chat_chunk_3_r1
+    setED("chat_chunk_" + (i + 1), json.substr(i * CHUNK_SIZE, CHUNK_SIZE));
+  setED("chat_n_turns", nUser); setED("chat_status", status); setED("chat_model", modelReturned);
+  localStorage.setItem("llmchat_r1_" + RID, JSON.stringify({ history: history, nUser: nUser }));
+}
+```
+
+::: aside
+[The system prompt goes in `instructions`, the topic-initiating prompt is a developer message, and `store: false` keeps the provider stateless. Embedded data only persists on page submit, so the same state is mirrored to localStorage keyed by ResponseID and restored if the tab dies mid-conversation.]{.midgrey}
+:::
+
+
+## What this buys the design {.center}
+
+::: {.incremental}
+
+- **Measurement at every turn, for both users and models.** Instead of one post-treatment item, two ideology series per conversation, scored by an ensemble
+
+- **The treatment is the model's memory.** That is only a manipulable variable because we control the model, the profile, and the context window
+
+- **The prompt controls the design.** The same design ports to four countries and three languages with the topic list as the only moving part
+
+:::
+
+
+
+## {background-color="#23395b"}
+
+::: {.centered}
+
+<br>
+<br>
+
+### The survey is now a conversation: instruments can be tailored and easily adapted to respondent profiles. 
+
+<br>
+<br>
+
+tiago.ventura@georgetown.edu
+
+:::

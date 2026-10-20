@@ -14,6 +14,8 @@ Repository to share source materials for presentations and talks.
 
 - [Swarthmore College - What Happened in the Brazilian Elections?](https://tiagoventura.github.io/talks/brazilian_elections/swarthmore.html)
 
+- [Georgetown - How GenAI Let Me Run Better Survey Experiments](https://tiagoventura.github.io/talks/ai_surveys/georgetown.html)
+
 - [ICS-ULisboa GI SPARC Seminar - WhatsApp Multicountry](https://tiagoventura.github.io/talks/whatsapp_multicountry/ics_lisboa/ics_lisboa.html)
 
 - [ABCP - Mesa: Novas Fronteiras nos Estudos de Comportamento Político](https://tiagoventura.github.io/talks/abcp/2026/mesa_comportamento_politico/abcp_2026.html)
