@@ -29,11 +29,9 @@ format:
 Surveys have mostly been used as **static and non-interactive instruments**: same pre-defined questions for everyone. LLMs allow you to very easily change this.
 
 <br>
-<br>
 
 > Language models are not just chatbots or agents. They are a [portable adaptive layer]{.red}. They allow us to take rigid, deterministic platforms and insert dynamism and personalization.
 
-<br>
 <br>
 
 ::: aside
