@@ -26,16 +26,18 @@ format:
 
 ## AI and Surveys {.center}
 
-Surveys have mostly been used as **static and non-interactive instruments**. They use the same **pre-defined** and **non-interactive** questions for everyone. 
+::: {.incremental}
 
-<br>
+Surveys have mostly been used as **static and non-interactive instruments**: same pre-defined questions for everyone. LLMs allow you to very easily change this
 
-> Language models are not just chatbots or agents. They are a [portable adaptive layer]{.red}. They allow us to take rigid, deterministic platforms and insert dynamism and personalization.
+- LLMs add an [adaptive layer]{.red} on top of static surveys on platforms like Qualtrics [(Velez 2025, [Surveys That Listen](https://newinstruments.substack.com/p/surveys-that-listen))]{.midgrey}. Some examples:
 
-<br>
+   - **Tailored measurement:** GPT-3 reads each respondent's own top issue and writes the counter-argument to *that* issue [(Velez & Liu 2025, *APSR*)]{.midgrey}
 
-::: aside
-[Yamil Velez, [Surveys That Listen](https://newinstruments.substack.com/p/surveys-that-listen) (New Instruments)]{.midgrey}
+   - **Adaptive instruments:** open-ended answers become inputs for future questions and treatments while the survey is in the field
+
+   - **Dynamic Conversations:** LLMs can be easily added in surveys for users to have conversations with, which allows tests for persuasion theories, biases, and human-machine interactions
+
 :::
 
 ## Four of my papers now put AI inside surveys {.center}
