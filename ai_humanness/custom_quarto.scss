@@ -1,0 +1,165 @@
+/*-- scss:defaults --*/
+@import 'https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible&display=swap';
+
+$presentation-font-size-root: 32px;
+$presentation-heading-color: #012169;
+$code-block-bg:#F0F0F0;
+$font-family-sans-serif: "Palatino Linotype", "Book Antiqua", Palatino,
+  FreeSerif, serif !default;
+
+/*-- scss:rules --*/
+
+.reveal .slides > section > section {
+  text-align:left;
+}
+
+body {
+  font-family: $font-family-sans-serif;
+}
+
+.reveal b,
+.reveal strong {
+  color: #041E42;
+}
+.blue {
+  color: #041E42;
+  font-weight: bold;
+}
+
+.red {
+  color: #D50032;
+  font-weight: bold;
+}
+.midgrey {
+  color: gray;
+  opacity: .8;
+}
+.midgray {
+  color: gray;
+  opacity: .8;
+}
+
+.center h1 {
+  text-align: center;
+}
+
+.centered h2 {
+  text-align: center;
+}
+.centered h3 {
+  text-align: center;
+}
+.centered p {
+  text-align: center;
+}
+
+code.sourceCode {
+  font-size: 1.6em;
+}
+
+code {
+  font-size: 1.2em;
+}
+
+.larger-font {
+    font-size: 62px;
+}
+
+/* title slide */
+.reveal .quarto-title-block .title {
+  font-size: 1.8em;
+  margin-bottom: 40px;
+}
+
+.reveal .quarto-title-block .subtitle {
+  font-size: 1.1em;
+}
+
+.reveal .quarto-title-block .quarto-title-author-name strong {
+  color: #041E42;
+}
+
+/* more space between slide titles and the first line of content */
+.reveal .slides section h2 {
+  margin-bottom: 0.7em;
+}
+
+/* ---- custom title slide ------------------------------------------------ */
+.title-hero .reveal .footer { display: none; }
+.title-hero .reveal .slide-number { display: none !important; }
+
+.reveal .slides section.title-hero h2 { display: none; }
+
+.reveal .hero { text-align: left; height: 820px; display: flex; align-items: center; }
+.reveal .hero-left { position: relative; height: 100%; width: 100%;
+                     display: flex; flex-direction: column; justify-content: center; }
+
+.reveal .hero-kicker {
+  font-size: 0.62em; letter-spacing: 0.08em; text-transform: uppercase;
+  color: #6b7280; margin-bottom: 22px;
+}
+.reveal h1.hero-title {
+  font-size: 1.95em; line-height: 1.1; color: #041E42;
+  text-align: left; margin: 0; max-width: 1150px;
+}
+.reveal .hero-rule { width: 120px; height: 6px; background: #D50032; margin: 32px 0 28px; }
+.reveal .hero-presenter { font-size: 0.85em; color: #22211d; margin: 0 0 8px; }
+.reveal .hero-presenter strong { color: #041E42; }
+.reveal .hero-authors { font-size: 0.68em; color: #4b5563; margin: 0; }
+.reveal img.hero-logo { position: absolute; bottom: 10px; left: -31px; width: 330px; margin: 0; }
+
+/* ---- RQ dividers and closing slide (reuse title-slide style) ------------ */
+.reveal .slides section.rq-divider { text-align: left; }
+.reveal .slides section.rq-divider > h1 {
+  font-size: 2.3em; line-height: 1.1; color: #041E42; text-align: left; margin: 0;
+}
+.reveal .slides section.rq-divider > h1::before {
+  display: block; margin-bottom: 22px;
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+  font-size: 0.27em; font-weight: normal; letter-spacing: 0.08em;
+  text-transform: uppercase; color: #6b7280;
+}
+.reveal .slides section.rq-divider > h1::after {
+  content: ""; display: block; width: 120px; height: 6px;
+  background: #D50032; margin: 32px 0 30px;
+}
+.reveal .slides section.rq-divider > p { font-size: 0.85em; color: #22211d; margin: 0; }
+.reveal .slides section.rq-divider.d1 > h1::before { content: "Results \00B7  1 of 4"; }
+.reveal .slides section.rq-divider.d2 > h1::before { content: "Results \00B7  2 of 4"; }
+.reveal .slides section.rq-divider.d3 > h1::before { content: "Results \00B7  3 of 4"; }
+.reveal .slides section.rq-divider.d4 > h1::before { content: "Results \00B7  4 of 4"; }
+.reveal h1.hero-title.closing { font-size: 1.6em; max-width: 1200px; }
+
+/* ---- section label: top-right corner of the slide canvas ---------------- */
+.reveal:has(section.present.sec-intro) .slides::before,
+.reveal:has(section.present.sec-design) .slides::before,
+.reveal:has(section.present.rq1) .slides::before,
+.reveal:has(section.present.rq2) .slides::before,
+.reveal:has(section.present.rq3) .slides::before,
+.reveal:has(section.present.rq4) .slides::before,
+.reveal:has(section.present.sec-concl) .slides::before,
+.reveal:has(section.present.sec-backup) .slides::before {
+  position: absolute; top: 6px; right: 0; z-index: 10;
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+  font-size: 20px; letter-spacing: 0.08em; text-transform: uppercase; color: #6b7280;
+}
+.reveal:has(section.present.sec-intro) .slides::before { content: "Introduction"; }
+.reveal:has(section.present.sec-design) .slides::before { content: "Design"; }
+.reveal:has(section.present.rq1) .slides::before { content: "RQ1 \00B7  Detection"; }
+.reveal:has(section.present.rq2) .slides::before { content: "RQ2 \00B7  Features"; }
+.reveal:has(section.present.rq3) .slides::before { content: "RQ3 \00B7  Individual traits"; }
+.reveal:has(section.present.rq4) .slides::before { content: "RQ4 \00B7  Partisanship"; }
+.reveal:has(section.present.sec-concl) .slides::before { content: "Conclusion"; }
+.reveal:has(section.present.sec-backup) .slides::before { content: "Appendix"; }
+
+/* hide footer and slide number on title, divider, and closing slides (robust to direct navigation) */
+.reveal:has(section.present.title-hero) .footer,
+.reveal:has(section.present.rq-divider) .footer,
+.reveal:has(section.present.title-hero) .slide-number,
+.reveal:has(section.present.rq-divider) .slide-number { display: none !important; }
+
+/* reserve a band at the top of labeled slides so the pinned label never overlaps the title */
+.reveal .slides section.sec-intro, .reveal .slides section.sec-design,
+.reveal .slides section.rq1, .reveal .slides section.rq2,
+.reveal .slides section.rq3, .reveal .slides section.rq4,
+.reveal .slides section.sec-concl, .reveal .slides section.sec-backup { padding-top: 46px !important; }

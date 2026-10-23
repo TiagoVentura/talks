@@ -12,6 +12,8 @@ Repository to share source materials for presentations and talks.
 
 ## 2026
 
+- [GenAI and Social Science Conference, NYU & Columbia - Humans Show Limited Ability to Distinguish Human-Authored and AI-Generated Political Content](https://tiagoventura.github.io/talks/ai_humanness/genai_nyu_columbia.html)
+
 - [Swarthmore College - What Happened in the Brazilian Elections?](https://tiagoventura.github.io/talks/brazilian_elections/swarthmore.html)
 
 - [Georgetown - How GenAI Let Me Run Better Survey Experiments](https://tiagoventura.github.io/talks/ai_surveys/georgetown.html)
