@@ -358,7 +358,7 @@ How do demographics and media habits predict accuracy?
 
 ::: {.notes}
 - Human-AI pairs, mixed logit, AMEs
-- Men +2 pp, white +3 pp, offline news -1.5 pp
+- Men +2 pp, white +4 pp, offline news -1.6 pp per SD
 - Everything else ~0; exploratory
 :::
 
