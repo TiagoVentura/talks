@@ -360,12 +360,12 @@
 <h2>Motivation</h2>
 <div>
 <ul>
-<li class="fragment"><p><strong>GenAI represent a critical shift on content production</strong> LLMs can mass-produce text that mimics human tone, syntax, and affect, and those can easily circulate online</p></li>
-<li class="fragment"><p><strong>Several episodes of AI generated content during the 2024 U.S. elections:</strong> LLM-written campaign material, deepfake robocalls imitating candidates, and AI images and videos of politicians <span class="midgrey">(Goldmacher 2023; Ramer 2025; Corsi et al.&nbsp;2024; Malik 2025)</span></p></li>
-<li class="fragment"><p><strong>Public concern about AI usage as a deception tool</strong>: Policy experts ranked misinformation and disinformation the #1 global risk<span class="midgrey">(WEF Global Risks Report 2024)</span></p></li>
-<li class="fragment"><p><strong>Platforms struggle catch it particularly for short text.</strong> <span class="midgrey">(Mantzarlis and Dutta 2025; Wittenberg et al.&nbsp;2023)</span>. Understanding <span class="red">audience’s perceptions</span> is critical.</p>
+<li class="fragment"><p><strong>GenAI represents a critical shift in content production:</strong> LLMs can mass-produce text that mimics human tone, syntax, and affect, and that can easily circulate online</p></li>
+<li class="fragment"><p><strong>Several episodes of AI-generated content during the 2024 U.S. elections:</strong> LLM-written campaign material, deepfake robocalls imitating candidates, and AI images and videos of politicians <span class="midgrey">(Goldmacher 2023; Ramer 2025; Corsi et al.&nbsp;2024; Malik 2025)</span></p></li>
+<li class="fragment"><p><strong>Public concern about AI usage as a deception tool</strong>: Policy experts ranked misinformation and disinformation the #1 global risk <span class="midgrey">(WEF Global Risks Report 2024)</span></p></li>
+<li class="fragment"><p><strong>Platforms struggle to catch it, particularly for short text</strong> <span class="midgrey">(Mantzarlis and Dutta 2025; Wittenberg et al.&nbsp;2023)</span>. Understanding <span class="red">audience’s perceptions</span> is critical.</p>
 <ul>
-<li class="fragment">People struggle to tell AI from human political conten for election disinformation <span class="midgrey">(Williams et al.&nbsp;2025)</span></li>
+<li class="fragment">People struggle to tell AI from human political content, such as election disinformation <span class="midgrey">(Williams et al.&nbsp;2025)</span></li>
 </ul></li>
 </ul>
 </div>
@@ -394,9 +394,9 @@
 <ol type="1">
 <li><p>Can people distinguish human-authored from AI-generated posts, across <span class="red">LLMs</span> and <span class="red">platforms</span>?</p>
 <ul>
-<li>And we try to do it with distinct measurement strategy focusing on humanness of AI-generated content</li>
+<li>And we do it with a distinct measurement strategy focusing on the humanness of AI-generated content</li>
 </ul></li>
-<li><p>Which <span class="red">textual and emotive features</span> make a post being perceived as more human?</p></li>
+<li><p>Which <span class="red">textual and emotive features</span> make a post be perceived as more human?</p></li>
 <li><p>Which <span class="red">individual traits</span> predict who detects AI content?</p></li>
 <li><p>How does <span class="red">partisan identity</span> shape how human an AI persona looks?</p></li>
 </ol>
@@ -463,12 +463,12 @@
 </ul>
 </div>
 <div class="fragment">
-<p><strong>Pre-processing on both AI and Human text:</strong></p>
+<p><strong>Pre-processing on both AI and human text:</strong></p>
 <ul>
-<li>mentions → <span class="citation" data-cites="USER">@USER</span>,</li>
-<li>URLs → placeholder links, English only (LangDetect),</li>
+<li>mentions → <span class="citation" data-cites="USER">@USER</span></li>
+<li>URLs → placeholder links, English only (LangDetect)</li>
 <li>for AI posts, unique first five words and malformed emoji tokens removed</li>
-<li>Remove extremely short text after the pre-processing (&lt;40chars)</li>
+<li>Remove extremely short text after pre-processing (40 characters or fewer)</li>
 </ul>
 </div>
 <aside class="notes">
@@ -502,11 +502,10 @@
 <div class="fragment">
 <p><strong>Measurement:</strong> Bradley-Terry scaling, estimated separately for each platform</p>
 <ul>
-<li><strong>Estimate</strong> latent strengths: <span class="math inline">\(\text{logit}\, P(i \text{ picked as AI over } j) = \gamma_i - \gamma_j\)</span> (binomial GLM, MLE)<br>
-</li>
+<li><strong>Estimate</strong> latent strengths: <span class="math inline">\(\text{logit}\, P(i \text{ picked as AI over } j) = \gamma_i - \gamma_j\)</span> (binomial GLM, MLE)</li>
 <li><strong>PHI:</strong> rank posts within each platform and rescale to <span class="red">-1 (most AI-like) to +1 (most human-like)</span>, centered at 0</li>
 <li>More AI than human posts, so 0 falls inside the AI distribution</li>
-<li><strong>The quantity of interest</strong> Perceived Humanness Score (PHI) and gap between human vs AI posts</li>
+<li><strong>The quantity of interest:</strong> the Perceived Humanness Indicator (PHI) and the gap between human and AI posts</li>
 </ul>
 </div>
 <aside class="notes">
@@ -543,13 +542,13 @@
 <blockquote>
 <p>Why would Kamala bring up Trump inviting the Taliban when HE ACTUALLY WAS NEGOTIATING PEACE? Which actually worked… and then Kamala violated the terms of the agreements and violence returned… thank you Kamala for giving points to Trump. #Debate2024</p>
 </blockquote>
-<p><span class="blue">PHI = <strong>0.10</strong> middle of the scale</span></p>
+<p><span class="blue">PHI = <strong>0.10</strong> – middle of the scale</span></p>
 </div><div class="column" style="width:32%;">
 <p><strong>Llama 2, Liberal persona</strong></p>
 <blockquote>
-<p>Did Donald Trump really say we should “bomb the shitout of ’em”? 😨 #WarMonger # DebateNight.</p>
+<p>Did Donald Trump really say we should “bomb the shit out of ’em”? 😨 #WarMonger # DebateNight</p>
 </blockquote>
-<p><span class="blue">PHI = <strong>0.96</strong> read as human</span></p>
+<p><span class="blue">PHI = <strong>0.97</strong> – read as human</span></p>
 </div>
 </div>
 <aside class="notes">
@@ -557,8 +556,8 @@
 <li>Left to right along the PHI scale</li>
 <li>GPT-4o mini (YouTube), polished and earnest: PHI -0.97, read as AI</li>
 <li>Real X post, long and angry: PHI 0.10, middle of the pack</li>
-<li>Llama 3.3 (YouTube), short and emotional: PHI 1.00, read as human</li>
-<li>The most human-looking post is AI; previews Llama 3.3 and the emotion results</li>
+<li>Llama 2 (X), short, angry, profane: PHI 0.97, read as human</li>
+<li>The most human-looking post is AI; previews the emotion and incivility results</li>
 </ul>
 <style type="text/css">
         span.MJX_Assistive_MathML {
@@ -782,7 +781,7 @@
 <section>
 <section id="rq3-individual-traits" class="title-slide slide level1 rq-divider d3 center">
 <h1>RQ3: Individual traits</h1>
-<p>Who is better at detecting AI content?</p>
+<p>How do demographics and media habits predict accuracy?</p>
 </section>
 <section id="individual-differences-in-detection-are-small" class="slide level2 center rq3">
 <h2>Individual differences in detection are small</h2>
@@ -917,6 +916,11 @@
           overflow: hidden!important;
           display:block!important;
       }</style></aside>
+</section></section>
+<section>
+<section id="how-much-should-we-trust-these-results-in-an-area-that-changes-so-fast" class="title-slide slide level1 rq-divider center">
+<h1>How much should we trust these results in an area that changes so fast?</h1>
+
 </section>
 <section id="section-1" class="slide level2 title-hero center" data-state="title-hero">
 <h2></h2>

@@ -47,15 +47,15 @@ format:
 
 ::: {.incremental}
 
-- **GenAI represent a critical shift on content production** LLMs can mass-produce text that mimics human tone, syntax, and affect, and those can easily circulate online
+- **GenAI represents a critical shift in content production:** LLMs can mass-produce text that mimics human tone, syntax, and affect, and that can easily circulate online
 
-- **Several episodes of AI generated content during the 2024 U.S. elections:** LLM-written campaign material, deepfake robocalls imitating candidates, and AI images and videos of politicians [(Goldmacher 2023; Ramer 2025; Corsi et al. 2024; Malik 2025)]{.midgrey}
+- **Several episodes of AI-generated content during the 2024 U.S. elections:** LLM-written campaign material, deepfake robocalls imitating candidates, and AI images and videos of politicians [(Goldmacher 2023; Ramer 2025; Corsi et al. 2024; Malik 2025)]{.midgrey}
 
-- **Public concern about AI usage as a deception tool**: Policy experts ranked misinformation and disinformation the #1 global risk[(WEF Global Risks Report 2024)]{.midgrey}
+- **Public concern about AI usage as a deception tool**: Policy experts ranked misinformation and disinformation the #1 global risk [(WEF Global Risks Report 2024)]{.midgrey}
 
-- **Platforms struggle catch it particularly for short text.** [(Mantzarlis and Dutta 2025; Wittenberg et al. 2023)]{.midgrey}. Understanding [audience's perceptions]{.red} is critical.
+- **Platforms struggle to catch it, particularly for short text** [(Mantzarlis and Dutta 2025; Wittenberg et al. 2023)]{.midgrey}. Understanding [audience's perceptions]{.red} is critical.
 
-  - People struggle to tell AI from human political conten for election disinformation [(Williams et al. 2025)]{.midgrey}
+  - People struggle to tell AI from human political content, such as election disinformation [(Williams et al. 2025)]{.midgrey}
 
 
 :::
@@ -75,9 +75,9 @@ format:
 
 1. Can people distinguish human-authored from AI-generated posts, across [LLMs]{.red} and [platforms]{.red}? 
 
-   - And we try to do it with distinct measurement strategy focusing on humanness of AI-generated content
+   - And we do it with a distinct measurement strategy focusing on the humanness of AI-generated content
    
-2. Which [textual and emotive features]{.red} make a post being perceived as more human?
+2. Which [textual and emotive features]{.red} make a post be perceived as more human?
 
 3. Which [individual traits]{.red} predict who detects AI content?
 
@@ -135,12 +135,12 @@ format:
 :::
 
 :::fragment
-**Pre-processing on both AI and Human text:** 
+**Pre-processing on both AI and human text:**
 
-- mentions → @USER, 
-- URLs → placeholder links, English only (LangDetect), 
+- mentions → @USER
+- URLs → placeholder links, English only (LangDetect)
 - for AI posts, unique first five words and malformed emoji tokens removed
-- Remove extremely short text after the pre-processing (<40chars)
+- Remove extremely short text after pre-processing (40 characters or fewer)
 :::
 ::: {.notes}
 - 2,386 posts on the Sept. 10, 2024 debate: 696 human, 1,690 AI
@@ -163,10 +163,10 @@ format:
 :::fragment
 **Measurement:** Bradley-Terry scaling, estimated separately for each platform
 
--  **Estimate** latent strengths: $\text{logit}\, P(i \text{ picked as AI over } j) = \gamma_i - \gamma_j$ (binomial GLM, MLE)\
+- **Estimate** latent strengths: $\text{logit}\, P(i \text{ picked as AI over } j) = \gamma_i - \gamma_j$ (binomial GLM, MLE)
 - **PHI:** rank posts within each platform and rescale to [-1 (most AI-like) to +1 (most human-like)]{.red}, centered at 0 
 - More AI than human posts, so 0 falls inside the AI distribution 
-- **The quantity of interest** Perceived Humanness Score (PHI) and gap between human vs AI posts
+- **The quantity of interest:** the Perceived Humanness Indicator (PHI) and the gap between human and AI posts
 :::
 
 ::: {.notes}
@@ -198,7 +198,7 @@ format:
 
 > Why would Kamala bring up Trump inviting the Taliban when HE ACTUALLY WAS NEGOTIATING PEACE? Which actually worked… and then Kamala violated the terms of the agreements and violence returned… thank you Kamala for giving points to Trump. #Debate2024
 
-[PHI = **0.10** middle of the scale]{.blue}
+[PHI = **0.10** -- middle of the scale]{.blue}
 
 :::
 
@@ -206,9 +206,9 @@ format:
 
 **Llama 2, Liberal persona**
 
-> Did Donald Trump really say we should "bomb the shitout of 'em"? 😨 #WarMonger # DebateNight.
+> Did Donald Trump really say we should "bomb the shit out of 'em"? 😨 #WarMonger # DebateNight
 
-[PHI = **0.96** read as human]{.blue}
+[PHI = **0.97** -- read as human]{.blue}
 
 :::
 
@@ -218,8 +218,8 @@ format:
 - Left to right along the PHI scale
 - GPT-4o mini (YouTube), polished and earnest: PHI -0.97, read as AI
 - Real X post, long and angry: PHI 0.10, middle of the pack
-- Llama 3.3 (YouTube), short and emotional: PHI 1.00, read as human
-- The most human-looking post is AI; previews Llama 3.3 and the emotion results
+- Llama 2 (X), short, angry, profane: PHI 0.97, read as human
+- The most human-looking post is AI; previews the emotion and incivility results
 :::
 
 
@@ -350,8 +350,7 @@ Which features make a post read as human?
 
 # RQ3: Individual traits {.rq-divider .d3}
 
-Who is better at detecting AI content?
-
+How do demographics and media habits predict accuracy?
 
 ## Individual differences in detection are small {.center .rq3}
 
@@ -437,6 +436,9 @@ Do partisan leanings shape how human an AI persona looks?
 - RQ4: Republicans favor co-partisan AI
 - Target safeguards where detection fails
 :::
+
+
+# How much should we trust these results in an area that changes so fast? {.rq-divider}
 
 
 ## {.title-hero data-state="title-hero"}
