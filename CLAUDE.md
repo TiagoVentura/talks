@@ -16,7 +16,7 @@ Talks are organized by **research project / topic**, not by venue. Each topic fo
 - `ai_humanness/` — Human vs. AI-generated political posts (PNAS humanness paper)
 - `brazilian_elections/` — Brazilian elections (Swarthmore College, 2026)
 - `sciencespo_conference/`, `training_css/`, `reu/`, `abcp/`, `l2/` — venue- or program-specific decks
-- `template/` — base template (`template.qmd` + shared SCSS/CSS) for new talks, modeled on `twitter_ban/twitter_ban_western.qmd`. See [[template/CLAUDE]].
+- `template/` — older base template (dark dividers). **Current house template** is the hero design from `ai_humanness/genai_nyu_columbia.qmd` and `twitter_ban/upenn_cind.qmd` (`twitter_ban/custom_quarto_upenn.scss`); the `presentation` skill carries a copy. House rules: no `::: aside` (findings as a `[...]{.midgrey}` paragraph under the figure), no `--`/`---`/em-dashes in slide text. See [[template/CLAUDE]].
 
 `README.md` is the public index of talks by year. `_extensions/`, `custom.css`, `custom.scss`, `mytheme-fonts.css` provide shared Quarto/reveal.js styling.
 

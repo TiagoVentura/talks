@@ -1,5 +1,7 @@
 # CLAUDE.md — Template
 
+**Superseded (Oct 2026).** New decks use the hero template from the NYU Humaness / UPenn CIND talks: `twitter_ban/custom_quarto_upenn.scss` + `twitter_ban/upenn_cind.qmd` as the reference, with copies in the `presentation` Claude Code skill (`~/.claude/skills/presentation/template_deck.qmd`). House rules: no `::: aside` (findings go in a plain `[...]{.midgrey}` paragraph under the figure), no `--`/`---`/em-dashes in titles or text, hero title and closing slides, `rq-divider` section breaks. The notes below describe the older dark-divider template and only matter for re-rendering old decks.
+
 Base template for new talks. Modeled on `twitter_ban/twitter_ban_western.qmd`.
 
 ## Files
