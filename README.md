@@ -12,6 +12,8 @@ Repository to share source materials for presentations and talks.
 
 ## 2026
 
+- [Center for Information Networks and Democracy, University of Pennsylvania - The Partisan Effects of Information Control Policies: Evidence from the X Ban in Brazil](https://tiagoventura.github.io/talks/twitter_ban/upenn_cind.html)
+
 - [GenAI and Social Science Conference, NYU & Columbia - Humans Show Limited Ability to Distinguish Human-Authored and AI-Generated Political Content](https://tiagoventura.github.io/talks/ai_humanness/genai_nyu_columbia.html)
 
 - [Swarthmore College - What Happened in the Brazilian Elections?](https://tiagoventura.github.io/talks/brazilian_elections/swarthmore.html)
